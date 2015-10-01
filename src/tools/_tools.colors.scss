@@ -8,7 +8,7 @@
 // 
 // <div class="compatibility">Compatibility untested.</div>
 //
-// Styleguide 3.1
+// Styleguide 2.1
 
 @mixin is-coloured($colors) {
 	@each $key, $value in $colors {
@@ -19,9 +19,9 @@
 }
 
 
-// Get a specific color of the Sass map of colors defined in [settings.colors](/section-2.html#section-2.1).
+// Get a specific color of the Sass map of colors defined in [settings.colors](/section-1.html#section-2.1).
 //
-// $color - The key of color we want to obtain from the [Sass map of colors](/section-2.html#section-2.1).
+// $color - The key of color we want to obtain from the [Sass map of colors](/section-1.html#section-2.1).
 //
 @function get-color($color) {
 	$result: #000;
