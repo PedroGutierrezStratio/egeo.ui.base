@@ -1,0 +1,35 @@
+// utils.clearfix
+//
+// Originaly written by [Harry Roberts](https://twitter.com/csswizardry) for
+// [inuitcss](https://github.com/inuitcss).
+//
+// Micro clearfix, as per: 
+// [css-101.org/articles/clearfix/latest-new-clearfix-so-far.php](http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php)
+// Extend the clearfix class with Sass to avoid the `.clearfix` class appearing
+// over and over in your markup.
+//
+// You can use it directly applying the class `.clearfix` to your HTML or
+// injecting the [placeholder](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_) 
+// `%clearfix` in your Sass code using the [@extend directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#extend).
+//
+// ```
+// .clearfix,
+// %clearfix {
+//     &:after {
+//         content: "";
+//         display: table;
+//         clear: both;
+//     }
+// }
+// ```
+//
+// Styleguide 9.3
+
+.clearfix,
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

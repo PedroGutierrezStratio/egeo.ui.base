@@ -1,0 +1,105 @@
+// tools.log
+//
+// <span class="tag tag--untested">untested</span>
+//
+// A logger library implemented over the version created by Hugo Giraudel
+// in his article 
+// [Using @error responsibly in Sass](http://www.sitepoint.com/using-error-responsibly-in-sass/)
+// at sitepoint.
+//
+// The log includes a mixin and a function with the same name. This is 
+// a hack needed to allow the log can be called from a function due to
+// Sass doesn't allow calling mixins inside functions.
+//
+// **Note**: This module cannot be tested due to the current systems of testing
+// for Sass doesn't allow to test console outputs or compilation breaks.
+//
+// ## Variables
+//
+// | var 											| default 	| desc 																																							|
+// |------------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+// | <div class="u-tx-align-left">$log-debug</div> 	| No 		| <div class="u-tx-align-left">A constant value used by the log methods to say to the log method that we want to show a debug message in the console.</div> 	|
+// | <div class="u-tx-align-left">$log-warn</div> 	| No 		| <div class="u-tx-align-left">A constant value used by the log methods to say to the log method that we want to show a warn message in the console.</div> 		|
+// | <div class="u-tx-align-left">$log-error</div> 	| No 		| <div class="u-tx-align-left">A constant value used by the log methods to say to the log method that we want to show an error message in the console.</div> 	|
+//
+// ## Functions
+//
+// ### log($message, $type: $log-debug) - the function
+//
+// The function log launches the directive `@debug`, `@warn` or `@error` depending on
+// the parameter `$type` passed to the function. It detects if the directive
+// @error is supported (Sass 3.3+) and provides an alternative for lower versions.
+//
+// | parameters										| <div class="st-u-nowrap">default value</div> 	| desc 																																																|
+// |------------------------------------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+// | <div class="u-tx-align-left">$message</div> 	| No 				| <div class="u-tx-align-left">The message we want to show in the console.</div> 																													|
+// | <div class="u-tx-align-left">$type</div> 		| $log-debug		| <div class="u-tx-align-left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$log-debug`, `@log-warn` or `@log-error`.</div> |
+// 
+// #### Usage
+//
+// If we want to use the logger inside a function we have to 
+// use a hack due to the Sass limitations. We should have a
+// code like the one below:
+//
+// ```
+//	@function myFunction() {
+//		...
+//		@if @log('My log message', $log-error) {}
+//		...
+// }
+// ```
+//
+// <div class="compatibility">Compatibility untested.</div>
+//
+// ### log($message, $type: $log-debug) - the mixin
+//
+// Does exactly the same than the function but you can call it
+// like showed in the Usage section.
+//
+// | parameters										| <div class="st-u-nowrap">default value</div> 	| desc 																																																|
+// |------------------------------------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+// | <div class="u-tx-align-left">$message</div> 	| No 				| <div class="u-tx-align-left">The message we want to show in the console.</div> 																													|
+// | <div class="u-tx-align-left">$type</div> 		| $log-debug		| <div class="u-tx-align-left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$log-debug`, `@log-warn` or `@log-error`.</div> |
+//
+// #### Usage
+//
+// ```
+//	...
+//	@include('My log message', $log-error);
+//	...
+// ```
+//
+// <div class="compatibility">Compatibility untested.</div>
+//
+// Styleguide 3.3
+
+$log-debug: 'debug';
+$log-warn: 'warn';
+$log-error: 'error';
+
+@function log($message, $type: $log-debug) {
+	@if $type == $log-debug {
+		@debug $message;
+	} @else if $type == $log-warn {
+		@warn $message;
+	} @else if $type == $log-error {
+		@if feature-exists('at-error') == true {
+			@error $message;
+		} @else {
+			@warn $message;
+		
+			// Because functions cannot be called anywhere in Sass,
+			// we need to hack the call in a dummy condition.
+			@if noop() {}
+		}
+	} @else {
+		@warn 'The type #{type} not exist in the log library.'; 
+	}
+}
+
+@mixin log($message, $type: $log-debug) {
+  // Because functions cannot be called anywhere in Sass,
+  // we need to hack the call in a dummy condition.
+  // There are other ways to do this, such as `log: log(..)`.
+  @if log($message, $type) {}
+}

@@ -1,0 +1,44 @@
+// tools.colors
+//
+// #### is-coloured($colors)
+//
+// Creates a set of modifier classes with the whole colors of a colors map passed as a parameter.
+//
+// * **$colors** - A Sass map of colors when the key is the name of the color and the value is the color itself.
+// 
+// <div class="compatibility">Compatibility untested.</div>
+//
+// Styleguide 3.1
+
+@mixin is-coloured($colors) {
+	@each $key, $value in $colors {
+		&--#{$key} {
+			color: $value;
+		}
+	}
+}
+
+
+// Get a specific color of the Sass map of colors defined in [settings.colors](/section-2.html#section-2.1).
+//
+// $color - The key of color we want to obtain from the [Sass map of colors](/section-2.html#section-2.1).
+//
+@function get-color($color) {
+	$result: #000;
+
+	@if global-variable-exists(colors) {
+		@if map-has-key($colors, $color) {
+			$result: map-get($colors, $color);
+		} @else {
+			@if mixin-exists(log) {
+				@if log('@get-color::The color #{color} not exist in $colors.') {}
+			}
+		}
+	} @else {
+		@if mixin-exists(log) {
+			@if log('@get-color::The Sass map $colors is not defined.') {}
+		}
+	}
+
+	@return $result;
+}

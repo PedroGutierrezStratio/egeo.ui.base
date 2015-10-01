@@ -1,0 +1,55 @@
+// tools.typography
+//
+// The typography tools includes a series of mixins and functions
+// to work with typographies.
+//
+//
+// Styleguide 3.2
+
+@mixin font-families() {
+	@each $key, $value in $font-families {
+		&--#{$key} {
+			font-family: $value;
+		}
+	}
+}
+
+@mixin font-sizes() {
+	@each $key, $value in $font-sizes {
+		&--#{$key} {
+			font-size: $value;
+		}
+	}
+}
+
+@mixin font-weights() {
+	@each $key, $value in $font-weights {
+		&--#{$key} {
+			font-weight: $value;
+		}
+	}
+}
+
+@mixin line-heights() {
+	@each $key, $value in $line-heights {
+		&--line-height-#{$key} {
+			line-height: $value;
+		}
+	}
+}
+
+@function get-font($font-family: bariol) {
+	@return map-get($font-families, $font-family);
+}
+
+@function get-font-weight($weight: normal) {
+	@return map-get($font-weights, $weight);
+}
+
+@function get-font-size($size: medium) {
+	@return map-get($font-sizes, $size);
+}
+
+@function get-line-height($height: normal) {
+	@return map-get($line-heights, $height);
+}

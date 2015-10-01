@@ -1,0 +1,28 @@
+// utils.floats
+//
+// Provide a series of classes and placeholders to float content to
+// any side. These classes are also available using the [non-BEM 
+// namespace](/section-2.html).
+//
+//
+// Styleguide 5.2
+
+.#{$egeo-namespace}u-float-left,
+%#{$egeo-namespace}u-float-left {
+	float: left;
+}
+
+.#{$egeo-namespace}u-float-right,
+%#{$egeo-namespace}u-float-right {
+	float: right;
+}
+
+.#{$egeo-nobem-namespace}u-float-left,
+%#{$egeo-nobem-namespace}u-float-left {
+	float: left !important;
+}
+
+.#{$egeo-nobem-namespace}u-float-right,
+%#{$egeo-nobem-namespace}u-float-right {
+	float: right !important;
+}

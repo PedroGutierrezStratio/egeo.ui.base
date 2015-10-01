@@ -1,0 +1,101 @@
+// settings.typography
+//
+// In this file are defined the variables related to the use of typography.
+//
+// ## Variables
+//
+// | var 												| default 											| desc 																																				|
+// |----------------------------------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+// | <div class="u-tx-align-left">$font-families</div> 	| <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of font families declared in the [visual specifications](/section-1.html#section-1.2).</div> 	|
+// | <div class="u-tx-align-left">$font-weights</div>  	| <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of font weights declared in the [visual specifications](/section-1.html#section-1.2).</div> 	|
+// | <div class="u-tx-align-left">$font-sizes</div> 	| <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of font sizes declared in the [visual specifications](/section-1.html#section-1.2). </div>		|
+// | <div class="u-tx-align-left">$line-heights</div> 	| <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of line heights declared in the [visual specifications](/section-1.html#section-1.2).</div> 	|
+//
+// ### Sass map $font-families
+//
+// | Result																								| Value				| Key					|
+// |----------------------------------------------------------------------------------------------------|-------------------|-----------------------|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--medium">Brandon Grotesque</span> | Brandon Grotesque	| brandon-grotesque		|
+// | <span class="typo-block typo-block--open-sans typo-block--medium">Open Sans</span> 				| Open Sans			| open-sans				|
+//
+// ### Sass map $font-sizes
+//
+// | Result	            																	| Value     | Key	    |
+// |----------------------------------------------------------------------------------------|-----------|-----------|
+// | <span class="typo-block typo-block--open-sans typo-block--xgiant">Open Sans</span>		| 4rem	   	| xgiant	|
+// | <span class="typo-block typo-block--open-sans typo-block--giant">Open Sans</span>		| 3rem		| giant		|
+// | <span class="typo-block typo-block--open-sans typo-block--xxxlarge">Open Sans</span>	| 2.5rem	| xxxlarge	|
+// | <span class="typo-block typo-block--open-sans typo-block--xxlarge">Open Sans</span>	| 2rem		| xxlarge	|
+// | <span class="typo-block typo-block--open-sans typo-block--xlarge">Open Sans</span>		| 1.5rem	| xlarge	|
+// | <span class="typo-block typo-block--open-sans typo-block--large">Open Sans</span>		| 1.2rem	| large		|
+// | <span class="typo-block typo-block--open-sans typo-block--medium">Open Sans</span>		| 1rem		| medium	|
+// | <span class="typo-block typo-block--open-sans typo-block--small">Open Sans</span>		| .8rem		| small		|
+// | <span class="typo-block typo-block--open-sans typo-block--xsmall">Open Sans</span>		| .7rem		| xsmall	|
+// | <span class="typo-block typo-block--open-sans typo-block--xxsmall">Open Sans</span>	| .6rem		| xxsmall	|
+// | <span class="typo-block typo-block--open-sans typo-block--xxxsmall">Open Sans</span>	| .5rem		| xxxsmall	|
+//
+// ### Sass map $font-weights
+//
+// | Result		            																					| Value     | Key	    |
+// |------------------------------------------------------------------------------------------------------------|-----------|-----------|
+// | <span class="typo-block typo-block--open-sans typo-block--medium typo-block--bolder">Open Sans</span>		| 900		| bolder	|
+// | <span class="typo-block typo-block--open-sans typo-block--medium typo-block--bold">Open Sans</span>		| 700		| bold		|
+// | <span class="typo-block typo-block--open-sans typo-block--medium typo-block--semibold">Open Sans</span>	| 500		| semibold	|
+// | <span class="typo-block typo-block--open-sans typo-block--medium typo-block--normal">Open Sans</span>		| 400		| normal	|
+// | <span class="typo-block typo-block--open-sans typo-block--medium typo-block--light">Open Sans</span>		| 200		| light		|
+// 
+//
+// ### Sass map $line-heights
+//
+// #### double
+//
+// <p class="typo-block typo-block--line-height-double">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor nunc elit. Sed ut euismod sem, congue blandit odio. Curabitur enim eros, imperdiet aliquam maximus non, luctus a diam. Suspendisse eleifend lectus metus. Morbi maximus eget sem a laoreet. Proin a nibh nec dolor vulputate auctor sit amet ut erat. Fusce scelerisque justo leo, sit amet rhoncus leo finibus dictum. Aliquam eget placerat nunc.</p>
+//
+// #### normal
+//
+// <p class="typo-block typo-block--line-height-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor nunc elit. Sed ut euismod sem, congue blandit odio. Curabitur enim eros, imperdiet aliquam maximus non, luctus a diam. Suspendisse eleifend lectus metus. Morbi maximus eget sem a laoreet. Proin a nibh nec dolor vulputate auctor sit amet ut erat. Fusce scelerisque justo leo, sit amet rhoncus leo finibus dictum. Aliquam eget placerat nunc.</p>
+//
+// #### stretch
+//
+// <p class="typo-block typo-block--line-height-stretch">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor nunc elit. Sed ut euismod sem, congue blandit odio. Curabitur enim eros, imperdiet aliquam maximus non, luctus a diam. Suspendisse eleifend lectus metus. Morbi maximus eget sem a laoreet. Proin a nibh nec dolor vulputate auctor sit amet ut erat. Fusce scelerisque justo leo, sit amet rhoncus leo finibus dictum. Aliquam eget placerat nunc.</p>
+//
+// #### single
+//
+// <p class="typo-block typo-block--line-height-single">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor nunc elit. Sed ut euismod sem, congue blandit odio. Curabitur enim eros, imperdiet aliquam maximus non, luctus a diam. Suspendisse eleifend lectus metus. Morbi maximus eget sem a laoreet. Proin a nibh nec dolor vulputate auctor sit amet ut erat. Fusce scelerisque justo leo, sit amet rhoncus leo finibus dictum. Aliquam eget placerat nunc.</p>
+//
+// Styleguide 2.2
+
+$font-families: (
+	brandon-grotesque: 'Brandon Grotesque',
+	open-sans: 'Open Sans',
+	stratio-iconfont: 'ico_stratio'
+) !default;
+
+$font-weights: (
+	bolder: 900,
+	bold: 700,
+	semibold: 500,
+	normal: 400,
+	light: 200,
+) !default;
+
+$font-sizes: (
+	xgiant: 4rem,
+	giant: 3rem,
+	xxxlarge: 2.5rem,
+	xxlarge: 2rem,
+	xlarge: 1.5rem,
+	large: 1.2rem,
+	medium: 1rem,
+	small: .8rem,
+	xsmall: .7rem,
+	xxsmall: .6rem,
+	xxxsmall: .5rem
+) !default;
+
+$line-heights: (
+	double: 2em,
+	normal: 1.5em,
+	stretch: 1.2em,
+	single: 1em,
+) !default;

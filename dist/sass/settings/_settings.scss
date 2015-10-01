@@ -1,0 +1,49 @@
+// Settings
+//
+// The settings section includes a series of variables to configure our project.
+// You could find two differente types of variables; the default ones which should
+// be modified vía [theming](/section-10.html) and the immutable ones which are
+// internally used by the framework and shouldn't be modified.
+//
+// ## Variables
+//
+// | var 														| default 											| value				| desc 																																									|
+// |------------------------------------------------------------|---------------------------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+// | <div class="u-tx-align-left">$egeo-namespace</div> 		| <span class="tag tag--default">!default</span> 	| 'st-'				| <div class="u-tx-align-left">A prefix included in all classes created by the UI Kit.</div> 																			|
+// | <div class="u-tx-align-left">$egeo-nobem-namespace</div> 	| <span class="tag tag--default">!default</span> 	| 'st-nobem-'		| <div class="u-tx-align-left">A prefix included in all classes created by the UI Kit to be used in projects which are not using BEM like naming methodology.</div> 	|
+// | <div class="u-tx-align-left">$egeo-fontface-src</div> 		| <span class="tag tag--default">!default</span> 	| 'assets/fonts'	| <div class="u-tx-align-left">A base url from which the @font-face directive will seek the font folders.</div> 	|
+// 
+// ### Why a UI Kit namespace?
+//
+// The use of a namespace that prefix all classes exposed ensures that the classes of 
+// the framework will have no collisions with the classes defined in the project the 
+// framework will be imported on.
+// 
+// ### Why a non-BEM namespace?
+//
+// When you are building a project using 
+// [BEM Methodology](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/), 
+// created by [Yandex](https://www.yandex.com/), you are building a CSS with
+// flat [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) 
+// due to almost all selectors used are delimited to one class, that
+// is equal to 10 points of [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity). 
+// That means that if you load the files of the framework in the right order, 
+// the classes always be respond as expected, overwritten the styles necessary, 
+// for example, when you are using [utils](/section-9.html).
+//
+// However, if you are not working with BEM or you are using external libraries not built
+// with [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) 
+// like [Bootstrap](http://getbootstrap.com/), [AngularUI](https://angular-ui.github.io/) or 
+// [Foundation](http://foundation.zurb.com/), then you have to overwritte some styles
+// using `!important` flag due to you have no way to know what specifity could have a selector.
+// Even knowing it, you would have to create a selector specifically written for each
+// selector you want to overwrite. A mess.
+//
+// For that, some classes and placeholders in the framework uses the non-BEM namespace to
+// ensure that the `!important` flag is used and they can overwrite any class in the project.
+//
+// Styleguide 2
+
+$egeo-namespace: 'st-' !default;
+$egeo-nobem-namespace: $egeo-namespace + '-nobem-' !default;
+$egeo-fontface-src: 'assets/fonts' !default;

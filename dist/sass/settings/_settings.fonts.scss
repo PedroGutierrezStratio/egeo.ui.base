@@ -1,0 +1,37 @@
+// settings.fonts
+//
+// This file only include an import of the Fonts specified in 
+// the [visual reference](/section-1.html#section-1.1). You can
+// see below the families and formats imported as well as a
+// reference compatibility table.
+//
+// ## Fonts
+//
+// | Font 																								| Families																																			| Formats available		|
+// |----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--medium">Brandon Grotesque</span> | <div class="u-tx-align-left">Light, Regular, Bold, Black</div>																					| EOT, SVG, TTF, WOFF	|
+// | <span class="typo-block typo-block--open-sans typo-block--medium">Open Sans</span> 				| <div class="u-tx-align-left">Light, LightItalic, Regular, Italic, Semibold, SemiboldItalic, Bold, BoldItalic, ExtraBold, ExtraBoldItalic</div>	| EOT, SVG, TTF, WOFF	|
+// 
+// ## Compatibility
+//
+// | Font format 	| IE 														| Chrome 													| Firefox 													| Safari 													| Opera 													| Edge	|
+// |----------------|-----------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------|-------|
+// | TTF/OTF		| 9.0+*														| 4.0+														| 3.5+														| 3.1+														| 10.0+ 													| 12+ 	|
+// | WOFF			| 9.0+														| 5.0+														| 3.6+														| 5.1+														| 11.1+ 													| 12+ 	|
+// | WOFF2			| <span class="tag tag--not-supported">Not supported</span>	| 36.0+														| 35.0*														| <span class="tag tag--not-supported">Not supported</span>	| 26.0+														| 12+ 	|
+// | SVG			| <span class="tag tag--not-supported">Not supported</span>	| 4.0+														| <span class="tag tag--not-supported">Not supported</span>	| 3.2+														| 9.0+ 														| 12+ 	|
+// | EOT			| 6.0+														| <span class="tag tag--not-supported">Not supported</span>	| <span class="tag tag--not-supported">Not supported</span>	| <span class="tag tag--not-supported">Not supported</span>	| <span class="tag tag--not-supported">Not supported</span>	| 12+ 	|
+// 
+// * *IE: The font format only works when set to be "installable".*
+// * *Firefox: Disabled by default, but can be enabled (need to set a flag to "true" to use WOFF2).*
+// 
+// Compatible in IE8+, Edge 12+, Firefox 3.5+, Chrome 4+, Safari 3.1+, Opera 9+
+//
+// ## Dependencies
+//
+// * [tools.log](/section-3.html#section-3.3): The fonts uses the logger tool to show debug info.
+//
+// Styleguide 2.4
+
+@import '../vendors/vendors.brandon-grotesque';
+@import '../vendors/vendors.open-sans';
