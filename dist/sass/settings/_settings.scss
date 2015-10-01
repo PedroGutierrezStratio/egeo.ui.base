@@ -42,7 +42,7 @@
 // For that, some classes and placeholders in the framework uses the non-BEM namespace to
 // ensure that the `!important` flag is used and they can overwrite any class in the project.
 //
-// Styleguide 2
+// Styleguide 1
 
 $egeo-namespace: 'st-' !default;
 $egeo-nobem-namespace: $egeo-namespace + '-nobem-' !default;
