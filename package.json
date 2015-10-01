@@ -13,6 +13,10 @@
   "devDependencies": {
     "grunt-contrib-watch": "^0.6.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stratio/egeo.ui.base"
+  },
   "dependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
