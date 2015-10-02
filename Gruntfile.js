@@ -20,7 +20,7 @@
   Plugins
 
   time-grunt......................Measure the time used in each subtask
-  grunt-contrib-sass..............Sass compiler
+  grunt-sass......................Sass compiler
   grunt-contrib-watch.............Watcher to automatize tasks if files changed
   grunt-contrib-clean.............Clean files and directories
   grunt-contrib-copy..............Copy files and directories
@@ -61,23 +61,25 @@ module.exports = function (grunt) {
     sass: {
       dev: {
         options: {
-          sourcemap: 'auto',  // The sourcemaps are a way to map the compiled and
+          sourceMap: 'auto',  // The sourcemaps are a way to map the compiled and
                               // minified files to let the browser to know when
                               // inspect code the original file and line we are
                               // inspecting
-          style: 'expanded' // Minify the Sass as much as possible
+          outputStyle: 'expanded'   // Minify the Sass as much as possible
         },
-        files: {
-          '<%= app.dist %>/egeo.ui.base.css': '<%= app.src %>/index.scss'
+        dist: {
+            files: {
+                '<%= app.dist %>/egeo.ui.base.min.css': '<%= app.src %>/index.scss'
+            }
         }
       },
       dist: {
         options: {
-          sourcemap: 'auto',  // The sourcemaps are a way to map the compiled and
+          sourceMap: 'auto',  // The sourcemaps are a way to map the compiled and
                               // minified files to let the browser to know when
                               // inspect code the original file and line we are
                               // inspecting
-          style: 'compressed' // Minify the Sass as much as possible
+          outputStyle: 'compressed' // Minify the Sass as much as possible
         },
         files: {
           '<%= app.dist %>/egeo.ui.base.min.css': '<%= app.src %>/index.scss'
@@ -101,7 +103,7 @@ module.exports = function (grunt) {
         files: ['<%= app.src %>/*.scss', '<%= app.src %>/**/*.scss'], // Files to watch
         tasks: ['sass-dev'],                                          // Taks to execute when changes detected
         options: {
-          spawn: true,  // If the spawn property is established to false, the 
+          spawn: true   // If the spawn property is established to false, the 
                         // system is faster but also  more prone to fail due to 
                         // it opens a second thread to treat the files and can 
                         // result in the warning explained above.
@@ -130,7 +132,7 @@ module.exports = function (grunt) {
   });
 
   // Load the npm tasks needed
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -159,6 +161,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'sass-dist',  // Compile Sass
+    'sass-dist'   // Compile Sass
   ]);
 };
