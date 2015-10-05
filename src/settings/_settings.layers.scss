@@ -1,0 +1,42 @@
+// settings.layers
+//
+// In this file are defined the variables related to the use of different layers.
+// in the app. When you work in any web project, often it is needed to fight with
+// multiple z-index declaration across different CSS files or in one only big CSS
+// with thousands lines of code. This library, working with 
+// [tools.layers](/section-2.html#section-2.4) provides a set of tools to abstract 
+// all this complexity referencing the layer deeps with descriptive names, helping 
+// developers to set the CSS classes in the appropiate layer without the use of 
+// magic numbers.
+//
+// ## Variables
+//
+// | var 										| default 											| desc 																																				|
+// |--------------------------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+// | <div class="u-tx-align-left">$layers</div> | <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of layers. This map is only a set of pairs key/value that represents name/number of deep.</div> |
+//
+// ### Sass Map $layers
+//
+// | key	| value		|
+// |--------|-----------|
+// | back	| -10		|
+// | sub-2	| -2		|
+// | sub-1	| -1		|
+// | base	| 0 		|
+// | top-1	| 1 		|
+// | top-2	| 2 		|
+// | top-3	| 3 		|
+// | ontop	| 10		|
+//
+// Styleguide 1.5
+
+$layers: {
+	back: -10,
+	sub-2: -2,
+	sub-1: -1,
+	base: 0,
+	top-1: 1,
+	top-2: 2,
+	top-3: 3,
+	ontop: 10
+} !default;

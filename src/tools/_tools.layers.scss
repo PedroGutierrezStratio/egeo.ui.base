@@ -1,0 +1,31 @@
+// tools.layers
+//
+// #### get-layer($layer)
+//
+// Return a value from the Sass map [$layers](/section-1.html#section-1.5).
+//
+// * **$layer** - The key of a pair key/value defined in the Sass map [$layers](/section-1.html#section-1.5).
+// 
+// <div class="compatibility">Compatibility untested.</div>
+//
+// Styleguide 2.4
+
+@function get-layer($layer) {
+	$result: 0;
+
+	@if global-variable-exists(layers) {
+		@if map-has-key($layers, $layer) {
+			$result: map-get($layers, $layer);
+		} @else {
+			@if mixin-exists(log) {
+				@if log('@get-layer::The layer #{layer} not exist in $layers.') {}
+			}
+		}
+	} @else {
+		@if mixin-exists(log) {
+			@if log('@get-layer::The Sass map $layers is not defined.') {}
+		}
+	}
+
+	@return $result;
+}
