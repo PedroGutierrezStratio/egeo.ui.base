@@ -7,7 +7,7 @@ Hi! This is the repository of the Egeo Base Framework. The framework is divided 
 Download the project to any folder via `git clone` or using the ZIP button and launch `npm install` to install all dependencies needed to build the website ([NodeJS](https://nodejs.org) and [Git client](https://git-scm.com/download/) are required to be installed first to can use these commands on your console).
 
 ```
-git clone https://github.com/Stratio/egeo.ui.documentation.git
+git clone https://github.com/Stratio/egeo.ui.base.git
 
 npm install
 ```
