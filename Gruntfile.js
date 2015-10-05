@@ -8,8 +8,8 @@
 
   Tasks
 
-  grunt sass-watch................Launch a watcher that watchs all the Sass files and
-                                  launches the sass-dev task when changes detected.
+  grunt sass-watch................Launch the sass-dev task every time a Sass file
+                                  changes
   grunt sass-dev..................Compiles the sass, the files and creates an
                                   expanded version of the CSS to check that all is ok. 
   grunt sass-dist.................Compiles the sass and creates the distribution 
