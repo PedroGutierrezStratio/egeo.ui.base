@@ -1,0 +1,173 @@
+@import 'true';
+@import '../../src/settings/settings.typography';
+@import '../../src/tools/tools.log';
+@import '../../src/tools/tools.typography';
+
+$egeo-font-families: (
+	brandon-grotesque: 'Brandon Grotesque',
+	open-sans: 'Open Sans',
+);
+
+$egeo-font-weights: (
+	bold: 700,
+	semibold: 500,
+	normal: 400,
+);
+
+$egeo-font-sizes: (
+	large: 1.2rem,
+	medium: 1rem,
+	small: .8rem,
+);
+
+$egeo-line-heights: (
+	double: 2em,
+	normal: 1.5em,
+);
+
+@include test-module('tools.typography') {
+	@include test('get-font [function]') {
+		$test: get-font(brandon-grotesque);
+		$expect: 'Brandon Grotesque';
+
+		@include assert-equal($test, $expect, 'Returns a font-family from the $egeo-font-families Sass map');
+	}
+
+	@include test('get-font [function] @default') {
+		$test: get-font();
+		$expect: 'Open Sans';
+
+		@include assert-equal($test, $expect, 'Returns the default font-family from the $egeo-font-families Sass map');
+	}
+
+	@include test('get-font-size [function]') {
+		$test: get-font-size(small);
+		$expect: .8rem;
+
+		@include assert-equal($test, $expect, 'Returns a font-size from the $egeo-font-sizes Sass map');
+	}
+
+	@include test('get-font-size [function] @default') {
+		$test: get-font-size();
+		$expect: 1rem;
+
+		@include assert-equal($test, $expect, 'Returns the default font-size from the $egeo-font-sizes Sass map');
+	}
+
+	@include test('get-font-weight [function]') {
+		$test: get-font-weight(bold);
+		$expect: 700;
+
+		@include assert-equal($test, $expect, 'Returns a font-weight from the $egeo-font-weights Sass map');
+	}
+
+	@include test('get-font-weight [function] @default') {
+		$test: get-font-weight();
+		$expect: 400;
+
+		@include assert-equal($test, $expect, 'Returns the default font-weight from the $egeo-font-weights Sass map');
+	}
+
+	@include test('get-line-height [function]') {
+		$test: get-line-height(double);
+		$expect: 2em;
+
+		@include assert-equal($test, $expect, 'Returns a line-height from the $egeo-line-heights Sass map');
+	}
+
+	@include test('get-line-height [function] @default') {
+		$test: get-line-height();
+		$expect: 1.5em;
+
+		@include assert-equal($test, $expect, 'Returns the default line-height from the $egeo-line-heights Sass map');
+	}
+
+	@include test('set-font-families [mixin]') {
+		@include assert('output a set of modifiers based on the $egeo-font-families map') {
+			@include input {
+				.test {
+					@include set-font-families;
+				}
+			}
+
+			@include expect {
+				.test--brandon-grotesque {
+					font-family: "Brandon Grotesque";
+				}
+
+				.test--open-sans {
+					font-family: "Open Sans";
+				}
+			}
+		}
+	}
+
+	@include test('set-font-sizes [mixin]') {
+		@include assert('output a set of modifiers based on the $egeo-font-sizes map') {
+			@include input {
+				.test {
+					@include set-font-sizes;
+				}
+			}
+
+			@include expect {
+				.test--large {
+					font-size: 1.2rem;
+				}
+
+				.test--medium {
+					font-size: 1rem;
+				}
+
+				.test--small {
+					font-size: 0.8rem;
+				}
+			}
+		}
+	}
+
+	@include test('set-font-weights [mixin]') {
+		@include assert('output a set of modifiers based on the $egeo-font-weights map') {
+			@include input {
+				.test {
+					@include set-font-weights;
+				}
+			}
+
+			@include expect {
+				.test--bold {
+					font-weight: 700;
+				}
+
+				.test--semibold {
+					font-weight: 500;
+				}
+
+				.test--normal {
+					font-weight: 400;
+				}
+			}
+		}
+	}
+	@include test('set-line-heights [mixin]') {
+		@include assert('output a set of modifiers based on the $egeo-line-heights map') {
+			@include input {
+				.test {
+					@include set-line-heights;
+				}
+			}
+
+			@include expect {
+				.test--double {
+					line-height: 2em;
+				}
+
+				.test--normal {
+					line-height: 1.5em;
+				}
+			}
+		}
+	}
+}
+
+@include report;

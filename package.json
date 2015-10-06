@@ -6,12 +6,15 @@
   "scripts": {
     "sass-watch": "grunt sass-watch",
     "sass-dev": "grunt sass-dev",
-    "sass-dist": "grunt sass-dist"
+    "sass-dist": "grunt sass-dist",
+    "sass-tests": "mocha tests/test-sass.js"
   },
   "author": "Alex R Chies (alejandrorodriguez@stratio.com)",
   "license": "ISC",
   "devDependencies": {
-    "grunt-contrib-watch": "^0.6.1"
+    "grunt-contrib-watch": "^0.6.1",
+    "sass-true": "^2.0.2",
+    "mocha": "^2.3.3"
   },
   "repository": {
     "type": "git",

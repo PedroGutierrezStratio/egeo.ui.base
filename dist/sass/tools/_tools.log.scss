@@ -95,6 +95,8 @@ $log-error: 'error';
 	} @else {
 		@warn 'The type #{type} not exist in the log library.'; 
 	}
+
+	@return true;
 }
 
 @mixin log($message, $type: $log-debug) {

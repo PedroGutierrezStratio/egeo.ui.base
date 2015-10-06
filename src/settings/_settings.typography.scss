@@ -4,12 +4,12 @@
 //
 // ## Variables
 //
-// | var 												| default 											| desc 																																				|
-// |----------------------------------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-// | <div class="u-tx-align-left">$font-families</div> 	| <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of font families declared in the [visual specifications](/visual-docs/section-1.html#section-1.2).</div> 	|
-// | <div class="u-tx-align-left">$font-weights</div>  	| <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of font weights declared in the [visual specifications](/visual-docs/section-1.html#section-1.2).</div> 	|
-// | <div class="u-tx-align-left">$font-sizes</div> 	| <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of font sizes declared in the [visual specifications](/visual-docs/section-1.html#section-1.2). </div>		|
-// | <div class="u-tx-align-left">$line-heights</div> 	| <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of line heights declared in the [visual specifications](/visual-docs/section-1.html#section-1.2).</div> 	|
+// | font-variant: 											| default 											| desc 																																				|
+// |--------------------------------------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+// | <div class="u-tx-align-left">$egeo-font-families</div> | <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of font families declared in the [visual specifications](/visual-docs/section-1.html#section-1.2).</div> 	|
+// | <div class="u-tx-align-left">$egeo-font-weights</div>  | <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of font weights declared in the [visual specifications](/visual-docs/section-1.html#section-1.2).</div> 	|
+// | <div class="u-tx-align-left">$egeo-font-sizes</div> 	| <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of font sizes declared in the [visual specifications](/visual-docs/section-1.html#section-1.2). </div>		|
+// | <div class="u-tx-align-left">$egeo-line-heights</div> 	| <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of line heights declared in the [visual specifications](/visual-docs/section-1.html#section-1.2).</div> 	|
 //
 // ### Sass map $font-families
 //
@@ -65,13 +65,13 @@
 //
 // Styleguide 2.2
 
-$font-families: (
+$egeo-font-families: (
 	brandon-grotesque: 'Brandon Grotesque',
 	open-sans: 'Open Sans',
 	stratio-iconfont: 'ico_stratio'
 ) !default;
 
-$font-weights: (
+$egeo-font-weights: (
 	bolder: 900,
 	bold: 700,
 	semibold: 500,
@@ -79,7 +79,7 @@ $font-weights: (
 	light: 200,
 ) !default;
 
-$font-sizes: (
+$egeo-font-sizes: (
 	xgiant: 4rem,
 	giant: 3rem,
 	xxxlarge: 2.5rem,
@@ -93,7 +93,7 @@ $font-sizes: (
 	xxxsmall: .5rem
 ) !default;
 
-$line-heights: (
+$egeo-line-heights: (
 	double: 2em,
 	normal: 1.5em,
 	stretch: 1.2em,

@@ -1,0 +1,28 @@
+@import 'true';
+@import '../../src/settings/settings.layers';
+@import '../../src/tools/tools.log';
+@import '../../src/tools/tools.layers';
+
+$egeo-layers: (
+	top: 3,
+	base: 0,
+	bottom: -1
+);
+
+@include test-module('tools.layers') {
+	@include test('get-layer [function]') {
+		$test: get-layer(top);
+		$expect: 3;
+
+		@include assert-equal($test, $expect, 'Returns a layer from the $egeo-layers Sass map');
+	}
+
+	@include test('get-layer [function] @default') {
+		$test: get-layer();
+		$expect: 0;
+
+		@include assert-equal($test, $expect, 'Returns the default layer from the $egeo-layers Sass map');
+	}
+}
+
+@include report;

@@ -67,10 +67,8 @@ module.exports = function (grunt) {
                               // inspecting
           outputStyle: 'expanded'   // Minify the Sass as much as possible
         },
-        dist: {
-            files: {
-                '<%= app.dist %>/egeo.ui.base.min.css': '<%= app.src %>/index.scss'
-            }
+        files: {
+            '<%= app.dist %>/egeo.ui.base.min.css': '<%= app.src %>/index.scss'
         }
       },
       dist: {

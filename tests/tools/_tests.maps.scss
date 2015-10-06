@@ -1,0 +1,37 @@
+@import 'true';
+@import '../../src/tools/tools.log';
+@import '../../src/tools/tools.maps';
+
+$test-map: (
+	top: 3,
+	base: 0,
+	bottom: -1
+);
+
+@include test-module('tools.maps') {
+	@include test('bem-modifiers-from-map [mixin]') {
+		@include assert('output a set of modifiers based on a Sass map') {
+			@include input {
+				.test {
+					@include bem-modifiers-from-map($test-map, z-index);			
+				}
+			}
+
+			@include expect {
+				.test--top {
+					z-index: 3;
+				}
+
+				.test--base {
+					z-index: 0;
+				}
+
+				.test--bottom {
+					z-index: -1;
+				}
+			}
+		}
+	}
+}
+
+@include report;

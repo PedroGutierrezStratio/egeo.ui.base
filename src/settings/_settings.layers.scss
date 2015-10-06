@@ -13,7 +13,7 @@
 //
 // | var 										| default 											| desc 																																				|
 // |--------------------------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-// | <div class="u-tx-align-left">$layers</div> | <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of layers. This map is only a set of pairs key/value that represents name/number of deep.</div> |
+// | <div class="u-tx-align-left">$egeo-layers</div> | <span class="tag tag--default">!default</span> 	| <div class="u-tx-align-left">The default Sass map of layers. This map is only a set of pairs key/value that represents name/number of deep.</div> |
 //
 // ### Sass Map $layers
 //
@@ -30,7 +30,7 @@
 //
 // Styleguide 2.5
 
-$layers: {
+$egeo-layers: (
 	back: -10,
 	sub-2: -2,
 	sub-1: -1,
@@ -39,4 +39,4 @@ $layers: {
 	top-2: 2,
 	top-3: 3,
 	ontop: 10
-} !default;
+) !default;

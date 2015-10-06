@@ -1,0 +1,40 @@
+@import 'true';
+@import '../../src/settings/settings.colors';
+@import '../../src/tools/tools.log';
+@import '../../src/tools/tools.colors';
+
+$colors: (
+	c1: #37b5e4, 
+	c2: #000
+);
+
+@include test-module('tools.colors') {
+	@include test('get-color [function]') {
+		$test: get-color(c1);
+		$expect: #37b5e4;
+
+		@include assert-equal($test, $expect, 'Returns the C1 color');
+	}
+
+	@include test('is-coloured [mixin]') {
+		@include assert('output a set of modifiers based on a color Sass map') {
+			@include input {
+				.test {
+					@include is-coloured($colors);			
+				}
+			}
+
+			@include expect {
+				.test--c1 {
+					color: #37b5e4;
+				}
+
+				.test--c2 {
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+@include report;

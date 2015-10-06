@@ -1,29 +1,37 @@
 // tools.layers
 //
-// #### get-layer($layer)
+// ### get-layer($layer)
+// 
+// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
 //
-// Return a value from the Sass map [$layers](section-2.html#section-2.5).
+// Return a value from the Sass map [$egeo-layers](section-2.html#section-2.5).
 //
-// * **$layer** - The key of a pair key/value defined in the Sass map [$layers](section-2.html#section-2.5).
+// * **$layer** - The key of a pair key/value defined in the Sass map [$egeo-layers](section-2.html#section-2.5).
 // 
 // <div class="compatibility">Compatibility untested.</div>
 //
 // Styleguide 3.4
 
-@function get-layer($layer) {
+@function get-layer($layer: base) {
 	$result: 0;
 
-	@if global-variable-exists(layers) {
-		@if map-has-key($layers, $layer) {
-			$result: map-get($layers, $layer);
+	@if global-variable-exists(egeo-layers) {
+		@if type-of($egeo-layers) == 'map' {
+			@if map-has-key($egeo-layers, $layer) {
+				$result: map-get($egeo-layers, $layer);
+			} @else {
+				@if function-exists(log) {
+					@if log('@get-layer::The layer #{layer} not exist in $egeo-layers.') {}
+				}
+			}
 		} @else {
-			@if mixin-exists(log) {
-				@if log('@get-layer::The layer #{layer} not exist in $layers.') {}
+			@if function-exists(log) {
+				@if log('@get-layer::The variable $egeo-layers is not a map.') {}
 			}
 		}
 	} @else {
-		@if mixin-exists(log) {
-			@if log('@get-layer::The Sass map $layers is not defined.') {}
+		@if function-exists(log) {
+			@if log('@get-layer::The Sass map $egeo-layers is not defined.') {}
 		}
 	}
 

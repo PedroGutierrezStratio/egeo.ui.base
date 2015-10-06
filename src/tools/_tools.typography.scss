@@ -4,52 +4,291 @@
 // to work with typographies.
 //
 //
+// ### get-font($font-family: open-sans)
+// 
+// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
+//
+// Return a value from the Sass map [$egeo-font-families](section-2.html#section-2.2).
+//
+// * **$font-family** - The key of a pair key/value defined in the Sass map [$egeo-font-families](section-2.html#section-2.2).
+//
+// Usage
+// ```
+// .test {
+//		font-family: get-font();
+// }
+//
+// .test-2 {
+//		font-family: get-font(brandon-grotesque);
+// }
+// ```
+// This code will generate:
+// ```
+// .test {
+//		font-family: 'Open Sans';
+// }
+//
+// .test-2 {
+//		font-family: 'Brandon Grotesque';
+// }
+// ```
+// 
+// <div class="compatibility">Compatibility untested.</div>
+//
+//
+// ### get-font-size($font-size: medium)
+// 
+// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
+//
+// Return a value from the Sass map [$egeo-font-sizes](section-2.html#section-2.2).
+//
+// * **$font-size** - The key of a pair key/value defined in the Sass map [$egeo-font-sizes](section-2.html#section-2.2).
+//
+// Usage
+// ```
+// .test {
+//		font-size: get-font-size();
+// }
+//
+// .test-2 {
+//		font-size: get-font-size(small);
+// }
+// ```
+// This code will generate:
+// ```
+// .test {
+//		font-size: 1rem;
+// }
+//
+// .test-2 {
+//		font-size: .8rem;
+// }
+// ```
+// 
+// <div class="compatibility">Compatibility untested.</div>
+//
+//
+// ### get-font-weight($font-weight: normal)
+// 
+// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
+//
+// Return a value from the Sass map [$egeo-font-weights](section-2.html#section-2.2).
+//
+// * **$font-weight** - The key of a pair key/value defined in the Sass map [$egeo-font-weights](section-2.html#section-2.2).
+//
+// Usage
+// ```
+// .test {
+//		font-weight: get-font-weight();
+// }
+//
+// .test-2 {
+//		font-weight: get-font-weight(bold);
+// }
+// ```
+// This code will generate:
+// ```
+// .test {
+//		font-weight: 400;
+// }
+//
+// .test-2 {
+//		font-weight: 700;
+// }
+// ```
+// 
+// <div class="compatibility">Compatibility untested.</div>
+//
+//
+// ### get-line-height($line-height: normal)
+// 
+// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
+//
+// Return a value from the Sass map [$egeo-line-heights](section-2.html#section-2.2).
+//
+// * **$line-height** - The key of a pair key/value defined in the Sass map [$egeo-line-heights](section-2.html#section-2.2).
+//
+// Usage
+// ```
+// .test {
+//		line-height: get-line-height();
+// }
+//
+// .test-2 {
+//		line-height: get-line-height(double);
+// }
+// ```
+// This code will generate:
+// ```
+// .test {
+//		line-height: 1em;
+// }
+//
+// .test-2 {
+//		line-height: 2em;
+// }
+// ```
+// 
+// <div class="compatibility">Compatibility untested.</div>
+//
+//
+// ### set-font-families()
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+//
+// Output a set of modifiers based on the $egeo-font-families map
+//
+// Usage
+// ```
+// .test {
+//		@include set-font-families;
+// }
+// ```
+// This code will generate:
+// ```
+//	...
+//
+//	.test--brandon-grotesque {
+//		font-family: "Brandon Grotesque";
+//	}
+//
+//	.test--open-sans {
+//		font-family: "Open Sans";
+//	}
+//
+//	...
+// ```
+// 
+// <div class="compatibility">Compatibility untested.</div>
+//
+//
+// ### set-font-sizes()
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+//
+// Output a set of modifiers based on the $egeo-font-sizes map
+//
+// Usage
+// ```
+// .test {
+//		@include set-font-sizes;
+// }
+// ```
+// This code will generate:
+// ```
+//	...
+//
+//	.test--large {
+//		font-size: 1.2rem;
+//	}
+//
+//	.test--medium {
+//		font-size: 1rem;
+//	}
+//
+//	.test--small {
+//		font-size: 0.8rem;
+//	}
+//
+//	...
+// ```
+// 
+// <div class="compatibility">Compatibility untested.</div>
+//
+//
+// ### set-font-weights()
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+//
+// Output a set of modifiers based on the $egeo-font-weights map
+//
+// Usage
+// ```
+// .test {
+//		@include set-font-weights;
+// }
+// ```
+// This code will generate:
+// ```
+//	...
+//
+//	.test--bold {
+//		font-weight: 700;
+//	}
+//
+//	.test--semibold {
+//		font-weight: 500;
+//	}
+//
+//	.test--normal {
+//		font-weight: 400;
+//	}
+//
+//	...
+// ```
+// 
+// <div class="compatibility">Compatibility untested.</div>
+//
+//
+// ### set-line-heights()
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+//
+// Output a set of modifiers based on the $egeo-line-heights map
+//
+// Usage
+// ```
+// .test {
+//		@include set-line-heights;
+// }
+// ```
+// This code will generate:
+// ```
+//	...
+//
+//	.test--double {
+//		line-height: 2em;
+//	}
+//
+//	.test--normal {
+//		line-height: 1.5em;
+//	}
+//
+//	...
+// ```
+// 
+// <div class="compatibility">Compatibility untested.</div>
+//
 // Styleguide 3.2
 
-@mixin font-families() {
-	@each $key, $value in $font-families {
-		&--#{$key} {
-			font-family: $value;
-		}
-	}
+@mixin set-font-families() {
+	@include bem-modifiers-from-map($egeo-font-families, font-family);
 }
 
-@mixin font-sizes() {
-	@each $key, $value in $font-sizes {
-		&--#{$key} {
-			font-size: $value;
-		}
-	}
+@mixin set-font-sizes() {
+	@include bem-modifiers-from-map($egeo-font-sizes, font-size);
 }
 
-@mixin font-weights() {
-	@each $key, $value in $font-weights {
-		&--#{$key} {
-			font-weight: $value;
-		}
-	}
+@mixin set-font-weights() {
+	@include bem-modifiers-from-map($egeo-font-weights, font-weight);
 }
 
-@mixin line-heights() {
-	@each $key, $value in $line-heights {
-		&--line-height-#{$key} {
-			line-height: $value;
-		}
-	}
+@mixin set-line-heights() {
+	@include bem-modifiers-from-map($egeo-line-heights, line-height);
 }
 
-@function get-font($font-family: bariol) {
-	@return map-get($font-families, $font-family);
+@function get-font($font-family: open-sans) {
+	@return map-get($egeo-font-families, $font-family);
 }
 
 @function get-font-weight($weight: normal) {
-	@return map-get($font-weights, $weight);
+	@return map-get($egeo-font-weights, $weight);
 }
 
 @function get-font-size($size: medium) {
-	@return map-get($font-sizes, $size);
+	@return map-get($egeo-font-sizes, $size);
 }
 
 @function get-line-height($height: normal) {
-	@return map-get($line-heights, $height);
+	@return map-get($egeo-line-heights, $height);
 }

@@ -1,0 +1,57 @@
+// tools.maps
+//
+// ### bem-modifiers-from-map($map, $css-property)
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+//
+// Create a BEM modifier class from the inner class that contains the mixin
+// using the keys of the map passed as parameter as the --name and the
+// values as the value of the $css-property.
+//
+// * **$map** - A Sass map with pairs key/value.
+// * **$css-property** - The name of the CSS property which will change in the modifiers.
+// 
+// Usage
+//
+// ```
+// $my-map: (
+//		large: 1.5rem;
+//		normal: 1rem;
+//		small: .8rem;
+// )
+//
+// .my-class {
+// 		@include bem-modifiers-from-map($my-map, font-size);
+// }
+// ```
+// This sample will generate this CSS code.
+// ```
+// .my-class--large {
+//		font-size: 1.5rem;
+// }
+
+// .my-class--normal {
+//		font-size: 1rem;
+// }
+// .my-class--small {
+//		font-size: .8rem;
+// }
+// ```
+//
+// <div class="compatibility">Compatibility untested.</div>
+//
+// Styleguide 3.5
+
+@mixin bem-modifiers-from-map($map, $css-property) {
+	@if type-of($map) == 'map' {
+		@each $key, $value in $map {
+			&--#{$key} {
+				#{$css-property}: $value;
+			}
+		}
+	} @else {
+		@if function-exists(log) {
+			@if log('@get-layer::The variable $map is not a map.') {}
+		}
+	}
+}
