@@ -3,7 +3,7 @@
 //
 // To do
 //
-// Styleguide 3.3
+// Styleguide 4.3
 
 @if not global-variable-exists(egeo-fontface-src) {
     @include log('The variable $egeo-fontface-src should be defined in _settings.scss. The compilation will assume the root folder as the folder which contains the font folders.', $log-error);

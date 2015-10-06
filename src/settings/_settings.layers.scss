@@ -1,8 +1,8 @@
 // settings.layers
 //
-// In this file are defined the variables related to the use of different layers.
+// In this file are defined the variables related to the use of different layers
 // in the app. When you work in any web project, often it is needed to fight with
-// multiple z-index declaration across different CSS files or in one only big CSS
+// multiple z-index declarations across different CSS files or in one only big CSS
 // with thousands lines of code. This library, working with 
 // [tools.layers](/section-2.html#section-2.4) provides a set of tools to abstract 
 // all this complexity referencing the layer deeps with descriptive names, helping 
@@ -28,7 +28,7 @@
 // | top-3	| 3 		|
 // | ontop	| 10		|
 //
-// Styleguide 1.5
+// Styleguide 2.5
 
 $layers: {
 	back: -10,
