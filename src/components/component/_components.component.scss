@@ -1,0 +1,31 @@
+// Component
+//
+// The component Component is the parent class of all components in
+// the UI Kit
+//
+// ### c-component
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+//
+// Injects the general behavior and properties of the abstract class Component to other
+// components of the UI Kit.
+//
+// Usage
+//
+// ```
+// .test {
+// 		@include c-component;
+// }
+// ```
+// Will product the next result:
+// ```
+// .test {
+// 		box-sizing: border-box;
+// }
+// ```
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.1
+
+@import "rules";

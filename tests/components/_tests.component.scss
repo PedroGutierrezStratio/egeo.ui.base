@@ -1,0 +1,23 @@
+@import 'true';
+@import '../../src/tools/tools.log';
+@import '../../src/components/component/components.component';
+
+@include test-module('components.component') {
+	@include test('component [mixin]') {
+		@include assert('output the general properties and modifiers of a component') {
+			@include input {
+				.test {
+					@include c-component;
+				}
+			}
+
+			@include expect {
+				.test {
+					box-sizing: border-box;
+				}
+			}
+		}
+	}
+}
+
+@include report;
