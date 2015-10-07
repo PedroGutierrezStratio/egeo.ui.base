@@ -1,10 +1,59 @@
 // utils.alignments
 //
-// To do.
+// A set of mixins, functions and classes to work with alignments.
+// These classes are also available using the [non-BEM 
+// namespace](section-1.html).
 //
+// ### %#{$egeo-namespace}u-tx-align-left, .#{$egeo-namespace}u-tx-align-left
+// 
+// <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
+//
+// Set a 'text-align: left;' property.
+//
+// <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
+//
+// ### %#{$egeo-nobem-namespace}u-tx-align-left, .#{$egeo-nobem-namespace}u-tx-align-left
+// 
+// <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
+//
+// Set a 'text-align: left !important;' property.
+//
+// <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
+//
+// ### %#{$egeo-namespace}u-tx-align-right, .#{$egeo-namespace}u-tx-align-right
+// 
+// <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
+//
+// Set a 'text-align: right;' property.
+//
+// <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
+//
+// ### %#{$egeo-nobem-namespace}u-tx-align-right, .#{$egeo-nobem-namespace}u-tx-align-right
+// 
+// <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
+//
+// Set a 'text-align: right !important;' property.
+//
+// <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
 //
 // Styleguide 8.1
 
-.u-tx-align-left {
+.#{$egeo-namespace}u-tx-align-left,
+%#{$egeo-namespace}u-tx-align-left {
 	text-align: left;
+}
+
+.#{$egeo-nobem-namespace}u-tx-align-left,
+%#{$egeo-nobem-namespace}u-tx-align-left {
+	text-align: left !important;
+}
+
+.#{$egeo-namespace}u-tx-align-right,
+%#{$egeo-namespace}u-tx-align-right {
+	text-align: right;
+}
+
+.#{$egeo-nobem-namespace}u-tx-align-right,
+%#{$egeo-nobem-namespace}u-tx-align-right {
+	text-align: right !important;
 }

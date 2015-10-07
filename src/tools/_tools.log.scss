@@ -1,7 +1,5 @@
 // tools.log
 //
-// <span class="tag tag--type">@function</span><span class="tag tag--untested">untested</span>
-//
 // A logger library implemented over the version created by Hugo Giraudel
 // in his article 
 // [Using @error responsibly in Sass](http://www.sitepoint.com/using-error-responsibly-in-sass/)
@@ -25,6 +23,8 @@
 // ## Functions
 //
 // ### log($message, $type: $log-debug) - the function
+//
+// <span class="tag tag--type">@function</span><span class="tag tag--untested">untested</span>
 //
 // The function log launches the directive `@debug`, `@warn` or `@error` depending on
 // the parameter `$type` passed to the function. It detects if the directive
@@ -52,6 +52,8 @@
 // <div class="compatibility">Compatibility untested.</div>
 //
 // ### log($message, $type: $log-debug) - the mixin
+//
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span>
 //
 // Does exactly the same than the function but you can call it
 // like showed in the Usage section.
