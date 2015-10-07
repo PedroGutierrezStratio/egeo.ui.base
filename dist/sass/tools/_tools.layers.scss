@@ -23,17 +23,17 @@
 				$result: map-get($egeo-layers, $layer);
 			} @else {
 				@if function-exists(log) {
-					@if log('@get-layer::The layer #{layer} not exist in $egeo-layers.') {}
+					@if log('@get-layer::The layer #{layer} not exist in $egeo-layers.', $log-warn) {}
 				}
 			}
 		} @else {
 			@if function-exists(log) {
-				@if log('@get-layer::The variable $egeo-layers is not a map.') {}
+				@if log('@get-layer::The variable $egeo-layers is not a map.', $log-warn) {}
 			}
 		}
 	} @else {
 		@if function-exists(log) {
-			@if log('@get-layer::The Sass map $egeo-layers is not defined.') {}
+			@if log('@get-layer::The Sass map $egeo-layers is not defined.', $log-warn) {}
 		}
 	}
 

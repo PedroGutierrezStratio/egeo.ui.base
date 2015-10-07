@@ -53,7 +53,7 @@
 		}
 	} @else {
 		@if function-exists(log) {
-			@if log('@get-layer::The variable $map is not a map.') {}
+			@if log('@get-layer::The variable $map is not a map.', $log-warn) {}
 		}
 	}
 }

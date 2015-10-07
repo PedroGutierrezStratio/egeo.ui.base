@@ -31,12 +31,12 @@
 				} @else if {
 					background-color: $value;
 				} @else {
-					@if log('@is-coloured::The second param #{type} is not a valid value. Only color or background are valid ones.', $log-error) {}
+					@if log('@is-coloured::The second param #{type} is not a valid value. Only color or background are valid ones.', $log-warn) {}
 				}
 			}
 		}
 	} @else {
-		@if log('@is-coloured::The first param is not a valid Sass map.', $log-error) {}
+		@if log('@is-coloured::The first param is not a valid Sass map.', $log-warn) {}
 	}
 }
 
@@ -49,17 +49,17 @@
 				$result: map-get($egeo-colors, $color);
 			} @else {
 				@if function-exists(log) {
-					@if log('@get-color::The color #{color} not exist in $egeo-colors.', $log-error) {}
+					@if log('@get-color::The color #{color} not exist in $egeo-colors.', $log-warn) {}
 				}
 			}
 		} @else {
 			@if function-exists(log) {
-				@if log('@get-color::The $egeo-colors variable is not a Sass map.', $log-error) {}
+				@if log('@get-color::The $egeo-colors variable is not a Sass map.', $log-warn) {}
 			}
 		}
 	} @else {
 		@if function-exists(log) {
-			@if log('@get-color::The Sass map $egeo-colors is not defined.', $log-error) {}
+			@if log('@get-color::The Sass map $egeo-colors is not defined.', $log-warn) {}
 		}
 	}
 
