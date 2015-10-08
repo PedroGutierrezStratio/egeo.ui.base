@@ -1,7 +1,9 @@
 // Component
 //
 // The component Component is the parent class of all components in
-// the UI Kit
+// the UI Kit. It is an abstrac class that it means that it doesn't
+// exist as a CSS class itself but as a mixin that can be inherited
+// in any component.
 //
 // ### c-component
 // 

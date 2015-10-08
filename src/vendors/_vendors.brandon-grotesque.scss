@@ -4,10 +4,17 @@
 //
 // <div class="compatibility">This vendor uses @font-face. Check the compatibility [here](section-2.html#section-2.4).</div>
 //
+// ## Dependencies
+//
+// * [settings](section-2.html): This library uses the $egeo-fontface-src variable.
+// * [tools.log](section-3.html#section-3.3): This library uses the logger tool to show debug info.
+//
 // Styleguide 4.2
 
 @if not global-variable-exists(egeo-fontface-src) {
-    @include log('The variable $egeo-fontface-src should be defined in _settings.scss. The compilation will assume the root folder as the folder which contains the font folders.', $log-error);
+    @if mixin-exists(egeo-log) {
+        @include egeo-log('The variable $egeo-fontface-src should be defined in _settings.scss. The compilation will assume the root folder as the folder which contains the font folders.', $egeo-log-error);    
+    }
 }
 
 /* Regular */

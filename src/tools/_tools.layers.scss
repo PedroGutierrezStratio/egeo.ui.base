@@ -2,7 +2,7 @@
 //
 // A set of functions and mixins to work with layers (z-index).
 //
-// ### get-layer($layer)
+// ### egeo-get-layer($layer)
 // 
 // <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
 //
@@ -12,9 +12,13 @@
 // 
 // <div class="compatibility">Compatibility untested.</div>
 //
+// ## Dependencies
+//
+// * [tools.log](section-3.html#section-3.3): This library uses the logger tool to show debug info.
+//
 // Styleguide 3.4
 
-@function get-layer($layer: base) {
+@function egeo-get-layer($layer: base) {
 	$result: 0;
 
 	@if global-variable-exists(egeo-layers) {
@@ -22,18 +26,18 @@
 			@if map-has-key($egeo-layers, $layer) {
 				$result: map-get($egeo-layers, $layer);
 			} @else {
-				@if function-exists(log) {
-					@if log('@get-layer::The layer #{layer} not exist in $egeo-layers.', $log-warn) {}
+				@if function-exists(egeo-log) {
+					@if egeo-log('@egeo-get-layer::The layer #{layer} not exist in $egeo-layers.', $egeo-log-warn) {}
 				}
 			}
 		} @else {
-			@if function-exists(log) {
-				@if log('@get-layer::The variable $egeo-layers is not a map.', $log-warn) {}
+			@if function-exists(egeo-log) {
+				@if egeo-log('@egeo-get-layer::The variable $egeo-layers is not a map.', $egeo-log-warn) {}
 			}
 		}
 	} @else {
-		@if function-exists(log) {
-			@if log('@get-layer::The Sass map $egeo-layers is not defined.', $log-warn) {}
+		@if function-exists(egeo-log) {
+			@if egeo-log('@egeo-get-layer::The Sass map $egeo-layers is not defined.', $egeo-log-warn) {}
 		}
 	}
 

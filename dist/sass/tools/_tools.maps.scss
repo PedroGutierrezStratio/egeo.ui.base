@@ -42,6 +42,10 @@
 //
 // <div class="compatibility">Compatibility untested.</div>
 //
+// ## Dependencies
+//
+// * [tools.log](section-3.html#section-3.3): This library uses the logger tool to show debug info.
+//
 // Styleguide 3.5
 
 @mixin bem-modifiers-from-map($map, $css-property) {
@@ -52,8 +56,8 @@
 			}
 		}
 	} @else {
-		@if function-exists(log) {
-			@if log('@get-layer::The variable $map is not a map.', $log-warn) {}
+		@if function-exists(egeo-log) {
+			@if egeo-log('@get-layer::The variable $map is not a map.', $egeo-log-warn) {}
 		}
 	}
 }
