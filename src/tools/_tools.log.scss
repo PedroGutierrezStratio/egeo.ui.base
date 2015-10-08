@@ -30,7 +30,7 @@
 // the parameter `$type` passed to the function. It detects if the directive
 // @error is supported (Sass 3.3+) and provides an alternative for lower versions.
 //
-// | parameters										| <div class="st-u-nowrap">default value</div> 	| desc 																																																|
+// | parameters										| <div class="egeo-u-nowrap">default value</div> 	| desc 																																																|
 // |------------------------------------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 // | <div class="u-tx-align-left">$message</div> 	| No 				| <div class="u-tx-align-left">The message we want to show in the console.</div> 																													|
 // | <div class="u-tx-align-left">$type</div> 		| $log-debug		| <div class="u-tx-align-left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$log-debug`, `@log-warn` or `@log-error`.</div> |
@@ -58,7 +58,7 @@
 // Does exactly the same than the function but you can call it
 // like showed in the Usage section.
 //
-// | parameters										| <div class="st-u-nowrap">default value</div> 	| desc 																																																|
+// | parameters										| <div class="egeo-u-nowrap">default value</div> 	| desc 																																																|
 // |------------------------------------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 // | <div class="u-tx-align-left">$message</div> 	| No 				| <div class="u-tx-align-left">The message we want to show in the console.</div> 																													|
 // | <div class="u-tx-align-left">$type</div> 		| $log-debug		| <div class="u-tx-align-left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$log-debug`, `@log-warn` or `@log-error`.</div> |

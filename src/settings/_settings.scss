@@ -9,8 +9,8 @@
 //
 // | var 														| default 											| value				| desc 																																									|
 // |------------------------------------------------------------|---------------------------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-// | <div class="u-tx-align-left">$egeo-namespace</div> 		| <span class="tag tag--default">!default</span> 	| 'st-'				| <div class="u-tx-align-left">A prefix included in all classes created by the UI Kit.</div> 																			|
-// | <div class="u-tx-align-left">$egeo-nobem-namespace</div> 	| <span class="tag tag--default">!default</span> 	| 'st-nobem-'		| <div class="u-tx-align-left">A prefix included in all classes created by the UI Kit to be used in projects which are not using BEM like naming methodology.</div> 	|
+// | <div class="u-tx-align-left">$egeo-namespace</div> 		| <span class="tag tag--default">!default</span> 	| 'egeo-'				| <div class="u-tx-align-left">A prefix included in all classes created by the UI Kit.</div> 																			|
+// | <div class="u-tx-align-left">$egeo-nobem-namespace</div> 	| <span class="tag tag--default">!default</span> 	| 'egeo-nobem-'		| <div class="u-tx-align-left">A prefix included in all classes created by the UI Kit to be used in projects which are not using BEM like naming methodology.</div> 	|
 // | <div class="u-tx-align-left">$egeo-fontface-src</div> 		| <span class="tag tag--default">!default</span> 	| 'assets/fonts'	| <div class="u-tx-align-left">A base url from which the @font-face directive will seek the font folders.</div> 	|
 // 
 // ### Why a UI Kit namespace?
@@ -44,6 +44,6 @@
 //
 // Styleguide 2
 
-$egeo-namespace: 'st-' !default;
+$egeo-namespace: 'egeo-' !default;
 $egeo-nobem-namespace: $egeo-namespace + '-nobem-' !default;
 $egeo-fontface-src: 'assets/fonts' !default;
