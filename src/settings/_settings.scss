@@ -9,9 +9,10 @@
 //
 // | var 														| default 											| value				| desc 																																									|
 // |------------------------------------------------------------|---------------------------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-// | <div class="u-tx-align-left">$egeo-namespace</div> 		| <span class="tag tag--default">!default</span> 	| 'egeo-'				| <div class="u-tx-align-left">A prefix included in all classes created by the UI Kit.</div> 																			|
+// | <div class="u-tx-align-left">$egeo-namespace</div> 		| <span class="tag tag--default">!default</span> 	| 'egeo-'			| <div class="u-tx-align-left">A prefix included in all classes created by the UI Kit.</div> 																			|
 // | <div class="u-tx-align-left">$egeo-nobem-namespace</div> 	| <span class="tag tag--default">!default</span> 	| 'egeo-nobem-'		| <div class="u-tx-align-left">A prefix included in all classes created by the UI Kit to be used in projects which are not using BEM like naming methodology.</div> 	|
-// | <div class="u-tx-align-left">$egeo-fontface-src</div> 		| <span class="tag tag--default">!default</span> 	| 'assets/fonts'	| <div class="u-tx-align-left">A base url from which the @font-face directive will seek the font folders.</div> 	|
+// | <div class="u-tx-align-left">$egeo-fontface-src</div>      | <span class="tag tag--default">!default</span>    | 'assets/fonts'    | <div class="u-tx-align-left">A base url from which the @font-face directive will seek the font folders.</div>                                                         |
+// | <div class="u-tx-align-left">$egeo-silent-classes</div>    | <span class="tag tag--default">!default</span> 	| 'false'           | <div class="u-tx-align-left">Active/deactivate the use of silent classes (view en explanation about silent classes below).</div> 	                                    |
 // 
 // ### Why a UI Kit namespace?
 //
@@ -42,8 +43,31 @@
 // For that, some classes and placeholders in the framework uses the non-BEM namespace to
 // ensure that the `!important` flag is used and they can overwrite any class in the project.
 //
+// ### Silent Classes
+//
+// It is possible that, in any cases, you want to use some of the Egeo features
+// but you don't want to import all the classes generated in your final CSS due to
+// obvious performance reasons. If not used, shouldn't appear.
+//
+// All CSS classes in the Egeo UI Kit even in the Base Framework, are generated
+// throughout mixins. This means that we can enable/disable the generation of the
+// CSS class and import only the mixins to our code or import only the CSS classes
+// we really need to use. This technique is called *Silent Classes*.
+//
+// By default, Egeo considers that you want to generate all CSS classes you import so
+// the default value of `$egeo-silent-classes` is *false*. If you set it as *true*,
+// by default, the system will only provide you the mixins and you have to set manually,
+// class by class, if you want to generate the CSS class or not.
+//
+// To do it, all Egeo components include a variable called like the component that is
+// a boolean. For example, the Button component that has the mixin `egeo-c-button`
+// includes a variable called `$egeo-c-button` to indicate if Egeo should generate
+// the CSS class or not. By default, this variable will have the value of 
+// `$egeo-silent-classes`.
+//
 // Styleguide 2
 
 $egeo-namespace: 'egeo-' !default;
 $egeo-nobem-namespace: $egeo-namespace + '-nobem-' !default;
 $egeo-fontface-src: 'assets/fonts' !default;
+$egeo-silent-classes: false !default;

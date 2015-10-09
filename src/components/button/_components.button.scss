@@ -1,82 +1,134 @@
-// Component
+// Button
 //
-// The component Button is supported in `<a>`, `<input>`, `<button>` and `<span>` tags.
+// The component Button is officially supported in `<a>`, `<input>`, `<button>` and `<span>` tags.
 //
-// ### c-button
+// .egeo-c-button                           - Button without type
+// .egeo-c-button--call-to-action-1         - Button call-to-action-1
+// .egeo-c-button--call-to-action-1:hover   - Button call-to-action-1:hover
+// .egeo-c-button--call-to-action-2         - Button call-to-action-2
+// .egeo-c-button--call-to-action-2:hover   - Button call-to-action-2:hover
+// .egeo-c-button--call-to-action-3         - Button call-to-action-3
+// .egeo-c-button--call-to-action-3:hover   - Button call-to-action-3:hover
+// .egeo-c-button--call-to-action-4         - Button call-to-action-4
+// .egeo-c-button--call-to-action-4:hover   - Button call-to-action-4:hover
+// .egeo-c-button--danger                   - Button danger
+// .egeo-c-button--danger:hover             - Button danger:hover
+//
+// ### egeo-c-button-modifier
 // 
 // <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
 //
-// Injects the general behavior and properties of the abstract class Component to other
-// components of the UI Kit.
+// Creates a new modifier which is a type of button with the properties passed as parameters.
 //
 // Usage
 //
 // ```
 // .test {
-// 		@include c-component;
+//      @include egeo-c-button-modifier('warning', 
+//                                       orange, 
+//                                       1px solid blue, 
+//                                       white,
+//                                       red, 
+//                                       1px solid white, 
+//                                       white
+//                                       );
 // }
 // ```
 // Will product the next result:
 // ```
-// .test {
-// 		box-sizing: border-box;
+// .test--warning {
+// 		background: orange;
+//      border: 1px solid blue;
+//      color: white;
+// }
+//
+// .test--warning:hover {
+//      background: red;
+//      border: 1px solid white;
+//      color: white;
 // }
 // ```
 //
-// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+// ### egeo-c-button
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
+//
+// Internally used to create the Egeo buttons in an extensible way.
+//
+// ## How to extend the button
+//```
+//    .#{$egeo-namespace}c-button {
+//        @include egeo-c-button;
+//
+//        // your code here
+//
+//        // If you want to use the modifier constructor
+//        @include egeo-c-button-modifier('name-of-you-modifier',
+//                                    #000, // Background value
+//                                    1px solid #000, // Border value
+//                                    #000, // Color value
+//                                    #000, // Background value on hover
+//                                    1px solid #000, // Border value on hover
+//                                    #000, // Color value on hover
+//                                    );
+//    }
+// ```
+//
+// ## How to create a new button inheriting from button
+//```
+//    .my-button {
+//        @include egeo-c-button;
+//
+//        // your code here
+//
+//        // If you want to use the modifier constructor
+//        @include egeo-c-button-modifier('name-of-you-modifier',
+//                                    #000, // Background value
+//                                    1px solid #000, // Border value
+//                                    #000, // Color value
+//                                    #000, // Background value on hover
+//                                    1px solid #000, // Border value on hover
+//                                    #000, // Color value on hover
+//                                    );
+//    }
+// ```
+//
+// <div class="compatibility">Compatibility untested</div>
+//
+// ## Variables exposed to theming
+//  
+// | Variable                                                | Default value                    |
+// | ------------------------------------------------------- | ---------------------------------|
+// | $egeo-c-button                                          | `true`                           |
+// | $egeo-c-button---height                                 | `40px`                           |
+// | $egeo-c-button---min-width                              | `180px`                          |
+// | $egeo-c-button---padding                                | `0 20px`                         |
+// | $egeo-c-button---text-align                             | `center`                         |
+// | $egeo-c-button---text-transform                         | `uppercase`                      |
+// | $egeo-c-button--call-to-action-1---background           | `egeo-get-color(c1)`             |
+// | $egeo-c-button--call-to-action-1---color                | `egeo-get-color(g0)`             |
+// | $egeo-c-button--call-to-action-1--hover---background    | `egeo-get-color(c1b)`            |
+// | $egeo-c-button--call-to-action-1--hover---color         | `egeo-get-color(g0)`             |
+// | $egeo-c-button--call-to-action-2---background           | `egeo-get-color(c2)`             |
+// | $egeo-c-button--call-to-action-2---color                | `egeo-get-color(g0)`             |
+// | $egeo-c-button--call-to-action-2--hover---background    | `egeo-get-color(c2b)`            |
+// | $egeo-c-button--call-to-action-2--hover---color         | `egeo-get-color(g0)`             |
+// | $egeo-c-button--call-to-action-3---background           | `egeo-get-color(c3)`             |
+// | $egeo-c-button--call-to-action-3---color                | `egeo-get-color(g0)`             |
+// | $egeo-c-button--call-to-action-3--hover---background    | `egeo-get-color(c3b)`            |
+// | $egeo-c-button--call-to-action-3--hover---color         | `egeo-get-color(g0)`             |
+// | $egeo-c-button--call-to-action-4---background           | `egeo-get-color(g0)`             |
+// | $egeo-c-button--call-to-action-4---border               | `2px solid egeo-get-color(g3)`   |
+// | $egeo-c-button--call-to-action-4---color                | `egeo-get-color(g4)`             |
+// | $egeo-c-button--call-to-action-4--hover---background    | `egeo-get-color(g0)`             |
+// | $egeo-c-button--call-to-action-4--hover---border        | `2px solid egeo-get-color(g4)`   |
+// | $egeo-c-button--call-to-action-4--hover---color         | `egeo-get-color(g5)`             |
+// 
+// ## Dependencies
+//  
+// * [c-component](section-7.html#section-7.1)
 //
 // Styleguide 7.1
 
-/*doc
----
-title: c-button
-name: c-button
-category: components
----
-
-The button component creates a button that can be customized.
-
-```html_example
- <button class="c-button c-button--call-to-action-1"></button>
- <button class="c-button c-button--call-to-action-2"></button>
- <button class="c-button c-button--call-to-action-3"></button>
- <button class="c-button c-button--call-to-action-4"></button>
- <button class="c-button c-button--call-to-action-1 c-button--to-right"></button>
-```
-
-## Variables exposed to theming
-
-Variable                                     	 	| Default value
---------------------------------------------------- | -----------------
-$c-button---height             						| `40px`
-$c-button---min-width              					| `180px`
-$c-button---padding              					| `0 20px`
-$c-button---text-align              				| `center`
-$c-button---text-transform              			| `uppercase`
-$c-button--call-to-action-1---background            | `egeo-get-color(c1)`
-$c-button--call-to-action-1---color              	| `egeo-get-color(g0)`
-$c-button--call-to-action-1--hover---background     | `egeo-get-color(c1b)`
-$c-button--call-to-action-1--hover---color          | `egeo-get-color(g0)`
-$c-button--call-to-action-2---background            | `egeo-get-color(c2)`
-$c-button--call-to-action-2---color              	| `egeo-get-color(g0)`
-$c-button--call-to-action-2--hover---background     | `egeo-get-color(c2b)`
-$c-button--call-to-action-2--hover---color          | `egeo-get-color(g0)`
-$c-button--call-to-action-3---background            | `egeo-get-color(c3)`
-$c-button--call-to-action-3---color              	| `egeo-get-color(g0)`
-$c-button--call-to-action-3--hover---background     | `egeo-get-color(c3b)`
-$c-button--call-to-action-3--hover---color          | `egeo-get-color(g0)`
-$c-button--call-to-action-4---background   			| `egeo-get-color(g0)`
-$c-button--call-to-action-4---border   				| `2px solid egeo-get-color(g3)`
-$c-button--call-to-action-4---color   				| `egeo-get-color(g4)`
-$c-button--call-to-action-4--hover---background   	| `egeo-get-color(g0)`
-$c-button--call-to-action-4--hover---border   		| `2px solid egeo-get-color(g4)`
-$c-button--call-to-action-4--hover---color   		| `egeo-get-color(g5)`
-
-## Dependencies
-
-[c-component]()
-
-*/
-
-@import "vars";
-@import "rules";
+@import 'vars';
+@import 'rules';

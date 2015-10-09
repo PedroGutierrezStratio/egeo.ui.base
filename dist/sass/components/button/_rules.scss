@@ -1,83 +1,111 @@
-@mixin c-button {
-	@include c-component;
+@mixin egeo-c-button-modifier($name, $background, $border, $color, $background-hover, $border-hover, $color-hover) {
+	@if $name {
+		&--#{$name} {
+			@if $background {
+				background: $background;
+			}
 
-	border: none;
-	cursor: pointer;
-	display: inline-block;
-	height: $c-button---height;
-	min-width: $c-button---min-width;
-	padding: $c-button---padding;
-	position: relative;
-	text-align: $c-button---text-align;
-	text-transform: $c-button---text-transform;
+			@if $border {
+				border: $border;
+			}
 
-	@include item-to-right;
+			@if $color {
+				color: $color;
+			}
 
-	&--call-to-action-1 {
-		background: $c-button--call-to-action-1---background;
-		border: $c-button--call-to-action-1---border;
-		color: $c-button--call-to-action-1---color;
+			&:hover {
+				@if $background-hover {
+					background: $background-hover;
+				}
 
-		&:hover {
-			background: $c-button--call-to-action-1--hover---background;
-			border: $c-button--call-to-action-1--hover---border;
-			color: $c-button--call-to-action-1--hover---color;
+				@if $border-hover {
+					border: $border-hover;
+				}
+
+				@if $color-hover {
+					color: $color-hover;
+				}
+
+			}
+		}		
+	} @else {
+		@if function-exist(egeo-log) {
+			@if egeo-log('@egeo-c-button-modifier::$name null is not allowed, the modifier will be not generated.', $log-warn) {}
 		}
-	}
-
-	&--call-to-action-2 {
-		background: $c-button--call-to-action-2---background;
-		border: $c-button--call-to-action-2---border;
-		color: $c-button--call-to-action-2---color;
-
-		&:hover {
-			background: $c-button--call-to-action-2--hover---background;
-			border: $c-button--call-to-action-2--hover---border;
-			color: $c-button--call-to-action-2--hover---color;
-		}
-	}
-
-	&--call-to-action-3 {
-		background: $c-button--call-to-action-3---background;
-		border: $c-button--call-to-action-3---border;
-		color: $c-button--call-to-action-3---color;
-
-		&:hover {
-			background: $c-button--call-to-action-3--hover---background;
-			border: $c-button--call-to-action-3--hover---border;
-			color: $c-button--call-to-action-3--hover---color;
-		}
-	}
-
-	&--call-to-action-4 {
-		background: $c-button--call-to-action-4---background;
-		border: $c-button--call-to-action-4---border;
-		color: $c-button--call-to-action-4---color;
-
-		&:hover {
-			background: $c-button--call-to-action-4--hover---background;
-			border: $c-button--call-to-action-4--hover---border;
-			color: $c-button--call-to-action-4--hover---color;
-		}
-	}
-
-	&--danger {
-		background: $c-button--danger---background;
-		border: $c-button--danger---border;
-		color: $c-button--danger---color;
-
-		&:hover {
-			background: $c-button--danger--hover---background;
-			border: $c-button--danger--hover---border;
-			color: $c-button--danger--hover---color;
-		}
-	}
-
-	.c-icon {
-		margin: $c-button__c-icon---margin;
 	}
 }
 
-.c-button {
-	@include c-button;
+@mixin egeo-c-button {
+	@include egeo-c-component;
+
+	border: 0;
+	cursor: pointer;
+	display: inline-block;
+	height: $egeo-c-button---height;
+	min-width: $egeo-c-button---min-width;
+	padding: $egeo-c-button---padding;
+	position: relative;
+	text-align: $egeo-c-button---text-align;
+	text-transform: $egeo-c-button---text-transform;
+
+	@include egeo-c-button-modifier('call-to-action-1', 
+									$egeo-c-button--call-to-action-1---background, 
+									$egeo-c-button--call-to-action-1---border, 
+									$egeo-c-button--call-to-action-1---color,
+									$egeo-c-button--call-to-action-1--hover---background, 
+									$egeo-c-button--call-to-action-1--hover---border, 
+									$egeo-c-button--call-to-action-1--hover---color
+									);
+
+	@include egeo-c-button-modifier('call-to-action-2',
+									$egeo-c-button--call-to-action-2---background, 
+									$egeo-c-button--call-to-action-2---border, 
+									$egeo-c-button--call-to-action-2---color,
+									$egeo-c-button--call-to-action-2--hover---background, 
+									$egeo-c-button--call-to-action-2--hover---border, 
+									$egeo-c-button--call-to-action-2--hover---color
+									);
+
+	@include egeo-c-button-modifier('call-to-action-3',
+									$egeo-c-button--call-to-action-3---background, 
+									$egeo-c-button--call-to-action-3---border, 
+									$egeo-c-button--call-to-action-3---color,
+									$egeo-c-button--call-to-action-3--hover---background, 
+									$egeo-c-button--call-to-action-3--hover---border, 
+									$egeo-c-button--call-to-action-3--hover---color
+									);
+
+	@include egeo-c-button-modifier('call-to-action-4',
+									$egeo-c-button--call-to-action-4---background, 
+									$egeo-c-button--call-to-action-4---border, 
+									$egeo-c-button--call-to-action-4---color,
+									$egeo-c-button--call-to-action-4--hover---background, 
+									$egeo-c-button--call-to-action-4--hover---border, 
+									$egeo-c-button--call-to-action-4--hover---color
+									);
+
+	@include egeo-c-button-modifier('danger',
+									$egeo-c-button--danger---background, 
+									$egeo-c-button--danger---border, 
+									$egeo-c-button--danger---color,
+									$egeo-c-button--danger--hover---background, 
+									$egeo-c-button--danger--hover---border, 
+									$egeo-c-button--danger--hover---color
+									);
+
+	@if variable-exists(egeo-c-icon) {
+		@if $egeo-c-icon {
+			.#{$egeo-namespace}c-icon {
+				margin: $egeo-c-button__c-icon---margin;
+			}
+		}
+	}
+}
+
+@if variable-exists(egeo-c-button) {
+	@if $egeo-c-button {
+		.#{$egeo-namespace}c-button {
+			@include egeo-c-button;
+		}
+	}
 }
