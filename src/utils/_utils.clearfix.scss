@@ -3,7 +3,7 @@
 // Originaly written by [Harry Roberts](https://twitter.com/csswizardry) for
 // [inuitcss](https://github.com/inuitcss).
 //
-// ### %#{$egeo-namespace}u-tx-align-left
+// ### %#{$egeo-namespace}egeo-u-tx-align-left
 // 
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
@@ -34,8 +34,8 @@
 .#{$egeo-namespace}u-clearfix,
 %#{$egeo-namespace}u-clearfix {
     &:after {
+        clear: both;
         content: "";
         display: table;
-        clear: both;
     }
 }

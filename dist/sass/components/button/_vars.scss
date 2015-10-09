@@ -1,5 +1,5 @@
 @if global-variable-exists(egeo-silent-classes) {
-    $egeo-c-button: $egeo-silent-classes !default;    
+    $egeo-c-button: not $egeo-silent-classes !default;    
 } @else {
     $egeo-c-button: true !default;
 }
@@ -10,39 +10,39 @@ $egeo-c-button---padding: 0 20px !default;
 $egeo-c-button---text-align: center !default;
 $egeo-c-button---text-transform: uppercase !default;
  
-$egeo-c-button--call-to-action-1---background: egeo-get-color(c1) !default;
+$egeo-c-button--call-to-action-1---background: egeo-get-color(a1) !default;
 $egeo-c-button--call-to-action-1---border: 0 !default;
-$egeo-c-button--call-to-action-1---color: egeo-get-color(g0) !default;
-$egeo-c-button--call-to-action-1--hover---background: egeo-get-color(c1b) !default;
+$egeo-c-button--call-to-action-1---color: egeo-get-color(n0) !default;
+$egeo-c-button--call-to-action-1--hover---background: egeo-get-color(a1_dark) !default;
 $egeo-c-button--call-to-action-1--hover---border: 0 !default;
-$egeo-c-button--call-to-action-1--hover---color: egeo-get-color(g0) !default;
+$egeo-c-button--call-to-action-1--hover---color: egeo-get-color(n0) !default;
 
-$egeo-c-button--call-to-action-2---background: egeo-get-color(c2) !default;
+$egeo-c-button--call-to-action-2---background: egeo-get-color(a2) !default;
 $egeo-c-button--call-to-action-2---border: 0 !default;
-$egeo-c-button--call-to-action-2---color: egeo-get-color(g0) !default;
-$egeo-c-button--call-to-action-2--hover---background: egeo-get-color(c2b) !default;
+$egeo-c-button--call-to-action-2---color: egeo-get-color(n0) !default;
+$egeo-c-button--call-to-action-2--hover---background: egeo-get-color(a2_dark) !default;
 $egeo-c-button--call-to-action-2--hover---border: 0 !default;
-$egeo-c-button--call-to-action-2--hover---color: egeo-get-color(g0) !default;
+$egeo-c-button--call-to-action-2--hover---color: egeo-get-color(n0) !default;
 
-$egeo-c-button--call-to-action-3---background: egeo-get-color(c3) !default;
+$egeo-c-button--call-to-action-3---background: egeo-get-color(a3) !default;
 $egeo-c-button--call-to-action-3---border: 0 !default;
-$egeo-c-button--call-to-action-3---color: egeo-get-color(g0) !default;
-$egeo-c-button--call-to-action-3--hover---background: egeo-get-color(c3b) !default;
+$egeo-c-button--call-to-action-3---color: egeo-get-color(n0) !default;
+$egeo-c-button--call-to-action-3--hover---background: egeo-get-color(a3_dark) !default;
 $egeo-c-button--call-to-action-3--hover---border: 0 !default;
-$egeo-c-button--call-to-action-3--hover---color: egeo-get-color(g0) !default;
+$egeo-c-button--call-to-action-3--hover---color: egeo-get-color(n0) !default;
 
-$egeo-c-button--call-to-action-4---background: egeo-get-color(g0) !default;
-$egeo-c-button--call-to-action-4---border: 2px solid egeo-get-color(g3) !default;
-$egeo-c-button--call-to-action-4---color: egeo-get-color(g4) !default;
-$egeo-c-button--call-to-action-4--hover---background: egeo-get-color(g0) !default;
-$egeo-c-button--call-to-action-4--hover---border: 2px solid egeo-get-color(g4) !default;
-$egeo-c-button--call-to-action-4--hover---color: egeo-get-color(g5) !default;
+$egeo-c-button--call-to-action-4---background: egeo-get-color(n0) !default;
+$egeo-c-button--call-to-action-4---border: 2px solid egeo-get-color(n3) !default;
+$egeo-c-button--call-to-action-4---color: egeo-get-color(n4) !default;
+$egeo-c-button--call-to-action-4--hover---background: egeo-get-color(n0) !default;
+$egeo-c-button--call-to-action-4--hover---border: 2px solid egeo-get-color(n4) !default;
+$egeo-c-button--call-to-action-4--hover---color: egeo-get-color(n5) !default;
 
-$egeo-c-button--danger---background: egeo-get-color(e3) !default;
+$egeo-c-button--danger---background: egeo-get-color(s3) !default;
 $egeo-c-button--danger---border: 0 !default;
-$egeo-c-button--danger---color: egeo-get-color(g0) !default;
-$egeo-c-button--danger--hover---background: egeo-get-color(e3b) !default;
+$egeo-c-button--danger---color: egeo-get-color(n0) !default;
+$egeo-c-button--danger--hover---background: egeo-get-color(s3_dark) !default;
 $egeo-c-button--danger--hover---border: 0 !default;
-$egeo-c-button--danger--hover---color: egeo-get-color(g0) !default;
+$egeo-c-button--danger--hover---color: egeo-get-color(n0) !default;
 
 $egeo-c-button__c-icon---margin: 0 .5em 0 0 !default;

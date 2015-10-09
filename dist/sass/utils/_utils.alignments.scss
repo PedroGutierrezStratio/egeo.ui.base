@@ -4,7 +4,7 @@
 // These classes are also available using the [non-BEM 
 // namespace](section-1.html).
 //
-// ### %#{$egeo-namespace}u-tx-align-left, .#{$egeo-namespace}u-tx-align-left
+// ### %#{$egeo-namespace}egeo-u-tx-align-left, .#{$egeo-namespace}egeo-u-tx-align-left
 // 
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
@@ -12,7 +12,7 @@
 //
 // <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
 //
-// ### %#{$egeo-nobem-namespace}u-tx-align-left, .#{$egeo-nobem-namespace}u-tx-align-left
+// ### %#{$egeo-nobem-namespace}egeo-u-tx-align-left, .#{$egeo-nobem-namespace}egeo-u-tx-align-left
 // 
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
@@ -38,13 +38,13 @@
 //
 // Styleguide 8.1
 
-.#{$egeo-namespace}u-tx-align-left,
-%#{$egeo-namespace}u-tx-align-left {
+.#{$egeo-namespace}egeo-u-tx-align-left,
+%#{$egeo-namespace}egeo-u-tx-align-left {
 	text-align: left;
 }
 
-.#{$egeo-nobem-namespace}u-tx-align-left,
-%#{$egeo-nobem-namespace}u-tx-align-left {
+.#{$egeo-nobem-namespace}egeo-u-tx-align-left,
+%#{$egeo-nobem-namespace}egeo-u-tx-align-left {
 	text-align: left !important;
 }
 
