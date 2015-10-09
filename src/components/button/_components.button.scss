@@ -99,30 +99,30 @@
 //  
 // | Variable                                                                                   | Default value                                                       |
 // | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------|
-// | <span class="egeo-u-tx-alignl-feft">$egeo-c-button</span>                                         | <span class="egeo-u-tx-align-left">`true`</span>                          |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button---height</span>                                | <span class="egeo-u-tx-align-left">`40px`</span>                          |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button---min-width</span>                             | <span class="egeo-u-tx-align-left">`180px`</span>                         |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button---padding</span>                               | <span class="egeo-u-tx-align-left">`0 20px`</span>                        |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button---text-align</span>                            | <span class="egeo-u-tx-align-left">`center`</span>                        |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button---text-transform</span>                        | <span class="egeo-u-tx-align-left">`uppercase`</span>                     |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-1---background</span>          | <span class="egeo-u-tx-align-left">`egeo-get-color(c1)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-1---color</span>               | <span class="egeo-u-tx-align-left">`egeo-get-color(g0)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-1--hover---background</span>   | <span class="egeo-u-tx-align-left">`egeo-get-color(c1b)`</span>           |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-1--hover---color</span>        | <span class="egeo-u-tx-align-left">`egeo-get-color(g0)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-2---background</span>          | <span class="egeo-u-tx-align-left">`egeo-get-color(c2)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-2---color</span>               | <span class="egeo-u-tx-align-left">`egeo-get-color(g0)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-2--hover---background</span>   | <span class="egeo-u-tx-align-left">`egeo-get-color(c2b)`</span>           |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-2--hover---color</span>        | <span class="egeo-u-tx-align-left">`egeo-get-color(g0)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-3---background</span>          | <span class="egeo-u-tx-align-left">`egeo-get-color(c3)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-3---color</span>               | <span class="egeo-u-tx-align-left">`egeo-get-color(g0)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-3--hover---background</span>   | <span class="egeo-u-tx-align-left">`egeo-get-color(c3b)`</span>           |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-3--hover---color</span>        | <span class="egeo-u-tx-align-left">`egeo-get-color(g0)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4---background</span>          | <span class="egeo-u-tx-align-left">`egeo-get-color(g0)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4---border</span>              | <span class="egeo-u-tx-align-left">`2px solid egeo-get-color(g3)`</span>  |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4---color</span>               | <span class="egeo-u-tx-align-left">`egeo-get-color(g4)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4--hover---background</span>   | <span class="egeo-u-tx-align-left">`egeo-get-color(g0)`</span>            |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4--hover---border</span>       | <span class="egeo-u-tx-align-left">`2px solid egeo-get-color(g4)`</span>  |
-// | <span class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4--hover---color</span>        | <span class="egeo-u-tx-align-left">`egeo-get-color(g5)`</span>            |
+// | <div class="egeo-u-tx-align-feft">$egeo-c-button</div>                                         | <div class="egeo-u-tx-align-left">`true`</div>                          |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button---height</div>                                | <div class="egeo-u-tx-align-left">`40px`</div>                          |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button---min-width</div>                             | <div class="egeo-u-tx-align-left">`180px`</div>                         |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button---padding</div>                               | <div class="egeo-u-tx-align-left">`0 20px`</div>                        |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button---text-align</div>                            | <div class="egeo-u-tx-align-left">`center`</div>                        |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button---text-transform</div>                        | <div class="egeo-u-tx-align-left">`uppercase`</div>                     |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-1---background</div>          | <div class="egeo-u-tx-align-left">`egeo-get-color(c1)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-1---color</div>               | <div class="egeo-u-tx-align-left">`egeo-get-color(g0)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-1--hover---background</div>   | <div class="egeo-u-tx-align-left">`egeo-get-color(c1b)`</div>           |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-1--hover---color</div>        | <div class="egeo-u-tx-align-left">`egeo-get-color(g0)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-2---background</div>          | <div class="egeo-u-tx-align-left">`egeo-get-color(c2)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-2---color</div>               | <div class="egeo-u-tx-align-left">`egeo-get-color(g0)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-2--hover---background</div>   | <div class="egeo-u-tx-align-left">`egeo-get-color(c2b)`</div>           |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-2--hover---color</div>        | <div class="egeo-u-tx-align-left">`egeo-get-color(g0)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-3---background</div>          | <div class="egeo-u-tx-align-left">`egeo-get-color(c3)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-3---color</div>               | <div class="egeo-u-tx-align-left">`egeo-get-color(g0)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-3--hover---background</div>   | <div class="egeo-u-tx-align-left">`egeo-get-color(c3b)`</div>           |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-3--hover---color</div>        | <div class="egeo-u-tx-align-left">`egeo-get-color(g0)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4---background</div>          | <div class="egeo-u-tx-align-left">`egeo-get-color(g0)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4---border</div>              | <div class="egeo-u-tx-align-left">`2px solid egeo-get-color(g3)`</div>  |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4---color</div>               | <div class="egeo-u-tx-align-left">`egeo-get-color(g4)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4--hover---background</div>   | <div class="egeo-u-tx-align-left">`egeo-get-color(g0)`</div>            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4--hover---border</div>       | <div class="egeo-u-tx-align-left">`2px solid egeo-get-color(g4)`</div>  |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--call-to-action-4--hover---color</div>        | <div class="egeo-u-tx-align-left">`egeo-get-color(g5)`</div>            |
 // 
 // ## Usage
 //
