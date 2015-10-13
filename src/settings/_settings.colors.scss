@@ -12,44 +12,44 @@
 //
 // ### Sass Map $colors
 //
-// <div class="color-block color-block-c1"><div class="color-block__title">c1: #37b5e4</div></div>
-// <div class="color-block color-block--a1"><div class="color-block__title">a1: #37b5e4</div></div>
-// <div class="color-block color-block--a1_dark"><div class="color-block__title">a1_dark: #2d96bd</div></div>
-// <div class="color-block color-block--a1_light"><div class="color-block__title">a1_light: #3dc9fc</div></div>
-// <div class="color-block color-block--a2"><div class="color-block__title">a2: #b5c1c5</div></div>
-// <div class="color-block color-block--a2_dark"><div class="color-block__title">a2_dark: #919b9e</div></div>
-// <div class="color-block color-block--a2_light"><div class="color-block__title">a2_light: #ccd9de</div></div>
-// <div class="color-block color-block--a3"><div class="color-block__title">a3: #405467</div></div>
-// <div class="color-block color-block--a3_dark"><div class="color-block__title">a3_dark: #283440</div></div>
-// <div class="color-block color-block--a3_light"><div class="color-block__title">a3_light: #4f6880</div></div>
-// <div class="color-block color-block--n0"><div class="color-block__title">n0: #fff</div></div>
-// <div class="color-block color-block--n1"><div class="color-block__title">n1: #fbfbfb</div></div>
-// <div class="color-block color-block--n2"><div class="color-block__title">n2: #f3f3f3</div></div>
-// <div class="color-block color-block--n3"><div class="color-block__title">n3: #e4e4e4</div></div>
-// <div class="color-block color-block--n4"><div class="color-block__title">n4: #cbcbcb</div></div>
-// <div class="color-block color-block--n5"><div class="color-block__title">n5: #b5b5b5</div></div>
-// <div class="color-block color-block--n6"><div class="color-block__title">n6: #999</div></div>
-// <div class="color-block color-block--n7"><div class="color-block__title">n7: #777</div></div>
-// <div class="color-block color-block--n8"><div class="color-block__title">n8: #555</div></div>
-// <div class="color-block color-block--n9"><div class="color-block__title">n9: #242424</div></div>
-// <div class="color-block color-block--n10"><div class="color-block__title">n10: #000</div></div>
-// <div class="color-block color-block--b1"><div class="color-block__title">b1: #172734</div></div>
-// <div class="color-block color-block--b2"><div class="color-block__title">b2: #0f1b27</div></div>
-// <div class="color-block color-block--b3"><div class="color-block__title">b3: #eff2f3</div></div>
-// <div class="color-block color-block--b3_dark"><div class="color-block__title">b3_dark: #e1e4e5</div></div>
-// <div class="color-block color-block--b4"><div class="color-block__title">b4: #fff</div></div>
-// <div class="color-block color-block--s1"><div class="color-block__title">s1: #88b060</div></div>
-// <div class="color-block color-block--s1_dark"><div class="color-block__title">s1_dark: #759653</div></div>
-// <div class="color-block color-block--s1_light"><div class="color-block__title">s1_light: #9ab084</div></div>
-// <div class="color-block color-block--s2"><div class="color-block__title">s2: #ff8900</div></div>
-// <div class="color-block color-block--s2_dark"><div class="color-block__title">s2_dark: #e57a00</div></div>
-// <div class="color-block color-block--s2_light"><div class="color-block__title">s2_light: #ffa033</div></div>
-// <div class="color-block color-block--s3"><div class="color-block__title">s3: #e23b2b</div></div>
-// <div class="color-block color-block--s3_dark"><div class="color-block__title">s3_dark: #c93426</div></div>
-// <div class="color-block color-block--s3_light"><div class="color-block__title">s3_light: #e36459</div></div>
-// <div class="color-block color-block--t1"><div class="color-block__title">t1: #d0c120</div></div>
-// <div class="color-block color-block--t2"><div class="color-block__title">t2: #21d8de</div></div>
-// <div class="color-block color-block--t3"><div class="color-block__title">t3: #bcea3f</div></div>
+// <div class="c-col--3 color-block color-block--c1"><div class="color-block__title">c1: #37b5e4</div></div><!--
+// --><div class="c-col--3 color-block color-block--a1"><div class="color-block__title">a1: #37b5e4</div></div><!--
+// --><div class="c-col--3 color-block color-block--a1_dark"><div class="color-block__title">a1_dark: #2d96bd</div></div><!--
+// --><div class="c-col--3 color-block color-block--a1_light"><div class="color-block__title">a1_light: #3dc9fc</div></div><!--
+// --><div class="c-col--3 color-block color-block--a2"><div class="color-block__title">a2: #b5c1c5</div></div><!--
+// --><div class="c-col--3 color-block color-block--a2_dark"><div class="color-block__title">a2_dark: #919b9e</div></div><!--
+// --><div class="c-col--3 color-block color-block--a2_light"><div class="color-block__title">a2_light: #ccd9de</div></div><!--
+// --><div class="c-col--3 color-block color-block--a3"><div class="color-block__title">a3: #405467</div></div><!--
+// --><div class="c-col--3 color-block color-block--a3_dark"><div class="color-block__title">a3_dark: #283440</div></div><!--
+// --><div class="c-col--3 color-block color-block--a3_light"><div class="color-block__title">a3_light: #4f6880</div></div><!--
+// --><div class="c-col--3 color-block color-block--n0"><div class="color-block__title">n0: #fff</div></div><!--
+// --><div class="c-col--3 color-block color-block--n1"><div class="color-block__title">n1: #fbfbfb</div></div><!--
+// --><div class="c-col--3 color-block color-block--n2"><div class="color-block__title">n2: #f3f3f3</div></div><!--
+// --><div class="c-col--3 color-block color-block--n3"><div class="color-block__title">n3: #e4e4e4</div></div><!--
+// --><div class="c-col--3 color-block color-block--n4"><div class="color-block__title">n4: #cbcbcb</div></div><!--
+// --><div class="c-col--3 color-block color-block--n5"><div class="color-block__title">n5: #b5b5b5</div></div><!--
+// --><div class="c-col--3 color-block color-block--n6"><div class="color-block__title">n6: #999</div></div><!--
+// --><div class="c-col--3 color-block color-block--n7"><div class="color-block__title">n7: #777</div></div><!--
+// --><div class="c-col--3 color-block color-block--n8"><div class="color-block__title">n8: #555</div></div><!--
+// --><div class="c-col--3 color-block color-block--n9"><div class="color-block__title">n9: #242424</div></div><!--
+// --><div class="c-col--3 color-block color-block--n10"><div class="color-block__title">n10: #000</div></div><!--
+// --><div class="c-col--3 color-block color-block--b1"><div class="color-block__title">b1: #172734</div></div><!--
+// --><div class="c-col--3 color-block color-block--b2"><div class="color-block__title">b2: #0f1b27</div></div><!--
+// --><div class="c-col--3 color-block color-block--b3"><div class="color-block__title">b3: #eff2f3</div></div><!--
+// --><div class="c-col--3 color-block color-block--b3_dark"><div class="color-block__title">b3_dark: #e1e4e5</div></div><!--
+// --><div class="c-col--3 color-block color-block--b4"><div class="color-block__title">b4: #fff</div></div><!--
+// --><div class="c-col--3 color-block color-block--s1"><div class="color-block__title">s1: #88b060</div></div><!--
+// --><div class="c-col--3 color-block color-block--s1_dark"><div class="color-block__title">s1_dark: #759653</div></div><!--
+// --><div class="c-col--3 color-block color-block--s1_light"><div class="color-block__title">s1_light: #9ab084</div></div><!--
+// --><div class="c-col--3 color-block color-block--s2"><div class="color-block__title">s2: #ff8900</div></div><!--
+// --><div class="c-col--3 color-block color-block--s2_dark"><div class="color-block__title">s2_dark: #e57a00</div></div><!--
+// --><div class="c-col--3 color-block color-block--s2_light"><div class="color-block__title">s2_light: #ffa033</div></div><!--
+// --><div class="c-col--3 color-block color-block--s3"><div class="color-block__title">s3: #e23b2b</div></div><!--
+// --><div class="c-col--3 color-block color-block--s3_dark"><div class="color-block__title">s3_dark: #c93426</div></div><!--
+// --><div class="c-col--3 color-block color-block--s3_light"><div class="color-block__title">s3_light: #e36459</div></div><!--
+// --><div class="c-col--3 color-block color-block--t1"><div class="color-block__title">t1: #d0c120</div></div><!--
+// --><div class="c-col--3 color-block color-block--t2"><div class="color-block__title">t2: #21d8de</div></div><!--
+// --><div class="c-col--3 color-block color-block--t3"><div class="color-block__title">t3: #bcea3f</div></div>
 //
 // Styleguide 2.1
 
