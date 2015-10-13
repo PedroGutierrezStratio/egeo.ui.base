@@ -26,6 +26,7 @@
 					color: $color-hover;
 				}
 
+				text-decoration: none;
 			}
 		}		
 	} @else {
@@ -48,6 +49,7 @@
 	text-align: $egeo-c-button---text-align;
 	text-transform: $egeo-c-button---text-transform;
 	text-decoration: none;
+	transition: $egeo-c-button---transition;
 
 	@each $button, $properties in $egeo-c-buttons {
 		@include egeo-c-button-modifier($button, 
