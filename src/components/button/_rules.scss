@@ -49,50 +49,16 @@
 	text-transform: $egeo-c-button---text-transform;
 	text-decoration: none;
 
-	@include egeo-c-button-modifier('call-to-action-1', 
-									$egeo-c-button--call-to-action-1---background, 
-									$egeo-c-button--call-to-action-1---border, 
-									$egeo-c-button--call-to-action-1---color,
-									$egeo-c-button--call-to-action-1--hover---background, 
-									$egeo-c-button--call-to-action-1--hover---border, 
-									$egeo-c-button--call-to-action-1--hover---color
-									);
-
-	@include egeo-c-button-modifier('call-to-action-2',
-									$egeo-c-button--call-to-action-2---background, 
-									$egeo-c-button--call-to-action-2---border, 
-									$egeo-c-button--call-to-action-2---color,
-									$egeo-c-button--call-to-action-2--hover---background, 
-									$egeo-c-button--call-to-action-2--hover---border, 
-									$egeo-c-button--call-to-action-2--hover---color
-									);
-
-	@include egeo-c-button-modifier('call-to-action-3',
-									$egeo-c-button--call-to-action-3---background, 
-									$egeo-c-button--call-to-action-3---border, 
-									$egeo-c-button--call-to-action-3---color,
-									$egeo-c-button--call-to-action-3--hover---background, 
-									$egeo-c-button--call-to-action-3--hover---border, 
-									$egeo-c-button--call-to-action-3--hover---color
-									);
-
-	@include egeo-c-button-modifier('call-to-action-4',
-									$egeo-c-button--call-to-action-4---background, 
-									$egeo-c-button--call-to-action-4---border, 
-									$egeo-c-button--call-to-action-4---color,
-									$egeo-c-button--call-to-action-4--hover---background, 
-									$egeo-c-button--call-to-action-4--hover---border, 
-									$egeo-c-button--call-to-action-4--hover---color
-									);
-
-	@include egeo-c-button-modifier('danger',
-									$egeo-c-button--danger---background, 
-									$egeo-c-button--danger---border, 
-									$egeo-c-button--danger---color,
-									$egeo-c-button--danger--hover---background, 
-									$egeo-c-button--danger--hover---border, 
-									$egeo-c-button--danger--hover---color
-									);
+	@each $button, $properties in $egeo-c-buttons {
+		@include egeo-c-button-modifier($button, 
+										map-get($properties, background), 
+										map-get($properties, border), 
+										map-get($properties, color),
+										map-get($properties, background-hover), 
+										map-get($properties, border-hover), 
+										map-get($properties, color-hover)
+										);
+	}
 
 	@if variable-exists(egeo-c-icon) {
 		@if $egeo-c-icon {
