@@ -45,6 +45,7 @@
 	border: 0;
 	cursor: pointer;
 	display: inline-block;
+	font-size: $egeo-c-button---font-size;
 	height: $egeo-c-button---height;
 	min-width: $egeo-c-button---min-width;
 	padding: $egeo-c-button---padding;
@@ -77,6 +78,20 @@
 		@if $egeo-c-icon {
 			.#{$egeo-namespace}c-icon {
 				margin: $egeo-c-button__c-icon---margin;
+			}
+		}
+	}
+
+	&--small {
+		font-size: $egeo-c-button--small---font-size;
+		height: $egeo-c-button--small---height;
+		padding: $egeo-c-button--small---padding;
+
+		@if variable-exists(egeo-c-icon) {
+			@if $egeo-c-icon {
+				.#{$egeo-namespace}c-icon {
+					margin: $egeo-c-button--small__c-icon---margin;
+				}
 			}
 		}
 	}
