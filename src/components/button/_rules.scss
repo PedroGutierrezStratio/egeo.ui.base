@@ -64,6 +64,7 @@
 
 	&:focus {
 		box-shadow: $egeo-c-button--focus---shadow;
+		outline: none;
 	}
 
 	@if map-has-key($egeo-c-buttons, disabled) {
