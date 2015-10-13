@@ -98,7 +98,19 @@
 
 	&--rounded {
 		border-radius: 100%;
-		padding: .5em;		
+		padding: .5em;
+		min-width: $egeo-c-button---height;
+		width: $egeo-c-button---height;
+		padding-left: $egeo-c-button---height * .3;
+		padding-top: $egeo-c-button---height / 4;
+
+		@if variable-exists(egeo-c-icon) {
+			@if $egeo-c-icon {
+				.#{$egeo-namespace}c-icon {
+					margin: 0;
+				}
+			}
+		}
 	}
 }
 
