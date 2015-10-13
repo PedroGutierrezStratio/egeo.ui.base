@@ -4,9 +4,8 @@
 // The `<input>` tag has a particular behavior due to the default values and special
 // implementation dragged from its implementation in the oldest browsers.
 //
-// If you use an `<input>` tag as a button, the result will be a button with the size
-// equal to min-width + padding property, always. If the text is wider than this sum,
-// then it will be truncated.
+// `<input>` tag can be perfectly used but keep in mind that the input type doesn't allow
+// to use an icon inside the text (that is place in the value attribute).
 //
 // ### egeo-c-button-modifier
 // 
@@ -157,21 +156,23 @@
 // ## Usage
 //
 // ```
-// <a class="egeo-c-button egeo-c-button--main-1">Call to Action 1</a>
-// <span class="egeo-c-button egeo-c-button--main-2">Call to Action 2</span>
-// <button class="egeo-c-button egeo-c-button--main-3">Call to Action 3</button>
+// <a class="egeo-c-button egeo-c-button--main-1"><i class="icon-cog"></i>Call to Action 1</a>
+// <span class="egeo-c-button egeo-c-button--main-2"><i class="icon-cog"></i>Call to Action 2</span>
+// <button class="egeo-c-button egeo-c-button--main-3"><i class="icon-cog"></i>Call to Action 3</button>
 // <input type="submit" class="egeo-c-button egeo-c-button--secondary-1" value="Call to Action 4">
 // <input type="reset" class="egeo-c-button egeo-c-button--danger" value="Danger action">
-// <button class="egeo-c-button egeo-c-button--main-3" disabled>Disabled button</button>
+// <button class="egeo-c-button egeo-c-button--main-3" disabled><i class="icon-cog"></i>Disabled button</button>
 // ```
 // Will be renderized to:
 // <hr>
-// <a class="egeo-c-button egeo-c-button--main-1">Call to Action 1</a>
-// <span class="egeo-c-button egeo-c-button--main-2">Call to Action 2</span>
-// <button class="egeo-c-button egeo-c-button--main-3">Call to Action 3</button>
-// <input type="submit" class="egeo-c-button egeo-c-button--secondary-1" value="Call to Action 4">
-// <input type="reset" class="egeo-c-button egeo-c-button--danger" value="Danger action">
-// <button class="egeo-c-button egeo-c-button--main-3" disabled>Disabled button</button>
+// <div style="padding-left: 20px;">
+//   <a class="egeo-c-button egeo-c-button--main-1"><i class="icon-cog"></i>Call to Action 1</a>
+//   <span class="egeo-c-button egeo-c-button--main-2"><i class="icon-cog"></i>Call to Action 2</span>
+//   <button class="egeo-c-button egeo-c-button--main-3"><i class="icon-cog"></i>Call to Action 3</button>
+//   <input type="submit" class="egeo-c-button egeo-c-button--secondary-1" value="Call to Action 4">
+//   <input type="reset" class="egeo-c-button egeo-c-button--danger" value="Danger action">
+//   <button class="egeo-c-button egeo-c-button--main-3" disabled><i class="icon-cog"></i>Disabled button</button>
+// </div>
 // <hr>
 //
 // ## Dependencies
