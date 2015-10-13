@@ -1,22 +1,20 @@
-// Component
+// Icon
 //
-// The component Component is the parent class of all components in
-// the UI Kit. It is an abstrac class that it means that it doesn't
-// exist as a CSS class itself but as a mixin that can be inherited
-// in any component.
+// The Icon Component is a class to group common styles and behaviors to
+// all icons in an Egeo app.
 //
-// ### egeo-c-component
+// ### egeo-c-icon
 // 
 // <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
 //
-// Injects the general behavior and properties of the abstract class Component to other
+// Injects the general behavior and properties of the class Icon to other
 // components of the UI Kit.
 //
 // Usage
 //
 // ```
 // .test {
-// 		@include egeo-c-component;
+// 		@include egeo-c-icon;
 // }
 // ```
 // Will product the next result:
@@ -28,6 +26,7 @@
 //
 // <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
 //
-// Styleguide 7.1
+// Styleguide 7.3
 
 @import 'rules';
+@import 'vars';

@@ -5,7 +5,7 @@
 // exist as a CSS class itself but as a mixin that can be inherited
 // in any component.
 //
-// ### c-component
+// ### egeo-c-component
 // 
 // <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
 //
@@ -16,7 +16,7 @@
 //
 // ```
 // .test {
-// 		@include c-component;
+// 		@include egeo-c-component;
 // }
 // ```
 // Will product the next result:
@@ -30,4 +30,4 @@
 //
 // Styleguide 7.1
 
-@import "rules";
+@import 'rules';
