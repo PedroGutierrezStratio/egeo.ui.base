@@ -11,11 +11,32 @@
 
 // default buttons
 $egeo-c-buttons: (
-    call-to-action-1: (background: egeo-get-color(a1), border: 0, color: egeo-get-color(n0), background-hover: egeo-get-color(a1_dark), border-hover: 0, color-hover: egeo-get-color(n0)),
-    call-to-action-2: (background: egeo-get-color(a2), border: 0, color: egeo-get-color(n0), background-hover: egeo-get-color(a2_dark), border-hover: 0, color-hover: egeo-get-color(n0)),
-    call-to-action-3: (background: egeo-get-color(a3), border: 0, color: egeo-get-color(n0), background-hover: egeo-get-color(a3_dark), border-hover: 0, color-hover: egeo-get-color(n0)),
-    call-to-action-4: (background: egeo-get-color(n3), border: 2px solid egeo-get-color(n3), color: egeo-get-color(n4), background-hover: egeo-get-color(n0), border-hover: 2px solid egeo-get-color(n4), color-hover: egeo-get-color(n5)),
-    danger: (background: egeo-get-color(s3), border: 0, color: egeo-get-color(n0), background-hover: egeo-get-color(s3_dark), border-hover: 0, color-hover: egeo-get-color(n0))
+    main-1: (
+                normal: (background: egeo-get-color(a1), border: 0, color: egeo-get-color(n0)), 
+                hover: (background-hover: egeo-get-color(a1_dark), border-hover: 0, color-hover: egeo-get-color(n0)), 
+                focus: (background-focus: egeo-get-color(a1_light), border-focus: 0, color-focus: egeo-get-color(n0))
+            ),
+    main-2: (
+                normal: (background: egeo-get-color(a2), border: 0, color: egeo-get-color(n0)), 
+                hover: (background-hover: egeo-get-color(a2_dark), border-hover: 0, color-hover: egeo-get-color(n0)), 
+                focus: (background-focus: egeo-get-color(a2_light), border-focus: 0, color-focus: egeo-get-color(n0))
+            ),
+    main-3: (
+                normal: (background: egeo-get-color(a3), border: 0, color: egeo-get-color(n0)), 
+                hover: (background-hover: egeo-get-color(a3_dark), border-hover: 0, color-hover: egeo-get-color(n0)), 
+                focus: (background-focus: egeo-get-color(a3_light), border-focus: 0, color-focus: egeo-get-color(n0))
+            ),
+    secondary-1: (
+                    normal: (background: egeo-get-color(n3), border: 2px solid egeo-get-color(n3), color: egeo-get-color(n4)), 
+                    hover: (background-hover: egeo-get-color(n0), border-hover: 2px solid egeo-get-color(n4), color-hover: egeo-get-color(n5))
+                ),
+    danger: (
+                normal: (background: egeo-get-color(s3), border: 0, color: egeo-get-color(n0)), 
+                hover: (background-hover: egeo-get-color(s3_dark), border-hover: 0, color-hover: egeo-get-color(n0))
+            ),
+    disabled: (
+                normal: (background: egeo-get-color(n3), border: 0, color: egeo-get-color(n0))
+              )
 ) !default;
 
 // Map to customize new buttons
@@ -34,4 +55,6 @@ $egeo-c-button---text-align: center !default;
 $egeo-c-button---text-transform: uppercase !default;
 $egeo-c-button---transition: all .5s !default;
 
-$egeo-c-button__c-icon---margin: 0 .5em 0 0 !default;
+$egeo-c-button--focus---shadow: 0 0 5px 0 rgba(egeo-get-color(n6), .5) !default;
+
+$egeo-c-button__c-icon---margin: 0 8px 0 0 !default;

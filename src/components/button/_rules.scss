@@ -1,32 +1,35 @@
-@mixin egeo-c-button-modifier($name, $background, $border, $color, $background-hover, $border-hover, $color-hover) {
+@mixin egeo-c-button-modifier($name,
+							  $normal-properties,
+							  $hover-properties, 
+							  $focus-properties) {
 	@if $name {
 		&--#{$name} {
-			@if $background {
-				background: $background;
+			@if $normal-properties {
+				@if length($normal-properties) > 0 {
+					@each $name, $value in $normal-properties {
+						#{$name}: $value;
+					}
+				}				
 			}
 
-			@if $border {
-				border: $border;
+			@if $hover-properties {
+				@if length($hover-properties) > 0 {
+					&:hover {
+						@each $name, $value in $hover-properties {
+							#{$name}: $value;
+						}
+					}
+				}				
 			}
 
-			@if $color {
-				color: $color;
-			}
-
-			&:hover {
-				@if $background-hover {
-					background: $background-hover;
-				}
-
-				@if $border-hover {
-					border: $border-hover;
-				}
-
-				@if $color-hover {
-					color: $color-hover;
-				}
-
-				text-decoration: none;
+			@if $focus-properties {
+				@if length($focus-properties) > 0 {
+					&:focus {
+						@each $name, $value in $focus-properties {
+							#{$name}: $value;
+						}
+					}
+				}				
 			}
 		}		
 	} @else {
@@ -53,13 +56,20 @@
 
 	@each $button, $properties in $egeo-c-buttons {
 		@include egeo-c-button-modifier($button, 
-										map-get($properties, background), 
-										map-get($properties, border), 
-										map-get($properties, color),
-										map-get($properties, background-hover), 
-										map-get($properties, border-hover), 
-										map-get($properties, color-hover)
+										map-get($properties, normal), 
+										map-get($properties, hover), 
+										map-get($properties, focus)
 										);
+	}
+
+	&:focus {
+		box-shadow: $egeo-c-button--focus---shadow;
+	}
+
+	@if map-has-key($egeo-c-buttons, disabled) {
+		&:disabled {
+			@extend .egeo-c-button--disabled;
+		}
 	}
 
 	@if variable-exists(egeo-c-icon) {
