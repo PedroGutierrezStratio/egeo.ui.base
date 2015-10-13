@@ -3,11 +3,11 @@
 @import '../../src/components/component/components.component';
 
 @include test-module('components.component') {
-	@include test('component [mixin]') {
+	@include test('egeo-c-component [mixin]') {
 		@include assert('output the general properties and modifiers of a component') {
 			@include input {
 				.test {
-					@include c-component;
+					@include egeo-c-component;
 				}
 			}
 

@@ -265,34 +265,34 @@
 //
 // Styleguide 3.2
 
-@mixin set-font-families() {
-	@include bem-modifiers-from-map($egeo-font-families, font-family);
+@mixin egeo-set-font-families() {
+	@include egeo-bem-modifiers-from-map($egeo-font-families, font-family);
 }
 
-@mixin set-font-sizes() {
-	@include bem-modifiers-from-map($egeo-font-sizes, font-size);
+@mixin egeo-set-font-sizes() {
+	@include egeo-bem-modifiers-from-map($egeo-font-sizes, font-size);
 }
 
-@mixin set-font-weights() {
-	@include bem-modifiers-from-map($egeo-font-weights, font-weight);
+@mixin egeo-set-font-weights() {
+	@include egeo-bem-modifiers-from-map($egeo-font-weights, font-weight);
 }
 
-@mixin set-line-heights() {
-	@include bem-modifiers-from-map($egeo-line-heights, line-height);
+@mixin egeo-set-line-heights() {
+	@include egeo-bem-modifiers-from-map($egeo-line-heights, line-height);
 }
 
-@function get-font($font-family: open-sans) {
+@function egeo-get-font($font-family: open-sans) {
 	@return map-get($egeo-font-families, $font-family);
 }
 
-@function get-font-weight($weight: normal) {
+@function egeo-get-font-weight($weight: normal) {
 	@return map-get($egeo-font-weights, $weight);
 }
 
-@function get-font-size($size: medium) {
+@function egeo-get-font-size($size: medium) {
 	@return map-get($egeo-font-sizes, $size);
 }
 
-@function get-line-height($height: normal) {
+@function egeo-get-line-height($height: normal) {
 	@return map-get($egeo-line-heights, $height);
 }

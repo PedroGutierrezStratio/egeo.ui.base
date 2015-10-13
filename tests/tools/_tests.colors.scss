@@ -4,23 +4,23 @@
 @import '../../src/tools/tools.colors';
 
 $colors: (
-	c1: #37b5e4, 
-	c2: #000
+	a1: #37b5e4, 
+	a2: #000
 );
 
 @include test-module('tools.colors') {
-	@include test('get-color [function]') {
-		$test: get-color(c1);
+	@include test('egeo-get-color [function]') {
+		$test: egeo-get-color(a1);
 		$expect: #37b5e4;
 
 		@include assert-equal($test, $expect, 'Returns the C1 color');
 	}
 
-	@include test('is-coloured [mixin]') {
+	@include test('egeo-is-coloured [mixin]') {
 		@include assert('output a set of modifiers based on a color Sass map') {
 			@include input {
 				.test {
-					@include is-coloured($colors);			
+					@include egeo-is-coloured($colors);			
 				}
 			}
 

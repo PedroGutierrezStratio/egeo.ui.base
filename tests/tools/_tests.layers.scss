@@ -10,15 +10,15 @@ $egeo-layers: (
 );
 
 @include test-module('tools.layers') {
-	@include test('get-layer [function]') {
-		$test: get-layer(top);
+	@include test('egeo-get-layer [function]') {
+		$test: egeo-get-layer(top);
 		$expect: 3;
 
 		@include assert-equal($test, $expect, 'Returns a layer from the $egeo-layers Sass map');
 	}
 
-	@include test('get-layer [function] @default') {
-		$test: get-layer();
+	@include test('egeo-get-layer [function] @default') {
+		$test: egeo-get-layer();
 		$expect: 0;
 
 		@include assert-equal($test, $expect, 'Returns the default layer from the $egeo-layers Sass map');

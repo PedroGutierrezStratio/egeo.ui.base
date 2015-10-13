@@ -48,7 +48,7 @@
 //
 // Styleguide 3.5
 
-@mixin bem-modifiers-from-map($map, $css-property) {
+@mixin egeo-bem-modifiers-from-map($map, $css-property) {
 	@if type-of($map) == 'map' {
 		@each $key, $value in $map {
 			&--#{$key} {

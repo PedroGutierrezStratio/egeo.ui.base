@@ -9,11 +9,11 @@ $test-map: (
 );
 
 @include test-module('tools.maps') {
-	@include test('bem-modifiers-from-map [mixin]') {
+	@include test('egeo-bem-modifiers-from-map [mixin]') {
 		@include assert('output a set of modifiers based on a Sass map') {
 			@include input {
 				.test {
-					@include bem-modifiers-from-map($test-map, z-index);			
+					@include egeo-bem-modifiers-from-map($test-map, z-index);			
 				}
 			}
 
