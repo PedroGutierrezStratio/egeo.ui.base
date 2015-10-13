@@ -30,6 +30,14 @@ $egeo-c-buttons: (
                     normal: (background: transparent, border: 3px solid egeo-get-color(n3), color: egeo-get-color(n4)), 
                     hover: (background: transparent, border: 3px solid egeo-get-color(n4), color: egeo-get-color(n5))
                 ),
+    tool-1: (
+                normal: (background: egeo-get-color(n2), border: 0, color: egeo-get-color(a1)), 
+                hover: (background: egeo-get-color(n3), border: 0, color: egeo-get-color(a1_dark))
+            ),
+    tool-2: (
+                normal: (background: egeo-get-color(n2), border: 0, color: egeo-get-color(n7)), 
+                hover: (background: egeo-get-color(n3), border: 0, color: egeo-get-color(n3))
+            ),
     danger: (
                 normal: (background: egeo-get-color(s3), border: 0, color: egeo-get-color(n0)), 
                 hover: (background: egeo-get-color(s3_dark), border: 0, color: egeo-get-color(n0))
