@@ -1,3 +1,7 @@
+// All test should be done over mixins.
+// Normal classes could crash tests.
+$egeo-silent-classes: true;
+
 @import 'tools/tests.colors';
 @import 'tools/tests.layers';
 @import 'tools/tests.maps';
@@ -5,3 +9,4 @@
 
 @import 'components/tests.component';
 @import 'components/tests.icon';
+@import 'components/tests.button';

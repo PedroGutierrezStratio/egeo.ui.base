@@ -74,12 +74,36 @@
 //
 //        // If you want to use the modifier constructor
 //        @include egeo-c-button-modifier('name-of-you-modifier',
-//                                    #000, // Background value
-//                                    1px solid #000, // Border value
-//                                    #000, // Color value
-//                                    #000, // Background value on hover
-//                                    1px solid #000, // Border value on hover
-//                                    #000, // Color value on hover
+//                                    (background: #000, margin:0), // Sass map that includes the styles to be placed in the modifier
+//                                    (background: #777, margin:0), // Sass map that includes the styles to be placed in the modifier on hover
+//                                    (background: #fff, margin:0)  // Sass map that includes the styles to be placed in the modifier on focus
+//                                    );
+//
+//        // your code here
+//    }
+// ```
+//
+// This script will create a class called `my-button` with the shared styles of all egeo-buttons,
+// other class called `my-button---name-of-your-modifier` with the default values
+// of the first Sass map, a pseudo-class called `my-button---name-of-your-modifier:hover`
+// with the values of the second Sass map and a last pseudo-class called
+// `my-button---name-of-your-modifier:focus` with the values of the third Sass map.
+//
+// ## How to create a disabled state
+//
+// Automatically, if exist a button which name is *disabled*, then the system 
+// will also create a pseudo-class called `:disabled` that will work when buttons
+// will be tagged with the HTML5 attribute **disabled**.
+//
+//```
+//    .my-button {
+//        @include egeo-c-button;
+//
+//        // If you want to use the modifier constructor
+//        @include egeo-c-button-modifier('disabled',
+//                                    (background: #777, margin:0), // Sass map that includes the styles to be placed in the modifier
+//                                    (background: #777, margin:0), // Sass map that includes the styles to be placed in the modifier on hover
+//                                    (background: #777, margin:0)  // Sass map that includes the styles to be placed in the modifier on focus
 //                                    );
 //
 //        // your code here

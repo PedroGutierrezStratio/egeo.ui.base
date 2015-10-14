@@ -1,0 +1,206 @@
+@import 'true';
+@import '../../src/settings/settings';
+@import '../../src/tools/tools.log';
+@import '../../src/components/component/components.component';
+@import '../../src/components/icon/components.icon';
+@import '../../src/components/button/components.button';
+
+// default buttons
+$egeo-c-buttons: (
+    main: (
+                normal: (background: #000, border: 0, color: #fff), 
+                hover: (background: #333, border: 0, color: #fff), 
+                focus: (background: #777, border: 0, color: #fff)
+            )
+);
+
+$egeo-c-buttons-disabled: (
+    disabled: (
+                normal: (background: #777, border: 0, color: #fff), 
+            )
+);
+
+@include test-module('components.button') {
+	@include test('egeo-c-button-modifier [mixin]') {
+		@include assert('output normal, hover and focus properties of a button') {
+			@include input {
+				.test {
+					box-sizing: border-box;
+
+					@each $button, $properties in $egeo-c-buttons {
+						@include egeo-c-button-modifier($button, 
+													map-get($properties, normal), 
+													map-get($properties, hover), 
+													map-get($properties, focus)
+													);
+					}
+				}
+			}
+
+			@include expect {
+				.test {
+					box-sizing: border-box;
+				}
+
+				.test--main {
+					background: #000;
+					border: 0;
+					color: #fff;
+				}
+
+				.test--main:hover {
+					background: #333;
+					border: 0;
+					color: #fff;
+				}
+
+				.test--main:focus {
+					background: #777;
+					border: 0;
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	@include test('egeo-c-button [mixin]') {
+		@include assert('output the properties of buttons') {
+			@include input {
+				.test {
+					@include egeo-c-button;
+				}
+			}
+
+			@include expect {
+				.test {
+					box-sizing: border-box;
+					border: 0;
+					cursor: pointer;
+					display: inline-block;
+					font-size: 1rem;
+					height: 40px;
+					min-width: 180px;
+					padding: 8px 20px;
+					position: relative;
+					text-align: center;
+					text-transform: uppercase;
+					text-decoration: none;
+					transition: all .5s;
+				}
+
+				.test--small {
+					font-size: .8rem;
+					height: 30px;
+					padding: 4px 15px;
+				}
+
+				.test--rounded {
+					border-radius: 100%;
+					min-width: 40px;
+					width: 40px;
+					padding-left: 12px;
+					padding-top: 10px;
+				}
+
+				.test--main {
+					background: #000;
+					border: 0;
+					color: #fff;
+				}
+
+				.test--main:hover {
+					background: #333;
+					border: 0;
+					color: #fff;
+				}
+
+				.test--main:focus {
+					background: #777;
+					border: 0;
+					color: #fff;
+				}
+
+				.test:focus {
+					box-shadow: 0 0 5px 0 rgba(#555, .5);
+					outline: none;
+				}
+			}
+		}
+	}
+
+	@include test('egeo-c-button [mixin] - [Disabled]') {
+		$egeo-c-buttons: map-merge($egeo-c-buttons, $egeo-c-buttons-disabled);
+
+		@include assert('output the properties of buttons') {
+			@include input {
+				.test {
+					@include egeo-c-button;
+				}
+			}
+
+			@include expect {
+				.test {
+					box-sizing: border-box;
+					border: 0;
+					cursor: pointer;
+					display: inline-block;
+					font-size: 1rem;
+					height: 40px;
+					min-width: 180px;
+					padding: 8px 20px;
+					position: relative;
+					text-align: center;
+					text-transform: uppercase;
+					text-decoration: none;
+					transition: all .5s;
+				}
+
+				.test--small {
+					font-size: .8rem;
+					height: 30px;
+					padding: 4px 15px;
+				}
+
+				.test--rounded {
+					border-radius: 100%;
+					min-width: 40px;
+					width: 40px;
+					padding-left: 12px;
+					padding-top: 10px;
+				}
+
+				.test--main {
+					background: #000;
+					border: 0;
+					color: #fff;
+				}
+
+				.test--main:hover {
+					background: #333;
+					border: 0;
+					color: #fff;
+				}
+
+				.test--main:focus {
+					background: #777;
+					border: 0;
+					color: #fff;
+				}
+
+				.test--disabled,
+				.test:disabled {
+					background: #777;
+					border: 0;
+					color: #fff;
+				}
+
+				.test:focus {
+					box-shadow: 0 0 5px 0 rgba(#555, .5);
+					outline: none;
+				}
+			}
+		}
+	}
+}
+
+@include report;
