@@ -9,7 +9,34 @@
 //  Button definitions
 //
 
-// default buttons
+//
+//  General properties shared between all buttons
+//
+$egeo-c-button---font-size: egeo-get-font-size(medium) !default;
+$egeo-c-button---height: 40px !default;
+$egeo-c-button---min-width: 180px !default;
+$egeo-c-button---padding: 8px 20px !default;
+$egeo-c-button---text-align: center !default;
+$egeo-c-button---text-transform: uppercase !default;
+$egeo-c-button---transition: all .5s !default;
+
+$egeo-c-button--focus---shadow: 0 0 5px 0 rgba(egeo-get-color(n8), .5) !default;
+
+$egeo-c-button__c-icon---margin: 0 8px 0 0 !default;
+
+
+//
+//  General properties shared between all buttons
+//  in a small size
+//
+$egeo-c-button--small---font-size: egeo-get-font-size(small) !default;
+$egeo-c-button--small---height: 30px !default;
+$egeo-c-button--small---padding: 4px 15px !default;
+
+$egeo-c-button--small__c-icon---margin: 0 6px 0 0 !default;
+
+
+// Default button types
 $egeo-c-buttons: (
     main-1: (
                 normal: (background: egeo-get-color(a1), border: 0, color: egeo-get-color(n0)), 
@@ -39,8 +66,8 @@ $egeo-c-buttons: (
                 hover: (background: egeo-get-color(n3), border: 0, color: egeo-get-color(n7))
             ),
     tool-ellipsis: (
-                normal: (background: transparent, border: 2px solid egeo-get-color(n5), color: egeo-get-color(n6), padding-left: 10px),
-                hover: (background: transparent, border: 2px solid egeo-get-color(n5), color: egeo-get-color(n6), padding-left: 10px)
+                normal: (background: transparent, border: 2px solid egeo-get-color(n5), color: egeo-get-color(n6), padding-left: $egeo-c-button---height / 4),
+                hover: (background: transparent, border: 2px solid egeo-get-color(n5), color: egeo-get-color(n6), padding-left: $egeo-c-button---height / 4)
             ),
     danger: (
                 normal: (background: egeo-get-color(s3), border: 0, color: egeo-get-color(n0)), 
@@ -56,29 +83,3 @@ $egeo-c-buttons-custom: () !default;
 
 // Merge of the two Sass map of buttons
 $egeo-c-buttons: map-merge($egeo-c-buttons, $egeo-c-buttons-custom);
-
-//
-//  General properties shared between all buttons
-//
-$egeo-c-button---font-size: egeo-get-font-size(medium) !default;
-$egeo-c-button---height: 40px !default;
-$egeo-c-button---min-width: 180px !default;
-$egeo-c-button---padding: 8px 20px !default;
-$egeo-c-button---text-align: center !default;
-$egeo-c-button---text-transform: uppercase !default;
-$egeo-c-button---transition: all .5s !default;
-
-$egeo-c-button--focus---shadow: 0 0 5px 0 rgba(egeo-get-color(n8), .5) !default;
-
-$egeo-c-button__c-icon---margin: 0 8px 0 0 !default;
-
-
-//
-//  General properties shared between all buttons
-//  in a small size
-//
-$egeo-c-button--small---font-size: egeo-get-font-size(small) !default;
-$egeo-c-button--small---height: 30px !default;
-$egeo-c-button--small---padding: 4px 15px !default;
-
-$egeo-c-button--small__c-icon---margin: 0 6px 0 0 !default;
