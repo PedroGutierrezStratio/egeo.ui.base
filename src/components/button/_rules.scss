@@ -61,7 +61,6 @@ $this: '#{$egeo-namespace}c-button';
 		@if $egeo-c-icon {
 			.#{$egeo-namespace}c-icon {
 				margin: $egeo-c-button__c-icon---margin;
-				vertical-align: text-bottom;
 			}
 		}
 	}
@@ -69,6 +68,7 @@ $this: '#{$egeo-namespace}c-button';
 	&--small {
 		font-size: $egeo-c-button--small---font-size;
 		height: $egeo-c-button--small---height;
+		padding: $egeo-c-button--small---padding;
 
 		@if variable-exists(egeo-c-icon) {
 			@if $egeo-c-icon {
@@ -89,6 +89,7 @@ $this: '#{$egeo-namespace}c-button';
 			@if $egeo-c-icon {
 				.#{$egeo-namespace}c-icon {
 					margin: 0;
+					vertical-align: text-bottom;
 				}
 			}
 		}
