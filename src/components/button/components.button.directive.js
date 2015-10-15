@@ -10,6 +10,7 @@
             restrict: 'E',
             replace: true,
             scope: {
+                icon: '@',
                 label: '@',
                 modifier: '@',
                 tabindex: '@',
