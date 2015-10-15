@@ -1,10 +1,12 @@
+$this: '#{$egeo-namespace}c-icon';
+
 @mixin egeo-c-icon {
 	@include egeo-c-component;
 }
 
 @if variable-exists(egeo-c-icon) {
     @if $egeo-c-icon {
-        .#{$egeo-namespace}c-icon {
+        .#{$this}c-icon {
             @include egeo-c-icon;
         }
     }

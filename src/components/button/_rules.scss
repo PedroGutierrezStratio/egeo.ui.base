@@ -1,3 +1,5 @@
+$this: '#{$egeo-namespace}c-button';
+
 @mixin egeo-c-button-modifier($name,
 							  $normal-properties,
 							  $hover-properties, 
@@ -72,9 +74,9 @@
 	&--rounded {
 		border-radius: 100%;
 		min-width: $egeo-c-button---height;
-		width: $egeo-c-button---height;
 		padding-left: $egeo-c-button---height * .3;
 		padding-top: $egeo-c-button---height / 4;
+		width: $egeo-c-button---height;
 
 		@if variable-exists(egeo-c-icon) {
 			@if $egeo-c-icon {
@@ -82,6 +84,13 @@
 					margin: 0;
 				}
 			}
+		}
+
+		&.#{$this}--small {
+			min-width: $egeo-c-button--small---height;
+			padding-left: $egeo-c-button--small---height * .3;
+			padding-top: $egeo-c-button--small---height / 4;
+			width: $egeo-c-button--small---height;
 		}
 	}
 
@@ -100,7 +109,7 @@
 
 	@if map-has-key($egeo-c-buttons, disabled) {
 		&:disabled {
-			@extend .egeo-c-button--disabled;
+			@extend .#{$this}--disabled;
 		}
 	}
 
@@ -115,7 +124,7 @@
 
 @if variable-exists(egeo-c-button) {
 	@if $egeo-c-button {
-		.#{$egeo-namespace}c-button {
+		.#{$this} {
 			@include egeo-c-button;
 		}
 	}
