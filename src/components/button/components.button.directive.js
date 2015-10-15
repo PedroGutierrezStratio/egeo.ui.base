@@ -2,20 +2,26 @@
     'use strict';
 
     angular
-        .module('egeo.buttons', [])
-        .directive('egeoCButton',egeoCButton);
+        .module('myApp', [])
+        .directive('egeoCButton', egeoCButton);
 
     function egeoCButton() {
         var directive = {
             restrict: 'E',
             replace: true,
             scope: {
-                label: '=',
-                modifier: '=',
-                tabindex: '=',
-                type: '='
+                label: '@',
+                modifier: '@',
+                tabindex: '@',
+                rounded: '@',
+                small: '@',
+                type: '@'
             },
-            templateUrl: 'components.button.tpl.html'
+            templateUrl: 'public/js/egeo/components/button/components.button.tpl.html'
         }
+
+        console.log("egeoCButton");
+
+        return directive;
     }
 })();
