@@ -3,6 +3,6 @@
         data-ng-class="{'egeo-c-button--rounded': rounded, 'egeo-c-button--small': small}" 
         role="button" tabindex="{{tabindex}}" 
         aria-pressed="false">
-            <i class="egeo-c-icon {{icon}}" data-ng-if="icon !== null"></i>
+            <i class="egeo-c-icon {{icon}}" data-ng-if="!icon"></i>
             {{label}}
         </button>
