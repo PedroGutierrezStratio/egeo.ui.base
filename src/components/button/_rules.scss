@@ -61,6 +61,7 @@ $this: '#{$egeo-namespace}c-button';
 		@if $egeo-c-icon {
 			.#{$egeo-namespace}c-icon {
 				margin: $egeo-c-button__c-icon---margin;
+				vertical-align: text-bottom;
 			}
 		}
 	}
@@ -73,7 +74,6 @@ $this: '#{$egeo-namespace}c-button';
 			@if $egeo-c-icon {
 				.#{$egeo-namespace}c-icon {
 					margin: $egeo-c-button--small__c-icon---margin;
-					vertical-align: middle;
 				}
 			}
 		}
