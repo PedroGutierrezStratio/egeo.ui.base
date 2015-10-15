@@ -89,7 +89,7 @@ $this: '#{$egeo-namespace}c-button';
 			@if $egeo-c-icon {
 				.#{$egeo-namespace}c-icon {
 					margin: 0;
-					vertical-align: text-bottom;
+					display: block;
 				}
 			}
 		}
