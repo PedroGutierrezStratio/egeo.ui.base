@@ -66,8 +66,8 @@ $egeo-c-buttons: (
                 hover: (background: egeo-get-color(n3), border: 0, color: egeo-get-color(n7))
             ),
     tool-ellipsis: (
-                normal: (background: transparent, border: 2px solid egeo-get-color(n5), color: egeo-get-color(n6), padding-left: $egeo-c-button---height / 4),
-                hover: (background: transparent, border: 2px solid egeo-get-color(n5), color: egeo-get-color(n6), padding-left: $egeo-c-button---height / 4)
+                normal: (background: transparent, border: 2px solid egeo-get-color(n5), color: egeo-get-color(n6)),
+                hover: (background: transparent, border: 2px solid egeo-get-color(n5), color: egeo-get-color(n6))
             ),
     danger: (
                 normal: (background: egeo-get-color(s3), border: 0, color: egeo-get-color(n0)), 

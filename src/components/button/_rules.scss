@@ -57,15 +57,23 @@ $this: '#{$egeo-namespace}c-button';
 	text-decoration: none;
 	transition: $egeo-c-button---transition;
 
+	@if variable-exists(egeo-c-icon) {
+		@if $egeo-c-icon {
+			.#{$egeo-namespace}c-icon {
+				margin: $egeo-c-button__c-icon---margin;
+			}
+		}
+	}
+
 	&--small {
 		font-size: $egeo-c-button--small---font-size;
 		height: $egeo-c-button--small---height;
-		padding: $egeo-c-button--small---padding;
 
 		@if variable-exists(egeo-c-icon) {
 			@if $egeo-c-icon {
 				.#{$egeo-namespace}c-icon {
 					margin: $egeo-c-button--small__c-icon---margin;
+					vertical-align: middle;
 				}
 			}
 		}
@@ -74,8 +82,7 @@ $this: '#{$egeo-namespace}c-button';
 	&--rounded {
 		border-radius: 100%;
 		min-width: $egeo-c-button---height;
-		padding-left: $egeo-c-button---height * .3;
-		padding-top: $egeo-c-button---height / 4;
+		padding: 0;
 		width: $egeo-c-button---height;
 
 		@if variable-exists(egeo-c-icon) {
@@ -88,8 +95,6 @@ $this: '#{$egeo-namespace}c-button';
 
 		&.#{$this}--small {
 			min-width: $egeo-c-button--small---height;
-			padding-left: $egeo-c-button--small---height * .3;
-			padding-top: $egeo-c-button--small---height / 4;
 			width: $egeo-c-button--small---height;
 		}
 	}
@@ -110,14 +115,6 @@ $this: '#{$egeo-namespace}c-button';
 	@if map-has-key($egeo-c-buttons, disabled) {
 		&:disabled {
 			@extend .#{$this}--disabled;
-		}
-	}
-
-	@if variable-exists(egeo-c-icon) {
-		@if $egeo-c-icon {
-			.#{$egeo-namespace}c-icon {
-				margin: $egeo-c-button__c-icon---margin;
-			}
 		}
 	}
 }
