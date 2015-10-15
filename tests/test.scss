@@ -9,4 +9,4 @@ $egeo-silent-classes: true;
 
 @import 'components/tests.component';
 @import 'components/tests.icon';
-@import 'components/tests.button';
+//@import 'components/tests.button';    // The button tests are commented due to True doesn't work well with mixins which generates new classes

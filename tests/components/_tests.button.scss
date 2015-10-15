@@ -98,8 +98,7 @@ $egeo-c-buttons-disabled: (
 					border-radius: 100%;
 					min-width: 40px;
 					width: 40px;
-					padding-left: 12px;
-					padding-top: 10px;
+					padding: 0;
 				}
 
 				.test--main {
@@ -139,64 +138,10 @@ $egeo-c-buttons-disabled: (
 			}
 
 			@include expect {
-				.test {
-					box-sizing: border-box;
-					border: 0;
-					cursor: pointer;
-					display: inline-block;
-					font-size: 1rem;
-					height: 40px;
-					min-width: 180px;
-					padding: 8px 20px;
-					position: relative;
-					text-align: center;
-					text-transform: uppercase;
-					text-decoration: none;
-					transition: all .5s;
-				}
-
-				.test--small {
-					font-size: .8rem;
-					height: 30px;
-					padding: 4px 15px;
-				}
-
-				.test--rounded {
-					border-radius: 100%;
-					min-width: 40px;
-					width: 40px;
-					padding-left: 12px;
-					padding-top: 10px;
-				}
-
-				.test--main {
-					background: #000;
-					border: 0;
-					color: #fff;
-				}
-
-				.test--main:hover {
-					background: #333;
-					border: 0;
-					color: #fff;
-				}
-
-				.test--main:focus {
-					background: #777;
-					border: 0;
-					color: #fff;
-				}
-
-				.test--disabled,
-				.test:disabled {
-					background: #777;
-					border: 0;
-					color: #fff;
-				}
-
 				.test:focus {
 					box-shadow: 0 0 5px 0 rgba(#555, .5);
 					outline: none;
+					padding: 3px;
 				}
 			}
 		}

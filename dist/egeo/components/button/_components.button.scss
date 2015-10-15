@@ -9,9 +9,11 @@
 //
 // ### egeo-c-button-modifier
 // 
-// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">Untested</span>
 //
 // Creates a new modifier which is a type of button with the properties passed as parameters.
+// Sass True doesn't work well with mixins that generates completely new classes outside 
+// the one marked as input.
 //
 // Usage
 //
@@ -44,9 +46,12 @@
 //
 // ### egeo-c-button
 // 
-// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">Untested</span><span class="tag tag--danger">Internal</span>
 //
-// Internally used to create the Egeo buttons in an extensible way.
+// Internally used to create the Egeo buttons in an extensible way. Sass True doesn't work well with mixins that generates
+// completely new classes outside the one marked as input.
+//
+// <div class="compatibility">Compatibility IE6+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
 //
 // ## How to extend the button
 //```
@@ -195,19 +200,38 @@
 //
 // ## Variables exposed to theming
 //  
-// | Variable                                                                                       | Default value                                                       |
-// | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------|
-// | <div class="egeo-u-tx-align-feft">$egeo-c-button</div>                                         | <div class="egeo-u-tx-align-left">`true`</div>                          |
-// | <div class="egeo-u-tx-align-left">$egeo-c-button---height</div>                                | <div class="egeo-u-tx-align-left">`40px`</div>                          |
-// | <div class="egeo-u-tx-align-left">$egeo-c-button---min-width</div>                             | <div class="egeo-u-tx-align-left">`180px`</div>                         |
-// | <div class="egeo-u-tx-align-left">$egeo-c-button---padding</div>                               | <div class="egeo-u-tx-align-left">`0 20px`</div>                        |
-// | <div class="egeo-u-tx-align-left">$egeo-c-button---text-align</div>                            | <div class="egeo-u-tx-align-left">`center`</div>                        |
-// | <div class="egeo-u-tx-align-left">$egeo-c-button---text-transform</div>                        | <div class="egeo-u-tx-align-left">`uppercase`</div>                     |
-// | <div class="egeo-u-tx-align-left">$egeo-c-buttons</div>                                        | <div class="egeo-u-tx-align-left">Sass map</div>            |
-// | <div class="egeo-u-tx-align-left">$egeo-c-buttons-custom</div>                                 | <div class="egeo-u-tx-align-left">Sass map</div>            |
+// | Variable                                                                                       | Default value                                                 |
+// | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button</div>                        | <div class="egeo-u-tx-align-left">`true`</div>                                 |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button---height</div>               | <div class="egeo-u-tx-align-left">`40px`</div>                                 |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button---min-width</div>            | <div class="egeo-u-tx-align-left">`180px`</div>                                |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button---padding</div>              | <div class="egeo-u-tx-align-left">`0 20px`</div>                               |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button---text-align</div>           | <div class="egeo-u-tx-align-left">`center`</div>                               |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button---text-transform</div>       | <div class="egeo-u-tx-align-left">`uppercase`</div>                            |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button---transition</div>           | <div class="egeo-u-tx-align-left">`all .5s`                                    |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--focus---shadow</div>        | <div class="egeo-u-tx-align-left">`0 0 5px 0 rgba(egeo-get-color(n8), .5)`     |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button__c-icon---margin</div>       | <div class="egeo-u-tx-align-left">`0 8px 0 0`                                  |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--small---font-size</div>     | <div class="egeo-u-tx-align-left">`egeo-get-font-size(small)`                  |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--small---height</div>        | <div class="egeo-u-tx-align-left">`30px`                                       |
+// | <div class="egeo-u-tx-align-left">$egeo-c-button--small---padding</div>       | <div class="egeo-u-tx-align-left">`4px 15px`                                   |
+// | <div class="egeo-u-tx-align-left">$egeo-c-buttons</div>                       | <div class="egeo-u-tx-align-left">Sass map</div>                               |
+// | <div class="egeo-u-tx-align-left">$egeo-c-buttons-custom</div>                | <div class="egeo-u-tx-align-left">Sass map</div>                               |
 //
 // ## The egeo-c-button AngularJS directive
 //
+// Egeo provides an AngularJS directive to create all types of buttons defined with ease. The directive is restricted
+// to HTML Element and called `egeo-c-button`. Below you can see the properties exposed:
+//
+// | Property                                            | Default value                                                                  |
+// | --------------------------------------------------- | ------------------------------------------------------------------------------ |
+// | <div class="egeo-u-tx-align-left">type</div>        | <div class="egeo-u-tx-align-left">Submit, Reset or Button</div>                                          |
+// | <div class="egeo-u-tx-align-left">modifier</div>    | <div class="egeo-u-tx-align-left">The name of the button created as a CSS BEM Modifier</div>             |
+// | <div class="egeo-u-tx-align-left">label</div>       | <div class="egeo-u-tx-align-left">The label of the button</div>                                          |
+// | <div class="egeo-u-tx-align-left">icon</div>        | <div class="egeo-u-tx-align-left">An icon which appears at left side</div>                               |
+// | <div class="egeo-u-tx-align-left">small</div>       | <div class="egeo-u-tx-align-left">A small version of the button</div>                                    |
+// | <div class="egeo-u-tx-align-left">rounded</div>     | <div class="egeo-u-tx-align-left">A rounded version of the button. A rounded button will hide the label and only show the icon.</div> |
+//
+// Markup
 // ```
 // <div style="margin-bottom: 5px"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button"></egeo-c-button></div>
 // <div style="margin-bottom: 5px"><egeo-c-button type="submit" modifier="main-2" label="AngularJS Button"></egeo-c-button></div>
