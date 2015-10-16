@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('myApp', [])
+        .module('egeo.buttons', [])
         .directive('egeoCButton', egeoCButton);
 
     function egeoCButton() {
