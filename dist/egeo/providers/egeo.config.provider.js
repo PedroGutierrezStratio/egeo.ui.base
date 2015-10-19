@@ -3,12 +3,13 @@
 
     angular
         .module('egeo.config', [])
-        .provider('EgeoConfigProvider', EgeoConfigProvider);
+        .provider('EgeoConfig', EgeoConfig);
 
-    function EgeoConfigProvider() {
+    function EgeoConfig() {
         var defaultEgeoPath = 'public/js/egeo';
 
         this.setEgeoPath = function(path) {
+            console.log(path);
             this.defaultEgeoPath = path;
         }
 
