@@ -13,15 +13,13 @@
                 icon: '@',
                 label: '@',
                 modifier: '@',
-                tabindex: '@',
                 rounded: '@',
                 small: '@',
+                tabindex: '@',
                 type: '@'
             },
             templateUrl: 'public/js/egeo/components/button/components.button.tpl.html'
         }
-
-        console.log("egeoCButton");
 
         return directive;
     }
