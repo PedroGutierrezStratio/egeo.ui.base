@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('egeo.buttons', [])
+        .module('egeo.buttons', ['EgeoConfigProvider'])
         .directive('egeoCButton', egeoCButton);
 
     function egeoCButton() {
@@ -18,7 +18,7 @@
                 tabindex: '@',
                 type: '@'
             },
-            templateUrl: 'public/js/egeo/components/button/components.button.tpl.html'
+            templateUrl: EgeoConfigProvider.getEgeoPath + '/components/button/components.button.tpl.html'
         }
 
         return directive;
