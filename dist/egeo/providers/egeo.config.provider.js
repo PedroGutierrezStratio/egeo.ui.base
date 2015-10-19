@@ -9,8 +9,7 @@
         var defaultEgeoPath = 'public/js/egeo';
 
         this.setEgeoPath = function(path) {
-            console.log(path);
-            this.defaultEgeoPath = path;
+            defaultEgeoPath = path;
         }
 
         getEgeoPath = function () {
