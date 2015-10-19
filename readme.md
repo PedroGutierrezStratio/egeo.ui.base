@@ -1,8 +1,37 @@
-# Egeo UI Base
+# Egeo Base Framework
 
 Hi! This is the repository of the Egeo Base Framework. The framework is divided in two areas mainly: *principles and methodology* and *code and components*. The first one is related to the principles and methodologies used to built the framework and the components which forms the Egeo UI Kit. This principles and methodologies can be used to build apps that uses the UI Kit but it is not mandatory. They are defined and explained in detail in the proper section of the Egeo UI Documentation.
 
-## How to install
+## How to install Egeo as a dependency of your project
+
+If you work with Npm or Bower, the only thing to do is to configure the Github project of Egeo as a git repository as it shown below:
+
+### With Npm
+
+Include the Egeo Base Framework dependency in the *dependencies* section of your package.json file:
+```
+  "dependencies": {
+    ...
+    "egeo.ui.base": "git://github.com/Stratio/egeo.ui.base.git#master",
+    ...
+  }
+´´´
+And launch `npm install`. You can also update the library using `npm update egeo.ui.base`.
+
+### Bower
+
+Include the Egeo Base Framework dependency in the *dependencies* section of your bower.json file:
+```
+  "dependencies": {
+    ...
+    "egeo.ui.base": "git://github.com/Stratio/egeo.ui.base.git#master",
+    ...
+  }
+´´´
+And launch `bower install`. You can also update the library using `bower update egeo.ui.base`.
+
+
+## How to install Egeo locally
 
 Download the project to any folder via `git clone` or using the ZIP button and launch `npm install` to install all dependencies needed to build the website ([NodeJS](https://nodejs.org) and [Git client](https://git-scm.com/download/) are required to be installed first to can use these commands on your console).
 
