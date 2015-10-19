@@ -15,10 +15,10 @@ Include the Egeo Base Framework dependency in the *dependencies* section of your
     "egeo.ui.base": "git://github.com/Stratio/egeo.ui.base.git#master",
     ...
   }
-´´´
+```
 And launch `npm install`. You can also update the library using `npm update egeo.ui.base`.
 
-### Bower
+### With Bower
 
 Include the Egeo Base Framework dependency in the *dependencies* section of your bower.json file:
 ```
@@ -27,7 +27,7 @@ Include the Egeo Base Framework dependency in the *dependencies* section of your
     "egeo.ui.base": "git://github.com/Stratio/egeo.ui.base.git#master",
     ...
   }
-´´´
+```
 And launch `bower install`. You can also update the library using `bower update egeo.ui.base`.
 
 
