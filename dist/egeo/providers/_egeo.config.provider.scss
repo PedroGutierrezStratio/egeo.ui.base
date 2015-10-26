@@ -1,11 +1,15 @@
 // EgeoConfig
 //
+// <span class="tag tag--type">@provider</span><span class="tag tag--warn">partially tested</span>
+//
 // The EgeoConfig provider expose a series of methods to
 // configure how the application works, how it is installed
 // and where the components should look for their templates
 // or similar resources.
 //
 // ### EgeoPath
+//
+// <span class="tag tag--warn">partially tested</span>
 //
 // The EgeoPath is the path where the system have to seek for
 // egeo components and resources. Where a component needs to
@@ -59,5 +63,8 @@
 //            EgeoConfigProvider.setEgeoPath('my/path');
 //        });
 // ```
+//
+// The tests covers the getEgeoPath function in the default case but not
+// the manual configuration process for now.
 //
 // Styleguide 10.1
