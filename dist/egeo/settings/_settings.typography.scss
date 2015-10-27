@@ -13,11 +13,24 @@
 //
 // ### Sass map $egeo-font-families
 //
-// | Result																								| Value				| Key					|
-// |----------------------------------------------------------------------------------------------------|-------------------|-----------------------|
-// | <span class="typo-block typo-block--brandon-grotesque typo-block--medium">Brandon Grotesque</span> | Brandon Grotesque	| brandon-grotesque		|
-// | <span class="typo-block typo-block--open-sans typo-block--medium">Open Sans</span> 				| Open Sans			| open-sans				|
-// | <span class="typo-block typo-block--droid-sans typo-block--medium">Droid Sans</span> 				| Droid Sans		| droid-sans			|
+// The $egeo-font-families map includes, althought the font families used, a series of alias to hide
+// the font family behind the purpose of that font and protect our app of the changes in the typographies
+// at future. For example, we can use `egeo-get-font(heading)` instead of `egeo-get-font(brandon-grotesque)`.
+// The final result will be the same but, if in the future the design team decides that the font for the
+// heading will be Monotype, our code will be safe due to when the framework update the font reference of
+// the heading value, we will only need to recompile the Sass code to obtain the new value in all places
+// we are using it.
+//
+// | Result																								 			| Value					| Key					|
+// |--------------------------------------------------------------------------------------------------------------- | --------------------- | -----------------------|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--medium">Brandon Grotesque</span>  			| Brandon Grotesque		| brandon-grotesque		|
+// | <span class="typo-block typo-block--open-sans typo-block--medium">Open Sans</span> 				 			| Open Sans				| open-sans				|
+// | <span class="typo-block typo-block--droid-sans typo-block--medium">Droid Sans</span> 				 			| DroidSansMonoRegular	| droid-sans			|
+// | <span class="typo-block typo-block--stratio-iconfont typo-block--medium"><i class="icon-datetime"></i></span> 	| ico_stratio			| stratio-iconfont			|
+// | <span class="typo-block typo-block--heading typo-block--medium">Heading</span>  								| Brandon Grotesque		| heading		|
+// | <span class="typo-block typo-block--body typo-block--medium">Body</span> 				 						| Open Sans				| body				|
+// | <span class="typo-block typo-block--code typo-block--medium">Code</span> 				 						| DroidSansMonoRegular	| code			|
+// | <span class="typo-block typo-block--icon typo-block--medium"><i class="icon-datetime"></i></span> 				| icon					| stratio-iconfont			|
 //
 // ### Sass map $egeo-font-sizes
 //
@@ -91,7 +104,11 @@ $egeo-font-families: (
 	brandon-grotesque: 'Brandon Grotesque',
 	open-sans: 'Open Sans',
 	droid-sans: 'DroidSansMonoRegular',
-	stratio-iconfont: 'ico_stratio'
+	stratio-iconfont: 'ico_stratio',
+	heading: 'Brandon Grotesque',
+	body: 'Open Sans',
+	code: 'DroidSansMonoRegular',
+	icon: 'ico_stratio'
 ) !default;
 
 $egeo-font-weights: (
