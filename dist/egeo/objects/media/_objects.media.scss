@@ -1,0 +1,42 @@
+// Media
+//
+// The Media Object is the Egeo implementation of the 
+// [Nicolle Sullivan](https://twitter.com/stubbornella)'s media object.
+//
+// To find out how to use and what exactly is, read [Nicole’s blog post](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/).
+//
+// Usage
+//
+// ```
+// <div class="egeo-o-media">
+//      <a href="#" class="egeo-o-media__img">
+//          <img src="public/assets/images/header.logo.png" alt="logo" />
+//      </a>
+//
+//      <div class="egeo-o-media__bd">Text to keep right aligned.</div>
+// </div>
+// ```
+// Will product the next result:
+// 
+// <div class="egeo-o-media">
+//      <a href="#" class="egeo-o-media__img">
+//          <img src="public/assets/images/header.logo.png" alt="logo" />
+//      </a>
+//
+//      <div class="egeo-o-media__bd">Text to keep right aligned.</div>
+// </div>
+// 
+//
+// ## Variables exposed to theming
+//  
+// | Variable                                                                      | Default value                                   | Description                                                                          |
+// | ----------------------------------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------ |
+// | <div class="egeo-u-tx-align-left">$egeo-o-media</div>                         | <div class="egeo-u-tx-align-left">`true`</div>  | Whether or not we want to include the media object in the compiled CSS.              |
+// | <div class="egeo-u-tx-align-left">$egeo-o-media---margin</div>                | <div class="egeo-u-tx-align-left">`10px`</div>  | The margin value the media object will use to separate the items which belong to it. |
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 6.1
+
+@import 'vars';
+@import 'rules';

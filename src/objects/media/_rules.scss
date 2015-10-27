@@ -1,0 +1,27 @@
+@if ($egeo-o-media) {
+    .#{$egeo-namespace}o-media {
+        @extend %#{$egeo-namespace}u-clearfix;
+
+        margin: $egeo-o-media-margin;
+    }
+
+    .#{$egeo-namespace}o-media,
+    .#{$egeo-namespace}o-media__bd {
+        overflow: visible;
+        zoom: 1;
+    }
+
+    .#{$egeo-namespace}o-media__img {
+        float: left;
+        margin-right: $egeo-o-media-margin;
+    }
+
+    .#{$egeo-namespace}o-media__img__item {
+        display: block;
+    }
+
+    .#{$egeo-namespace}o-media__imgExt {
+        float: right;
+        margin-left: $egeo-o-media-margin;
+    }    
+}
