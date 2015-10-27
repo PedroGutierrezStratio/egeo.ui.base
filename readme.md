@@ -70,3 +70,22 @@ npm run-script sass-watch
 ```
 
 This command creates a watcher that launches the sass-dev task every time a Sass file changes.
+
+## How to test
+
+The Base Framework includes a couple of commands to test the Sass and Javascript and to generate a report about code coverage.
+
+The command below will launch the Sass suite of tests:
+```
+npm run-script sass-test
+```
+
+The command below will launch the Javascript suite of tests:
+```
+npm run-script js-test
+```
+
+The command below will launch the both suite of tests, Javascript and Sass, and will generate the code coverage report about the Javascript code:
+```
+npm run-script test
+```

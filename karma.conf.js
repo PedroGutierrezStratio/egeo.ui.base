@@ -25,19 +25,18 @@ module.exports = function (config) {
     port: 8080,
 
     preprocessors: {
-      'src/providers/**/*.js': ['coverage'],
-      'tests/app.js': ['coverage']
+      'src/providers/**/*.js': ['coverage']
     },
 
     junitReporter: {
-      outputDir: 'target/surefire-reports/',
+      outputDir: 'tests/coverage/surefire-reports/',
       outputFile: undefined,
       suite: ''
     },
 
     coverageReporter: {
-      type: "lcovonly",
-      dir: 'target/coverage',
+      type: "lcov",
+      dir: 'tests/coverage',
       file: '../../lcovUT.info'
     },
     singleRun: true,

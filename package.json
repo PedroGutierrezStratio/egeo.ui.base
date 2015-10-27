@@ -7,9 +7,9 @@
     "sass-watch": "grunt sass-watch",
     "sass-dev": "grunt sass-dev",
     "sass-dist": "grunt sass-dist",
-    "sass-tests": "mocha tests/test-sass.js",
-    "js-tests": "karma start",
-    "tests": "mocha tests/test-sass.js && karma start"
+    "sass-test": "mocha tests/test-sass.js",
+    "js-test": "karma start",
+    "test": "mocha tests/test-sass.js && karma start"
   },
   "author": "Alex R Chies (alejandrorodriguez@stratio.com)",
   "license": "ISC",
