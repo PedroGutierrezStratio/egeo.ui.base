@@ -2,7 +2,7 @@
 //
 // Functions and mixins to help work with Sass maps.
 //
-// ### bem-modifiers-from-map($map, $css-property)
+// ### egeo-bem-modifiers-from-map($map, $css-property)
 // 
 // <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
 //
@@ -23,7 +23,7 @@
 // )
 //
 // .my-class {
-// 		@include bem-modifiers-from-map($my-map, font-size);
+// 		@include egeo-bem-modifiers-from-map($my-map, font-size);
 // }
 // ```
 // This sample will generate this CSS code.

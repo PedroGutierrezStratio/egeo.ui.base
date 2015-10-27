@@ -19,28 +19,31 @@
 //
 // ```
 // .test {
-//      @include egeo-c-button-modifier('warning', 
-//                                       orange, 
-//                                       1px solid blue, 
-//                                       white,
-//                                       red, 
-//                                       1px solid white, 
-//                                       white
-//                                       );
+//        @include egeo-c-button-modifier('warning',
+//                                    (background: orange, margin:0, color: white), // Sass map that includes the styles to be placed in the modifier
+//                                    (background: black, margin:0, color: white), // Sass map that includes the styles to be placed in the modifier on hover
+//                                    (background: blue, margin:0, color: white)  // Sass map that includes the styles to be placed in the modifier on focus
+//                                    );
 // }
 // ```
 // Will product the next result:
 // ```
 // .test--warning {
 // 		background: orange;
-//      border: 1px solid blue;
 //      color: white;
+//      margin: 0;
 // }
 //
 // .test--warning:hover {
-//      background: red;
-//      border: 1px solid white;
+//      background: black;
 //      color: white;
+//      margin: 0;
+// }
+//
+// .test--warning:focus {
+//      background: blue;
+//      color: white;
+//      margin: 0;
 // }
 // ```
 //
@@ -59,13 +62,10 @@
 //        @include egeo-c-button;
 //
 //        // If you want to use the modifier constructor
-//        @include egeo-c-button-modifier('name-of-the-button',
-//                                    #000, // Background value
-//                                    1px solid #000, // Border value
-//                                    #000, // Color value
-//                                    #000, // Background value on hover
-//                                    1px solid #000, // Border value on hover
-//                                    #000, // Color value on hover
+//        @include egeo-c-button-modifier('name-of-you-modifier',
+//                                    (background: #000, margin:0), // Sass map that includes the styles to be placed in the modifier
+//                                    (background: #777, margin:0), // Sass map that includes the styles to be placed in the modifier on hover
+//                                    (background: #fff, margin:0)  // Sass map that includes the styles to be placed in the modifier on focus
 //                                    );
 //
 //        // your code here

@@ -4,7 +4,7 @@
 // to work with typographies.
 //
 //
-// ### get-font($font-family: open-sans)
+// ### egeo-get-font($font-family: open-sans)
 // 
 // <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
 //
@@ -15,11 +15,11 @@
 // Usage
 // ```
 // .test {
-//		font-family: get-font();
+//		font-family: egeo-get-font();
 // }
 //
 // .test-2 {
-//		font-family: get-font(brandon-grotesque);
+//		font-family: egeo-get-font(brandon-grotesque);
 // }
 // ```
 // This code will generate:
@@ -36,7 +36,7 @@
 // <div class="compatibility">Compatibility untested.</div>
 //
 //
-// ### get-font-size($font-size: medium)
+// ### egeo-get-font-size($font-size: medium)
 // 
 // <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
 //
@@ -47,11 +47,11 @@
 // Usage
 // ```
 // .test {
-//		font-size: get-font-size();
+//		font-size: egeo-get-font-size();
 // }
 //
 // .test-2 {
-//		font-size: get-font-size(small);
+//		font-size: egeo-get-font-size(small);
 // }
 // ```
 // This code will generate:
@@ -68,7 +68,7 @@
 // <div class="compatibility">Compatibility untested.</div>
 //
 //
-// ### get-font-weight($font-weight: normal)
+// ### egeo-get-font-weight($font-weight: normal)
 // 
 // <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
 //
@@ -79,11 +79,11 @@
 // Usage
 // ```
 // .test {
-//		font-weight: get-font-weight();
+//		font-weight: egeo-get-font-weight();
 // }
 //
 // .test-2 {
-//		font-weight: get-font-weight(bold);
+//		font-weight: egeo-get-font-weight(bold);
 // }
 // ```
 // This code will generate:
@@ -100,7 +100,7 @@
 // <div class="compatibility">Compatibility untested.</div>
 //
 //
-// ### get-line-height($line-height: normal)
+// ### egeo-get-line-height($line-height: normal)
 // 
 // <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
 //
@@ -111,11 +111,11 @@
 // Usage
 // ```
 // .test {
-//		line-height: get-line-height();
+//		line-height: egeo-get-line-height();
 // }
 //
 // .test-2 {
-//		line-height: get-line-height(double);
+//		line-height: egeo-get-line-height(double);
 // }
 // ```
 // This code will generate:
@@ -132,7 +132,7 @@
 // <div class="compatibility">Compatibility untested.</div>
 //
 //
-// ### set-font-families()
+// ### egeo-set-font-families()
 // 
 // <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
 //
@@ -141,7 +141,7 @@
 // Usage
 // ```
 // .test {
-//		@include set-font-families;
+//		@include egeo-set-font-families;
 // }
 // ```
 // This code will generate:
@@ -162,7 +162,7 @@
 // <div class="compatibility">Compatibility untested.</div>
 //
 //
-// ### set-font-sizes()
+// ### egeo-set-font-sizes()
 // 
 // <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
 //
@@ -171,7 +171,7 @@
 // Usage
 // ```
 // .test {
-//		@include set-font-sizes;
+//		@include egeo-set-font-sizes;
 // }
 // ```
 // This code will generate:
@@ -196,7 +196,7 @@
 // <div class="compatibility">Compatibility untested.</div>
 //
 //
-// ### set-font-weights()
+// ### egeo-set-font-weights()
 // 
 // <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
 //
@@ -205,7 +205,7 @@
 // Usage
 // ```
 // .test {
-//		@include set-font-weights;
+//		@include egeo-set-font-weights;
 // }
 // ```
 // This code will generate:
@@ -230,7 +230,7 @@
 // <div class="compatibility">Compatibility untested.</div>
 //
 //
-// ### set-line-heights()
+// ### egeo-set-line-heights()
 // 
 // <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
 //
@@ -239,7 +239,7 @@
 // Usage
 // ```
 // .test {
-//		@include set-line-heights;
+//		@include egeo-set-line-heights;
 // }
 // ```
 // This code will generate:
