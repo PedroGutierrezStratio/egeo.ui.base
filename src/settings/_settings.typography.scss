@@ -11,30 +11,52 @@
 // | <div class="egeo-u-tx-align-left">$egeo-font-sizes</div> 	| <span class="tag tag--default">!default</span> 	| <div class="egeo-u-tx-align-left">The default Sass map of font sizes declared in the [visual specifications](/web/visual-docs/section-2.html). </div>		|
 // | <div class="egeo-u-tx-align-left">$egeo-line-heights</div> 	| <span class="tag tag--default">!default</span> 	| <div class="egeo-u-tx-align-left">The default Sass map of line heights declared in the [visual specifications](/web/visual-docs/section-2.html).</div> 	|
 //
-// ### Sass map $font-families
+// ### Sass map $egeo-font-families
 //
 // | Result																								| Value				| Key					|
 // |----------------------------------------------------------------------------------------------------|-------------------|-----------------------|
 // | <span class="typo-block typo-block--brandon-grotesque typo-block--medium">Brandon Grotesque</span> | Brandon Grotesque	| brandon-grotesque		|
 // | <span class="typo-block typo-block--open-sans typo-block--medium">Open Sans</span> 				| Open Sans			| open-sans				|
+// | <span class="typo-block typo-block--droid-sans typo-block--medium">Droid Sans</span> 				| Droid Sans		| droid-sans			|
 //
-// ### Sass map $font-sizes
+// ### Sass map $egeo-font-sizes
 //
-// | Result	            																	| Value     | Key	    |
-// |----------------------------------------------------------------------------------------|-----------|-----------|
-// | <span class="typo-block typo-block--open-sans typo-block--xgiant">Open Sans</span>		| 4rem	   	| xgiant	|
-// | <span class="typo-block typo-block--open-sans typo-block--giant">Open Sans</span>		| 3rem		| giant		|
-// | <span class="typo-block typo-block--open-sans typo-block--xxxlarge">Open Sans</span>	| 2.5rem	| xxxlarge	|
-// | <span class="typo-block typo-block--open-sans typo-block--xxlarge">Open Sans</span>	| 2rem		| xxlarge	|
-// | <span class="typo-block typo-block--open-sans typo-block--xlarge">Open Sans</span>		| 1.5rem	| xlarge	|
-// | <span class="typo-block typo-block--open-sans typo-block--large">Open Sans</span>		| 1.2rem	| large		|
-// | <span class="typo-block typo-block--open-sans typo-block--medium">Open Sans</span>		| 1rem		| medium	|
-// | <span class="typo-block typo-block--open-sans typo-block--small">Open Sans</span>		| .8rem		| small		|
-// | <span class="typo-block typo-block--open-sans typo-block--xsmall">Open Sans</span>		| .7rem		| xsmall	|
-// | <span class="typo-block typo-block--open-sans typo-block--xxsmall">Open Sans</span>	| .6rem		| xxsmall	|
-// | <span class="typo-block typo-block--open-sans typo-block--xxxsmall">Open Sans</span>	| .5rem		| xxxsmall	|
+// The $egeo-font-sizes map is really a merge of three different maps: $egeo-head-font-sizes, 
+// $egeo-icon-font-sizes and $egeo-body-font-sizes as it is described in the [Visual Guidelines](/web/visual-docs/).
 //
-// ### Sass map $font-weights
+// | Result	            																									| Value     | Key	    	|
+// | ---------------------------------------------------------------------------------------------------------------------- | --------- | ------------- |
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--head_giant">Heading in Brandon Grotesque</span>		| 2.75rem	| head_giant	|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--head_xxxlarge">Heading in Brandon Grotesque</span>	| 2.12rem	| head_xxxlarge	|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--head_xxlarge">Heading in Brandon Grotesque</span>	| 1.88rem	| head_xxlarge	|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--head_xlarge">Heading in Brandon Grotesque</span>		| 1.75rem	| head_xlarge	|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--head_large">Heading in Brandon Grotesque</span>		| 1.5rem	| head_large	|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--head_medium">Heading in Brandon Grotesque</span>		| 1.38rem	| head_medium	|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--head_small">Heading in Brandon Grotesque</span>		| 1.13rem	| head_small	|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--head_xsmall">Heading in Brandon Grotesque</span>		| 1rem		| head_xsmall	|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--head_xxsmall">Heading in Brandon Grotesque</span>	| .94rem	| head_xxsmall	|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--head_xxxsmall">Heading in Brandon Grotesque</span>	| .82rem	| head_xxxsmall	|
+// | <span class="typo-block typo-block--brandon-grotesque typo-block--head_mini">Heading in Brandon Grotesque</span>		| .75rem	| head_mini		|
+// | <span class="typo-block typo-block--stratio-iconfont typo-block--icon_xxlarge"><i class="icon-datetime"></i></span>	| 1.88rem	| icon_xxlarge	|
+// | <span class="typo-block typo-block--stratio-iconfont typo-block--icon_xlarge"><i class="icon-datetime"></i></span>		| 1.63rem	| icon_xlarge	|
+// | <span class="typo-block typo-block--stratio-iconfont typo-block--icon_large"><i class="icon-datetime"></i></span>		| 1.38rem	| icon_large	|
+// | <span class="typo-block typo-block--stratio-iconfont typo-block--icon_medium"><i class="icon-datetime"></i></span>		| 1.2rem	| icon_medium	|
+// | <span class="typo-block typo-block--stratio-iconfont typo-block--icon_small"><i class="icon-datetime"></i></span>		| 1.1rem	| icon_small	|
+// | <span class="typo-block typo-block--stratio-iconfont typo-block--icon_xsmall"><i class="icon-datetime"></i></span>		| .94rem	| icon_xsmall	|
+// | <span class="typo-block typo-block--stratio-iconfont typo-block--icon_xxsmall"><i class="icon-datetime"></i></span>	| .82rem	| icon_xxsmall	|
+// | <span class="typo-block typo-block--stratio-iconfont typo-block--icon_xxxsmall"><i class="icon-datetime"></i></span>	| .7rem		| icon_xxxsmall	|
+// | <span class="typo-block typo-block--open-sans typo-block--body_xxxlarge">Body in Open Sans</span>						| 1.38rem	| body_xxxlarge	|
+// | <span class="typo-block typo-block--open-sans typo-block--body_xxlarge">Body in Open Sans</span>						| 1.19rem	| body_xxlarge	|
+// | <span class="typo-block typo-block--open-sans typo-block--body_xlarge">Body in Open Sans</span>						| 1.1rem	| body_xlarge	|
+// | <span class="typo-block typo-block--open-sans typo-block--body_large">Body in Open Sans</span>							| 1rem		| body_large	|
+// | <span class="typo-block typo-block--open-sans typo-block--body_medium">Body in Open Sans</span>						| .94rem	| body_medium	|
+// | <span class="typo-block typo-block--open-sans typo-block--body_small">Body in Open Sans</span>							| .84rem	| body_small	|
+// | <span class="typo-block typo-block--open-sans typo-block--body_xsmall">Body in Open Sans</span>						| .82rem	| body_xsmall	|
+// | <span class="typo-block typo-block--open-sans typo-block--body_xxsmall">Body in Open Sans</span>						| .75rem	| body_xxsmall	|
+// | <span class="typo-block typo-block--open-sans typo-block--body_xxxsmall">Body in Open Sans</span>						| .69rem	| body_xxxsmall	|
+//
+//
+// ### Sass map $egeo-font-weights
 //
 // | Result		            																					| Value     | Key	    |
 // |------------------------------------------------------------------------------------------------------------|-----------|-----------|
@@ -45,7 +67,7 @@
 // | <span class="typo-block typo-block--open-sans typo-block--medium typo-block--light">Open Sans</span>		| 200		| light		|
 // 
 //
-// ### Sass map $line-heights
+// ### Sass map $egeo-line-heights
 //
 // #### double
 //
@@ -68,6 +90,7 @@
 $egeo-font-families: (
 	brandon-grotesque: 'Brandon Grotesque',
 	open-sans: 'Open Sans',
+	droid-sans: 'DroidSansMonoRegular',
 	stratio-iconfont: 'ico_stratio'
 ) !default;
 
@@ -79,19 +102,44 @@ $egeo-font-weights: (
 	light: 200,
 ) !default;
 
-$egeo-font-sizes: (
-	xgiant: 4rem,
-	giant: 3rem,
-	xxxlarge: 2.5rem,
-	xxlarge: 2rem,
-	xlarge: 1.5rem,
-	large: 1.2rem,
-	medium: 1rem,
-	small: .8rem,
-	xsmall: .7rem,
-	xxsmall: .6rem,
-	xxxsmall: .5rem
+$egeo-head-font-sizes: (
+	head_giant: 2.75rem,
+	head_xxxlarge: 2.12rem,
+	head_xxlarge: 1.88rem,
+	head_xlarge: 1.75rem,
+	head_large: 1.5rem,
+	head_medium: 1.38rem,
+	head_small: 1.13rem,
+	head_xsmall: 1rem,
+	head_xxsmall: .94rem,
+	head_xxxsmall: .82rem,
+	head_mini: .75rem
 ) !default;
+
+$egeo-icon-font-sizes: (
+	icon_xxlarge: 1.88rem,
+	icon_xlarge: 1.63rem,
+	icon_large: 1.38rem,
+	icon_medium: 1.2rem,
+	icon_small: 1.1rem,
+	icon_xsmall: .94rem,
+	icon_xxsmall: .82rem,
+	icon_xxxsmall: .7rem,
+) !default;
+
+$egeo-body-font-sizes: (
+	body_xxxlarge: 1.38rem,
+	body_xxlarge: 1.19rem,
+	body_xlarge: 1.1rem,
+	body_large: 1rem,
+	body_medium: .94rem,
+	body_small: .84rem,
+	body_xsmall: .82rem,
+	body_xxsmall: .75rem,
+	body_xxxsmall: .69rem,
+) !default;
+
+$egeo-font-sizes: map-merge(map-merge($egeo-head-font-sizes, $egeo-icon-font-sizes), $egeo-body-font-sizes) !default;
 
 $egeo-line-heights: (
 	double: 2em,
