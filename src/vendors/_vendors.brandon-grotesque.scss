@@ -4,6 +4,10 @@
 //
 // <div class="compatibility">This vendor uses @font-face. Check the compatibility [here](section-2.html#section-2.4).</div>
 //
+// | Variable                                                                      | Default value                                     | Description                                                                          |
+// | ----------------------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------ |
+// | <div class="egeo-u-tx-align-left">$egeo-brandon-grotesque</div>               | <div class="egeo-u-tx-align-left">`true`</div>    | Tell to the framework wheter or not the font Brandon Grotesque have to be installed. |
+//
 // ## Dependencies
 //
 // * [settings](section-2.html): This library uses the $egeo-fontface-src variable.
@@ -11,62 +15,66 @@
 //
 // Styleguide 4.2
 
+$egeo-brandon-grotesque: true !default;
+
 @if not global-variable-exists(egeo-fontface-src) {
     @if mixin-exists(egeo-log) {
         @include egeo-log('The variable $egeo-fontface-src should be defined in _settings.scss. The compilation will assume the root folder as the folder which contains the font folders.', $egeo-log-error);    
     }
 }
 
-/* Regular */
-@font-face {
-    font-family: 'Brandon Grotesque';
-    
-    src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-regular.eot');
-    src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-regular.eot?#iefix') format('embedded-opentype'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-regular.woff') format('woff'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-regular.ttf') format('truetype'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-regular.svg#BrandonGrotesqueRegular') format('svg');
-    font-weight: normal;
-    font-weight: 400;
-    font-style: normal;
+@if $egeo-brandon-grotesque {
+    // Regular
+    @font-face {
+        font-family: 'Brandon Grotesque';
+        
+        src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-regular.eot');
+        src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-regular.eot?#iefix') format('embedded-opentype'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-regular.woff') format('woff'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-regular.ttf') format('truetype'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-regular.svg#BrandonGrotesqueRegular') format('svg');
+        font-weight: normal;
+        font-weight: 400;
+        font-style: normal;
 
-}
+    }
 
-/* Light */
-@font-face {
-    font-family: 'Brandon Grotesque';
-    src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-light.eot');
-    src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-light.eot?#iefix') format('embedded-opentype'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-light.woff') format('woff'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-light.ttf') format('truetype'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-light.svg#BrandonGrotesqueLight') format('svg');
-    font-weight: 200;
-    font-style: normal;
+    // Light
+    @font-face {
+        font-family: 'Brandon Grotesque';
+        src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-light.eot');
+        src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-light.eot?#iefix') format('embedded-opentype'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-light.woff') format('woff'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-light.ttf') format('truetype'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-light.svg#BrandonGrotesqueLight') format('svg');
+        font-weight: 200;
+        font-style: normal;
 
-}
+    }
 
-/* Bold */
-@font-face {
-    font-family: 'Brandon Grotesque';
-    src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-bold.eot');
-    src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-bold.eot?#iefix') format('embedded-opentype'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-bold.woff') format('woff'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-bold.ttf') format('truetype'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-bold.svg#BrandonGrotesqueBold') format('svg');
-    font-weight: bold;
-    font-weight: 700;
-    font-style: normal;
+    // Bold
+    @font-face {
+        font-family: 'Brandon Grotesque';
+        src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-bold.eot');
+        src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-bold.eot?#iefix') format('embedded-opentype'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-bold.woff') format('woff'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-bold.ttf') format('truetype'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-bold.svg#BrandonGrotesqueBold') format('svg');
+        font-weight: bold;
+        font-weight: 700;
+        font-style: normal;
 
-}
+    }
 
-/* Extra Bold */
-@font-face {
-    font-family: 'Brandon Grotesque';
-    src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-black.eot');
-    src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-black.eot?#iefix') format('embedded-opentype'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-black.woff') format('woff'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-black.ttf') format('truetype'),
-         url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-black.svg#BrandonGrotesqueBlack') format('svg');
-    font-weight: 900;
-    font-style: normal;
+    // Extra Bold
+    @font-face {
+        font-family: 'Brandon Grotesque';
+        src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-black.eot');
+        src: url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-black.eot?#iefix') format('embedded-opentype'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-black.woff') format('woff'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-black.ttf') format('truetype'),
+             url($egeo-fontface-src + '/brandon-grotesque/brandongrotesque-black.svg#BrandonGrotesqueBlack') format('svg');
+        font-weight: 900;
+        font-style: normal;
+    }    
 }

@@ -4,6 +4,10 @@
 //
 // <div class="compatibility">This vendor uses @font-face. Check the compatibility [here](section-2.html#section-2.4).</div>
 //
+// | Variable                                                                      | Default value                                     | Description                                                                        |
+// | ----------------------------------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------- |
+// | <div class="egeo-u-tx-align-left">$egeo-droid-sans-mono</div>                 | <div class="egeo-u-tx-align-left">`true`</div>    | Tell to the framework wheter or not the font Droid Sans Mono have to be installed. |
+//
 // ## Dependencies
 //
 // * [settings](section-2.html): This library uses the $egeo-fontface-src variable.
@@ -11,19 +15,23 @@
 //
 // Styleguide 4.2
 
+$egeo-droid-sans-mono: true !default;
+
 @if not global-variable-exists(egeo-fontface-src) {
     @if mixin-exists(egeo-log) {
         @include egeo-log('The variable $egeo-fontface-src should be defined in _settings.scss. The compilation will assume the root folder as the folder which contains the font folders.', $egeo-log-error);    
     }
 }
 
-@font-face {
-    font-family: 'DroidSansMonoRegular';
-    src: url($egeo-fontface-src + '/droid-sans-mono/droid-sans-mono-webfont.eot');
-    src: url($egeo-fontface-src + '/droid-sans-mono/droid-sans-mono-webfont.eot?#iefix') format('embedded-opentype'),
-         url($egeo-fontface-src + '/droid-sans-mono/droid-sans-mono-webfont.woff') format('woff'),
-         url($egeo-fontface-src + '/droid-sans-mono/droid-sans-mono-webfont.ttf') format('truetype'),
-         url($egeo-fontface-src + '/droid-sans-mono/droid-sans-mono-webfont.svg#DroidSansMonoRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+@if $egeo-droid-sans-mono {
+    @font-face {
+        font-family: 'DroidSansMonoRegular';
+        src: url($egeo-fontface-src + '/droid-sans-mono/droid-sans-mono-webfont.eot');
+        src: url($egeo-fontface-src + '/droid-sans-mono/droid-sans-mono-webfont.eot?#iefix') format('embedded-opentype'),
+             url($egeo-fontface-src + '/droid-sans-mono/droid-sans-mono-webfont.woff') format('woff'),
+             url($egeo-fontface-src + '/droid-sans-mono/droid-sans-mono-webfont.ttf') format('truetype'),
+             url($egeo-fontface-src + '/droid-sans-mono/droid-sans-mono-webfont.svg#DroidSansMonoRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
 }
