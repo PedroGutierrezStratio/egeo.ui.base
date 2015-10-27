@@ -104,10 +104,10 @@
 //
 // ## Variables exposed to theming
 //  
-// | Variable                                                                      | Default value                                   | Description                                                                          |
-// | ----------------------------------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------ |
-// | <div class="egeo-u-tx-align-left">$egeo-o-media</div>                         | <div class="egeo-u-tx-align-left">`true`</div>  | Whether or not we want to include the media object in the compiled CSS.              |
-// | <div class="egeo-u-tx-align-left">$egeo-o-media---margin</div>                | <div class="egeo-u-tx-align-left">`10px`</div>  | The margin value the media object will use to separate the items which belong to it. |
+// | Variable                                                                      | Default value                                   | Description                                                                                                                  |
+// | ----------------------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+// | <div class="egeo-u-tx-align-left">$egeo-o-media</div>                         | <div class="egeo-u-tx-align-left">`true`</div>  | <div class="egeo-u-tx-align-left">Whether or not we want to include the media object in the compiled CSS.</div>              |
+// | <div class="egeo-u-tx-align-left">$egeo-o-media---margin</div>                | <div class="egeo-u-tx-align-left">`10px`</div>  | <div class="egeo-u-tx-align-left">The margin value the media object will use to separate the items which belong to it.</div> |
 //
 // <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
 //
