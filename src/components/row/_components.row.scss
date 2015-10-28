@@ -49,7 +49,7 @@
 //
 // | Property                                            | Default value                                                                  |
 // | --------------------------------------------------- | ------------------------------------------------------------------------------ |
-// | <div class="egeo-u-tx-align--left">soon</div>       | <div class="egeo-u-tx-align--left">...</div>                                          |
+// | <div class="egeo-u-tx-align--left">content-at-right</div>       | <div class="egeo-u-tx-align--left">false</div>                                          |
 //
 // ### Usage
 //
@@ -57,10 +57,12 @@
 //
 // ```
 // <egeo-c-row><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
+// <egeo-c-row data-content-at-right="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
 // ```
 //
 // <hr>
 // <egeo-c-row><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
+// <egeo-c-row data-content-at-right="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
 // <hr>
 //
 // ## Dependencies

@@ -41,6 +41,8 @@
 //
 // Styleguide 8.1
 
+$this: '#{$egeo-namespace}u-clearfix';
+
 // If silent classes are activated the CSS classes will be not created
 @if global-variable-exists(egeo-silent-classes) {
     $egeo-u-clearfix: not $egeo-silent-classes !default;    
@@ -58,8 +60,8 @@
 
 @if variable-exists(egeo-c-clearfix) {
     @if $egeo-c-clearfix {
-        .#{$egeo-namespace}u-clearfix,
-        %#{$egeo-namespace}u-clearfix {
+        .#{$this},
+        %#{$this} {
             @include egeo-u-clearfix;
         }
     }

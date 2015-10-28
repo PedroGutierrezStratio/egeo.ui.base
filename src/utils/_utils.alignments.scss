@@ -53,6 +53,9 @@
 //
 // Styleguide 8.2
 
+$this: '#{$egeo-namespace}u-tx-align';
+$this-nobem: '#{$egeo-nobem-namespace}u-tx-align';
+
 // If silent classes are activated the CSS classes will be not created
 @if global-variable-exists(egeo-silent-classes) {
     $egeo-u-tx-alignments: not $egeo-silent-classes !default;    
@@ -69,23 +72,23 @@
 }
 
 @if $egeo-u-tx-alignments {
-    .#{$egeo-namespace}u-tx-align-left,
-    %#{$egeo-namespace}u-tx-align-left {
+    .#{$this}--left,
+    %#{$this}--left {
     	@include egeo-u-tx-align(left);
     }
 
-    .#{$egeo-nobem-namespace}u-tx-align-left,
-    %#{$egeo-nobem-namespace}u-tx-align-left {
+    .#{$this-nobem}--left,
+    %#{$this-nobem}--left {
     	@include egeo-u-tx-align(left, true);
     }
 
-    .#{$egeo-namespace}u-tx-align-right,
-    %#{$egeo-namespace}u-tx-align-right {
+    .#{$this}--right,
+    %#{$this}--right {
         @include egeo-u-tx-align(right);
     }
 
-    .#{$egeo-nobem-namespace}u-tx-align-right,
-    %#{$egeo-nobem-namespace}u-tx-align-right {
+    .#{$this-nobem}--right,
+    %#{$this-nobem}--right {
         @include egeo-u-tx-align(right, true);
     }    
 }
