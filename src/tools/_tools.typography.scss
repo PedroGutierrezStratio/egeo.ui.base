@@ -6,7 +6,7 @@
 //
 // ### egeo-get-font($font-family: open-sans)
 // 
-// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
+// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
 //
 // Return a value from the Sass map [$egeo-font-families](section-2.html#section-2.2).
 //
@@ -38,7 +38,7 @@
 //
 // ### egeo-get-font-size($font-size: medium)
 // 
-// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
+// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
 //
 // Return a value from the Sass map [$egeo-font-sizes](section-2.html#section-2.2).
 //
@@ -70,7 +70,7 @@
 //
 // ### egeo-get-font-weight($font-weight: normal)
 // 
-// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
+// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
 //
 // Return a value from the Sass map [$egeo-font-weights](section-2.html#section-2.2).
 //
@@ -102,7 +102,7 @@
 //
 // ### egeo-get-line-height($line-height: normal)
 // 
-// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span>
+// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
 //
 // Return a value from the Sass map [$egeo-line-heights](section-2.html#section-2.2).
 //
@@ -134,7 +134,7 @@
 //
 // ### egeo-set-font-families()
 // 
-// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
 //
 // Output a set of modifiers based on the $egeo-font-families map
 //
@@ -164,7 +164,7 @@
 //
 // ### egeo-set-font-sizes()
 // 
-// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
 //
 // Output a set of modifiers based on the $egeo-font-sizes map
 //
@@ -198,7 +198,7 @@
 //
 // ### egeo-set-font-weights()
 // 
-// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
 //
 // Output a set of modifiers based on the $egeo-font-weights map
 //
@@ -232,7 +232,7 @@
 //
 // ### egeo-set-line-heights()
 // 
-// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
 //
 // Output a set of modifiers based on the $egeo-line-heights map
 //
