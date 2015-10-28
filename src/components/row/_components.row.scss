@@ -1,38 +1,44 @@
-// Icon
+// Row
 //
-// The Icon Component is a class to group common styles and behaviors to
-// all icons in an Egeo app.
+// The Row Component is a container which uses always 100% width
+// and never floats.
 //
-// ### egeo-c-icon
+// ### egeo-c-row
 // 
 // <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
 //
-// Injects the general behavior and properties of the class Icon to other
+// Injects the general behavior and properties of the class Row to other
 // components of the UI Kit.
-//
-// **Note**: The Icon component triggers styles in other components if is active.
 //
 // Usage
 //
 // ```
 // .test {
-// 		@include egeo-c-icon;
+//      @include egeo-c-row;
 // }
 // ```
 // Will product the next result:
 // ```
 // .test {
-// 		box-sizing: border-box;
+//      box-sizing: border-box;
+//      display: block;
+// }
+//
+// .test:after {
+//      clear: both;
+//      content: "";
+//      display: table;
 // }
 // ```
 //
 // ## Dependencies
 //  
 // * [component](section-7.html#section-7.1)
+// * [clearfix](section-8.html#section-8.1)
 //
 // <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
 //
-// Styleguide 7.3
+// Styleguide 7.4
 
-@import 'rules';
 @import 'vars';
+@import 'rules';

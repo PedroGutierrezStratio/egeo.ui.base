@@ -1,0 +1,16 @@
+$this: '#{$egeo-namespace}c-row';
+
+@mixin egeo-c-row {
+    @include egeo-c-component;
+    @include egeo-u-clearfix;
+
+    display: block;
+}
+
+@if variable-exists(egeo-c-row) {
+    @if $egeo-c-row {
+        .#{$this} {
+            @include egeo-c-row;
+        }
+    }
+}
