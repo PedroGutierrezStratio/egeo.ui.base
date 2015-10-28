@@ -9,6 +9,7 @@ module.exports = function (config) {
 
       'tests/app.js',
       'src/providers/*.js',
+      'src/components/**/*.js',
 
       // fixtures
       //'tests/mock/*.json',
