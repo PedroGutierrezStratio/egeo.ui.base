@@ -12,7 +12,7 @@
 //
 // * **$font-family** - The key of a pair key/value defined in the Sass map [$egeo-font-families](section-2.html#section-2.2).
 //
-// Usage
+// #### Usage
 // ```
 // .test {
 //		font-family: egeo-get-font();
@@ -44,7 +44,7 @@
 //
 // * **$font-size** - The key of a pair key/value defined in the Sass map [$egeo-font-sizes](section-2.html#section-2.2).
 //
-// Usage
+// #### Usage
 // ```
 // .test {
 //		font-size: egeo-get-font-size();
@@ -76,7 +76,7 @@
 //
 // * **$font-weight** - The key of a pair key/value defined in the Sass map [$egeo-font-weights](section-2.html#section-2.2).
 //
-// Usage
+// #### Usage
 // ```
 // .test {
 //		font-weight: egeo-get-font-weight();
@@ -108,7 +108,7 @@
 //
 // * **$line-height** - The key of a pair key/value defined in the Sass map [$egeo-line-heights](section-2.html#section-2.2).
 //
-// Usage
+// #### Usage
 // ```
 // .test {
 //		line-height: egeo-get-line-height();
@@ -138,7 +138,7 @@
 //
 // Output a set of modifiers based on the $egeo-font-families map
 //
-// Usage
+// #### Usage
 // ```
 // .test {
 //		@include egeo-set-font-families;
@@ -168,7 +168,7 @@
 //
 // Output a set of modifiers based on the $egeo-font-sizes map
 //
-// Usage
+// #### Usage
 // ```
 // .test {
 //		@include egeo-set-font-sizes;
@@ -202,7 +202,7 @@
 //
 // Output a set of modifiers based on the $egeo-font-weights map
 //
-// Usage
+// #### Usage
 // ```
 // .test {
 //		@include egeo-set-font-weights;
@@ -236,7 +236,7 @@
 //
 // Output a set of modifiers based on the $egeo-line-heights map
 //
-// Usage
+// #### Usage
 // ```
 // .test {
 //		@include egeo-set-line-heights;

@@ -10,7 +10,7 @@
 // Injects the general behavior and properties of the class Row to other
 // components of the UI Kit.
 //
-// Usage
+// #### Usage
 //
 // ```
 // .test {
@@ -30,6 +30,16 @@
 //      display: table;
 // }
 // ```
+//
+// #### Example
+//
+// ```
+// <span class="egeo-c-row">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sem sem. Sed eros mi, blandit vel nulla non, sodales mollis libero.</span>
+// <span class="egeo-c-row">Nam faucibus aliquam mi, sit amet eleifend libero vehicula a. Fusce efficitur posuere lacus, eu tempus dolor volutpat id.</span>
+// ```
+//
+// <span class="egeo-c-row">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sem sem. Sed eros mi, blandit vel nulla non, sodales mollis libero.</span>
+// <span class="egeo-c-row">Nam faucibus aliquam mi, sit amet eleifend libero vehicula a. Fusce efficitur posuere lacus, eu tempus dolor volutpat id.</span>
 //
 // ## Dependencies
 //  
