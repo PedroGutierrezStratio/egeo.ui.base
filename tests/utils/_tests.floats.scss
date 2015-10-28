@@ -1,0 +1,66 @@
+@import 'true';
+@import '../../src/settings/settings';
+@import '../../src/tools/tools.log';
+@import '../../src/utils/utils.floats';
+
+@include test-module('utils.floats') {
+    @include test('egeo-u-float [mixin]') {
+        @include assert('output the float left pattern') {
+            @include input {
+                .test {
+                    @include egeo-u-float;
+                }
+            }
+
+            @include expect {
+                .test {
+                    float: left;
+                }
+            }
+        }
+
+        @include assert('output the float right pattern') {
+            @include input {
+                .test {
+                    @include egeo-u-float(right);
+                }
+            }
+
+            @include expect {
+                .test {
+                    float: right;
+                }
+            }
+        }
+
+        @include assert('output the float left pattern in no-bem systems') {
+            @include input {
+                .test {
+                    @include egeo-u-float(left, true);
+                }
+            }
+
+            @include expect {
+                .test {
+                    float: left !important;
+                }
+            }
+        }
+
+        @include assert('output the float right pattern in no-bem systems') {
+            @include input {
+                .test {
+                    @include egeo-u-float(right, true);
+                }
+            }
+
+            @include expect {
+                .test {
+                    float: right !important;
+                }
+            }
+        }
+    }
+}
+
+@include report;

@@ -4,7 +4,22 @@
 // These classes are also available using the [non-BEM 
 // namespace](section-1.html).
 //
-// ### %egeo-u-tx-align-left, .egeo-u-tx-align-left
+// ## Variables exposed to theming
+//  
+// | Variable                                                                      | Default value                                   | Description                                                                                                                  |
+// | ----------------------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+// | <div class="egeo-u-tx-align--left">$egeo-u-tx-alignments</div>                 | <div class="egeo-u-tx-align--left">`true`</div>  | <div class="egeo-u-tx-align--left">Whether or not we want to include the alignments classes in the compiled CSS.</div>        |
+//
+// ### egeo-u-tx-align($direction: left, $nobem: false)
+//
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Tested</span>
+//
+// Creates a text-align property in any $direction (left/right) and adding `!important` 
+// depending of the `$nobem` parameter value.
+//
+// <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
+//
+// ### %egeo-u-tx-align--left, .egeo-u-tx-align--left
 // 
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
@@ -12,7 +27,7 @@
 //
 // <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
 //
-// ### %egeo-u-tx-align-left, .egeo-u-tx-align-left
+// ### %egeo-u-tx-align--left, .egeo-u-tx-align--left
 // 
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
@@ -38,22 +53,39 @@
 //
 // Styleguide 8.2
 
-.#{$egeo-namespace}u-tx-align-left,
-%#{$egeo-namespace}u-tx-align-left {
-	text-align: left;
+// If silent classes are activated the CSS classes will be not created
+@if global-variable-exists(egeo-silent-classes) {
+    $egeo-u-tx-alignments: not $egeo-silent-classes !default;    
+} @else {
+    $egeo-u-tx-alignments: true !default;
 }
 
-.#{$egeo-nobem-namespace}u-tx-align-left,
-%#{$egeo-nobem-namespace}u-tx-align-left {
-	text-align: left !important;
+@mixin egeo-u-tx-align($direction: left, $nobem: false) {
+    @if $nobem {
+        text-align: $direction !important;
+    } @else {
+        text-align: $direction;
+    }
 }
 
-.#{$egeo-namespace}u-tx-align-right,
-%#{$egeo-namespace}u-tx-align-right {
-	text-align: right;
-}
+@if $egeo-u-tx-alignments {
+    .#{$egeo-namespace}u-tx-align-left,
+    %#{$egeo-namespace}u-tx-align-left {
+    	@include egeo-u-tx-align(left);
+    }
 
-.#{$egeo-nobem-namespace}u-tx-align-right,
-%#{$egeo-nobem-namespace}u-tx-align-right {
-	text-align: right !important;
+    .#{$egeo-nobem-namespace}u-tx-align-left,
+    %#{$egeo-nobem-namespace}u-tx-align-left {
+    	@include egeo-u-tx-align(left, true);
+    }
+
+    .#{$egeo-namespace}u-tx-align-right,
+    %#{$egeo-namespace}u-tx-align-right {
+        @include egeo-u-tx-align(right);
+    }
+
+    .#{$egeo-nobem-namespace}u-tx-align-right,
+    %#{$egeo-nobem-namespace}u-tx-align-right {
+        @include egeo-u-tx-align(right, true);
+    }    
 }

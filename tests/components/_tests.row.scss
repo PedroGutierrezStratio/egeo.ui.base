@@ -1,0 +1,35 @@
+@import 'true';
+@import '../../src/settings/settings';
+@import '../../src/tools/tools.log';
+@import '../../src/utils/utils.clearfix';
+@import '../../src/components/row/components.row';
+
+@include test-module('components.row') {
+	@include test('egeo-c-row [mixin]') {
+		@include assert('output the general properties and modifiers of a row') {
+			@include input {
+				.test {
+					@include egeo-c-row;
+					@include egeo-u-clearfix;
+
+					display: block;
+				}
+			}
+
+			@include expect {
+				.test {
+					box-sizing: border-box;
+					display: block;
+				}
+
+				.test:after {
+			        clear: both;
+			        content: '';
+			        display: table;
+				}
+			}
+		}
+	}
+}
+
+@include report;

@@ -7,6 +7,12 @@ $egeo-silent-classes: true;
 @import 'tools/tests.maps';
 @import 'tools/tests.typography';
 
+@import 'utils/tests.clearfix';
+@import 'utils/tests.text';
+@import 'utils/tests.floats';
+@import 'utils/tests.alignments';
+
 @import 'components/tests.component';
 @import 'components/tests.icon';
+@import 'components/tests.row';
 //@import 'components/tests.button';    // The button tests are commented due to True doesn't work well with mixins which generates new classes

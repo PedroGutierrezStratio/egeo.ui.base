@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<testsuite name="PhantomJS 1.9.8 (Windows 8 0.0.0)" package="" timestamp="2015-10-27T11:38:09" id="0" hostname="Alejandro-PC" tests="1" errors="0" failures="0" time="0.009">
+<testsuite name="PhantomJS 1.9.8 (Windows 8 0.0.0)" package="" timestamp="2015-10-28T11:24:12" id="0" hostname="Alejandro-PC" tests="1" errors="0" failures="0" time="0.011">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34"/>
   </properties>
-  <testcase name="It should return the default config value of the Path where Egeo is installed" time="0.009" classname="PhantomJS_1_9_8_(Windows_8_0_0_0).providers.egeo.config"/>
+  <testcase name="It should return the default config value of the Path where Egeo is installed" time="0.011" classname="PhantomJS_1_9_8_(Windows_8_0_0_0).providers.egeo.config"/>
   <system-out>
     <![CDATA[
 ]]>

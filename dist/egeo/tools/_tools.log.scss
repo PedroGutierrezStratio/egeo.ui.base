@@ -16,9 +16,9 @@
 //
 // | var 											| default 	| desc 																																							|
 // |------------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-// | <div class="egeo-u-tx-align-left">$egeo-log-debug</div> 	| No 		| <div class="egeo-u-tx-align-left">A constant value used by the log methods to say to the log method that we want to show a debug message in the console.</div> 	|
-// | <div class="egeo-u-tx-align-left">$egeo-log-warn</div> 	| No 		| <div class="egeo-u-tx-align-left">A constant value used by the log methods to say to the log method that we want to show a warn message in the console.</div> 		|
-// | <div class="egeo-u-tx-align-left">$egeo-log-error</div> 	| No 		| <div class="egeo-u-tx-align-left">A constant value used by the log methods to say to the log method that we want to show an error message in the console.</div> 	|
+// | <div class="egeo-u-tx-align--left">$egeo-log-debug</div> 	| No 		| <div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show a debug message in the console.</div> 	|
+// | <div class="egeo-u-tx-align--left">$egeo-log-warn</div> 	| No 		| <div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show a warn message in the console.</div> 		|
+// | <div class="egeo-u-tx-align--left">$egeo-log-error</div> 	| No 		| <div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show an error message in the console.</div> 	|
 //
 // ## Functions
 //
@@ -32,8 +32,8 @@
 //
 // | parameters										| <div class="egeo-u-nowrap">default value</div> 	| desc 																																																|
 // |------------------------------------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-// | <div class="egeo-u-tx-align-left">$message</div> 	| No 				| <div class="egeo-u-tx-align-left">The message we want to show in the console.</div> 																													|
-// | <div class="egeo-u-tx-align-left">$type</div> 		| $egeo-log-debug		| <div class="egeo-u-tx-align-left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$egeo-log-debug`, `@log-warn` or `@log-error`.</div> |
+// | <div class="egeo-u-tx-align--left">$message</div> 	| No 				| <div class="egeo-u-tx-align--left">The message we want to show in the console.</div> 																													|
+// | <div class="egeo-u-tx-align--left">$type</div> 		| $egeo-log-debug		| <div class="egeo-u-tx-align--left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$egeo-log-debug`, `@log-warn` or `@log-error`.</div> |
 // 
 // #### Usage
 //
@@ -60,8 +60,8 @@
 //
 // | parameters										| <div class="egeo-u-nowrap">default value</div> 	| desc 																																																|
 // |------------------------------------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-// | <div class="egeo-u-tx-align-left">$message</div> 	| No 				| <div class="egeo-u-tx-align-left">The message we want to show in the console.</div> 																													|
-// | <div class="egeo-u-tx-align-left">$type</div> 		| $egeo-log-debug		| <div class="egeo-u-tx-align-left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$egeo-log-debug`, `@log-warn` or `@log-error`.</div> |
+// | <div class="egeo-u-tx-align--left">$message</div> 	| No 				| <div class="egeo-u-tx-align--left">The message we want to show in the console.</div> 																													|
+// | <div class="egeo-u-tx-align--left">$type</div> 		| $egeo-log-debug		| <div class="egeo-u-tx-align--left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$egeo-log-debug`, `@log-warn` or `@log-error`.</div> |
 //
 // #### Usage
 //

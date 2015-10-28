@@ -1,0 +1,38 @@
+@import 'true';
+@import '../../src/settings/settings';
+@import '../../src/tools/tools.log';
+@import '../../src/utils/utils.text';
+
+@include test-module('utils.text') {
+    @include test('egeo-u-nowrap [mixin]') {
+        @include assert('output the nowrap property') {
+            @include input {
+                .test {
+                    @include egeo-u-nowrap;
+                }
+            }
+
+            @include expect {
+                .test {
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        @include assert('output the nowrap property in nobem systems') {
+            @include input {
+                .test {
+                    @include egeo-u-nowrap(true);
+                }
+            }
+
+            @include expect {
+                .test {
+                    white-space: nowrap !important;
+                }
+            }
+        }
+    }
+}
+
+@include report;

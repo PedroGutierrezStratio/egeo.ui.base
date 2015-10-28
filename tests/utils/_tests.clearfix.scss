@@ -1,0 +1,26 @@
+@import 'true';
+@import '../../src/settings/settings';
+@import '../../src/tools/tools.log';
+@import '../../src/utils/utils.clearfix';
+
+@include test-module('utils.clearfix') {
+    @include test('egeo-u-clearfix [mixin]') {
+        @include assert('output the clearfix pattern') {
+            @include input {
+                .test {
+                    @include egeo-u-clearfix;
+                }
+            }
+
+            @include expect {
+                .test:after {
+                    clear: both;
+                    content: '';
+                    display: table;
+                }
+            }
+        }
+    }
+}
+
+@include report;

@@ -2,7 +2,7 @@ $this: '#{$egeo-namespace}c-row';
 
 @mixin egeo-c-row {
     @include egeo-c-component;
-    @include egeo-u-clearfix;
+    @extend %#{$egeo-namespace}u-clearfix;
 
     display: block;
 }

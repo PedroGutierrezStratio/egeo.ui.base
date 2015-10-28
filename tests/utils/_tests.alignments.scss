@@ -1,0 +1,66 @@
+@import 'true';
+@import '../../src/settings/settings';
+@import '../../src/tools/tools.log';
+@import '../../src/utils/utils.alignments';
+
+@include test-module('utils.alignments') {
+    @include test('egeo-u-tx-align [mixin]') {
+        @include assert('output the text-align left pattern') {
+            @include input {
+                .test {
+                    @include egeo-u-tx-align;
+                }
+            }
+
+            @include expect {
+                .test {
+                    text-align: left;
+                }
+            }
+        }
+
+        @include assert('output the text-align right pattern') {
+            @include input {
+                .test {
+                    @include egeo-u-tx-align(right);
+                }
+            }
+
+            @include expect {
+                .test {
+                    text-align: right;
+                }
+            }
+        }
+
+        @include assert('output the text-align left pattern in no-bem systems') {
+            @include input {
+                .test {
+                    @include egeo-u-tx-align(left, true);
+                }
+            }
+
+            @include expect {
+                .test {
+                    text-align: left !important;
+                }
+            }
+        }
+
+        @include assert('output the text-align right pattern in no-bem systems') {
+            @include input {
+                .test {
+                    @include egeo-u-tx-align(right, true);
+                }
+            }
+
+            @include expect {
+                .test {
+                    text-align: right !important;
+                }
+            }
+        }
+    }
+}
+
+@include report;

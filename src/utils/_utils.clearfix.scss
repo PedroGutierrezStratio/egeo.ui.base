@@ -3,16 +3,12 @@
 // Originaly written by [Harry Roberts](https://twitter.com/csswizardry) for
 // [inuitcss](https://github.com/inuitcss).
 //
-// ### %egeo-u-tx-align-left, .egeo-u-tx-align-left
-// 
-// <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
-//
 // Micro clearfix, as per: 
 // [css-101.org/articles/clearfix/latest-new-clearfix-so-far.php](http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php)
 // Extend the clearfix class with Sass to avoid the `.clearfix` class appearing
 // over and over in your markup.
 //
-// You can use it directly applying the class `.clearfix` to your HTML or
+// You can use it directly applying the class `.clearfix` to your HTML if [Silent Classes](section-2.html) are not active or
 // injecting the [placeholder](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_) 
 // `%clearfix` in your Sass code using the [@extend directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#extend).
 //
@@ -29,13 +25,42 @@
 //
 // <div class="compatibility">Compatibility IE8+*, Firefox 3+, Chrome 4+, Edge 12+, Safari 3.1+, Opera 7+<div>* With !Doctype or IE9 with full support</div>
 //
+// ## Variables exposed to theming
+//  
+// | Variable                                                  | Default value                                    | Description                                                                                                        |
+// | --------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+// | <div class="egeo-u-tx-align--left">$egeo-u-clearfix</div> | <div class="egeo-u-tx-align--left">`true`</div>  | <div class="egeo-u-tx-align--left">Whether or not we want to include the clearfix class in the compiled CSS.</div>  |
+//
+// ### egeo-u-clearfix
+//
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Tested</span>
+//
+// Creates the clearfix pattern from the class which is injected.
+//
+// <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
+//
 // Styleguide 8.1
 
-.#{$egeo-namespace}u-clearfix,
-%#{$egeo-namespace}u-clearfix {
+// If silent classes are activated the CSS classes will be not created
+@if global-variable-exists(egeo-silent-classes) {
+    $egeo-u-clearfix: not $egeo-silent-classes !default;    
+} @else {
+    $egeo-u-clearfix: true !default;
+}
+
+@mixin egeo-u-clearfix {
     &:after {
         clear: both;
-        content: "";
+        content: '';
         display: table;
+    }
+}
+
+@if variable-exists(egeo-c-clearfix) {
+    @if $egeo-c-clearfix {
+        .#{$egeo-namespace}u-clearfix,
+        %#{$egeo-namespace}u-clearfix {
+            @include egeo-u-clearfix;
+        }
     }
 }
