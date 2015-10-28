@@ -57,18 +57,6 @@ $this: '#{$egeo-namespace}c-button';
 	text-decoration: none;
 	transition: $egeo-c-button---transition;
 
-	@if variable-exists(egeo-c-icon) {
-		@if $egeo-c-icon {
-			.#{$egeo-namespace}c-icon:last-child {
-				margin: $egeo-c-button__c-icon--last-child---margin;
-			}
-
-			.#{$egeo-namespace}c-icon:first-child {
-				margin: $egeo-c-button__c-icon--first-child---margin;
-			}
-		}
-	}
-
 	&--small {
 		font-size: $egeo-c-button--small---font-size;
 		height: $egeo-c-button--small---height;
@@ -115,6 +103,18 @@ $this: '#{$egeo-namespace}c-button';
 	&:focus {
 		box-shadow: $egeo-c-button--focus---shadow;
 		outline: none;
+	}
+
+	@if variable-exists(egeo-c-icon) {
+		@if $egeo-c-icon {
+			.#{$egeo-namespace}c-icon:last-child {
+				margin: $egeo-c-button__c-icon--last-child---margin;
+			}
+
+			.#{$egeo-namespace}c-icon:first-child {
+				margin: $egeo-c-button__c-icon--first-child---margin;
+			}
+		}
 	}
 
 	@if map-has-key($egeo-c-buttons, disabled) {
