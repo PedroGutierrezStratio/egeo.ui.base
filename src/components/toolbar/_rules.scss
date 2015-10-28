@@ -1,0 +1,23 @@
+$this: '#{$egeo-namespace}c-toolbar';
+
+@mixin egeo-c-toolbar {
+    @include egeo-c-component;
+
+    display: inline-block;
+
+    &__item {
+        margin: $egeo-c-toolbar__item---margin;
+
+        &:first-child {
+            margin: $egeo-c-toolbar__item--first-child---margin;
+        }
+    }
+}
+
+@if variable-exists(egeo-c-toolbar) {
+    @if $egeo-c-toolbar {
+        .#{$this} {
+            @include egeo-c-toolbar;
+        }
+    }
+}

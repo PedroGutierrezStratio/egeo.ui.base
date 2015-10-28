@@ -1,0 +1,34 @@
+@import 'true';
+@import '../../src/settings/settings';
+@import '../../src/tools/tools.log';
+@import '../../src/utils/utils.clearfix';
+@import '../../src/components/toolbar/components.toolbar';
+
+@include test-module('components.toolbar') {
+	@include test('egeo-c-toolbar [mixin]') {
+		@include assert('output the general properties and modifiers of a toolbar') {
+			@include input {
+				.test {
+					@include egeo-c-toolbar;
+				}
+			}
+
+			@include expect {
+				.test {
+					box-sizing: border-box;
+					display: inline-block;
+				}
+
+				.test__item {
+			        margin: 0 0 0 8px;
+				}
+
+				.test__item--first-child {
+			        margin: 0;
+				}
+			}
+		}
+	}
+}
+
+@include report;

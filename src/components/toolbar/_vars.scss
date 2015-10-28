@@ -1,0 +1,9 @@
+// If silent classes are activated the CSS classes will be not created
+@if global-variable-exists(egeo-silent-classes) {
+    $egeo-c-toolbar: not $egeo-silent-classes !default;    
+} @else {
+    $egeo-c-toolbar: true !default;
+}
+
+$egeo-c-toolbar__item---margin: 0 0 0 8px !default;
+$egeo-c-toolbar__item--first-child---margin: 0 !default;
