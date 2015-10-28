@@ -41,6 +41,28 @@
 // <span class="egeo-c-row">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sem sem. Sed eros mi, blandit vel nulla non, sodales mollis libero.</span>
 // <span class="egeo-c-row">Nam faucibus aliquam mi, sit amet eleifend libero vehicula a. Fusce efficitur posuere lacus, eu tempus dolor volutpat id.</span>
 //
+// ## The egeo-c-row AngularJS directive
+//
+// Egeo provides an AngularJS directive to create rows with ease. The directive is restricted
+// to HTML Element and called `egeo-c-row`. The Row component is a container so it allows to use
+// transclude content. Below you can see the properties exposed:
+//
+// | Property                                            | Default value                                                                  |
+// | --------------------------------------------------- | ------------------------------------------------------------------------------ |
+// | <div class="egeo-u-tx-align--left">soon</div>       | <div class="egeo-u-tx-align--left">...</div>                                          |
+//
+// ### Usage
+//
+// Take a look to the samples shown below to see how the properties could be used and combined to get different results:
+//
+// ```
+// <egeo-c-row><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
+// ```
+//
+// <hr>
+// <egeo-c-row><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
+// <hr>
+//
 // ## Dependencies
 //  
 // * [component](section-7.html#section-7.1)
