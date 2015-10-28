@@ -12,6 +12,7 @@
             restrict: 'E',
             replace: true,
             scope: {
+                at-right: '@',
                 icon: '@',
                 label: '@',
                 modifier: '@',
