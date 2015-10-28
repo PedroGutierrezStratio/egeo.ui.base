@@ -6,7 +6,7 @@ $this: '#{$egeo-namespace}c-icon';
 
 @if variable-exists(egeo-c-icon) {
     @if $egeo-c-icon {
-        .#{$this}c-icon {
+        .#{$this} {
             @include egeo-c-icon;
         }
     }
