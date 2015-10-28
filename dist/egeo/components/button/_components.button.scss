@@ -210,7 +210,8 @@
 // | <div class="egeo-u-tx-align--left">$egeo-c-button---text-transform</div>       | <div class="egeo-u-tx-align--left">`uppercase`</div>                            |
 // | <div class="egeo-u-tx-align--left">$egeo-c-button---transition</div>           | <div class="egeo-u-tx-align--left">`all .5s`                                    |
 // | <div class="egeo-u-tx-align--left">$egeo-c-button--focus---shadow</div>        | <div class="egeo-u-tx-align--left">`0 0 5px 0 rgba(egeo-get-color(n8), .5)`     |
-// | <div class="egeo-u-tx-align--left">$egeo-c-button__c-icon---margin</div>       | <div class="egeo-u-tx-align--left">`0 8px 0 0`                                  |
+// | <div class="egeo-u-tx-align--left">$egeo-c-button__c-icon--first-child---margin</div>       | <div class="egeo-u-tx-align--left">`0 8px 0 0`                                  |
+// | <div class="egeo-u-tx-align--left">$egeo-c-button__c-icon--last-child---margin</div>       | <div class="egeo-u-tx-align--left">`0 0 0 8px`                                  |
 // | <div class="egeo-u-tx-align--left">$egeo-c-button--small---font-size</div>     | <div class="egeo-u-tx-align--left">`egeo-get-font-size(small)`                  |
 // | <div class="egeo-u-tx-align--left">$egeo-c-button--small---height</div>        | <div class="egeo-u-tx-align--left">`30px`                                       |
 // | <div class="egeo-u-tx-align--left">$egeo-c-button--small---padding</div>       | <div class="egeo-u-tx-align--left">`4px 15px`                                   |
@@ -227,7 +228,8 @@
 // | <div class="egeo-u-tx-align--left">type</div>        | <div class="egeo-u-tx-align--left">Submit, Reset or Button</div>                                          |
 // | <div class="egeo-u-tx-align--left">modifier</div>    | <div class="egeo-u-tx-align--left">The name of the button created as a CSS BEM Modifier</div>             |
 // | <div class="egeo-u-tx-align--left">label</div>       | <div class="egeo-u-tx-align--left">The label of the button</div>                                          |
-// | <div class="egeo-u-tx-align--left">icon</div>        | <div class="egeo-u-tx-align--left">An icon which appears at left side</div>                               |
+// | <div class="egeo-u-tx-align--left">icon-left</div>        | <div class="egeo-u-tx-align--left">An icon which appears at left side</div>                               |
+// | <div class="egeo-u-tx-align--left">icon-right</div>        | <div class="egeo-u-tx-align--left">An icon which appears at right side</div>                               |
 // | <div class="egeo-u-tx-align--left">small</div>       | <div class="egeo-u-tx-align--left">A small version of the button</div>                                    |
 // | <div class="egeo-u-tx-align--left">rounded</div>     | <div class="egeo-u-tx-align--left">A rounded version of the button. A rounded button will hide the label and only show the icon.</div> |
 // | <div class="egeo-u-tx-align--left">at-right</div>    | <div class="egeo-u-tx-align--left">Floats the button to right</div> |
@@ -237,38 +239,38 @@
 // Take a look to the samples shown below to see how the properties could be used and combined to get different results:
 //
 // ```
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-2" data-label="AngularJS Button"></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-3" data-label="AngularJS Button"></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="secondary-1" data-label="AngularJS Button"></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="secondary-1" data-small="true" data-label="AngularJS Button Small"></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="danger" data-label="AngularJS Danger Button"></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="danger" data-label="AngularJS Disabled Button" disabled></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-icon="icon-datetime"></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-small="true" data-icon="icon-datetime"></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon="icon-datetime"></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-small="true" data-icon="icon-datetime"></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="ellipsis" data-rounded="true" data-icon="icon-datetime"></egeo-c-button></div>
-// <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="ellipsis" data-rounded="true" data-small="true" data-icon="icon-datetime"></egeo-c-button></div>
-// <div style="margin-bottom: 5px; overflow: auto"><egeo-c-button data-type="submit" data-modifier="ellipsis" data-rounded="true" data-small="true" data-icon="icon-datetime" data-at-right="true"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-2" data-icon-left="icon-cog" data-icon-right="icon-arrow2_down" data-label="AngularJS Button"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-3" data-label="AngularJS Button"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="secondary-1" data-label="AngularJS Button"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="secondary-1" data-icon-left="icon-cog" data-small="true" data-label="AngularJS Button Small"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="danger" data-label="AngularJS Danger Button"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="danger" data-icon-left="icon-cog" data-label="AngularJS Disabled Button" disabled></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-icon-left="icon-waiting"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-small="true" data-icon-left="icon-waiting"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px; overflow: auto"><egeo-c-button data-type="submit" data-modifier="ellipsis" data-rounded="true" data-small="true" data-icon-left="icon-datetime" data-at-right="true"></egeo-c-button></div>
 // ```
 //
 // <hr>
 // <div style="padding-left: 20px;">
 //   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></div>
-//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-2" icon="icon-cog" data-label="AngularJS Button"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-2" data-icon-left="icon-cog" data-icon-right="icon-arrow2_down" data-label="AngularJS Button"></egeo-c-button></div>
 //   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-3" data-label="AngularJS Button"></egeo-c-button></div>
 //   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="secondary-1" data-label="AngularJS Button"></egeo-c-button></div>
-//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="secondary-1" icon="icon-cog" data-small="true" data-label="AngularJS Button Small"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="secondary-1" data-icon-left="icon-cog" data-small="true" data-label="AngularJS Button Small"></egeo-c-button></div>
 //   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="danger" data-label="AngularJS Danger Button"></egeo-c-button></div>
-//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="danger" icon="icon-cog" data-label="AngularJS Disabled Button" disabled></egeo-c-button></div>
-//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-icon="icon-datetime"></egeo-c-button></div>
-//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-small="true" data-icon="icon-datetime"></egeo-c-button></div>
-//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon="icon-datetime"></egeo-c-button></div>
-//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-small="true" data-icon="icon-datetime"></egeo-c-button></div>
-//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-icon="icon-waiting"></egeo-c-button></div>
-//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-small="true" data-icon="icon-waiting"></egeo-c-button></div>
-//   <div style="margin-bottom: 5px; overflow: auto"><egeo-c-button data-type="submit" data-modifier="ellipsis" data-rounded="true" data-small="true" data-icon="icon-datetime" data-at-right="true"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="danger" data-icon-left="icon-cog" data-label="AngularJS Disabled Button" disabled></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-icon-left="icon-waiting"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-small="true" data-icon-left="icon-waiting"></egeo-c-button></div>
+//   <div style="margin-bottom: 5px; overflow: auto"><egeo-c-button data-type="submit" data-modifier="ellipsis" data-rounded="true" data-small="true" data-icon-left="icon-datetime" data-at-right="true"></egeo-c-button></div>
 // </div>
 // <hr>
 //

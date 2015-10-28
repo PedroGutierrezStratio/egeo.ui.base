@@ -59,8 +59,12 @@ $this: '#{$egeo-namespace}c-button';
 
 	@if variable-exists(egeo-c-icon) {
 		@if $egeo-c-icon {
-			.#{$egeo-namespace}c-icon {
-				margin: $egeo-c-button__c-icon---margin;
+			.#{$egeo-namespace}c-icon:first-child {
+				margin: $egeo-c-button__c-icon--first-child---margin;
+			}
+
+			.#{$egeo-namespace}c-icon:last-child {
+				margin: $egeo-c-button__c-icon--last-child---margin;
 			}
 		}
 	}

@@ -13,7 +13,8 @@
             replace: true,
             scope: {
                 atRight: '@',
-                icon: '@',
+                iconLeft: '@',
+                iconRight: '@',
                 label: '@',
                 modifier: '@',
                 rounded: '@',

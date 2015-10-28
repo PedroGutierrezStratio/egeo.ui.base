@@ -22,7 +22,8 @@ $egeo-c-button---transition: all .5s !default;
 
 $egeo-c-button--focus---shadow: 0 0 5px 0 rgba(egeo-get-color(n8), .5) !default;
 
-$egeo-c-button__c-icon---margin: 0 8px 0 0 !default;
+$egeo-c-button__c-icon--first-child---margin: 0 8px 0 0 !default;
+$egeo-c-button__c-icon--last-child---margin: 0 0 0 8px !default;
 
 
 //
