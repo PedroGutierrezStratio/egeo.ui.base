@@ -13,7 +13,7 @@
             replace: true,
             transclude: true,
             scope: {
-                content-at-right: '@'
+                contentAtRight: '@'
             },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/row/components.row.tpl.html'
         }
