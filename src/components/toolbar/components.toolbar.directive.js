@@ -8,15 +8,18 @@
     egeoCToolbar.$inject = ['EgeoConfig'];
 
     function egeoCToolbar(EgeoConfig) {
+        function link(scope, elm, attrs, ctrl, transclude) {
+            console.log('link');
+            
+            transclude(scope,function(clone) {
+                console.log('transclude');
+                clone.filter('button').addClass('egeo-c-toolbar__item');
+                elm.append(clone);
+            });
+        }
+
         var directive = {
-            link: function (scope, elm, attrs, ctrl, transclude) {
-                console.log('link');
-                transclude(scope,function(clone) {
-                    console.log('transclude');
-                    clone.filter('button').addClass('egeo-c-toolbar__item');
-                    elm.append(clone);
-                });
-            },
+            link: link,
             restrict: 'E',
             replace: true,
             transclude: true,
