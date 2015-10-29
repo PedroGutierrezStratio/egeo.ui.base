@@ -9,12 +9,14 @@
 
     function egeoCToolbar(EgeoConfig) {
         var directive = {
-            link: function (scope, elm, attrs,ctrl,transclude) {
+            link: function (scope, elm, attrs, ctrl, transclude) {
+                console.log('link');
                 transclude(scope,function(clone) {
-                    clone.filter('div').addClass('egeo-c-toolbar__item');
+                    console.log('transclude');
+                    clone.filter('button').addClass('egeo-c-toolbar__item');
                     elm.append(clone);
                 });
-            }
+            },
             restrict: 'E',
             replace: true,
             transclude: true,
