@@ -12,7 +12,7 @@
             // Create a temp store if not exists
             if (!document.egeo) document.egeo = {};
             if (!document.egeo.toolbars) document.egeo.toolbars = [];
-            
+
             // Save the element in a temp global item
             document.egeo.toolbars.push(elm);
 
@@ -24,11 +24,13 @@
                 for (var c = 0; c < document.egeo.toolbars.length; c++) {
                     toolbar = document.egeo.toolbars[c];
                     toolbar.children().addClass('egeo-c-toolbar__item');                
+                    document.egeo.toolbars.splice(c, 1);
                 }
 
                 // Free memory if not needed
-                document.egeo.toolbars = null;
-                if (Object.keys(document.egeo).length === 0) document.egeo = null;
+                
+                if (document.egeo.toolbars.length === 0) delete document.egeo.toolbars;
+                if (Object.keys(document.egeo).length === 0) delete document.egeo;
             }, 0);
         }
 
