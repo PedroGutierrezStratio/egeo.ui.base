@@ -59,21 +59,21 @@
 // Take a look to the samples shown below to see how the properties could be used and combined to get different results:
 //
 // ```
-// <span class="egeo-c-toolbar">
+// <egeo-c-toolbar>
 //   <egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button>
 //   <egeo-c-button data-type="submit" data-modifier="main-2" data-icon-left="icon-cog" data-icon-right="icon-arrow2_down" data-label="AngularJS Button"></egeo-c-button>
 //   <egeo-c-button data-type="submit" data-modifier="main-3" data-label="AngularJS Button"></egeo-c-button>
 //   <egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-icon-left="icon-waiting"></egeo-c-button>
-// </span>
+// </egeo-c-toolbar>
 // ```
 //
 // <hr>
-// <span class="egeo-c-toolbar">
+// <egeo-c-toolbar>
 //   <egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button>
 //   <egeo-c-button data-type="submit" data-modifier="main-2" data-icon-left="icon-cog" data-icon-right="icon-arrow2_down" data-label="AngularJS Button"></egeo-c-button>
 //   <egeo-c-button data-type="submit" data-modifier="main-3" data-label="AngularJS Button"></egeo-c-button>
 //   <egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-icon-left="icon-waiting"></egeo-c-button>
-// </span>
+// </egeo-c-toolbar>
 // <hr>
 //
 // ## Dependencies
