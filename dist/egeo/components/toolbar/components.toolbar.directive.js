@@ -5,22 +5,16 @@
         .module('egeo.toolbar', [])
         .directive('egeoCToolbar', egeoCToolbar);
 
-    egeoCToolbar.$inject = ['EgeoConfig'];
+    egeoCToolbar.$inject = ['EgeoConfig', 'EgeoChildrenClass'];
 
-    function egeoCToolbar(EgeoConfig) {
-        function link(scope, elm, attrs, ctrl, transclude) {
-            transclude(scope, function() {
-                elm.children().addClass('egeo-c-toolbar__item');                
-            });
-        }
+    function egeoCToolbar(EgeoConfig, EgeoChildrenClass) {
 
         var directive = {
-            link: link,
+            link: EgeoChildrenClass('egeo-c-toolbar__item'),
             restrict: 'E',
             replace: true,
             transclude: true,
-            scope: {
-            },
+            scope: {},
             templateUrl: EgeoConfig.getEgeoPath() + '/components/toolbar/components.toolbar.tpl.html'
         }
 
