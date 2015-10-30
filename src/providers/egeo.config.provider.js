@@ -12,7 +12,7 @@
             defaultEgeoPath = path;
         }
 
-        getEgeoPath = function () {
+        var getEgeoPath = function () {
             return defaultEgeoPath;
         }
 
