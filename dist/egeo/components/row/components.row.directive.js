@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('egeo.layout', [])
+        .module('egeo.row', [])
         .directive('egeoCRow', egeoCRow);
 
     egeoCRow.$inject = ['EgeoConfig'];
