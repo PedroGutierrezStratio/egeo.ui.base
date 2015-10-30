@@ -1,5 +1,5 @@
 (function() {
-    'use script';
+    'use strict';
 
     angular
         .module('egeo.config', [])
@@ -12,7 +12,7 @@
             defaultEgeoPath = path;
         }
 
-        getEgeoPath = function () {
+        var getEgeoPath = function () {
             return defaultEgeoPath;
         }
 
