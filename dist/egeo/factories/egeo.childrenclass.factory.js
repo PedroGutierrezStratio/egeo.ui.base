@@ -5,12 +5,11 @@
         .module('egeo.childrenClass', [])
         .factory('EgeoChildrenClass', EgeoChildrenClass);
 
-    EgeoChildrenClass.$inject = ['$timeout'];
-
-    function EgeoChildrenClass($timeout){
+    function EgeoChildrenClass(){
         return function(className){
             function link(scope, elem) {
-                $timeout(function(){
+
+                setTimeout(function(){
                     elem.children().addClass(className);
                 }, 0);
             }
