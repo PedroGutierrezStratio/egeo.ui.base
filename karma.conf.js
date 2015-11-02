@@ -28,7 +28,8 @@ module.exports = function (config) {
 
     preprocessors: {
       'src/factories/**/*.js': ['coverage'],
-      'src/providers/**/*.js': ['coverage']
+      'src/providers/**/*.js': ['coverage'],
+      'src/components/**/*.js': ['coverage']
     },
 
     junitReporter: {
