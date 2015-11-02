@@ -7,7 +7,7 @@ describe('factories.egeo.childrenClass', function () {
     beforeEach(function(){
         module("egeo");
         
-        _elem = jQuery('<div>').append(jQuery("<span/><span/><span/>"));
+        _elem = angular.element('<div>').append(angular.element("<span/><span/><span/>"));
 
         inject(function(_$rootScope_, _EgeoChildrenClass_) {
             _$rootScope = _$rootScope_;
