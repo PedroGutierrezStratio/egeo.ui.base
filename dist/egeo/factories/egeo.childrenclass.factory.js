@@ -8,7 +8,6 @@
     function EgeoChildrenClass(){
         return function(className){
             function link(scope, elem) {
-
                 setTimeout(function(){
                     elem.children().addClass(className);
                 }, 0);
