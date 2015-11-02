@@ -1,29 +1,27 @@
-/*describe('providers.egeo.config', function() {
-    var _EgeoConfig;
+describe('providers.egeo.config', function () {
+    var _testPath = "egeo/test";
+    var _egeoConfig;
+    var _egeoConfigProvider;
 
-    beforeEach(function() {
-        var fakeModule = angular.module('test.egeo.config', function() {});
-        fakeModule.config(function(EgeoConfigProvider) {
-                    console.log("Hola");
-                    EgeoConfigProvider.setEgeoPath('/test/');
-                    //_EgeoConfig = EgeoConfigProvider;
-                });
-
-        module('egeo', ['test.egeo.config']);
-
-        //inject(function() {});
+    beforeEach(function () {
+        angular
+            .module('EgeoConfigTest', ['egeo.config'])
+            .config(function(EgeoConfigProvider) {
+                _egeoConfigProvider = EgeoConfigProvider;
+            })
+            .run(function (EgeoConfig) {
+                _egeoConfig = EgeoConfig;
+            });
+        module('EgeoConfigTest');
+        inject();
     });
 
-    it('It should return the default config value of the Path where Egeo is installed', function() {
-        var defaultPath = 'public/js/egeo';
+    it('It should return the defined path with setEgeoPath', function() {
+        _egeoConfigProvider.setEgeoPath(_testPath);
 
-        expect(true).toBe(true);
-        console.log(_EgeoConfig);
-        console.log(_EgeoConfig);
-        expect(_EgeoConfig.getEgeoPath()).toBe(defaultPath);
+        expect(_egeoConfig.getEgeoPath()).toBe(_testPath);
     });
 });
-*/
 
 describe('providers.egeo.config', function() {
     beforeEach(module('egeo'));
