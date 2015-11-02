@@ -3,6 +3,7 @@
 
     angular
         .module('egeo', [
-            'egeo.config'
+            'egeo.config',
+        	'egeo.childrenClass'
         ]);
 })();
