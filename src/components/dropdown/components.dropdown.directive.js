@@ -5,18 +5,35 @@
         .module('egeo.dropdown', [])
         .directive('egeoCDropdown', egeoCDropdown);
 
-    egeoCDropdown.$inject = ['EgeoConfig', 'EgeoChildrenClass'];
+    egeoCDropdown.$inject = ['EgeoConfig'];
 
-    function egeoCDropdown(EgeoConfig, EgeoChildrenClass) {
+    function egeoCDropdown(EgeoConfig) {
         var directive = {
-            link: EgeoChildrenClass('egeo-c-dropdown__item'),
+            link: link('egeo-c-dropdown__menu__item'),
             replace: true,
             restrict: 'E',
             transclude: true,
-            scope: {},
+            scope: {
+                icon: '@',
+                label: '@',
+                rounded: '@',
+                small: '@'
+            },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/dropdown/components.dropdown.tpl.html'
         }
 
         return directive;
+
+        function link(){
+            return function(className){
+                function link(scope, elem) {
+                    setTimeout(function(){
+                        elem.find('.egeo-c-dropdown__menu').children().addClass(className);
+                    }, 0);
+                }
+
+                return link;
+            }
+        }        
     }
 })();

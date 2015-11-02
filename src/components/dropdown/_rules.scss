@@ -1,14 +1,13 @@
 $this: '#{$egeo-namespace}c-dropdown';
 
 @mixin egeo-c-dropdown {
-    @include egeo-c-button;
+    &__menu {
+        display: inline-block;
+        width: $egeo-c-dropdown__menu---width;
+    }
 
-    @each $item, $properties in $egeo-c-dropdown-items {
-        @include egeo-c-button-modifier($item, 
-                                        map-get($properties, normal), 
-                                        map-get($properties, hover), 
-                                        map-get($properties, focus)
-                                        );
+    &__item {
+        display: block;
     }
 
     &__caret {

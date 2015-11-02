@@ -76,7 +76,12 @@ $egeo-c-buttons: (
             ),
     disabled: (
                 normal: (background: egeo-get-color(n3), border: 0, color: egeo-get-color(n0))
-              )
+              ),
+    dropdown-1: (
+                normal: (background: transparent, border: 0, color: egeo-get-color(n7)), 
+                hover: (background: transparent, border: 0, color: egeo-get-color(n7)), 
+                focus: (background: transparent, border: 0, color: egeo-get-color(n7))
+            )    
 ) !default;
 
 // Map to customize new buttons
