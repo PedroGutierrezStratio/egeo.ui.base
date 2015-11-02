@@ -3,18 +3,19 @@
 
     angular
         .module('egeo.dropdown', [])
-        .directive('EgeoCDropdown', EgeoCDropdown);
+        .directive('egeoCDropdown', egeoCDropdown);
 
-    EgeoCDropdown.$inject = ['EgeoConfig', 'EgeoChildrenClass'];
+    egeoCDropdown.$inject = ['EgeoConfig', 'EgeoChildrenClass'];
 
-    function EgeoCDropdown() {
-        var directive = (
+    function egeoCDropdown(EgeoConfig, EgeoChildrenClass) {
+        var directive = {
             link: EgeoChildrenClass('egeo-c-dropdown__item'),
-            scope: {},
             replace: true,
             restrict: 'E',
-            templateUrl: EgeoConfig.getEgeoPath() + '/components/dropdown/components.dropdown.tpl.html';
-        );
+            transclude: true,
+            scope: {},
+            templateUrl: EgeoConfig.getEgeoPath() + '/components/dropdown/components.dropdown.tpl.html'
+        }
 
         return directive;
     }
