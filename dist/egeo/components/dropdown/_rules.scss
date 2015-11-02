@@ -1,0 +1,25 @@
+$this: '#{$egeo-namespace}c-dropdown';
+
+@mixin egeo-c-dropdown {
+    @include egeo-c-button;
+
+    @each $item, $properties in $egeo-c-dropdown-items {
+        @include egeo-c-button-modifier($item, 
+                                        map-get($properties, normal), 
+                                        map-get($properties, hover), 
+                                        map-get($properties, focus)
+                                        );
+    }
+
+    &__caret {
+        color: $egeo-c-dropdown__caret---color;
+    }
+}
+
+@if variable-exists(egeo-c-dropdown) {
+    @if $egeo-c-dropdown {
+        .#{$this} {
+            @include egeo-c-dropdown;
+        }
+    }
+}

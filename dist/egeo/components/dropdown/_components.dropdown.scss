@@ -1,0 +1,45 @@
+// Dropdown
+//
+// The component Dropdown...
+//
+// ## The egeo-c-dropdown AngularJS directive
+//
+// soon
+//
+// | Property                                             | Default value                                                                  |
+// | ---------------------------------------------------- | ------------------------------------------------------------------------------ |
+// | <div class="egeo-u-tx-align--left">soon</div>        | <div class="egeo-u-tx-align--left">soon</div>                                          |
+//
+// ### Usage
+//
+// soon
+//
+// ```
+//  <egeo-c-dropdown>
+//   <egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="secondary-1" data-label="AngularJS Button"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="danger" data-label="AngularJS Danger Button"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-icon-left="icon-waiting"></egeo-c-button>
+//  </egeo-c-dropdown>
+// ```
+//
+// <hr>
+//  <egeo-c-dropdown>
+//   <egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="secondary-1" data-label="AngularJS Button"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="danger" data-label="AngularJS Danger Button"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-icon-left="icon-waiting"></egeo-c-button>
+//  </egeo-c-dropdown>
+// <hr>
+//
+// ## Dependencies
+//  
+// * [components.component](section-7.html#section-7.1)
+// * [components.button](section-7.html#section-7.2)
+//
+// Styleguide 7.6
+
+@import 'vars';
+@import 'rules';
