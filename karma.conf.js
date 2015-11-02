@@ -9,6 +9,7 @@ module.exports = function (config) {
 
       'tests/app.js',
       'src/providers/*.js',
+      'src/factories/*.js',
       'src/components/**/*.js',
 
       // fixtures
@@ -26,6 +27,7 @@ module.exports = function (config) {
     port: 8080,
 
     preprocessors: {
+      'src/factories/**/*.js': ['coverage'],
       'src/providers/**/*.js': ['coverage']
     },
 
