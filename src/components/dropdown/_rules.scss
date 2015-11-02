@@ -2,8 +2,12 @@ $this: '#{$egeo-namespace}c-dropdown';
 
 @mixin egeo-c-dropdown {
     &__menu {
-        display: inline-block;
+        display: none;
         width: $egeo-c-dropdown__menu---width;
+
+        &--open {
+            display: inline-block;
+        }
     }
 
     &__item {

@@ -26,7 +26,7 @@
 
         function link(scope, elem) {
             setTimeout(function() {
-                elem.find('.egeo-c-dropdown__menu').children().addClass('egeo-c-dropdown__menu__item');
+                elem.find('.egeo-c-dropdown__menu').children().addClass('egeo-c-dropdown__item');
             }, 0);
         }
     }
