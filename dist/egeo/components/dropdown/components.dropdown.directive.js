@@ -9,7 +9,7 @@
 
     function egeoCDropdown(EgeoConfig) {
         var directive = {
-            link: link('egeo-c-dropdown__menu__item'),
+            link: link,
             replace: true,
             restrict: 'E',
             transclude: true,
@@ -24,16 +24,10 @@
 
         return directive;
 
-        function link(){
-            return function(className){
-                function link(scope, elem) {
-                    setTimeout(function(){
-                        elem.find('.egeo-c-dropdown__menu').children().addClass(className);
-                    }, 0);
-                }
-
-                return link;
-            }
-        }        
+        function link(scope, elem) {
+            setTimeout(function() {
+                elem.find('.egeo-c-dropdown__menu').children().addClass('egeo-c-dropdown__menu__item');
+            }, 0);
+        }
     }
 })();
