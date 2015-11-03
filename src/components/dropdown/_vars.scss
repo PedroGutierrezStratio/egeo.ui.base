@@ -1,3 +1,10 @@
+// If silent classes are activated the CSS classes will be not created
+@if global-variable-exists(egeo-silent-classes) {
+    $egeo-c-dropdown: not $egeo-silent-classes !default;    
+} @else {
+    $egeo-c-dropdown: true !default;
+}
+
 $egeo-c-dropdown__caret---color: egeo-get-color(n7) !default;
 
 $egeo-c-dropdown__menu---width: 300px !default;
