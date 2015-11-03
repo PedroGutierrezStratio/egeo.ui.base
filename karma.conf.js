@@ -10,7 +10,8 @@ module.exports = function (config) {
       'tests/app.js',
       'src/providers/*.js',
       'src/factories/*.js',
-      'src/components/**/*.js',
+      'src/components/**/*.directive.js',
+      'src/components/**/*controller.js',
 
       // fixtures
       //'tests/mock/*.json',
