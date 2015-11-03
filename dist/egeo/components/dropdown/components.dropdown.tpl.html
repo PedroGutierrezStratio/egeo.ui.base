@@ -1,13 +1,17 @@
-<div class="egeo-c-dropdown" data-ng-controller="DropdownCtrl as vm">
+<div class="egeo-c-dropdown">
+  <div data-ng-controller="DropdownController as vm">
     <egeo-c-button data-type="button" 
                    data-modifier="dropdown-1" 
                    data-label="Dropdown Button" 
-                   data-incon-left="icon-datetime" 
+                   data-icon-left="icon-datetime" 
                    data-icon-right="icon-arrow2_down egeo-c-dropdown__caret"
-                   data-ng-click="vm.click">
+                   data-ng-click="vm.click()">
+    </egeo-c-button>
 
     <div class="egeo-c-dropdown__menu" 
+         data-is-open="vm.isOpen"
          data-ng-class="{'egeo-c-dropdown--open': vm.isOpen}" 
          data-ng-transclude>
     </div>
+  </div>
 </div>

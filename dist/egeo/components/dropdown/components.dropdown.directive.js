@@ -1,4 +1,4 @@
-(function(){
+(function() {
     'use strict';
 
     angular
@@ -11,7 +11,7 @@
         var directive = {
             link: link,
             replace: true,
-            restrict: 'A',
+            restrict: 'E',
             transclude: true,
             scope: {
                 isOpen: '@'
@@ -24,8 +24,6 @@
         function link(scope, elem) {
             // Initialize the status if the user didn't set it via parameter
             if (!scope.isOpen) scope.isOpen = false;
-
-            //elem.find('egeo-c-button').bind('click', onClickDropdownBtn);
 
             setTimeout(function() {
                 // Apply the item class to all elements inside the menu

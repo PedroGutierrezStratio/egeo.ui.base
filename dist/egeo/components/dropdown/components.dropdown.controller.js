@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('egeo.dropdown', [])
+        .module('egeo.dropdown')
         .controller('DropdownController', DropdownController);
 
     function DropdownController($scope) {
