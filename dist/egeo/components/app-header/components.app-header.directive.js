@@ -14,7 +14,8 @@
             scope: {
                 logoSref: '@',
                 logoUrl: '@',
-                logoAlt: '@'
+                logoAlt: '@',
+                username: '@'
             },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/app-header/components.app-header.tpl.html'
         }
