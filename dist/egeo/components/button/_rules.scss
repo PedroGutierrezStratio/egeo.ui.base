@@ -30,6 +30,12 @@ $this: '#{$egeo-namespace}c-button';
 						@each $name, $value in $focus-properties {
 							#{$name}: $value;
 						}
+
+						@if map-get($focus-properties, background) != transparent {
+							box-shadow: $egeo-c-button--focus---shadow;
+						}
+
+						outline: none;
 					}
 				}				
 			}
@@ -118,11 +124,6 @@ $this: '#{$egeo-namespace}c-button';
 										map-get($properties, hover), 
 										map-get($properties, focus)
 										);
-	}
-
-	&:focus {
-		box-shadow: $egeo-c-button--focus---shadow;
-		outline: none;
 	}
 
 	@if map-has-key($egeo-c-buttons, disabled) {
