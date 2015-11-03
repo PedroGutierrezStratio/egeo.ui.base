@@ -9,6 +9,7 @@
 
     function egeoCToolbar(EgeoConfig, EgeoChildrenClass) {
         var directive = {
+            atRight: '@',
             link: EgeoChildrenClass('egeo-c-toolbar__item'),
             replace: true,
             restrict: 'E',

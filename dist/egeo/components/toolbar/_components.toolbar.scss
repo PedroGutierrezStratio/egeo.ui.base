@@ -52,7 +52,12 @@
 //
 // Egeo provides an AngularJS directive to create toolbars with ease. The directive is restricted
 // to HTML Element and called `egeo-c-toolbar`. The Toolbar component is a container so it allows to use
-// transclude content. Below you can see the properties exposed:
+// transclude content.  Below you can see the properties exposed:
+//
+// | Property                                           | Default value                                  | Description                                                                   |
+// | -------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------- |
+// | <div class="egeo-u-tx-align--left">at-right</div>  | <div class="egeo-u-tx-align--left">false</div> | <div class="egeo-u-tx-align--left">If the content will be right floated</div> |
+//
 //
 // ### Usage
 //
