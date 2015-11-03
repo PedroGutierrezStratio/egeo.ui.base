@@ -6,10 +6,7 @@ $this: '#{$egeo-namespace}c-row';
 
     display: block;
 
-    @include egeo-is-coloured(('b1': egeo-get-color(b1), 
-                                'b2': egeo-get-color(b2), 
-                                'b3': egeo-get-color(b3), 
-                                'b3_dark': egeo-get-color(b3_dark)), background);
+    @include egeo-is-coloured($egeo-c-row---backgrounds, background);
 }
 
 @if variable-exists(egeo-c-row) {

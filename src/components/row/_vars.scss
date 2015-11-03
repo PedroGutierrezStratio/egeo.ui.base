@@ -4,3 +4,11 @@
 } @else {
     $egeo-c-row: true !default;
 }
+
+$egeo-c-row---backgrounds: (
+    'b1': egeo-get-color(b1), 
+    'b2': egeo-get-color(b2), 
+    'b3': egeo-get-color(b3), 
+    'b3_dark': egeo-get-color(b3_dark),
+    'b4': egeo-get-color(b4)
+) !default;
