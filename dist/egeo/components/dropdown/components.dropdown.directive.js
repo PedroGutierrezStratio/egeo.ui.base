@@ -11,14 +11,10 @@
         var directive = {
             link: link,
             replace: true,
-            restrict: 'E',
+            restrict: 'A',
             transclude: true,
             scope: {
-                icon: '@',
-                isOpen: '@',
-                label: '@',
-                rounded: '@',
-                small: '@'
+                isOpen: '@'
             },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/dropdown/components.dropdown.tpl.html'
         }
@@ -37,7 +33,7 @@
             }, 0);
         }
 
-        function onClickDropdownBtn() {
+        function onClickDropdownBtn($event) {
             scope.isOpen = !scope.isOpen;
         }
     }
