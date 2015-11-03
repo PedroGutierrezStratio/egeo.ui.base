@@ -4,10 +4,10 @@ $this: '#{$egeo-namespace}c-dropdown';
     &__menu {
         display: none;
         width: $egeo-c-dropdown__menu---width;
+    }
 
-        &--open {
-            display: inline-block;
-        }
+    &--open {
+        display: block;
     }
 
     &__item {

@@ -13,8 +13,6 @@
 
         function toggleMenu() {
             vm.isOpen = !vm.isOpen;
-
-            console.log("--> vm.isOpen::to::" + vm.isOpen);
         }
     }
 })();
