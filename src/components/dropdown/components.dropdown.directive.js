@@ -13,7 +13,10 @@
             replace: true,
             restrict: 'E',
             transclude: true,
-            scope: {},
+            scope: {
+                icon: '@',
+                label: '@'
+            },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/dropdown/components.dropdown.tpl.html'
         }
 

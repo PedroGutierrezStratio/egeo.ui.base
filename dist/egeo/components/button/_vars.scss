@@ -79,9 +79,14 @@ $egeo-c-buttons: (
               ),
     dropdown-1: (
                 normal: (background: transparent, border: 0, color: egeo-get-color(n7)), 
-                hover: (background: transparent, border: 0, color: egeo-get-color(n7)), 
-                focus: (background: transparent, border: 0, color: egeo-get-color(n7))
-            )    
+                hover: (background: transparent, border: 0, color: egeo-get-color(n6)), 
+                focus: (background: transparent, border: 0, color: egeo-get-color(n6))
+            ),
+    menu-1: (
+                normal: (background: transparent, border: 0, color: egeo-get-color(n7)), 
+                hover: (background: transparent, border: 0, color: egeo-get-color(n6)), 
+                focus: (background: transparent, border: 0, color: egeo-get-color(n6))
+            )
 ) !default;
 
 // Map to customize new buttons

@@ -14,7 +14,8 @@
             restrict: 'E',
             transclude: true,
             scope: {
-                isOpen: '@'
+                icon: '@',
+                label: '@'
             },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/dropdown/components.dropdown.tpl.html'
         }
@@ -29,10 +30,6 @@
                 // Apply the item class to all elements inside the menu
                 elem.find('.egeo-c-dropdown__menu').children().addClass('egeo-c-dropdown__item');
             }, 0);
-        }
-
-        function onClickDropdownBtn($event) {
-            scope.isOpen = !scope.isOpen;
         }
     }
 })();
