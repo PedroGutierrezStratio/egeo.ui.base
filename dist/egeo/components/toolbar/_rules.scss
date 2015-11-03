@@ -6,6 +6,7 @@ $this: '#{$egeo-namespace}c-toolbar';
     display: inline-block;
 
     &__item {
+        display: inline-block;
         margin: $egeo-c-toolbar__item---margin;
 
         &:first-child {
