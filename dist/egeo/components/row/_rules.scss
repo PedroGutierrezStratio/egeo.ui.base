@@ -5,6 +5,11 @@ $this: '#{$egeo-namespace}c-row';
     @extend %#{$egeo-namespace}u-clearfix;
 
     display: block;
+
+    @include egeo-is-coloured(('b1': egeo-get-color(b1), 
+                                'b2': egeo-get-color(b2), 
+                                'b3': egeo-get-color(b3), 
+                                'b3_dark': egeo-get-color(b3_dark)), background);
 }
 
 @if variable-exists(egeo-c-row) {

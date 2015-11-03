@@ -13,7 +13,8 @@
             replace: true,
             transclude: true,
             scope: {
-                contentAtRight: '@'
+                contentAtRight: '@',
+                variant: '@'
             },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/row/components.row.tpl.html'
         }
