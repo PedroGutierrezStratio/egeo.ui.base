@@ -9,6 +9,7 @@
 // Creates a set of modifier classes with the whole colors of a colors map passed as a parameter.
 //
 // * **$colors** - A Sass map of colors when the key is the name of the color and the value is the color itself.
+// * **$type** - color/background
 //
 // <div class="compatibility">Compatibility untested.</div>
 //
@@ -32,7 +33,7 @@
 			&--#{$key} {
 				@if $type == color {
 					color: $value;
-				} @else if {
+				} @else if $type == background {
 					background-color: $value;
 				} @else {
 					@if function-exists(egeo-log) {
