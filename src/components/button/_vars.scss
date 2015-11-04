@@ -83,9 +83,9 @@ $egeo-c-buttons: (
                 focus: (background: transparent, border: 0, color: egeo-get-color(n6))
             ),
     menu-1: (
-                normal: (background: transparent, border: 0, color: egeo-get-color(n7)), 
-                hover: (background: transparent, border: 0, color: egeo-get-color(n5)), 
-                focus: (background: transparent, border: 0, color: egeo-get-color(n5))
+                normal: (background: transparent, border: 0, color: egeo-get-color(n7), min-width: 0, padding: 8px 0 8px 15px), 
+                hover: (background: transparent, border: 0, color: egeo-get-color(n5), min-width: 0, padding: 8px 0 8px 15px), 
+                focus: (background: transparent, border: 0, color: egeo-get-color(n5), min-width: 0, padding: 8px 0 8px 15px)
             )
 ) !default;
 

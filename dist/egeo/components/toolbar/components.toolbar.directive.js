@@ -14,7 +14,9 @@
             replace: true,
             restrict: 'E',
             transclude: true,
-            scope: {},
+            scope: {
+                atRight: '@'
+            },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/toolbar/components.toolbar.tpl.html'
         }
 
