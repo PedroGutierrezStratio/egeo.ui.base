@@ -1,0 +1,28 @@
+// Button Group
+//
+// ```
+// <egeo-c-buttongroup>
+//   <egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button>
+// </egeo-c-buttongroup>
+// ```
+//
+// <hr>
+// <egeo-c-buttongroup>
+//   <egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button>
+//   <egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button>
+// </egeo-c-buttongroup>
+// <hr>
+//
+// ## Dependencies
+//  
+// * [component](section-7.html#section-7.1)
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.8
+
+@import 'rules';
+@import 'vars';

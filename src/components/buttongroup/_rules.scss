@@ -1,0 +1,13 @@
+$this: '#{$egeo-namespace}c-buttongroup';
+
+@mixin egeo-c-buttongroup {
+	@include egeo-c-component;
+}
+
+@if variable-exists(egeo-c-buttongroup) {
+    @if $egeo-c-buttongroup {
+        .#{$this} {
+            @include egeo-c-buttongroup;
+        }
+    }
+}
