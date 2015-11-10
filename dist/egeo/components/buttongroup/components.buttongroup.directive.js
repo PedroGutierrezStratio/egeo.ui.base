@@ -24,8 +24,9 @@
         function link(scope, element, attrs, ctrl, transclude) {
             scope.childrenWidth = null;
             scope.lastWidth = null;
-            scope.buttonsHidden = false;
+            scope.maxLimit = null; 
             scope.lastLimit = null;
+            scope.itemsHidden = 0;
 
             // Replace the #transclude tag with transclude content to
             // put the ellipsis button at same level than the trascluded
@@ -43,28 +44,14 @@
                 if (scope.lastWidth != element.parent().width()) {
                     scope.lastWidth = element.parent().width();
 
-                    //if (isElementsWiderThanContainer()) {
-                        renderElements();
-                    //}
+                    renderElements();
                 }
-            }
-
-            function isElementsWiderThanContainer() {
-                // Calculate the space used only one time
-                if (!scope.childrenWidth) {
-                    var i = element.children().length;
-
-                    while (i--) {
-                        // Include in the width the paddings and margins
-                        scope.childrenWidth += angular.element(element.children()[i]).outerWidth(true);
-                    }
-                }
-
-                return scope.childrenWidth > element.parent().width();
             }
 
             function renderElements() {
                 var limit = null;
+
+                if (scope.maxLimit == null) scope.maxLimit = element.children().length - 2; // 2 because 1 is to avoid more button and other 1 to match the array index with the length counter;
 
                 // First, we have to calculate how many items fit in the available space
                 limit = getLastVisibleItemIndex();
@@ -73,13 +60,13 @@
                 // If limit is null means that all items must be shown
                 if (limit != scope.lastLimit) {
                     if (limit == null) {
-                        showItems();
+                        showItems(0, scope.maxLimit);
                     } else {
                         if (scope.lastLimit == null) {
-                            hideItems(element.children().length - 2, limit);
+                            hideItems(scope.maxLimit, limit);
                         } else {
                             if (limit > scope.lastLimit) {
-                                showItems(limit);
+                                showItems(scope.lastLimit, limit);
                             } else {
                                 hideItems(scope.lastLimit, limit);
                             }
@@ -95,24 +82,24 @@
                     child = null,
                     moreButton = angular.element(element.find('.egeo-c-button--tool-ellipsis'));
 
-                scope.buttonsHidden = true;
+                while (i > to) {
+                    child = angular.element(element.children()[i]);
 
-                if (i >= to) {
-                    while (i >= to) {
-                        child = angular.element(element.children()[i]);
-
-                        if (!child.hasClass('ng-hide')) child.addClass('ng-hide');
-                        
-                        i--;
+                    if (!child.hasClass('ng-hide')) { 
+                        child.addClass('ng-hide'); 
+                        scope.itemsHidden++;
                     }
+                    
+                    i--;
+                }
 
+                if (scope.itemsHidden > 0) {
                     if (moreButton.hasClass('ng-hide')) moreButton.removeClass('ng-hide');
                 }
             }
 
-            function showItems(from) {
-                var to = element.children().length - 1,
-                    item = to,
+            function showItems(from, to) {
+                var item = to,
                     child = null,
                     moreButton = angular.element(element.find('.egeo-c-button--tool-ellipsis'));
 
@@ -121,15 +108,16 @@
                 while (item >= from) {
                     child = angular.element(element.children()[item]);
 
-                    if (child.hasClass('ng-hide')) child.removeClass('ng-hide');
+                    if (child.hasClass('ng-hide')) {
+                        child.removeClass('ng-hide');
+                        scope.itemsHidden--;
+                    }
 
                     item--;
                 }
 
-                if (from == 0) { 
+                if (scope.itemsHidden == 0) { 
                     if (!moreButton.hasClass('ng-hide')) moreButton.addClass('ng-hide');
-
-                    scope.buttonsHidden = false;
                 }
             }
 
@@ -138,23 +126,26 @@
                     iMax = element.children().length,
                     widthBuffer = 0,
                     childWidth = 0,
-                    moreButtonWidth = angular.element(element.find('.egeo-c-button--tool-ellipsis')).outerWidth(true),
+                    correctionFactor = 3,
+                    moreButtonWidth = angular.element(element.find('.egeo-c-button--tool-ellipsis')).outerWidth(true) + correctionFactor,
                     limit = null;
 
                 // If we already have a limit, it is not needed keep the loop working
-                while (i < iMax && !limit) {
+                while (i < iMax && limit == null) {
                     // We will compare button to button
 
-                    childWidth = angular.element(element.children()[i]).outerWidth(true);
+                    childWidth = angular.element(element.children()[i]).outerWidth(true) + correctionFactor;
                     
-                    if ((widthBuffer + childWidth) <= (element.parent().width() - moreButtonWidth)) {
+                    if ((widthBuffer + childWidth) < (element.parent().width() - moreButtonWidth)) {
                         widthBuffer += childWidth;
                     } else {
-                        limit = i - 1;
+                        limit = i - 1; // Index of the last visible item
                     }
 
                     i++;
                 }
+
+                if (limit == null) limit = scope.maxLimit;
 
                 return limit;
             }
