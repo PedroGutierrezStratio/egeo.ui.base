@@ -85,11 +85,8 @@
                 while (i > to) {
                     child = angular.element(element.children()[i]);
 
-                    if (!child.hasClass('ng-hide')) { 
-                        child.addClass('ng-hide'); 
-                        scope.itemsHidden++;
-                    }
-                    
+                    hideItem(child);
+
                     i--;
                 }
 
@@ -108,10 +105,7 @@
                 while (item >= from) {
                     child = angular.element(element.children()[item]);
 
-                    if (child.hasClass('ng-hide')) {
-                        child.removeClass('ng-hide');
-                        scope.itemsHidden--;
-                    }
+                    showItem(child);
 
                     item--;
                 }
@@ -121,12 +115,26 @@
                 }
             }
 
+            function hideItem(item) {
+                if (!item.hasClass('ng-hide')) { 
+                    item.addClass('ng-hide'); 
+                    scope.itemsHidden++;
+                }
+            }
+
+            function showItem(item) {
+                if (item.hasClass('ng-hide')) {
+                    item.removeClass('ng-hide');
+                    scope.itemsHidden--;
+                }
+            }
+
             function getLastVisibleItemIndex() {
                 var i = 0,
                     iMax = element.children().length,
                     widthBuffer = 0,
                     childWidth = 0,
-                    correctionFactor = 3,
+                    correctionFactor = 3, // The correction factor is used due to the separation the browsers add to the inline-block elements
                     moreButtonWidth = angular.element(element.find('.egeo-c-button--tool-ellipsis')).outerWidth(true) + correctionFactor,
                     limit = null;
 
