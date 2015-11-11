@@ -16,6 +16,7 @@
   "devDependencies": {
     "angular": "^1.4.7",
     "angular-mocks": "^1.4.7",
+    "angular-animate": "^1.4.7",
     "grunt-contrib-watch": "^0.6.1",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.14",
