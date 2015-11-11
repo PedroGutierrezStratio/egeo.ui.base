@@ -1,0 +1,13 @@
+$this: '#{$egeo-namespace}c-popover';
+
+@mixin egeo-c-popover {
+    @include egeo-c-component;
+}
+
+@if variable-exists(egeo-c-popover) {
+    @if $egeo-c-popover {
+        .#{$this} {
+            @include egeo-c-popover;
+        }
+    }
+}

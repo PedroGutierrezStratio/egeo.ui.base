@@ -49,8 +49,9 @@ module.exports = function (grunt) {
     src: 'src',               // Folder of the source
     dist: 'dist',             // Folder of the distributable deliverables.
     sass: 'egeo',             // Folder of the Sass deliverables inside dist.
-    js: 'egeo',                 // Folder of the Js deliverables inside dist.
+    js: 'egeo',               // Folder of the Js deliverables inside dist.
     assets: 'assets',         // Folder where the assets will be included.
+    npm: 'node_modules',      // Folder where the Npm modules will be included.
     vendors: 'vendors'        // Folder of the vendors not included in npm or bower
   };
 
@@ -126,7 +127,8 @@ module.exports = function (grunt) {
           {expand: true, cwd: '<%= app.src %>/<%= app.vendors %>/', src: ['fonts/**'], dest: '<%= app.dist %>/<%= app.assets %>'},
           {expand: true, cwd: '<%= app.src %>/', src: ['**/*.scss', '*.scss', '!fonts'], dest: '<%= app.dist %>/<%= app.sass %>'},
           {expand: true, cwd: '<%= app.src %>/', src: ['**/*.html', '*.html'], dest: '<%= app.dist %>/<%= app.js %>'},
-          {expand: true, cwd: '<%= app.src %>/', src: ['**/*.js', '*.js'], dest: '<%= app.dist %>/<%= app.js %>'}
+          {expand: true, cwd: '<%= app.src %>/', src: ['**/*.js', '*.js'], dest: '<%= app.dist %>/<%= app.js %>'},
+          {expand: true, cwd: '<%= app.npm %>', src: ['angular-animate/*.js', 'angular/*.js', 'angular/*.js'], dest: '<%= app.dist %>/vendors'}
         ],
       },
     },
