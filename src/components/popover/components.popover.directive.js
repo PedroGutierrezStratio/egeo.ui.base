@@ -10,7 +10,6 @@
     function egeoCPopover(EgeoConfig) {
         var directive = {
             restrict: 'A',
-            replace: true,
             scope: {},
             templateUrl: EgeoConfig.getEgeoPath() + '/components/popover/components.popover.tpl.html';
             transclude: true
