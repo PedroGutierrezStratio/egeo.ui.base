@@ -2,6 +2,21 @@ $this: '#{$egeo-namespace}c-popover';
 
 @mixin egeo-c-popover {
     @include egeo-c-component;
+
+    border: $egeo-c-popover---border;
+    border-radius: $egeo-c-popover---border-radius;
+    box-shadow: $egeo-c-popover---box-shadow;
+    display: none;
+    position: absolute;
+    top: 50%;
+
+    &__listitems {
+        padding: $egeo-c-popover__listitems---padding;
+    }
+
+    &--open {
+        display: block;
+    }
 }
 
 @if variable-exists(egeo-c-popover) {

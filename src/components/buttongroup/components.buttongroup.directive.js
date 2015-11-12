@@ -13,6 +13,7 @@
             restrict: 'E',
             replace: true,
             scope: {
+                areItemsHidden: '@',
                 small: '@'
             },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/buttongroup/components.buttongroup.tpl.html',
@@ -27,6 +28,7 @@
             scope.maxLimit = null; 
             scope.lastLimit = null;
             scope.itemsHidden = 0;
+            scope.areItemsHidden = false;
 
             // Replace the #transclude tag with transclude content to
             // put the ellipsis button at same level than the trascluded
@@ -35,6 +37,8 @@
 
             // Apply the subclass to all buttons in the group
             EgeoChildrenClass('egeo-c-buttongroup__item');
+
+            renderMoreButton(true);
 
             // Check regularly if the width changes
             setInterval(checkWidth, 1000);
@@ -90,15 +94,12 @@
                     i--;
                 }
 
-                if (scope.itemsHidden > 0) {
-                    if (moreButton.hasClass('ng-hide')) moreButton.removeClass('ng-hide');
-                }
+                renderMoreButton();
             }
 
             function showItems(from, to) {
                 var item = to,
-                    child = null,
-                    moreButton = angular.element(element.find('.egeo-c-button--tool-ellipsis'));
+                    child = null;
 
                 from = typeof from !== 'undefined' ? from : 0;
 
@@ -110,23 +111,56 @@
                     item--;
                 }
 
-                if (scope.itemsHidden == 0) { 
+                renderMoreButton();
+            }
+
+            function renderMoreButton(hide) {
+                var moreButton = angular.element(element.find('.egeo-c-button--tool-ellipsis'));
+
+                if (hide) {
+                    console.log("force hide more");
                     if (!moreButton.hasClass('ng-hide')) moreButton.addClass('ng-hide');
+                    //angular.element(moreButton).hide(0);
+                    return;
                 }
+
+                if (scope.itemsHidden <= 0) { 
+                    scope.itemsHidden = 0;
+                    scope.areItemsHidden = false;
+
+                    if (!moreButton.hasClass('ng-hide')) moreButton.addClass('ng-hide');
+                    console.log("hide more");
+                    console.log(angular.element(moreButton));
+                    //angular.element(moreButton).fadeOut();
+                } else {
+                    scope.areItemsHidden = true;
+
+                    if (moreButton.hasClass('ng-hide')) moreButton.removeClass('ng-hide');
+                    console.log("show more");
+                    console.log(angular.element(moreButton));
+                    //angular.element(moreButton).fadeIn();
+                }
+
             }
 
             function hideItem(item) {
+                console.log("hide item");
+                console.log(item);
                 if (!item.hasClass('ng-hide')) { 
                     item.addClass('ng-hide'); 
                     scope.itemsHidden++;
                 }
+                //item.fadeOut();
             }
 
             function showItem(item) {
+                console.log("show item");
+                console.log(item);
                 if (item.hasClass('ng-hide')) {
                     item.removeClass('ng-hide');
                     scope.itemsHidden--;
                 }
+                //item.fadeIn();
             }
 
             function getLastVisibleItemIndex() {

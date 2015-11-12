@@ -4,3 +4,9 @@
 } @else {
     $egeo-c-popover: true !default;
 }
+
+$egeo-c-popover---border: 0 !default;
+$egeo-c-popover---border-radius: 15px !default;
+$egeo-c-popover---box-shadow: 0 0 3px rgba(0,0,0,.15),0 0 1px rgba(0,0,0,.3),0 3px 2px -1px rgba(0,0,0,.1) !default;
+
+$egeo-c-popover__listitems---padding: 3px 15px !default;
