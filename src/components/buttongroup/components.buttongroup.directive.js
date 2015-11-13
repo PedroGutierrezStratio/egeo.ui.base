@@ -13,7 +13,6 @@
             restrict: 'E',
             replace: true,
             scope: {
-                areItemsHidden: '@',
                 small: '@'
             },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/buttongroup/components.buttongroup.tpl.html',
@@ -23,6 +22,7 @@
         return directive;
 
         function link(scope, element, attrs, ctrl, transclude) {
+            scope.element = element;
             scope.childrenWidth = null;
             scope.lastWidth = null;
             scope.maxLimit = null; 

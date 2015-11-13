@@ -1,9 +1,9 @@
-<span class="egeo-c-buttongroup">
+<span class="egeo-c-buttongroup" data-ng-controller="egeoCButtongroupController as vm">
     <span id="transclude" ng-transclude><!-- this span will be replaced by the transcluded content --></span>
     
     <egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-small="{{small}}" data-icon-left="icon-waiting"></egeo-c-button data-is-shown="false">
     
-    <div data-ng-if="areItemsHidden" class="egeo-c-popover">
+    <div data-ng-if="vm.areItemsHidden" class="egeo-c-popover">
         <div class="egeo-c-popover__listitems"></div>
     </div>
 </span>
