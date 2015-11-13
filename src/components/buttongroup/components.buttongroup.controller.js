@@ -3,9 +3,9 @@
 
     angular
         .module('egeo.buttons')
-        .controller('egeoCButtongroupController', EgeoCButtongroupController);
+        .controller('EgeoButtongroupController', EgeoButtongroupController);
 
-    function EgeoCButtongroupController($scope) {
+    function EgeoButtongroupController($scope) {
         var vm = this;
 
         vm.areHiddenItems = false;
