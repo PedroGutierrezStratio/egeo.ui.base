@@ -3,9 +3,9 @@
 
     angular
         .module('egeo.dropdown')
-        .controller('DropdownController', DropdownController);
+        .controller('EgeoDropdownController', EgeoDropdownController);
 
-    function DropdownController($scope) {
+    function EgeoDropdownController($scope) {
         var vm = this;
 
         vm.isOpen = false;
