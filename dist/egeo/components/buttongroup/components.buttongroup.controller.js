@@ -5,11 +5,11 @@
         .module('egeo.buttons')
         .controller('EgeoButtongroupController', EgeoButtongroupController);
 
-    function EgeoButtongroupController($scope) {
+    function EgeoButtongroupController($scope, $element) {
         var vm = this;
 
         vm.areHiddenItems = false;
-
-        console.log($scope);
+        vm.isPopoverShown = false;
+        vm.popoverItems = null;
     }
 })();
