@@ -128,8 +128,8 @@ module.exports = function (grunt) {
           {expand: true, cwd: '<%= app.src %>/', src: ['**/*.scss', '*.scss', '!fonts'], dest: '<%= app.dist %>/<%= app.sass %>'},
           {expand: true, cwd: '<%= app.src %>/', src: ['**/*.html', '*.html'], dest: '<%= app.dist %>/<%= app.js %>'},
           {expand: true, cwd: '<%= app.src %>/', src: ['**/*.js', '*.js'], dest: '<%= app.dist %>/<%= app.js %>'},
-          {expand: true, cwd: '<%= app.npm %>', src: ['angular-animate/*.js', 'angular/*.js', 'angular/*.js'], dest: '<%= app.dist %>/vendors'},
-          {expand: true, cwd: '<%= app.npm %>', src: ['angular-sanitize/*.js', 'angular/*.js', 'angular/*.js'], dest: '<%= app.dist %>/vendors'}
+          {expand: true, cwd: '<%= app.npm %>', src: ['angular-animate/*.js', 'angular/*.js', 'angular-sanitize/*.js'], dest: '<%= app.dist %>/vendors'},
+          {expand: true, cwd: '<%= app.src %>/<%= app.vendors %>/', src: ['angular-bind-html-compile/*.js'], dest: '<%= app.dist %>/vendors'}
         ],
       },
     },
