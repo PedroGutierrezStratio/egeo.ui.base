@@ -26,7 +26,6 @@
             var lastWidth = null,
                 maxLimit = null,
                 lastLimit = null,
-                itemsHidden = [],
                 moreButtonWidth = 43;
 
             // Replace the #transclude tag with transclude content to
@@ -115,27 +114,27 @@
             }
 
             function renderPopover() {
-                var i = itemsHidden.length;
+                var i = ctrl.itemsHidden.length;
                 var output = "";
 
-                ctrl.popoverItems = null;
+                ctrl.popoverItems = [];
 
                 while (i--) {
-                    output = jQuery("<p>").append(itemsHidden[i].clone()).html() + output;
+                    ctrl.popoverItems[i] = {};
+                    ctrl.popoverItems[i].icon = ctrl.itemsHidden[i].find('.egeo-c-icon').attr('class');
+                    ctrl.popoverItems[i].label = ctrl.itemsHidden[i].attr('data-label');
                 }
 
-                if (output) {
+                if (ctrl.popoverItems.length > 0) {
                     ctrl.isPopoverShown = true;
                 } else {
                     ctrl.isPopoverShown = false;
                 }
-
-                ctrl.popoverItems = output;
             }
 
             function renderMoreButton() {
-                if (itemsHidden <= 0) { 
-                    itemsHidden = []; // fallback to avoid problems if something goes wrong
+                if (ctrl.itemsHidden <= 0) { 
+                    ctrl.itemsHidden = []; // fallback to avoid problems if something goes wrong
                     ctrl.areItemsHidden = false;
                 } else {
                     ctrl.areItemsHidden = true;
@@ -157,7 +156,7 @@
             }
 
             function fromPopoverToGroup(item) {
-                var items = itemsHidden.length,
+                var items = ctrl.itemsHidden.length,
                     i = 0,
                     index = null;
 
@@ -165,9 +164,9 @@
                 item.removeClass('ng-hide');
 
                 // Remove the item from the array which contains the hidden items
-                while (items == itemsHidden.length && i < itemsHidden.length) {
-                    if (itemsHidden[i].index() == item.index()) {
-                        itemsHidden.splice(i, 1);
+                while (items == ctrl.itemsHidden.length && i < ctrl.itemsHidden.length) {
+                    if (ctrl.itemsHidden[i].index() == item.index()) {
+                        ctrl.itemsHidden.splice(i, 1);
                     }
 
                     i++;
@@ -179,15 +178,15 @@
                 item.addClass('ng-hide'); 
 
                 // Add the item to the array which contains the hidden items
-                itemsHidden.push(item);
+                ctrl.itemsHidden.push(item);
             }
 
             function isItemHidden(item) {
                 var i = 0;
                 var response = false;
 
-                while (i < itemsHidden.length && !response) {
-                    if (itemsHidden[i].index() == item.index()) {
+                while (i < ctrl.itemsHidden.length && !response) {
+                    if (ctrl.itemsHidden[i].index() == item.index()) {
                         response = true;
                     }
 

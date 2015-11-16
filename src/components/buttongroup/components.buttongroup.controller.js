@@ -10,6 +10,7 @@
 
         vm.areHiddenItems = false;
         vm.isPopoverShown = false;
-        vm.popoverItems = null;
+        vm.itemsHidden = [];
+        vm.popoverItems = [];
     }
 })();
