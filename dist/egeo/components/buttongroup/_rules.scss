@@ -2,6 +2,11 @@ $this: '#{$egeo-namespace}c-buttongroup';
 
 @mixin egeo-c-buttongroup {
 	@include egeo-c-component;
+
+    &__more {
+        display: inline-block;
+        vertical-align: top;
+    }
 }
 
 @if variable-exists(egeo-c-buttongroup) {

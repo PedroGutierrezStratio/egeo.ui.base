@@ -3,12 +3,14 @@ $this: '#{$egeo-namespace}c-popover';
 @mixin egeo-c-popover {
     @include egeo-c-component;
 
+    background: $egeo-c-popover---background;
     border: $egeo-c-popover---border;
     border-radius: $egeo-c-popover---border-radius;
     box-shadow: $egeo-c-popover---box-shadow;
     display: none;
+    padding: $egeo-c-popover---padding;
     position: absolute;
-    top: 50%;
+    width: $egeo-c-popover---width;
 
     &__listitems {
         padding: $egeo-c-popover__listitems---padding;
