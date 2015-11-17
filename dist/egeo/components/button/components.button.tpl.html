@@ -5,4 +5,7 @@
             <i class="egeo-c-icon {{iconLeft}}" data-ng-if="iconLeft != null"></i>
             <span data-ng-if="!rounded">{{label}}</span>
             <i class="egeo-c-icon {{iconRight}}" data-ng-if="iconRight != null"></i>
-        </button>
+
+        <div class="egeo-c-popover__arrow--top" data-ng-if="vm.hasPopover"></div>
+        <div class="egeo-c-popover__arrow-shadow--top" data-ng-if="vm.hasPopover"></div>
+</button>

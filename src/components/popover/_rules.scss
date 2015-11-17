@@ -16,8 +16,45 @@ $this: '#{$egeo-namespace}c-popover';
         padding: $egeo-c-popover__listitems---padding;
     }
 
+    &__arrow,
+    &__arrow-shadow {
+        border-color: transparent;
+        display: none;
+        height: 0;
+        position: absolute;
+        width: 0;
+        z-index: 1;
+    }
+
+    &__arrow {
+        border-bottom-color: #fff;
+
+        &--top {
+            border-style: dashed dashed solid;
+            border-width: 0 8.5px 8.5px;
+            bottom: -10px;
+            left: 56px;
+        }
+    }
+
+    &__shadow {
+        border-bottom-color: #ccc;
+
+        &--top {
+            border-style: dashed dashed solid;
+            border-width: 0 8.5px 8.5px;
+            bottom: -9px;
+            left: 56px;
+        }
+    }
+
     &--open {
         display: block;
+
+        .egeo-c-popover__arrow,
+        .egeo-c-popover__arrow-shadow {
+            display: block;
+        }
     }
 }
 

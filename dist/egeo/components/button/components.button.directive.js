@@ -9,6 +9,8 @@
 
     function egeoCButton(EgeoConfig) {
         var directive = {
+            controller: 'EgeoButtonController as vm',
+            link: link,
             restrict: 'E',
             replace: true,
             scope: {
@@ -17,6 +19,7 @@
                 iconRight: '@',
                 label: '@',
                 modifier: '@',
+                popover: '@',
                 rounded: '@',
                 small: '@',
                 tabindex: '@',
@@ -26,5 +29,12 @@
         }
 
         return directive;
+
+        function link(scope, element, attrs, ctrl) {
+            if (scope.popover) { 
+                ctrl.hasPopover = true; 
+                element.click(ctrl.openPopover);
+            }
+        }
     }
 })();
