@@ -6,7 +6,7 @@
 
         <div class="egeo-c-popover" data-id="popover-{{vm.id}}" data-ng-if="vm.isPopoverShown">
             <div class="egeo-c-popover__listitems">
-                <li class="egeo-c-popover__listitem" ng-repeat="item in vm.popoverItems" data-ng-click="{{item.click}}">
+                <li class="egeo-c-popover__listitem" data-ng-repeat="item in vm.popoverItems" data-ng-click="item.click">
                     <i class="egeo-c-icon" data-ng-class="item.icon"></i>
                     <span data-ng-if="item.label">{{item.label}}</span>
                 </li>
