@@ -9,10 +9,25 @@
         var vm = this;
 
         vm.hasPopover = false;
-        vm.openPopover = openPopover;
+        vm.isOpenPopover = false;
+        vm.togglePopover = togglePopover;
+
+        function togglePopover() {
+            if (vm.isOpenPopover) {
+                closePopover();
+            } else {
+                openPopover();
+            }
+        }
 
         function openPopover() {
-            console.log("open popover: " + $scope.popover);
+            angular.element($element.parent().find('[data-id="' + $scope.popover + '"]')).addClass('egeo-c-popover--open');
+            vm.isOpenPopover = true;
+        }
+
+        function closePopover() {
+            angular.element($element.parent().find('[data-id="' + $scope.popover + '"]')).removeClass('egeo-c-popover--open');
+            vm.isOpenPopover = false;
         }
     }
 })();

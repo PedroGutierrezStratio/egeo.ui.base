@@ -12,5 +12,6 @@
         vm.isPopoverShown = false;
         vm.itemsHidden = [];
         vm.popoverItems = [];
+        vm.id = $scope.$id;
     }
 })();
