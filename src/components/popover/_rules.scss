@@ -17,7 +17,6 @@ $this: '#{$egeo-namespace}c-popover';
     }
 
     &__listitem {
-        background: $egeo-c-popover---shadow-color;
         color: $egeo-c-popover__listitem---color;
         cursor: pointer;
         list-style: none;
@@ -56,7 +55,7 @@ $this: '#{$egeo-namespace}c-popover';
             border-style: dashed dashed solid;
             border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size;
             bottom: -2px;
-            left: calc(50% - $egeo-c-popover__arrow---size);
+            left: calc(50% - #{$egeo-c-popover__arrow---size});
         }
     }
 
