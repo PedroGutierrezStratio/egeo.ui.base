@@ -6,6 +6,13 @@
 //   <egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button>
 //   <egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button>
 // </egeo-c-buttongroup>
+// <div style="width: 110px">
+//      <egeo-c-buttongroup>
+//          <egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button>
+//          <egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button>
+//          <egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button>
+//      </egeo-c-buttongroup>
+// </div>
 // ```
 //
 // <hr>
@@ -14,6 +21,14 @@
 //   <egeo-c-button data-type="submit" data-modifier="tool-1" data-label="Test 2" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button>
 //   <egeo-c-button data-type="submit" data-modifier="tool-2" data-label="Test 3" data-rounded="true" data-icon-left="icon-datetime" data-test="{{count}}" data-ng-click="count = count + 1"></egeo-c-button>
 // </egeo-c-buttongroup>
+// <p>The same buttongroup in a container of 110px wide.</p>
+// <div style="width: 110px">
+//      <egeo-c-buttongroup>
+//          <egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button>
+//          <egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button>
+//          <egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button>
+//      </egeo-c-buttongroup>
+// </div>
 // <hr>
 //
 // ## Dependencies
