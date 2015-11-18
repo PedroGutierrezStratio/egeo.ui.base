@@ -13,7 +13,26 @@ $this: '#{$egeo-namespace}c-popover';
     width: $egeo-c-popover---width;
 
     &__listitems {
-        padding: $egeo-c-popover__listitems---padding;
+        list-style: none;
+    }
+
+    &__listitem {
+        background: $egeo-c-popover---shadow-color;
+        color: $egeo-c-popover__listitem---color;
+        cursor: pointer;
+        list-style: none;
+        margin: $egeo-c-popover__listitem---margin;
+        padding: $egeo-c-popover__listitem---padding;
+
+        &:hover {
+            background: $egeo-c-popover__listitem--hover---background;
+        }
+
+        @if ($egeo-c-icon) {
+            .egeo-c-icon {
+                color: $egeo-c-popover__listitem__icon---color;
+            }
+        }
     }
 
     &__arrow,
@@ -30,25 +49,25 @@ $this: '#{$egeo-namespace}c-popover';
     }
 
     &__arrow {
-        border-bottom-color: #fff;
+        border-bottom-color: $egeo-c-popover---background;
         z-index: 1;
 
         &--top {
             border-style: dashed dashed solid;
-            border-width: 0 8.5px 8.5px;
+            border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size;
             bottom: -2px;
-            left: calc(50% - 8.5px);
+            left: calc(50% - $egeo-c-popover__arrow---size);
         }
     }
 
     &__arrow-shadow {
-        border-bottom-color: #ccc;
+        border-bottom-color: $egeo-c-popover---shadow-color;
 
         &--top {
             border-style: dashed dashed solid;
-            border-width: 0 8.5px 8.5px;
+            border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size;
             bottom: -1px;
-            left: calc(50% - 8.5px);
+            left: calc(50% - $egeo-c-popover__arrow---size);
         }
     }
 
