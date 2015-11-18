@@ -66,7 +66,7 @@ $this: '#{$egeo-namespace}c-popover';
             border-style: dashed dashed solid;
             border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size;
             bottom: -1px;
-            left: calc(50% - $egeo-c-popover__arrow---size);
+            left: calc(50% - #{$egeo-c-popover__arrow---size});
         }
     }
 

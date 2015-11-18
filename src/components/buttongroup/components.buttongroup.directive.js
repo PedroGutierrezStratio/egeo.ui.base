@@ -121,6 +121,12 @@
                     ctrl.popoverItems[i] = {};
                     ctrl.popoverItems[i].icon = ctrl.itemsHidden[i].find('.egeo-c-icon').attr('class');
                     ctrl.popoverItems[i].label = ctrl.itemsHidden[i].attr('data-label');
+
+                    if (ctrl.itemsHidden[i].attr('data-ng-click')) {
+                        ctrl.popoverItems[i].click = ctrl.itemsHidden[i].attr('data-ng-click');
+                    } else if (ctrl.itemsHidden[i].attr('ng-click')) {
+                        ctrl.popoverItems[i].click = ctrl.itemsHidden[i].attr('data-ng-click');
+                    }
                 }
 
                 if (ctrl.popoverItems.length > 0) {
