@@ -24,6 +24,10 @@ $this: '#{$egeo-namespace}c-popover';
         position: absolute;
         width: 0;
         z-index: 1;
+
+        &--open {
+            display: block;
+        }
     }
 
     &__arrow {
@@ -50,11 +54,6 @@ $this: '#{$egeo-namespace}c-popover';
 
     &--open {
         display: block;
-
-        .egeo-c-popover__arrow,
-        .egeo-c-popover__arrow-shadow {
-            display: block;
-        }
     }
 }
 
