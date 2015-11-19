@@ -17,7 +17,7 @@
 // </div>
 // <p>The same buttongroup in a container of 110px wide and right aligned.</p>
 // <div style="text-align: right" data-ng-controller="TestController as TestCtrl">
-//   <div style="width: 110px" data-ng-controller="TestController as TestCtrl">
+//   <div style="display: inline-block; width: 110px" data-ng-controller="TestController as TestCtrl">
 //      <egeo-c-buttongroup>
 //          <egeo-c-button data-type="submit" data-modifier="tool-1" data-label="Test 1" data-rounded="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
 //          <egeo-c-button data-type="submit" data-modifier="tool-1" data-label="Test 2" data-rounded="true" data-small="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
@@ -47,7 +47,7 @@
 // </div>
 // <p>The same buttongroup in a container of 110px wide and right aligned.</p>
 // <div style="text-align: right" data-ng-controller="TestController as TestCtrl">
-//   <div style="width: 110px" data-ng-controller="TestController as TestCtrl">
+//   <div style="display: inline-block; width: 110px" data-ng-controller="TestController as TestCtrl">
 //      <egeo-c-buttongroup>
 //          <egeo-c-button data-type="submit" data-modifier="tool-1" data-label="Test 1" data-rounded="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
 //          <egeo-c-button data-type="submit" data-modifier="tool-1" data-label="Test 2" data-rounded="true" data-small="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
