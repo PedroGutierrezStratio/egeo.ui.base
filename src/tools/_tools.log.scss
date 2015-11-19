@@ -24,7 +24,7 @@
 //
 // ### egeo-log($message, $type: $egeo-log-debug) - the function
 //
-// <span class="tag tag--type">@function</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">Internal</span>
+// <span class="tag tag--type">@function</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span>
 //
 // The function log launches the directive `@debug`, `@warn` or `@error` depending on
 // the parameter `$type` passed to the function. It detects if the directive
@@ -53,7 +53,7 @@
 //
 // ### egeo-log($message, $type: $egeo-log-debug) - the mixin
 //
-// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">Internal</span>
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span>
 //
 // Does exactly the same than the function but you can call it
 // like showed in the Usage section.

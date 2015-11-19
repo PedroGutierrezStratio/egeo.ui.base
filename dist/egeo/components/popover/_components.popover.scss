@@ -1,10 +1,17 @@
 // Popover
 //
+// <span class="tag tag--danger">internal</span><span class="tag tag--untested">untested</span>
+//
+// The Popover component, for now, is only available inside other components like
+// the Button Group. For that, in terms of code available to work with, only the
+// CSS has real influence in the code. In short term, this component will be 
+// available to be included as a directive in any other component itself.
+//
 // ## Dependencies
 //  
 // * [component](section-7.html#section-7.1)
 //
-// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+// <div class="compatibility">Compatibility untested</div>
 //
 // Styleguide 7.9
 
