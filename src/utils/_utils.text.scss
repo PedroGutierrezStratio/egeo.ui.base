@@ -56,13 +56,13 @@ $this-nobem: '#{$egeo-nobem-namespace}u-nowrap';
 }
 
 @if $egeo-u-nowrap {
-    .#{this},
-    %#{this} {
+    .#{$this},
+    %#{$this} {
     	@include egeo-u-nowrap;
     }
 
-    .#{this-nobem},
-    %#{this-nobem} {
+    .#{$this-nobem},
+    %#{$this-nobem} {
     	@include egeo-u-nowrap(true);
     }
 }
