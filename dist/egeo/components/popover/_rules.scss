@@ -26,6 +26,7 @@ $this: '#{$egeo-namespace}c-popover';
         margin: $egeo-c-popover__listitem---margin;
         padding: $egeo-c-popover__listitem---padding;
         text-align: left;
+        width: 100%;
 
         &:hover {
             background: $egeo-c-popover__listitem--hover---background;
