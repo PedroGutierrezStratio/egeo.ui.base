@@ -46,8 +46,6 @@
 
                     renderElements();
                 }
-
-                //renderPopover();
             }
 
             function renderElements() {
