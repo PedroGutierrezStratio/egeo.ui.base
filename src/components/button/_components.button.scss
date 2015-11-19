@@ -222,6 +222,8 @@
 //
 // ## The egeo-c-button AngularJS directive
 //
+// <span class="tag tag--type">@directive</span><span class="tag tag--untested">untested</span>
+//
 // Egeo provides an AngularJS directive to create all types of buttons defined with ease. The directive is restricted
 // to HTML Element and called `egeo-c-button`. Below you can see the properties exposed:
 //
@@ -235,7 +237,7 @@
 // | <div class="egeo-u-tx-align--left">small</div>       | <div class="egeo-u-tx-align--left">A small version of the button</div>                                                                                                  |
 // | <div class="egeo-u-tx-align--left">rounded</div>     | <div class="egeo-u-tx-align--left">A rounded version of the button. A rounded button will hide the label and only show the icon.</div>                                  |
 // | <div class="egeo-u-tx-align--left">at-right</div>    | <div class="egeo-u-tx-align--left">Floats the button to right</div>                                                                                                     |
-// | <div class="egeo-u-tx-align--left">popover</div>     | <div classgit="egeo-u-tx-align--left"><span class="tag tag--danger">internal!</span>It is used to reference popover IDs when the button is linked to a popover.</div>   |
+// | <div class="egeo-u-tx-align--left">popover</div>     | <div classgit="egeo-u-tx-align--left"><span class="tag tag--danger">internal</span>It is used to reference popover IDs when the button is linked to a popover.</div>   |
 //
 // ### Usage
 //
