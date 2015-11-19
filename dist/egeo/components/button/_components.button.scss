@@ -223,16 +223,17 @@
 // Egeo provides an AngularJS directive to create all types of buttons defined with ease. The directive is restricted
 // to HTML Element and called `egeo-c-button`. Below you can see the properties exposed:
 //
-// | Property                                             | Default value                                                                  |
-// | ---------------------------------------------------- | ------------------------------------------------------------------------------ |
-// | <div class="egeo-u-tx-align--left">type</div>        | <div class="egeo-u-tx-align--left">Submit, Reset or Button</div>                                          |
-// | <div class="egeo-u-tx-align--left">modifier</div>    | <div class="egeo-u-tx-align--left">The name of the button created as a CSS BEM Modifier</div>             |
-// | <div class="egeo-u-tx-align--left">label</div>       | <div class="egeo-u-tx-align--left">The label of the button</div>                                          |
-// | <div class="egeo-u-tx-align--left">icon-left</div>        | <div class="egeo-u-tx-align--left">An icon which appears at left side</div>                               |
-// | <div class="egeo-u-tx-align--left">icon-right</div>        | <div class="egeo-u-tx-align--left">An icon which appears at right side</div>                               |
-// | <div class="egeo-u-tx-align--left">small</div>       | <div class="egeo-u-tx-align--left">A small version of the button</div>                                    |
-// | <div class="egeo-u-tx-align--left">rounded</div>     | <div class="egeo-u-tx-align--left">A rounded version of the button. A rounded button will hide the label and only show the icon.</div> |
-// | <div class="egeo-u-tx-align--left">at-right</div>    | <div class="egeo-u-tx-align--left">Floats the button to right</div> |
+// | Property                                             | Description                                                                                                                                                                  |
+// | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+// | <div class="egeo-u-tx-align--left">type</div>        | <div class="egeo-u-tx-align--left">Submit, Reset or Button</div>                                                                                                        |
+// | <div class="egeo-u-tx-align--left">modifier</div>    | <div class="egeo-u-tx-align--left">The name of the button created as a CSS BEM Modifier</div>                                                                           |
+// | <div class="egeo-u-tx-align--left">label</div>       | <div class="egeo-u-tx-align--left">The label of the button</div>                                                                                                        |
+// | <div class="egeo-u-tx-align--left">icon-left</div>   | <div class="egeo-u-tx-align--left">An icon which appears at left side</div>                                                                                             |
+// | <div class="egeo-u-tx-align--left">icon-right</div>  | <div class="egeo-u-tx-align--left">An icon which appears at right side</div>                                                                                            |
+// | <div class="egeo-u-tx-align--left">small</div>       | <div class="egeo-u-tx-align--left">A small version of the button</div>                                                                                                  |
+// | <div class="egeo-u-tx-align--left">rounded</div>     | <div class="egeo-u-tx-align--left">A rounded version of the button. A rounded button will hide the label and only show the icon.</div>                                  |
+// | <div class="egeo-u-tx-align--left">at-right</div>    | <div class="egeo-u-tx-align--left">Floats the button to right</div>                                                                                                     |
+// | <div class="egeo-u-tx-align--left">popover</div>     | <div classgit="egeo-u-tx-align--left"><span class="tag tag--danger">internal!</span>It is used to reference popover IDs when the button is linked to a popover.</div>   |
 //
 // ### Usage
 //
