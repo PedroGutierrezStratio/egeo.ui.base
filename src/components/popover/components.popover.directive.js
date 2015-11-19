@@ -11,7 +11,7 @@
         var directive = {
             restrict: 'A',
             scope: {},
-            templateUrl: EgeoConfig.getEgeoPath() + '/components/popover/components.popover.tpl.html';
+            templateUrl: EgeoConfig.getEgeoPath() + '/components/popover/components.popover.tpl.html',
             transclude: true
         }
 

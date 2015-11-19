@@ -5,7 +5,7 @@
 
 @include test-module('components.icon') {
 	@include test('egeo-c-icon [mixin]') {
-		@include assert('output the general properties and modifiers of a icon') {
+		@include assert('output the general properties and modifiers of an icon') {
 			@include input {
 				.test {
 					@include egeo-c-icon;
@@ -15,6 +15,7 @@
 			@include expect {
 				.test {
 					box-sizing: border-box;
+					position: relative;
 				}
 			}
 		}
