@@ -17,11 +17,15 @@ $this: '#{$egeo-namespace}c-popover';
     }
 
     &__listitem {
+        background: transparent;
+        border: 0;
         color: $egeo-c-popover__listitem---color;
         cursor: pointer;
+        display: block;
         list-style: none;
         margin: $egeo-c-popover__listitem---margin;
         padding: $egeo-c-popover__listitem---padding;
+        text-align: left;
 
         &:hover {
             background: $egeo-c-popover__listitem--hover---background;

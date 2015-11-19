@@ -13,5 +13,10 @@
         vm.itemsHidden = [];
         vm.popoverItems = [];
         vm.id = $scope.$id;
+        vm.test = test;
+
+        function test() {
+            console.log("test");
+        }
     }
 })();

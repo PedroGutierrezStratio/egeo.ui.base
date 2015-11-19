@@ -46,6 +46,8 @@
 
                     renderElements();
                 }
+
+                //renderPopover();
             }
 
             function renderElements() {
@@ -112,24 +114,27 @@
             }
 
             function renderPopover() {
-                var i = ctrl.itemsHidden.length;
-                var output = "";
+                var i,
+                    buttongroupItems,
+                    item;
 
-                ctrl.popoverItems = [];
+                ctrl.popoverItems = angular.element(element.find('.egeo-c-popover__listitems')).children();
+                buttongroupItems = element.children().slice(0, element.children().length - 1);
+                i = ctrl.popoverItems.length;
 
                 while (i--) {
-                    ctrl.popoverItems[i] = {};
-                    ctrl.popoverItems[i].icon = ctrl.itemsHidden[i].find('.egeo-c-icon').attr('class');
-                    ctrl.popoverItems[i].label = ctrl.itemsHidden[i].attr('data-label');
+                    item = angular.element(ctrl.popoverItems[i]);
+                    item.attr('class', 'egeo-c-popover__listitem ng-isolate-scope');
+                    item.html(item.html() + item.attr('data-label'));
 
-                    if (ctrl.itemsHidden[i].attr('data-ng-click')) {
-                        ctrl.popoverItems[i].click = ctrl.itemsHidden[i].attr('data-ng-click');
-                    } else if (ctrl.itemsHidden[i].attr('ng-click')) {
-                        ctrl.popoverItems[i].click = ctrl.itemsHidden[i].attr('data-ng-click');
+                    if (angular.element(buttongroupItems[i]).hasClass('ng-hide')) {
+                        item.removeClass('ng-hide');
+                    } else {
+                        item.addClass('ng-hide');
                     }
                 }
 
-                if (ctrl.popoverItems.length > 0) {
+                if (ctrl.itemsHidden.length > 0) {
                     ctrl.isPopoverShown = true;
                 } else {
                     ctrl.isPopoverShown = false;
