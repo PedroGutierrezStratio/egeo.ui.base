@@ -28,9 +28,7 @@
                 lastLimit = null,
                 moreButtonWidth = 43;
 
-            // Replace the #transclude tag with transclude content to
-            // put the ellipsis button at same level than the trascluded
-            // ones.
+            // Replace the #transclude tag with transclude content
             element.find('#transclude').replaceWith(transclude());
 
             // Apply the subclass to all buttons in the group
@@ -209,14 +207,12 @@
 
             function getLastVisibleItemIndex() {
                 var i = 0,
-                    iMax = element.children().length,
+                    iMax = element.children().length -1,
                     widthBuffer = 0,
                     childWidth = 0,
                     correctionFactor = 3, // The correction factor is used due to the separation the browsers add to the inline-block elements
                     limit = null,
                     buttonFits = false;
-
-                if (ctrl.areItemsHidden) iMax--; // This is needed due to, in this case, the div which contains the popover is counted as child
 
                 // If we already have a limit, it is not needed keep the loop working
                 while (i < iMax && limit == null) {
