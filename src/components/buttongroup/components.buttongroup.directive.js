@@ -5,9 +5,9 @@
         .module('egeo.buttons')
         .directive('egeoCButtongroup', egeoCButtongroup);
 
-    egeoCButtongroup.$inject = ['EgeoConfig', 'EgeoChildrenClass'];
+    egeoCButtongroup.$inject = ['EgeoConfig', 'EgeoChildrenClass', '$window'];
 
-    function egeoCButtongroup(EgeoConfig, EgeoChildrenClass) {
+    function egeoCButtongroup(EgeoConfig, EgeoChildrenClass, $window) {
         var directive = {
             controller: 'EgeoButtongroupController as vm',
             link: link,
@@ -130,6 +130,10 @@
                     } else {
                         item.addClass('ng-hide');
                     }
+                }
+
+                if ((element.find('.egeo-c-popover').parent().parent().offset().left + element.find('.egeo-c-popover').outerWidth()) >= $(window).innerWidth()) {
+                    element.find('.egeo-c-popover').addClass('egeo-c-popover--right-aligned');
                 }
 
                 if (ctrl.itemsHidden.length > 0) {
