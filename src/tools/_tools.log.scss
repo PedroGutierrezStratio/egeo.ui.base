@@ -67,7 +67,7 @@
 //
 // ```
 //	...
-//	@include('My log message', $egeo-log-error);
+//	@include egeo-log('My log message', $egeo-log-error);
 //	...
 // ```
 //

@@ -90,6 +90,8 @@ $this: '#{$egeo-namespace}c-popover';
 
 @if variable-exists(egeo-c-popover) {
     @if $egeo-c-popover {
+        @if (not $egeo-c-popover__arrow---size) { @include egeo-log('The arrow of the popover will be not drawed due to its size is not defined or is null.', $egeo-log-warn); }
+
         .#{$this} {
             @include egeo-c-popover;
         }
