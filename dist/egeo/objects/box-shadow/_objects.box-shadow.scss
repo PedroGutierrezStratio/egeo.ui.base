@@ -54,10 +54,10 @@
 //  
 // | Variable                                                                       | Default value                                                 |
 // | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-// | <div class="egeo-u-tx-align--left">$egeo-o-box-shadow</div>                    | <div class="egeo-u-tx-align--left">`true`</div>                                 |
-// | <div class="egeo-u-tx-align--left">$egeo-shadows</div>                         | <div class="egeo-u-tx-align--left">A Sass map with RGBA colors to be used as shadows. The values are sh1, sh2 and sh3, with value rgba(0, 0, 0, .1), rgba(0, 0, 0, .15) and rgba(0, 0, 0, .3) respectively.</div> |
-// | <div class="egeo-u-tx-align--left">$egeo-o-box-shadow---box-shadow</div>       | <div class="egeo-u-tx-align--left">0 0 3px map-get($egeo-shadows, sh2), 0 0 1px map-get($egeo-shadows, sh3), 0 3px 2px -1px map-get($egeo-shadows, sh1)</div> |
-// | <div class="egeo-u-tx-align--left">$egeo-o-box-shadow---shadow-color</div>     | <div class="egeo-u-tx-align--left">map-get($egeo-shadows, sh3)</div>                               |
+// | <div class="egeo-u-tx-align--left egeo-u-nowrap">$egeo-o-box-shadow</div>                    | <div class="egeo-u-tx-align--left">`true`</div>                                 |
+// | <div class="egeo-u-tx-align--left egeo-u-nowrap">$egeo-shadows</div>                         | <div class="egeo-u-tx-align--left">A Sass map with RGBA colors to be used as shadows. The values are sh1, sh2 and sh3, with value rgba(0, 0, 0, .1), rgba(0, 0, 0, .15) and rgba(0, 0, 0, .3) respectively.</div> |
+// | <div class="egeo-u-tx-align--left egeo-u-nowrap">$egeo-o-box-shadow---box-shadow</div>       | <div class="egeo-u-tx-align--left">0 0 3px map-get($egeo-shadows, sh2), 0 0 1px map-get($egeo-shadows, sh3), 0 3px 2px -1px map-get($egeo-shadows, sh1)</div> |
+// | <div class="egeo-u-tx-align--left egeo-u-nowrap">$egeo-o-box-shadow---shadow-color</div>     | <div class="egeo-u-tx-align--left">map-get($egeo-shadows, sh3)</div>                               |
 //
 //
 // Styleguide 6.2
