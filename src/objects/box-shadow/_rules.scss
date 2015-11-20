@@ -1,7 +1,7 @@
 $this: '#{$egeo-namespace}o-box-shadow';
 
 @mixin egeo-o-box-shadow {
-    box-shadow: $egeo-o-box-shadow;
+    box-shadow: $egeo-o-box-shadow---box-shadow;
 }
 
 @if variable-exists(egeo-o-box-shadow) {
