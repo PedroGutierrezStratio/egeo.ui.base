@@ -3,14 +3,14 @@ $this: '#{$egeo-namespace}c-popover';
 @mixin egeo-c-popover {
     @include egeo-c-component;
 
-    background: $egeo-c-popover---background;
-    border: $egeo-c-popover---border;
-    border-radius: $egeo-c-popover---border-radius;
-    box-shadow: $egeo-c-popover---box-shadow;
+    @if $egeo-c-popover---background { background: $egeo-c-popover---background; }
+    @if $egeo-c-popover---border { border: $egeo-c-popover---border; }
+    @if $egeo-c-popover---border-radius { border-radius: $egeo-c-popover---border-radius; }
+    @if $egeo-c-popover---box-shadow { box-shadow: $egeo-c-popover---box-shadow; }
     display: none;
-    padding: $egeo-c-popover---padding;
+    @if $egeo-c-popover---padding { padding: $egeo-c-popover---padding; }
     position: absolute;
-    width: $egeo-c-popover---width;
+    @if $egeo-c-popover---width { width: $egeo-c-popover---width; }
 
     &--right-aligned {
         right: 0;
@@ -23,22 +23,26 @@ $this: '#{$egeo-namespace}c-popover';
     &__listitem {
         background: transparent;
         border: 0;
-        color: $egeo-c-popover__listitem---color;
+        @if $egeo-c-popover__listitem---color { color: $egeo-c-popover__listitem---color; }
         cursor: pointer;
         display: block;
         list-style: none;
-        margin: $egeo-c-popover__listitem---margin;
-        padding: $egeo-c-popover__listitem---padding;
+        @if $egeo-c-popover__listitem---margin { margin: $egeo-c-popover__listitem---margin; }
+        @if $egeo-c-popover__listitem---padding { padding: $egeo-c-popover__listitem---padding; }
         text-align: left;
         width: 100%;
 
-        &:hover {
-            background: $egeo-c-popover__listitem--hover---background;
+        @if $egeo-c-popover__listitem--hover---background {
+            &:hover {
+                background: $egeo-c-popover__listitem--hover---background;
+            }
         }
 
-        @if ($egeo-c-icon) {
-            .egeo-c-icon {
-                color: $egeo-c-popover__listitem__icon---color;
+        @if $egeo-c-icon {
+            @if $egeo-c-popover__listitem__icon---color {
+                .egeo-c-icon {
+                    color: $egeo-c-popover__listitem__icon---color;
+                }
             }
         }
     }
@@ -57,14 +61,14 @@ $this: '#{$egeo-namespace}c-popover';
     }
 
     &__arrow {
-        border-bottom-color: $egeo-c-popover---background;
+        @if $egeo-c-popover---background { border-bottom-color: $egeo-c-popover---background; }
         z-index: 1;
 
         &--top {
             border-style: dashed dashed solid;
-            border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size;
+            @if $egeo-c-popover__arrow---size { border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size; }
             bottom: -2px;
-            left: calc(50% - #{$egeo-c-popover__arrow---size});
+            @if $egeo-c-popover__arrow---size { left: calc(50% - #{$egeo-c-popover__arrow---size}); }
         }
     }
 
@@ -73,9 +77,9 @@ $this: '#{$egeo-namespace}c-popover';
 
         &--top {
             border-style: dashed dashed solid;
-            border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size;
+            @if $egeo-c-popover__arrow---size { border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size; }
             bottom: -1px;
-            left: calc(50% - #{$egeo-c-popover__arrow---size});
+            @if $egeo-c-popover__arrow---size { left: calc(50% - #{$egeo-c-popover__arrow---size}); }
         }
     }
 

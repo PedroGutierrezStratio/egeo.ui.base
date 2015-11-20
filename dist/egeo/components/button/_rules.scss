@@ -53,37 +53,43 @@ $this: '#{$egeo-namespace}c-button';
 	border: 0;
 	cursor: pointer;
 	display: inline-block;
-	font-size: $egeo-c-button---font-size;
-	height: $egeo-c-button---height;
-	min-width: $egeo-c-button---min-width;
-	padding: $egeo-c-button---padding;
+	@if $egeo-c-button---font-size { font-size: $egeo-c-button---font-size; }
+	@if $egeo-c-button---height { height: $egeo-c-button---height; }
+	@if $egeo-c-button---min-width { min-width: $egeo-c-button---min-width; }
+	@if $egeo-c-button---padding { padding: $egeo-c-button---padding; }
 	position: relative;
-	text-align: $egeo-c-button---text-align;
-	text-transform: $egeo-c-button---text-transform;
+	@if $egeo-c-button---text-align { text-align: $egeo-c-button---text-align; }
+	@if $egeo-c-button---text-transform { text-transform: $egeo-c-button---text-transform; }
 	text-decoration: none;
-	transition: $egeo-c-button---transition;
+	@if $egeo-c-button---transition { transition: $egeo-c-button---transition; }
 
 	@if variable-exists(egeo-c-icon) {
 		@if $egeo-c-icon {
-			.#{$egeo-namespace}c-icon:last-child {
-				margin: $egeo-c-button__c-icon--last-child---margin;
+			@if $egeo-c-button__c-icon--last-child---margin {
+				.#{$egeo-namespace}c-icon:last-child {
+					margin: $egeo-c-button__c-icon--last-child---margin;
+				}
 			}
 
-			.#{$egeo-namespace}c-icon:first-child {
-				margin: $egeo-c-button__c-icon--first-child---margin;
+			@if $egeo-c-button__c-icon--first-child---margin {
+				.#{$egeo-namespace}c-icon:first-child {
+					margin: $egeo-c-button__c-icon--first-child---margin;
+				}
 			}
 		}
 	}
 
 	&--small {
-		font-size: $egeo-c-button--small---font-size;
-		height: $egeo-c-button--small---height;
-		padding: $egeo-c-button--small---padding;
+		@if $egeo-c-button--small---font-size { font-size: $egeo-c-button--small---font-size; }
+		@if $egeo-c-button--small---height { height: $egeo-c-button--small---height; }
+		@if $egeo-c-button--small---padding { padding: $egeo-c-button--small---padding; }
 
 		@if variable-exists(egeo-c-icon) {
 			@if $egeo-c-icon {
-				.#{$egeo-namespace}c-icon {
-					margin: $egeo-c-button--small__c-icon---margin;
+				@if $egeo-c-button--small__c-icon---margin {
+					.#{$egeo-namespace}c-icon {
+						margin: $egeo-c-button--small__c-icon---margin;
+					}
 				}
 			}
 		}
@@ -91,9 +97,9 @@ $this: '#{$egeo-namespace}c-button';
 
 	&--rounded {
 		border-radius: 100%;
-		min-width: $egeo-c-button---height;
+		@if $egeo-c-button---height { min-width: $egeo-c-button---height; }
 		padding: 0;
-		width: $egeo-c-button---height;
+		@if $egeo-c-button---height { width: $egeo-c-button---height; }
 
 		@if variable-exists(egeo-c-icon) {
 			@if $egeo-c-icon {
@@ -113,8 +119,8 @@ $this: '#{$egeo-namespace}c-button';
 		}
 
 		&.#{$this}--small {
-			min-width: $egeo-c-button--small---height;
-			width: $egeo-c-button--small---height;
+			@if $egeo-c-button--small---height { min-width: $egeo-c-button--small---height; }
+			@if $egeo-c-button--small---height { width: $egeo-c-button--small---height; }
 		}
 	}
 

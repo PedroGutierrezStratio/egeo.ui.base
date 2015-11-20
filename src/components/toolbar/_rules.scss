@@ -7,11 +7,13 @@ $this: '#{$egeo-namespace}c-toolbar';
 
     &__item {
         display: inline-block;
-        margin: $egeo-c-toolbar__item---margin;
+        @if $egeo-c-toolbar__item---margin { margin: $egeo-c-toolbar__item---margin; }
         vertical-align: top;
 
-        &:first-child {
-            margin: $egeo-c-toolbar__item--first-child---margin;
+        @if $egeo-c-toolbar__item--first-child---margin {
+            &:first-child {
+                margin: $egeo-c-toolbar__item--first-child---margin;
+            }
         }
     }
 }

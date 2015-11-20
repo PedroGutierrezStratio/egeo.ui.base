@@ -3,7 +3,7 @@ $this: '#{$egeo-namespace}c-dropdown';
 @mixin egeo-c-dropdown {
     &__menu {
         display: none;
-        width: $egeo-c-dropdown__menu---width;
+        @if $egeo-c-dropdown__menu---width { width: $egeo-c-dropdown__menu---width; }
     }
 
     &--open {
@@ -15,7 +15,7 @@ $this: '#{$egeo-namespace}c-dropdown';
     }
 
     &__caret {
-        color: $egeo-c-dropdown__caret---color;
+        @if $egeo-c-dropdown__caret---color { color: $egeo-c-dropdown__caret---color; }
     }
 }
 
