@@ -12,6 +12,7 @@ module.exports = function (config) {
       'src/factories/*.js',
       'src/components/**/*.directive.js',
       'src/components/**/*controller.js',
+      'src/objects/**/*.js',
 
       // fixtures
       //'tests/mock/*.json',
