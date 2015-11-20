@@ -1,7 +1,11 @@
 $this: '#{$egeo-namespace}c-icon';
 
+$background: white;
 @mixin egeo-c-icon {
 	@include egeo-c-component;
+
+
+    @if ($background) {background: $background;}
 }
 
 @if variable-exists(egeo-c-icon) {
