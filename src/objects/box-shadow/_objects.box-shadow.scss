@@ -35,6 +35,7 @@
 // .test {
 //      box-shadow: 0 0 3px map-get($egeo-shadows, sh2), 0 0 1px map-get($egeo-shadows, sh3), 0 3px 2px -1px map-get($egeo-shadows, sh1);
 // }
+// ```
 //
 // #### Using the class
 //
@@ -44,7 +45,7 @@
 // </div>
 // ```
 // Will product the next result:
-// ```
+// 
 // <div>
 //      <div class="egeo-o-box-shadow" style="background: red; display: inline-block; height: 200px; width: 200px;"></div>
 // </div>
