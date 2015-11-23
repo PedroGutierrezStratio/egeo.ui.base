@@ -1,0 +1,13 @@
+$this: '#{$egeo-namespace}c-input';
+
+@mixin egeo-c-input {
+    @include egeo-c-formcontrol;
+}
+
+@if variable-exists(egeo-c-input) {
+    @if $egeo-c-input {
+        .#{$this} {
+            @include egeo-c-input;
+        }
+    }
+}
