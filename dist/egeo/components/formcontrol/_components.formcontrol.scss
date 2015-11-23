@@ -19,6 +19,19 @@
 // with egeo-c-form and egeo-c-formgroup so keep it in mind when you create
 // new form controls or extend them.
 //
+// ## Variables exposed to theming
+//
+// | Variable                                                                  | Default value                                                         | Description |
+// | ------------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------- |
+// | <span class="egeo-u-nowrap">$egeo-c-formcontrol</span>                    | <span class="egeo-u-nowrap">`true` </span>                            | Tells Egeo if the class egeo-c-formcontrol should be included in the CSS. |
+// | <span class="egeo-u-nowrap">$egeo-c-formcontrol---background</span>       | <span class="egeo-u-nowrap">`egeo-get-color(n0)`</span>               | Set the background by default of all form controls. |
+// | <span class="egeo-u-nowrap">$egeo-c-formcontrol---border</span>           | <span class="egeo-u-nowrap">`1px solid` </span>                       | Set the border by default of all form controls. |
+// | <span class="egeo-u-nowrap">$egeo-c-formcontrol---box-shadow</span>       | <span class="egeo-u-nowrap">`$egeo-o-box-shadow---box-shadow` </span> | If we don't want to use the egeo-o-box-shadow, Egeo will use this variable to set the box shadow of the form controls. |
+// | <span class="egeo-u-nowrap">$egeo-c-formcontrol---color</span>            | <span class="egeo-u-nowrap">`egeo-get-color(n10)`</span>              | Set the font color by default of all form controls. |
+// | <span class="egeo-u-nowrap">$egeo-c-formcontrol---font-size</span>        | <span class="egeo-u-nowrap">`egeo-get-font-size(body_medium)`</span>  | Set the font size by default of all form controls. |
+// | <span class="egeo-u-nowrap">$egeo-c-formcontrol---line-height</span>      | <span class="egeo-u-nowrap">`null` </span>                            | Set the line height by default of all form controls. |
+// | <span class="egeo-u-nowrap">$egeo-c-formcontrol---padding</span>          | <span class="egeo-u-nowrap">`3px 5px` </span>                         | Set the padding by default of all form controls. |
+//
 // ## Dependencies
 //  
 // * [component](section-7.html#section-7.1)

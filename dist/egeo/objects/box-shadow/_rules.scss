@@ -1,13 +1,13 @@
-$this: '#{$egeo-namespace}o-box-shadow';
+$this: '#{$egeo-namespace}c-label';
 
-@mixin egeo-o-box-shadow {
-    box-shadow: $egeo-o-box-shadow---box-shadow;
+@mixin egeo-c-label {
+    @include egeo-c-component;
 }
 
-@if variable-exists(egeo-o-box-shadow) {
-    @if $egeo-o-box-shadow {
+@if variable-exists(egeo-c-label) {
+    @if $egeo-c-label {
         .#{$this} {
-            @include egeo-o-box-shadow;
+            @include egeo-c-label;
         }
     }
 }

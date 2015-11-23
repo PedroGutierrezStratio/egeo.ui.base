@@ -5,11 +5,7 @@ $this: '#{$egeo-namespace}c-formcontrol';
 
     @if ($egeo-c-formcontrol---background) { background: $egeo-c-formcontrol---background; }
     @if ($egeo-c-formcontrol---border) { border: $egeo-c-formcontrol---border; }
-    @if ($egeo-c-formcontrol---use-o-box-shadow) { 
-        @include egeo-o-box-shadow;
-    } @else {
-        @if ($egeo-c-formcontrol---box-shadow) { box-shadow: $egeo-c-formcontrol---box-shadow; }
-    }
+    @if ($egeo-c-formcontrol---box-shadow) { box-shadow: $egeo-c-formcontrol---box-shadow; }
     @if ($egeo-c-formcontrol---color) { color: $egeo-c-formcontrol---color; }
     display: block;
     @if ($egeo-c-formcontrol---font-size) { font-size: $egeo-c-formcontrol---font-size; }

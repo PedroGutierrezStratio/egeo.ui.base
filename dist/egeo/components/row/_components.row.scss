@@ -76,9 +76,10 @@
 // to HTML Element and called `egeo-c-row`. The Row component is a container so it allows to use
 // transclude content. Below you can see the properties exposed:
 //
-// | Property                                                           | Default value                                  | Description                                                                                                      |
-// | ------------------------------------------------------------------ | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-// | <div class="egeo-u-tx-align--left">$egeo-c-row---backgrounds</div> | <div class="egeo-u-tx-align--left">`('b1': egeo-get-color(b1), 'b2': egeo-get-color(b2), 'b3': egeo-get-color(b3), 'b3_dark': egeo-get-color(b3_dark),'b4': egeo-get-color(b4))`</div>  | <div class="egeo-u-tx-align--left">Background colors. Now b1, b2, b3, b3_dark and b4 are set by default.</div>   |
+// | Property                                                           | Default value                                                                                                                                  | Description                                                                                              |
+// | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+// | <div class="egeo-u-nowrap">$egeo-c-row</div>                       | `true`                                                                                                                                         | Tells Egeo if the class egeo-c-group should be included in the CSS.                                      |
+// | <div class="egeo-u-nowrap">$egeo-c-row---backgrounds</div>         | `('b1': egeo-get-color(b1), 'b2': egeo-get-color(b2), 'b3': egeo-get-color(b3), 'b3_dark': egeo-get-color(b3_dark),'b4': egeo-get-color(b4))`  | <div class="egeo-u-nowrap">Background colors. Now b1, b2, b3, b3_dark and b4 are set by default.</div>   |
 //
 // ## Dependencies
 //  
