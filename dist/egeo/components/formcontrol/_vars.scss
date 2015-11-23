@@ -4,3 +4,12 @@
 } @else {
     $egeo-c-formcontrol: true !default;
 }
+
+$egeo-c-formcontrol---background: egeo-get-color(n0) !default;
+$egeo-c-formcontrol---border: 1px solid !default;
+$egeo-c-formcontrol---use-o-box-shadow: true !default;
+$egeo-c-formcontrol---box-shadow: none !default;
+$egeo-c-formcontrol---color: egeo-get-color(n10) !default;
+$egeo-c-formcontrol---font-size: egeo-get-font-size(body_medium) !default;
+$egeo-c-formcontrol---line-height: null !default;
+$egeo-c-formcontrol---padding: 3px 5px !default;

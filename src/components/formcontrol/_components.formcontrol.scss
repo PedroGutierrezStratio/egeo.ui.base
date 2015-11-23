@@ -1,2 +1,33 @@
+// Form Control
+//
+// <span class="tag tag--untested">untested</span>
+//
+// The Form Control component is an abstract class which is inherited
+// by the components which belong to a form. It includes a series of
+// default properties and behaviors all child components could inherit
+// as well, modify or complete overwrite by their owns.
+//
+// ### egeo-c-formcontrol
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span>
+//
+// This mixin is used by the form controls to inherit a default and common
+// behavior and appearance. It can be used to create new custom form controls,
+// extending it vía include in our own classes.
+//
+// These classes which inherit from egeo-c-formcontrol are designed to work
+// with egeo-c-form and egeo-c-formgroup so keep it in mind when you create
+// new form controls or extend them.
+//
+// ## Dependencies
+//  
+// * [component](section-7.html#section-7.1)
+// * [form](section-7.html#section-7.10)
+// * [form group](section-7.html#section-7.11)
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.12
+
 @import 'vars';
 @import 'rules';
