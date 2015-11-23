@@ -1,0 +1,39 @@
+// Form Group
+//
+// <span class="tag tag--untested">untested</span>
+//
+// The Form Group component is a wrapper to group components inside an HTML Form
+// that can be joined to work together. A typical example of a form group is a
+// label with an input.
+//
+// ### egeo-c-formgroup
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span>
+//
+// At present, the component only includes the basic behavior inherited from [component](section-7.html#section-7.1).
+//
+// #### Usage
+//
+// ```
+// .test {
+//      @include egeo-c-formgroup;
+// }
+// ```
+// Will product the next result:
+// ```
+// .test {
+//      box-sizing: border-box;
+//      position: relative;
+// }
+// ```
+//
+// ## Dependencies
+//  
+// * [component](section-7.html#section-7.1)
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.11
+
+@import 'vars';
+@import 'rules';
