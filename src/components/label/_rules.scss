@@ -1,0 +1,17 @@
+$this: '#{$egeo-namespace}c-label';
+
+@mixin egeo-c-label {
+    @include egeo-c-formcontrol;
+
+    @if $egeo-c-label---background { background: $egeo-c-label---background; }
+    @if $egeo-c-label---border { border: $egeo-c-label---border; }
+    @if $egeo-c-label---box-shadow { box-shadow: $egeo-c-label---box-shadow; }
+}
+
+@if variable-exists(egeo-c-label) {
+    @if $egeo-c-label {
+        .#{$this} {
+            @include egeo-c-label;
+        }
+    }
+}

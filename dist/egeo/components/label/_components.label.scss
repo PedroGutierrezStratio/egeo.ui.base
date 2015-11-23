@@ -1,0 +1,33 @@
+// Label
+//
+// <span class="tag tag--tested">tested</span>
+//
+// The Label Component is a class to show the Egeo custom version of an
+// HTML label tag.
+//
+// ### egeo-c-label
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span>
+//
+// Apply the whole styles needed to customize a label.
+//
+// ## Variables exposed to theming
+//
+// | Variable                                                       | Default value                                      | Description                                                              |
+// | -------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------ |
+// | <span class="egeo-u-nowrap">$egeo-c-label</span>               | <span class="egeo-u-nowrap">`true` </span>         | Tells Egeo if the class egeo-c-label should be included in the CSS.      |
+// | <span class="egeo-u-nowrap">$egeo-c-label---background</span>  | <span class="egeo-u-nowrap">`transparent` </span>  | Set the background of the label.                                         |
+// | <span class="egeo-u-nowrap">$egeo-c-label---border</span>      | <span class="egeo-u-nowrap">`0` </span>            | Set the border of the label.                                             |
+// | <span class="egeo-u-nowrap">$egeo-c-label---box-shadow</span>  | <span class="egeo-u-nowrap">`none` </span>         | Set the box-shadow of the label.                                         |
+//
+// ## Dependencies
+//  
+// * [component](section-7.html#section-7.1)
+// * [formcontrol](section-7.html#section-7.12)
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.13
+
+@import 'vars';
+@import 'rules';
