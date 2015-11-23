@@ -2,6 +2,8 @@ $this: '#{$egeo-namespace}c-formgroup';
 
 @mixin egeo-c-formgroup {
     @include egeo-c-component;
+
+    @if $egeo-c-formgroup---margin { margin: $egeo-c-formgroup---margin; }
 }
 
 @if variable-exists(egeo-c-formgroup) {

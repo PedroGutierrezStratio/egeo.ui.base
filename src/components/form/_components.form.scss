@@ -35,9 +35,9 @@
 // ## How to work with forms
 //
 // ```
-// <egeo-c-form name="test" method="post">
+// <egeo-c-form id="TestForm" method="post">
 //      <egeo-c-formgroup>
-//          <label for="test1">test:</label><input type="text" id="test1">
+//          <label class="egeo-c-formcontrol egeo-c-label" for="test1">test:</label><input class="egeo-c-formcontrol egeo-c-input" type="text" id="test1">
 //      </egeo-c-formgroup>
 //      <egeo-c-input id="test2" label="test2" placeholder="put here your text" type="text"></egeo-c-input>
 // </egeo-c-form>
@@ -45,7 +45,7 @@
 //
 // <egeo-c-form name="test" method="post">
 //      <egeo-c-formgroup>
-//          <label for="test1">test:</label><input type="text" id="test1">
+//          <label class="egeo-c-formcontrol egeo-c-label" for="test1">test:</label><input class="egeo-c-formcontrol egeo-c-input" type="text" id="test1">
 //      </egeo-c-formgroup>
 //      <egeo-c-input id="test2" label="test2" placeholder="put here your text" type="text"></egeo-c-input>
 // </egeo-c-form>

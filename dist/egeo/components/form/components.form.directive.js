@@ -12,7 +12,7 @@
             replace: true,
             restrict: 'E',
             scope: {
-                name: '@',
+                id: '@',
                 method: '@'
             },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/form/components.form.tpl.html',
