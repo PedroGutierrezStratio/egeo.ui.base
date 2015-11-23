@@ -2,6 +2,8 @@ $this: '#{$egeo-namespace}c-input';
 
 @mixin egeo-c-input {
     @include egeo-c-formcontrol;
+
+    @if $egeo-c-input---box-shadow { box-shadow: $egeo-c-input---box-shadow; }
 }
 
 @if variable-exists(egeo-c-input) {
