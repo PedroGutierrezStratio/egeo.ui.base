@@ -14,6 +14,7 @@
             transclude: true,
             scope: {
                 contentAtRight: '@',
+                contentCentered: '@',
                 variant: '@'
             },
             templateUrl: EgeoConfig.getEgeoPath() + '/components/row/components.row.tpl.html'

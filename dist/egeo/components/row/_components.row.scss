@@ -53,8 +53,9 @@
 //
 // | Property                                                   | Default value                                  | Description                                                                                                      |
 // | ---------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-// | <div class="egeo-u-tx-align--left">content-at-right</div>  | <div class="egeo-u-tx-align--left">false</div> | <div class="egeo-u-tx-align--left">If the content will be right aligned</div>                                    |
-// | <div class="egeo-u-tx-align--left">variant</div>           | <div class="egeo-u-tx-align--left">none</div>  | <div class="egeo-u-tx-align--left">Background colors. Now b1, b2, b3, b3_dark and b4 are set by default.</div>   |
+// | content-at-right  | false | If the content will be right aligned                                    |
+// | content-centered  | false | If the content will be center aligned                                   |
+// | variant           | none  | Background colors. Now b1, b2, b3, b3_dark and b4 are set by default.   |
 //
 // ### Usage
 //
@@ -63,11 +64,13 @@
 // ```
 // <egeo-c-row><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
 // <egeo-c-row data-content-at-right="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
+// <egeo-c-row data-content-centered="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
 // ```
 //
 // <hr>
 // <egeo-c-row><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
 // <egeo-c-row data-content-at-right="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
+// <egeo-c-row data-content-centered="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
 // <hr>
 //
 // ## Variables exposed to theming
