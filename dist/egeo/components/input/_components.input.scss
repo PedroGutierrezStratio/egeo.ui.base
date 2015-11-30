@@ -32,11 +32,9 @@
 // </egeo-c-form>
 // ```
 //
-// <egeo-c-form name="test" method="post">
-//      <egeo-c-formgroup>
-//          <label class="egeo-c-label" for="test1">test:</label><input class="egeo-c-input" type="text" id="test1">
-//      </egeo-c-formgroup>
-//      <egeo-c-input id="test2" label="test2" placeholder="put here your text" type="text"></egeo-c-input>
+// <egeo-c-form id="TestForm" method="post">
+//      <egeo-c-input id="username" label="username" placeholder="Ex. dwalsh" type="text" model="username" pattern="/^[a-zA-Z0-9]*$/" qa="id-for-qa"></egeo-c-input>
+//      <div>{{username}}</div>
 // </egeo-c-form>
 //
 // ## Dependencies

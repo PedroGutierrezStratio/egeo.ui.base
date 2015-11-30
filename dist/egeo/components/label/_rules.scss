@@ -6,6 +6,9 @@ $this: '#{$egeo-namespace}c-label';
     @if $egeo-c-label---background { background: $egeo-c-label---background; }
     @if $egeo-c-label---border { border: $egeo-c-label---border; }
     @if $egeo-c-label---box-shadow { box-shadow: $egeo-c-label---box-shadow; }
+    @if $egeo-c-label---color { color: $egeo-c-label---color; }
+    @if $egeo-c-label---font-size { font-size: $egeo-c-label---font-size; }
+    @if $egeo-c-label---font-style { font-style: $egeo-c-label---font-style; }
 }
 
 @if variable-exists(egeo-c-label) {
