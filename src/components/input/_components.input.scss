@@ -17,6 +17,28 @@
 // | -------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------ |
 // | <span class="egeo-u-nowrap">$egeo-c-input</span>               | <span class="egeo-u-nowrap">`true` </span>         | Tells Egeo if the class egeo-c-label should be included in the CSS.      |
 //
+// ## The egeo-c-input AngularJS directive
+//
+// Egeo includes an AngularJS directive to be used in Angular apps to allow developers to integrate the whole classes, properties and
+// functionalities with no effort. The directive is the responsible of apply different styles depending of the status of the input itself
+// and/or the form it is included on.
+//
+// ### How to work with
+//
+// ```
+// <egeo-c-form id="TestForm" method="post">
+//      <egeo-c-input id="username" label="username" placeholder="Ex. dwalsh" type="text" model="username" pattern="/^[a-zA-Z0-9]*$/" qa="id-for-qa"></egeo-c-input>
+//      <div>{{username}}</div>
+// </egeo-c-form>
+// ```
+//
+// <egeo-c-form name="test" method="post">
+//      <egeo-c-formgroup>
+//          <label class="egeo-c-label" for="test1">test:</label><input class="egeo-c-input" type="text" id="test1">
+//      </egeo-c-formgroup>
+//      <egeo-c-input id="test2" label="test2" placeholder="put here your text" type="text"></egeo-c-input>
+// </egeo-c-form>
+//
 // ## Dependencies
 //  
 // * [component](section-7.html#section-7.1)
