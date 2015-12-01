@@ -13,10 +13,11 @@
             replace: true,
             scope: {
                 disabled: '@',
+                form: '@',
                 id: '@',
                 label: '@',
-                model: '@',
-                pattern: '@',
+                model: '=',
+                pattern: '=',
                 placeholder: '@',
                 qa: '@',
                 required: '@',

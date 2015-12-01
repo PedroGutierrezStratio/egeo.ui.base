@@ -27,15 +27,15 @@
 //
 // ```
 // <egeo-c-form id="TestForm" method="post">
-//      <egeo-c-input id="username" label="username" placeholder="Ex. dwalsh" type="text" model="username" pattern="/^[a-zA-Z0-9]*$/" qa="id-for-qa"></egeo-c-input>
+//      <egeo-c-input data-id="username" data-label="username" data-placeholder="Ex. dwalsh" data-type="text" data-model="username" data-pattern="/^[a-zA-Z0-9]*$/" data-qa="id-for-qa"></egeo-c-input>
 //      <div>{{username}}</div>
 // </egeo-c-form>
 // ```
-//
-// <egeo-c-form id="TestForm" method="post">
-//      <egeo-c-input id="username" label="username" placeholder="Ex. dwalsh" type="text" model="username" pattern="/^[a-zA-Z0-9]*$/" qa="id-for-qa"></egeo-c-input>
-//      <div>{{username}}</div>
-// </egeo-c-form>
+// <div ng-controller="TestController as vm">
+//   <egeo-c-form id="TestForm" method="post">
+//      <egeo-c-input data-id="username" data-label="username" data-placeholder="Ex. dwalsh" data-type="text" data-model="vm.username" data-pattern="'[a-zA-Z0-9\S]*'" data-qa="id-for-qa"></egeo-c-input>
+//   </egeo-c-form>
+// </div>
 //
 // ## Dependencies
 //  
