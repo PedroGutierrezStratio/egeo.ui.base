@@ -15,6 +15,7 @@
                 disabled: '@',
                 form: '@',
                 id: '@',
+                info: '@',
                 label: '@',
                 model: '=',
                 pattern: '=',
