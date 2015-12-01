@@ -9,6 +9,12 @@ $this: '#{$egeo-namespace}c-label';
     @if $egeo-c-label---color { color: $egeo-c-label---color; }
     @if $egeo-c-label---font-size { font-size: $egeo-c-label---font-size; }
     @if $egeo-c-label---font-style { font-style: $egeo-c-label---font-style; }
+
+    &__optional-mark {
+        @if $egeo-c-label__optional-mark---color { color: $egeo-c-label__optional-mark---color; }
+        @if $egeo-c-label__optional-mark---content { content: $egeo-c-label__optional-mark---content; }
+        @if $egeo-c-label__optional-mark---font-style { font-style: $egeo-c-label__optional-mark---font-style; }
+    }
 }
 
 @if variable-exists(egeo-c-label) {

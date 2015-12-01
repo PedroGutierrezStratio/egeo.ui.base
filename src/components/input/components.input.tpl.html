@@ -1,5 +1,5 @@
 <div ng-form name="{{id}}" class="egeo-c-formgroup">
-    <label class="egeo-c-label" for="{{id}}" ng-show="{{(label != null)}}">{{label}}</label>
+    <label class="egeo-c-label" for="{{id}}" ng-show="{{(label != null)}}">{{label}} <span class="egeo-c-label__optional-mark" data-ng-if="!required"></span></label>
     <input type="{{type}}" class="egeo-c-input" id="{{id}}" name="{{id}}" placeholder="{{placeholder}}" data-ng-model="model" data-ng-pattern="pattern" data-ng-required="{{required}}" data-ng-disabled="{{disabled}}" data-qa="{{qa}}" data-ng-trim="false">
     <div class="egeo-c-message" data-ng-if="!this[id].$valid && this[id][id].$touched" data-ng-class="{'egeo-c-message--error': required, 'egeo-c-message--warn': !required}">
         <i class="egeo-c-icon icon-alert" data-ng-if="!required && this[id][id].$error.pattern"></i>
