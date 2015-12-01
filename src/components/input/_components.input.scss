@@ -28,13 +28,15 @@
 // ```
 // <div ng-controller="TestController as vm">
 //   <egeo-c-form id="TestForm" method="post">
-//      <egeo-c-input data-id="username" data-label="username" data-placeholder="Ex. dwalsh" data-type="text" data-model="vm.username" data-pattern="'/[a-zA-Z0-9]*/'" data-required="true" data-info="Only numbers and letters are allowed" data-qa="id-for-qa"></egeo-c-input>
+//      <egeo-c-input data-id="username" data-label="username" data-placeholder="Ex. dwalsh" data-type="text" data-model="vm.username" data-pattern="'([a-zA-Z0-9]*)'" data-required="true" data-info="Only numbers and letters are allowed" data-qa="id-for-username"></egeo-c-input>
+//      <egeo-c-input data-id="city" data-label="city" data-placeholder="Ex. dwalsh" data-type="text" data-model="vm.city" data-pattern="'([a-zA-Z]*)'" data-info="Only letters are allowed" data-qa="id-for-city"></egeo-c-input>
 //   </egeo-c-form>
 // </div>
 // ```
 // <div ng-controller="TestController as vm">
 //   <egeo-c-form id="TestForm" method="post">
-//      <egeo-c-input data-id="username" data-label="username" data-placeholder="Ex. dwalsh" data-type="text" data-model="vm.username" data-pattern="'/[a-zA-Z0-9]*/'" data-required="true" data-info="Only numbers and letters are allowed" data-qa="id-for-qa"></egeo-c-input>
+//      <egeo-c-input data-id="username" data-label="username" data-placeholder="Ex. dwalsh" data-type="text" data-model="vm.username" data-pattern="'([a-zA-Z0-9]*)'" data-required="true" data-info="Only numbers and letters are allowed" data-qa="id-for-username"></egeo-c-input>
+//      <egeo-c-input data-id="city" data-label="city" data-placeholder="Ex. dwalsh" data-type="text" data-model="vm.city" data-pattern="'([a-zA-Z]*)'" data-info="Only letters are allowed" data-qa="id-for-city"></egeo-c-input>
 //   </egeo-c-form>
 // </div>
 //
