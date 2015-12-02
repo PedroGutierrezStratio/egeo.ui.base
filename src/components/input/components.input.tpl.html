@@ -1,15 +1,17 @@
 <div ng-form name="{{id}}" class="egeo-c-formgroup">
     <label class="egeo-c-label" for="{{id}}" ng-show="{{(label != null)}}">
         {{label}}
-        <span class="egeo-c-label__optional-mark" data-ng-if="!required"></span>
-        <egeo-c-button data-type="submit" data-popover="popover-{{vm.id}}" data-modifier="help" data-rounded="true" data-xxsmall="true" data-icon-left="icon-help2" data-ng-if="vm.hasHelp"></egeo-c-button>
-    </label>
 
-    <div class="egeo-c-popover" data-id="popover-{{vm.id}}" data-ng-show="vm.isPopoverShown">
-        <div class="egeo-c-popover__text">
-            {{helpText}}
+        <span class="egeo-c-label__optional-mark" data-ng-if="!required"></span>
+
+        <egeo-c-button data-type="submit" data-popover="popover-{{vm.id}}" data-modifier="help" data-rounded="true" data-xxsmall="true" data-icon-left="icon-help2" data-ng-if="vm.hasHelp"></egeo-c-button>
+
+        <div class="egeo-c-popover" data-id="popover-{{vm.id}}" data-ng-show="vm.isPopoverShown">
+            <div class="egeo-c-popover__text">
+                {{helpText}}
+            </div>
         </div>
-    </div>
+    </label>
 
     <input type="{{type}}" class="egeo-c-input" id="{{id}}" name="{{id}}" placeholder="{{placeholder}}" data-ng-model="model" data-ng-pattern="pattern" data-ng-required="{{required}}" data-ng-disabled="{{disabled}}" data-qa="{{qa}}" data-ng-trim="false">
 
