@@ -1,0 +1,28 @@
+// If silent classes are activated the CSS classes will be not created
+@if global-variable-exists(egeo-silent-classes) {
+    $egeo-c-message: not $egeo-silent-classes !default;    
+} @else {
+    $egeo-c-message: true !default;
+}
+
+$egeo-c-messages: (
+    info: (
+        background: egeo-get-color(a1),
+        color: egeo-get-color(n0)
+        ),
+    warn: (
+        background: egeo-get-color(s2),
+        color: egeo-get-color(n0)
+        ),
+    error: (
+        background: egeo-get-color(s3),
+        color: egeo-get-color(n0)
+        ),
+) !default;
+
+$egeo-c-messages--custom: () !default;
+
+$egeo-c-messages: map-merge($egeo-c-messages, $egeo-c-messages--custom);
+
+$egeo-c-message---padding: .5em !default;
+$egeo-c-message---font-size: 12px !default;
