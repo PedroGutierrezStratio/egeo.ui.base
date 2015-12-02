@@ -22,6 +22,7 @@
                 popover: '@',
                 rounded: '@',
                 small: '@',
+                xxsmall: '@',
                 tabindex: '@',
                 type: '@'
             },
