@@ -11,6 +11,7 @@ $this: '#{$egeo-namespace}c-popover';
     @if $egeo-c-popover---padding { padding: $egeo-c-popover---padding; }
     position: absolute;
     @if $egeo-c-popover---width { width: $egeo-c-popover---width; }
+    @if $egeo-c-popover---z-index { z-index: $egeo-c-popover---z-index; }
 
     &--right-aligned {
         right: 0;
@@ -62,7 +63,7 @@ $this: '#{$egeo-namespace}c-popover';
 
     &__arrow {
         @if $egeo-c-popover---background { border-bottom-color: $egeo-c-popover---background; }
-        z-index: 1;
+        z-index: egeo-get-layer(top-2);
 
         &--top {
             border-style: dashed dashed solid;

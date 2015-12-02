@@ -12,6 +12,7 @@ $egeo-c-popover---box-shadow: $egeo-o-box-shadow---box-shadow !default;
 $egeo-c-popover---padding: 10px 0 !default;
 $egeo-c-popover---width: 300px !default;
 $egeo-c-popover---shadow-color: $egeo-o-box-shadow---shadow-color !default;
+$egeo-c-popover---z-index: egeo-get-layer(top-1) !default;
 
 $egeo-c-popover__listitem---margin: 0 !default;
 $egeo-c-popover__listitem---padding: 7px 25px !default;
