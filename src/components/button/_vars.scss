@@ -70,6 +70,9 @@ $egeo-c-buttons: (
                 normal: (background: transparent, border: 2px solid egeo-get-color(n5), color: egeo-get-color(n6)),
                 hover: (background: transparent, border: 2px solid egeo-get-color(n5), color: egeo-get-color(n6))
             ),
+    help: (
+                normal: (background: egeo-get-color(n6), border: 0, color: egeo-get-color(n0)),
+            ),
     danger: (
                 normal: (background: egeo-get-color(s3), border: 0, color: egeo-get-color(n0)), 
                 hover: (background: egeo-get-color(s3_dark), border: 0, color: egeo-get-color(n0))

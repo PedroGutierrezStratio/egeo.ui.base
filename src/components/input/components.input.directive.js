@@ -9,11 +9,14 @@
 
     function egeoCInput(EgeoConfig) {
         var directive = {
+            controller: 'EgeoInputController as vm',
+            link: link,
             restrict: 'E',
             replace: true,
             scope: {
                 disabled: '@',
                 form: '@',
+                helpText: '@',
                 id: '@',
                 info: '@',
                 label: '@',
@@ -28,5 +31,11 @@
         };
 
         return directive;
+
+        function link(scope, element, attrs, ctrl) {
+            if (scope.helpText) { 
+                ctrl.hasHelp = true; 
+            }
+        }
     }
 })();

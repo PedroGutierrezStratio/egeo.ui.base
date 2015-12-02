@@ -25,7 +25,7 @@ $this: '#{$egeo-namespace}c-message';
     @if $egeo-c-message---font-size { font-size: $egeo-c-message---font-size; }
 
     @each $message, $properties in $egeo-c-messages {
-        @include egeo-c-message-modifier($message, $properties );
+        @include egeo-c-message-modifier($message, $properties);
     }
 }
 
