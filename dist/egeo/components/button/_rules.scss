@@ -95,6 +95,22 @@ $this: '#{$egeo-namespace}c-button';
 		}
 	}
 
+	&--xxsmall {
+		@if $egeo-c-button--xxsmall---font-size { font-size: $egeo-c-button--xxsmall---font-size; }
+		@if $egeo-c-button--xxsmall---height { height: $egeo-c-button--xxsmall---height; }
+		@if $egeo-c-button--xxsmall---padding { padding: $egeo-c-button--xxsmall---padding; }
+
+		@if variable-exists(egeo-c-icon) {
+			@if $egeo-c-icon {
+				@if $egeo-c-button--xxsmall__c-icon---margin {
+					.#{$egeo-namespace}c-icon {
+						margin: $egeo-c-button--xxsmall__c-icon---margin;
+					}
+				}
+			}
+		}
+	}
+
 	&--rounded {
 		border-radius: 100%;
 		@if $egeo-c-button---height { min-width: $egeo-c-button---height; }

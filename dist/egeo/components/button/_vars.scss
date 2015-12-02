@@ -37,6 +37,17 @@ $egeo-c-button--small---padding: 4px 15px !default;
 $egeo-c-button--small__c-icon---margin: 0 6px 0 0 !default;
 
 
+//
+//  General properties shared between all buttons
+//  in a extra small size
+//
+$egeo-c-button--xxsmall---font-size: egeo-get-font-size(small) !default;
+$egeo-c-button--xxsmall---height: 12px !default;
+$egeo-c-button--xxsmall---padding: 0 5px !default;
+
+$egeo-c-button--xxsmall__c-icon---margin: 0 6px 0 0 !default;
+
+
 // Default button types
 $egeo-c-buttons: (
     main-1: (
