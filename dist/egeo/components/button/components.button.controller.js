@@ -26,16 +26,16 @@
 
         function openPopover() {
             if (!isPopoverInitialized) initializePopover();
-            angular.element(getPopover().addClass('egeo-c-popover--open');
-            angular.element(getPopoverArrow().addClass('egeo-c-popover__arrow--open');
-            angular.element(getPopoverArrowShadow().addClass('egeo-c-popover__arrow-shadow--open');
+            getPopover().addClass('egeo-c-popover--open');
+            getPopoverArrow().addClass('egeo-c-popover__arrow--open');
+            getPopoverArrowShadow().addClass('egeo-c-popover__arrow-shadow--open');
             vm.isOpenPopover = true;
         }
 
         function closePopover() {
-            angular.element(getPopover().removeClass('egeo-c-popover--open');
-            angular.element(getPopoverArrow().removeClass('egeo-c-popover__arrow--open');
-            angular.element(getPopoverArrowShadow().removeClass('egeo-c-popover__arrow-shadow--open');
+            getPopover().removeClass('egeo-c-popover--open');
+            getPopoverArrow().removeClass('egeo-c-popover__arrow--open');
+            getPopoverArrowShadow().removeClass('egeo-c-popover__arrow-shadow--open');
             vm.isOpenPopover = false;
         }
 
@@ -45,7 +45,7 @@
 
         function getPopover() {
             if (!popover) {
-                popover = $element.parent().find('[data-id="' + $scope.popover + '"]'));
+                popover = angular.element($element.parent().find('[data-id="' + $scope.popover + '"]'));
             }
 
             return popover;
@@ -53,7 +53,7 @@
 
         function getPopoverArrow() {
             if (!popoverArrow) {
-                popoverArrow = $element.find('.egeo-c-popover__arrow'));
+                popoverArrow = angular.element($element.find('.egeo-c-popover__arrow'));
             }
 
             return popoverArrow;
@@ -61,7 +61,7 @@
 
         function getPopoverArrowShadow() {
             if (!popoverArrowShadow) {
-                popoverArrowShadow = $element.find('.egeo-c-popover__arrow-shadow'));
+                popoverArrowShadow = angular.element($element.find('.egeo-c-popover__arrow-shadow'));
             }
 
             return popoverArrowShadow;
