@@ -40,7 +40,7 @@
         }
 
         function initializePopover() {
-            getPopover().bind('mouseout', closePopover);
+            getPopover().bind('mouseleave', closePopover);
         }
 
         function getPopover() {
