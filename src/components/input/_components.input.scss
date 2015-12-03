@@ -29,7 +29,7 @@
 // <div ng-controller="TestController as vm">
 //   <egeo-c-form id="TestForm" method="post">
 //      <egeo-c-input data-id="username" data-label="username" data-placeholder="Ex. dwalsh" data-type="text" data-model="vm.username" data-pattern="'([a-zA-Z0-9]*)'" data-required="true" data-info="Only numbers and letters are allowed" data-qa="id-for-username" data-help-text="The username is needed to login into our applications."></egeo-c-input>
-//      <egeo-c-input data-id="city" data-label="city" data-placeholder="Ex. Madrid" data-type="text" data-model="vm.city" data-pattern="'([a-zA-Z]*)'" data-info="Only letters are allowed" data-qa="id-for-city"></egeo-c-input>
+//      <egeo-c-input data-id="city" data-label="city" data-placeholder="Ex. Madrid" data-type="text" data-model="vm.city" data-pattern="'([a-zA-Z]*)'" data-info="Only letters are allowed" data-qa="id-for-city" data-help-text="The city will be used to gather stat info."></egeo-c-input>
 //      <egeo-c-input data-id="freetext" data-label="free text" data-placeholder="Ex. No contextual help but errors (try put whitespaces)" data-type="text" data-model="vm.city" data-pattern="'([a-zA-Z]*)'" data-qa="id-for-free-text"></egeo-c-input>
 //   </egeo-c-form>
 // </div>
