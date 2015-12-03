@@ -9,7 +9,6 @@
         var vm = this;
 
         vm.hasHelp = false;
-        vm.isPopoverShown = false;
         vm.id = $scope.$id;
     }
 })();
