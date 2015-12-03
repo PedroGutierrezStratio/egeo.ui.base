@@ -17,6 +17,10 @@ $this: '#{$egeo-namespace}c-popover';
         right: 0;
     }
 
+    &__text {
+        padding: $egeo-c-popover__text---padding;
+    }
+
     &__listitems {
         list-style: none;
     }
