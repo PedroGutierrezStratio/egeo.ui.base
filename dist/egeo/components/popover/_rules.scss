@@ -63,7 +63,7 @@ $this: '#{$egeo-namespace}c-popover';
 
     &__arrow {
         @if $egeo-c-popover---background { border-bottom-color: $egeo-c-popover---background; }
-        z-index: egeo-get-layer(top-2);
+        z-index: egeo-get-layer(top-1);
 
         &--top {
             border-style: dashed dashed solid;
