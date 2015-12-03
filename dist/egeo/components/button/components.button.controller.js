@@ -47,18 +47,24 @@
             if (!popover) {
                 popover = $element.parent().find('[data-id="' + $scope.popover + '"]'));
             }
+
+            return popover;
         }
 
         function getPopoverArrow() {
             if (!popoverArrow) {
                 popoverArrow = $element.find('.egeo-c-popover__arrow'));
             }
+
+            return popoverArrow;
         }
 
         function getPopoverArrowShadow() {
             if (!popoverArrowShadow) {
                 popoverArrowShadow = $element.find('.egeo-c-popover__arrow-shadow'));
             }
+
+            return popoverArrowShadow;
         }
     }
 })();
