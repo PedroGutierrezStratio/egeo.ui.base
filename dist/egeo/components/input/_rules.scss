@@ -7,12 +7,6 @@ $this: '#{$egeo-namespace}c-input';
     @if $egeo-c-input---border-bottom { border-bottom: $egeo-c-input---border-bottom; }
     @if $egeo-c-input---font-size { font-size: $egeo-c-input---font-size; }
     @if $egeo-c-input---box-shadow { box-shadow: $egeo-c-input---box-shadow; }
-
-    @if $egeo-c-popover {
-        .egeo-c-popover {
-            margin-top: -3px;
-        }
-    }
 }
 
 @if variable-exists(egeo-c-input) {

@@ -15,6 +15,12 @@ $this: '#{$egeo-namespace}c-label';
         @if $egeo-c-label__optional-mark---content { content: $egeo-c-label__optional-mark---content; }
         @if $egeo-c-label__optional-mark---font-style { font-style: $egeo-c-label__optional-mark---font-style; }
     }
+
+    @if $egeo-c-popover {
+        .egeo-c-popover {
+            margin-top: -3px;
+        }
+    }
 }
 
 @if variable-exists(egeo-c-label) {
