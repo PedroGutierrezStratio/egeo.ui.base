@@ -82,7 +82,7 @@ $egeo-c-buttons: (
                 hover: (background: transparent, border: 2px solid egeo-get-color(n5), color: egeo-get-color(n6))
             ),
     help: (
-                normal: (background: egeo-get-color(n6), border: 0, color: egeo-get-color(n0), min-width: $egeo-c-button--xxsmall---height, width: $egeo-c-button--xxsmall---height),
+                normal: (background: transparent, border: 0, color: egeo-get-color(n6), min-width: $egeo-c-button--xxsmall---height, width: $egeo-c-button--xxsmall---height),
             ),
     danger: (
                 normal: (background: egeo-get-color(s3), border: 0, color: egeo-get-color(n0)), 
