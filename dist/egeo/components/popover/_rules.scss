@@ -18,6 +18,8 @@ $this: '#{$egeo-namespace}c-popover';
     }
 
     &__text {
+        color: $egeo-c-popover__text---color;
+        font-style: $egeo-c-popover__text---font-style;
         padding: $egeo-c-popover__text---padding;
     }
 
