@@ -22,7 +22,7 @@
         <span class="egeo-c-message__text" data-ng-if="this[id][id].$error.pattern">This field has wrong format.</span>
     </div>
 
-    <div class="egeo-c-message egeo-c-message--info" data-ng-if="info && (this[id].$valid || !this[id][id].$touched)">
-        <span class="egeo-c-message__text">{{info}}</span>
+    <div class="egeo-c-message egeo-c-message--restriction" data-ng-if="restriction && (this[id].$valid || !this[id][id].$touched) && (document.activeElement.getAttribute('id') == id)">
+        <span class="egeo-c-message__text">{{restriction}}</span>
     </div>
 </div>

@@ -18,7 +18,7 @@
                 form: '@',
                 helpText: '@',
                 id: '@',
-                info: '@',
+                restriction: '@',
                 label: '@',
                 model: '=',
                 pattern: '=',

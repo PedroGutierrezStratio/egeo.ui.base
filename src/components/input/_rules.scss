@@ -7,6 +7,16 @@ $this: '#{$egeo-namespace}c-input';
     @if $egeo-c-input---border-bottom { border-bottom: $egeo-c-input---border-bottom; }
     @if $egeo-c-input---font-size { font-size: $egeo-c-input---font-size; }
     @if $egeo-c-input---box-shadow { box-shadow: $egeo-c-input---box-shadow; }
+
+    + .egeo-c-message--restriction {
+        visibility: hidden;
+    }
+
+    &:focus {
+        + .egeo-c-message--restriction {
+            visibility: visible;
+        }
+    }
 }
 
 @if variable-exists(egeo-c-input) {
