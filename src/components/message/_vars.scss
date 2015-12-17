@@ -5,10 +5,14 @@
     $egeo-c-message: true !default;
 }
 
+$egeo-c-message---padding: .5em !default;
+$egeo-c-message---font-size: 12px !default;
+
 $egeo-c-messages: (
     restriction: (
         background: transparent,
-        color: egeo-get-color(n5)
+        color: egeo-get-color(n5),
+        padding: $egeo-c-message---padding
         ),
     warn: (
         background: egeo-get-color(s2),
@@ -23,6 +27,3 @@ $egeo-c-messages: (
 $egeo-c-messages--custom: () !default;
 
 $egeo-c-messages: map-merge($egeo-c-messages, $egeo-c-messages--custom);
-
-$egeo-c-message---padding: .5em !default;
-$egeo-c-message---font-size: 12px !default;

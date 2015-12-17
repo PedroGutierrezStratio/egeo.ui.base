@@ -13,7 +13,7 @@
         </div>
     </label>
 
-    <input type="{{type}}" class="egeo-c-input" id="{{id}}" name="{{id}}" placeholder="{{placeholder}}" data-ng-model="model" data-ng-pattern="pattern" data-ng-required="{{required}}" data-ng-disabled="{{disabled}}" data-qa="{{qa}}" data-ng-trim="false">
+    <input type="{{type}}" class="egeo-c-input" id="{{id}}" name="{{id}}" placeholder="{{placeholder}}" data-ng-model="model" data-ng-pattern="pattern" data-ng-required="{{required}}" data-ng-disabled="{{disabled}}" data-qa="{{qa}}" data-ng-trim="false" data-ng-focus="vm.isFocused = true" data-ng-blur="vm.isFocused = false">
 
     <div class="egeo-c-message" data-ng-if="!this[id].$valid && this[id][id].$touched" data-ng-class="{'egeo-c-message--error': required, 'egeo-c-message--warn': !required}">
         <i class="egeo-c-icon icon-alert" data-ng-if="!required && this[id][id].$error.pattern"></i>
@@ -22,7 +22,12 @@
         <span class="egeo-c-message__text" data-ng-if="this[id][id].$error.pattern">This field has wrong format.</span>
     </div>
 
-    <div class="egeo-c-message egeo-c-message--restriction" data-ng-if="restriction && (this[id].$valid || !this[id][id].$touched) && (document.activeElement.getAttribute('id') == id)">
+    <div>Restriction: {{restriction}}</div>
+    <div>isFocused: {{vm.isFocused}}</div>
+    <div>isValid: {{this[id].$valid}}</div>
+    <div>isTouched {{this[id][id].$touched}}</div>
+
+    <div class="egeo-c-message egeo-c-message--restriction" data-ng-if="restriction && (this[id].$valid || !this[id][id].$touched) && vm.isFocused">
         <span class="egeo-c-message__text">{{restriction}}</span>
     </div>
 </div>

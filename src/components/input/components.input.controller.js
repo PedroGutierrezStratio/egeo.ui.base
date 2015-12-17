@@ -10,5 +10,6 @@
 
         vm.hasHelp = false;
         vm.id = $scope.$id;
+        vm.isFocused = false;
     }
 })();
