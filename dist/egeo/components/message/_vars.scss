@@ -12,7 +12,7 @@ $egeo-c-messages: (
     restriction: (
         background: transparent,
         color: egeo-get-color(n5),
-        padding: $egeo-c-message---padding 0
+        padding: $egeo-c-message---padding 0 0
         ),
     warn: (
         background: egeo-get-color(s2),
