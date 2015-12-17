@@ -11,5 +11,9 @@
         vm.hasHelp = false;
         vm.id = $scope.$id;
         vm.isFocused = false;
+
+        function onFocus() {
+            vm.isFocused = true;
+        }
     }
 })();

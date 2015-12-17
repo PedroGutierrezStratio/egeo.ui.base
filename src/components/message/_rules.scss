@@ -27,6 +27,10 @@ $this: '#{$egeo-namespace}c-message';
     @each $message, $properties in $egeo-c-messages {
         @include egeo-c-message-modifier($message, $properties);
     }
+
+    &--invisible {
+        visibility: hidden;
+    }
 }
 
 @if variable-exists(egeo-c-message) {
