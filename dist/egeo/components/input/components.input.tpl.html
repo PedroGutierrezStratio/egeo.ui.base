@@ -22,11 +22,6 @@
         <span class="egeo-c-message__text" data-ng-if="this[id][id].$error.pattern">This field has wrong format.</span>
     </div>
 
-    <div>Restriction: {{restriction}}</div>
-    <div>isFocused: {{vm.isFocused}}</div>
-    <div>isValid: {{this[id].$valid}}</div>
-    <div>isTouched {{this[id][id].$touched}}</div>
-
     <div class="egeo-c-message egeo-c-message--restriction" data-ng-if="restriction && (this[id].$valid || !this[id][id].$touched) && vm.isFocused">
         <span class="egeo-c-message__text">{{restriction}}</span>
     </div>
