@@ -15,3 +15,5 @@ $egeo-c-label---font-style: italic !default;
 $egeo-c-label__optional-mark---color: egeo-get-color(n5) !default;
 $egeo-c-label__optional-mark---content: '(optional)' !default;
 $egeo-c-label__optional-mark---font-style: italic !default;
+
+$egeo-c-label__icon---color: $egeo-c-label__optional-mark---color !default;

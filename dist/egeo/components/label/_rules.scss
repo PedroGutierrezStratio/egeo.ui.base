@@ -21,6 +21,11 @@ $this: '#{$egeo-namespace}c-label';
             margin-top: -3px;
         }
     }
+
+    .egeo-c-icon {
+        color: $egeo-c-label__icon---color;
+        cursor: pointer;
+    }
 }
 
 @if variable-exists(egeo-c-label) {
