@@ -17,6 +17,11 @@ $this: '#{$egeo-namespace}c-input';
             visibility: visible;
         }
     }
+
+    .egeo-c-popover {
+        left: 1px;
+        top: 15px;
+    }
 }
 
 @if variable-exists(egeo-c-input) {

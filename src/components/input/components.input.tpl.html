@@ -4,7 +4,10 @@
 
         <span class="egeo-c-label__optional-mark" data-ng-if="!required"></span>
 
-        <i class="egeo-c-icon icon-help2"></i>
+        <i class="egeo-c-icon icon-help2">
+            <div class="egeo-c-popover__arrow egeo-c-popover__arrow--top" data-ng-if="vm.hasHelp" data-ng-class="{'egeo-c-popover--open': vm.isFocused}"></div>
+            <div class="egeo-c-popover__arrow-shadow egeo-c-popover__arrow-shadow--top" data-ng-if="vm.hasHelp" data-ng-class="{'egeo-c-popover--open': vm.isFocused}"></div>
+        </i>
 
         <div class="egeo-c-popover" data-id="popover-{{vm.id}}">
             <div class="egeo-c-popover__text">
@@ -24,5 +27,9 @@
 
     <div class="egeo-c-message egeo-c-message--restriction" data-ng-class="{'egeo-c-message--invisible': !(restriction && (this[id].$valid || !this[id][id].$touched) && vm.isFocused)}">
         <span class="egeo-c-message__text">{{restriction}}</span>
+    </div>
+
+    <div class="egeo-c-popover" data-id="popover-{{vm.id}}" data-ng-class="{'egeo-c-popover--open': vm.isFocused}">
+        <div class="egeo-c-popover__text">{{helpText}}</div>
     </div>
 </div>
