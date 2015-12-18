@@ -9,6 +9,7 @@
         var vm = this;
 
         vm.hasHelp = false;
+        vm.isPopoverOpen = false;
         vm.id = $scope.$id;
         vm.isFocused = false;
 
