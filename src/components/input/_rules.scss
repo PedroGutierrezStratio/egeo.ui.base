@@ -18,9 +18,9 @@ $this: '#{$egeo-namespace}c-input';
         }
     }
 
-    .egeo-c-popover {
-        left: 1px;
-        top: 15px;
+    + .egeo-c-popover {
+        left: $egeo-c-input__popover---left;
+        top: $egeo-c-input__popover---top;
     }
 }
 
