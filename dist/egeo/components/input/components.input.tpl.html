@@ -9,7 +9,7 @@
             <div class="egeo-c-popover__arrow-shadow egeo-c-popover__arrow-shadow--top" data-ng-if="vm.hasHelp" data-ng-class="{'egeo-c-popover--open': vm.isPopoverOpen}"></div>
         </i>
 
-        <div class="egeo-c-popover" data-id="popover-{{vm.id}}">
+        <div class="egeo-c-popover" data-id="popover-{{vm.id}}" data-ng-blur="vm.isPopoverOpen = false">
             <div class="egeo-c-popover__text">
                 {{helpText}}
             </div>
