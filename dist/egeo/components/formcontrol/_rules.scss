@@ -13,22 +13,22 @@ $this: '#{$egeo-namespace}c-formcontrol';
     @if ($egeo-c-formcontrol---padding) { padding: $egeo-c-formcontrol---padding; }
     width: 100%;
 
-    ::-webkit-input-placeholder {
+    &::-webkit-input-placeholder {
         color: $egeo-c-formcontrol__placeholder---color;
         font-style: $egeo-c-formcontrol__placeholder---font-style;
     }
 
-    :-moz-placeholder {
+    &:-moz-placeholder {
         color: $egeo-c-formcontrol__placeholder---color;
         font-style: $egeo-c-formcontrol__placeholder---font-style;
     }
 
-    ::-moz-placeholder {
+    &::-moz-placeholder {
         color: $egeo-c-formcontrol__placeholder---color;
         font-style: $egeo-c-formcontrol__placeholder---font-style;
     }
 
-    :-ms-input-placeholder {
+    &:-ms-input-placeholder {
         color: $egeo-c-formcontrol__placeholder---color;
         font-style: $egeo-c-formcontrol__placeholder---font-style;
     }
