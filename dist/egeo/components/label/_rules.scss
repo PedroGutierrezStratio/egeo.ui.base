@@ -23,8 +23,9 @@ $this: '#{$egeo-namespace}c-label';
     }
 
     .egeo-c-icon {
-        color: $egeo-c-label__icon---color;
+        @if $egeo-c-label__icon---color { color: $egeo-c-label__icon---color; }
         cursor: pointer;
+        @if $egeo-c-label__icon---font-size { font-style: $egeo-c-label__icon---font-size; }
     }
 }
 

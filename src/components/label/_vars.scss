@@ -9,7 +9,7 @@ $egeo-c-label---background: transparent !default;
 $egeo-c-label---border: 0 !default;
 $egeo-c-label---box-shadow: none !default;
 $egeo-c-label---color: egeo-get-color(a1) !default;
-$egeo-c-label---font-size: egeo-get-font-size(body_small) !default;
+$egeo-c-label---font-size: egeo-get-font-size(body_xxsmall) !default;
 $egeo-c-label---font-style: null !default;
 
 $egeo-c-label__optional-mark---color: egeo-get-color(a1) !default;
@@ -17,3 +17,4 @@ $egeo-c-label__optional-mark---content: '(optional)' !default;
 $egeo-c-label__optional-mark---font-style: null !default;
 
 $egeo-c-label__icon---color: egeo-get-color(n5) !default;
+$egeo-c-label__icon---font-size: egeo-get-font-size(body_xsmall) !default;

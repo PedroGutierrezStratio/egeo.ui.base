@@ -13,6 +13,8 @@ $this: '#{$egeo-namespace}c-input';
     }
 
     &:focus {
+        @if $egeo-c-input--focus---border-bottom { border-bottom: $egeo-c-input--focus---border-bottom; }
+
         + .egeo-c-message--restriction {
             visibility: visible;
         }

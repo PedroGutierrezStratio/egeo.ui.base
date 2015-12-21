@@ -16,7 +16,9 @@ $egeo-c-popover---z-index: egeo-get-layer(top-1) !default;
 
 $egeo-c-popover__text---padding: 10px !default;
 $egeo-c-popover__text---color: egeo-get-color(n8) !default;
+$egeo-c-popover__text---font-size: egeo-get-font-size(body_large) !default;
 $egeo-c-popover__text---font-style: normal !default;
+$egeo-c-popover__text---line-height: egeo-get-line-height(single) !default;
 
 $egeo-c-popover__listitem---margin: 0 !default;
 $egeo-c-popover__listitem---padding: 7px 25px !default;

@@ -10,6 +10,7 @@ $this: '#{$egeo-namespace}c-formcontrol';
     display: block;
     @if ($egeo-c-formcontrol---font-size) { font-size: $egeo-c-formcontrol---font-size; }
     @if ($egeo-c-formcontrol---line-height) { line-height: $egeo-c-formcontrol---line-height; }
+    outline: none;
     @if ($egeo-c-formcontrol---padding) { padding: $egeo-c-formcontrol---padding; }
     width: 100%;
 }

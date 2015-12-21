@@ -114,6 +114,7 @@ $this: '#{$egeo-namespace}c-button';
 	&--rounded {
 		border-radius: 100%;
 		@if $egeo-c-button---height { min-width: $egeo-c-button---height; }
+		outline: none;
 		padding: 0;
 		@if $egeo-c-button---height { width: $egeo-c-button---height; }
 
