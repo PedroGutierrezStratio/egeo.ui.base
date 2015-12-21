@@ -12,6 +12,26 @@ $this: '#{$egeo-namespace}c-formcontrol';
     @if ($egeo-c-formcontrol---line-height) { line-height: $egeo-c-formcontrol---line-height; }
     @if ($egeo-c-formcontrol---padding) { padding: $egeo-c-formcontrol---padding; }
     width: 100%;
+
+    ::-webkit-input-placeholder {
+        color: $egeo-c-formcontrol__placeholder---color;
+        font-style: $egeo-c-formcontrol__placeholder---font-style;
+    }
+
+    :-moz-placeholder {
+        color: $egeo-c-formcontrol__placeholder---color;
+        font-style: $egeo-c-formcontrol__placeholder---font-style;
+    }
+
+    ::-moz-placeholder {
+        color: $egeo-c-formcontrol__placeholder---color;
+        font-style: $egeo-c-formcontrol__placeholder---font-style;
+    }
+
+    :-ms-input-placeholder {
+        color: $egeo-c-formcontrol__placeholder---color;
+        font-style: $egeo-c-formcontrol__placeholder---font-style;
+    }
 }
 
 @if variable-exists(egeo-c-formcontrol) {
