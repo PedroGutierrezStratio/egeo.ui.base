@@ -22,6 +22,26 @@ $this: '#{$egeo-namespace}c-input';
         left: $egeo-c-input__popover---left;
         top: $egeo-c-input__popover---top;
     }
+
+    &::-webkit-input-placeholder {
+        color: $egeo-c-input__placeholder---color;
+        font-style: $egeo-c-input__placeholder---font-style;
+    }
+
+    &:-moz-placeholder {
+        color: $egeo-c-input__placeholder---color;
+        font-style: $egeo-c-input__placeholder---font-style;
+    }
+
+    &::-moz-placeholder {
+        color: $egeo-c-input__placeholder---color;
+        font-style: $egeo-c-input__placeholder---font-style;
+    }
+
+    &:-ms-input-placeholder {
+        color: $egeo-c-input__placeholder---color;
+        font-style: $egeo-c-input__placeholder---font-style;
+    }
 }
 
 @if variable-exists(egeo-c-input) {
