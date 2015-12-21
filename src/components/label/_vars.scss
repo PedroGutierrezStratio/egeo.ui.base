@@ -16,4 +16,4 @@ $egeo-c-label__optional-mark---color: egeo-get-color(a1) !default;
 $egeo-c-label__optional-mark---content: '(optional)' !default;
 $egeo-c-label__optional-mark---font-style: null !default;
 
-$egeo-c-label__icon---color: $egeo-c-label__optional-mark---color !default;
+$egeo-c-label__icon---color: egeo-get-color(n5) !default;
