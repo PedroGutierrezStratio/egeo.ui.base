@@ -24,7 +24,7 @@ $this: '#{$egeo-namespace}c-message';
     @if $egeo-c-message--help__arrow---size { border-width: 0 $egeo-c-message--help__arrow---size $egeo-c-message--help__arrow---size; }
     @if $egeo-c-message--help---color { color: $egeo-c-message--help---color; }
     content: ' ';
-    @if $egeo-c-message--help---padding { padding: $egeo-c-message--help---padding; }
+    position: absolute;
 }
 
 @mixin egeo-c-message {
@@ -44,14 +44,14 @@ $this: '#{$egeo-namespace}c-message';
     &--help {
         &:before {
             @extend %arrow;
-            bottom: -2px;
+            top: 1px;
             @if $egeo-c-message--help__arrow---size { left: calc(50% - #{$egeo-c-message--help__arrow---size}); }
             z-index: egeo-get-layer(top-2);
         }
 
         &:after {
             @extend %arrow;
-            bottom: 2px;
+            top: 2px;
             @if $egeo-c-message--help__arrow---size { left: calc(50% - 1px); }
             transform: rotate(270deg);
             z-index: egeo-get-layer(top-1);
