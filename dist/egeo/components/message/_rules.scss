@@ -19,7 +19,6 @@ $this: '#{$egeo-namespace}c-message';
 }
 
 %arrow {
-    @if $egeo-c-message--help---background { border-bottom-color: $egeo-c-message--help---background; }
     border-style: dashed dashed solid;
     @if $egeo-c-message--help__arrow---size { border-width: 0 $egeo-c-message--help__arrow---size $egeo-c-message--help__arrow---size; }
     color: transparent;
@@ -44,14 +43,23 @@ $this: '#{$egeo-namespace}c-message';
     }
 
     &--help {
+        padding: $egeo-c-message--help__arrow---size 0 0;
+
         &:before {
             @extend %arrow;
+            border-bottom-color: $egeo-c-message--help---background;
             z-index: egeo-get-layer(top-2);
         }
 
         &:after {
             @extend %arrow;
+            border-bottom-color: $egeo-c-message--help---shadow-color;
             z-index: egeo-get-layer(top-1);
+        }
+
+        .egeo-c-message__text {
+            border-top: 1px solid $egeo-c-message--help---shadow-color;
+            padding: 1em;
         }
     }
 }
