@@ -25,7 +25,7 @@ $this: '#{$egeo-namespace}c-message';
     content: '';
     @if $egeo-c-message--help__arrow---size { left: calc(50% - #{$egeo-c-message--help__arrow---size}); }
     position: absolute;
-    top: 1px;
+    top: 2px;
 }
 
 @mixin egeo-c-message {
@@ -57,9 +57,13 @@ $this: '#{$egeo-namespace}c-message';
             z-index: egeo-get-layer(top-1);
         }
 
-        .egeo-c-message__text {
+        > .egeo-c-message__text {
             border-top: 1px solid $egeo-c-message--help---shadow-color;
-            padding: 1em;
+            padding: .5rem;
+        }
+
+        .egeo-c-message {
+            margin-top: -.5rem;
         }
     }
 }
