@@ -47,24 +47,25 @@ $this: '#{$egeo-namespace}c-message';
         &:before {
             @extend %arrow;
             border-bottom-color: $egeo-c-message--help---background;
-            top: 2px;
+            top: 1px;
             z-index: egeo-get-layer(top-2);
         }
 
         &:after {
             @extend %arrow;
             border-bottom-color: $egeo-c-message--help---shadow-color;
-            top: 1px;
+            top: 0px;
             z-index: egeo-get-layer(top-1);
         }
 
         > .egeo-c-message__text {
-            border-top: 1px solid $egeo-c-message--help---shadow-color;
+            border: 1px solid $egeo-c-message--help---shadow-color;
             padding: .5rem;
         }
 
         .egeo-c-message {
             margin-top: -.5rem;
+            padding-bottom: .5rem;
         }
     }
 }
