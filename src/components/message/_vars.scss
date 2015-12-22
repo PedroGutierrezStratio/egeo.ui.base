@@ -16,14 +16,22 @@ $egeo-c-messages: (
         ),
     warn: (
         background: egeo-get-color(s2),
-        color: egeo-get-color(n0)
+        color: egeo-get-color(n0),
+        margin: -.5rem
         ),
     error: (
         background: egeo-get-color(s3),
-        color: egeo-get-color(n0)
-        ),
+        color: egeo-get-color(n0),
+        margin: -.5rem
+        )
 ) !default;
 
 $egeo-c-messages--custom: () !default;
 
 $egeo-c-messages: map-merge($egeo-c-messages, $egeo-c-messages--custom);
+
+$egeo-c-message--help---background: egeo-get-color(n10);
+$egeo-c-message--help---border-top: 1px solid egeo-get-color(n0);
+$egeo-c-message--help---color: egeo-get-color(n0);
+$egeo-c-message--help---padding: .5rem;
+$egeo-c-message--help__arrow---size: 8.5px !default;

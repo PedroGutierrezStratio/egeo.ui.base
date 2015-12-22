@@ -11,19 +11,25 @@
     </label>
 
     <input type="{{type}}" class="egeo-c-input" id="{{id}}" name="{{id}}" placeholder="{{placeholder}}" data-ng-model="model" data-ng-pattern="pattern" data-ng-required="{{required}}" data-ng-disabled="{{disabled}}" data-qa="{{qa}}" data-ng-trim="false" data-ng-focus="vm.isFocused = true" data-ng-blur="vm.isFocused = false">
-
+<!--
     <div class="egeo-c-popover" data-id="popover-{{vm.id}}" data-ng-class="{'egeo-c-popover--open': (vm.isPopoverOpen && vm.hasHelp)}" data-ng-mouseleave="vm.isPopoverOpen = false">
         <div class="egeo-c-popover__text">{{helpText}}</div>
     </div>
+-->
 
-    <div class="egeo-c-message" data-ng-if="!this[id].$valid && this[id][id].$touched" data-ng-class="{'egeo-c-message--error': required, 'egeo-c-message--warn': !required}">
-        <i class="egeo-c-icon icon-alert" data-ng-if="!required && this[id][id].$error.pattern"></i>
-        <i class="egeo-c-icon icon-circle-cross" data-ng-if="this[id][id].$error.required || (this[id][id].$error.pattern && required)"></i>
-        <span class="egeo-c-message__text" data-ng-if="this[id][id].$error.required">This field is required.</span>
-        <span class="egeo-c-message__text" data-ng-if="this[id][id].$error.pattern">This field has wrong format.</span>
+    <div class="egeo-c-message egeo-c-message--help">
+        <div class="egeo-c-message" data-ng-if="!this[id].$valid && this[id][id].$touched" data-ng-class="{'egeo-c-message--error': required, 'egeo-c-message--warn': !required}">
+            <i class="egeo-c-icon icon-alert" data-ng-if="!required && this[id][id].$error.pattern"></i>
+            <i class="egeo-c-icon icon-circle-cross" data-ng-if="this[id][id].$error.required || (this[id][id].$error.pattern && required)"></i>
+            <span class="egeo-c-message__text" data-ng-if="this[id][id].$error.required">This field is required.</span>
+            <span class="egeo-c-message__text" data-ng-if="this[id][id].$error.pattern">This field has wrong format.</span>
+        </div>
+
+        <div class="egeo-c-message__text">{{helpText}}</div>
     </div>
-
+<!--
     <div class="egeo-c-message egeo-c-message--restriction" data-ng-class="{'egeo-c-message--invisible': !(restriction && (this[id].$valid || !this[id][id].$touched) && vm.isFocused)}">
         <span class="egeo-c-message__text">{{restriction}}</span>
     </div>
+-->
 </div>
