@@ -25,7 +25,6 @@ $this: '#{$egeo-namespace}c-message';
     content: '';
     @if $egeo-c-message--help__arrow---size { left: calc(50% - #{$egeo-c-message--help__arrow---size}); }
     position: absolute;
-    top: 2px;
 }
 
 @mixin egeo-c-message {
@@ -48,12 +47,14 @@ $this: '#{$egeo-namespace}c-message';
         &:before {
             @extend %arrow;
             border-bottom-color: $egeo-c-message--help---background;
+            top: 2px;
             z-index: egeo-get-layer(top-2);
         }
 
         &:after {
             @extend %arrow;
             border-bottom-color: $egeo-c-message--help---shadow-color;
+            top: 1px;
             z-index: egeo-get-layer(top-1);
         }
 
