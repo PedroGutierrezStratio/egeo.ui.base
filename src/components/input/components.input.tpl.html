@@ -19,7 +19,7 @@
     </div>
 -->
 
-    <div class="egeo-c-message egeo-c-message--help" data-ng-if="vm.isFocused || (!this[id].$valid && this[id][id].$touched)">
+    <div class="egeo-c-message egeo-c-message--help" data-ng-if="(vm.isFocused && vm.hasHelp) || (!this[id].$valid && this[id][id].$touched)">
         <div class="egeo-c-message__text">
             <div class="egeo-c-message" data-ng-if="!this[id].$valid && this[id][id].$touched" data-ng-class="{'egeo-c-message--error': required, 'egeo-c-message--warn': !required}">
                 <i class="egeo-c-icon icon-alert" data-ng-if="!required && this[id][id].$error.pattern"></i>
