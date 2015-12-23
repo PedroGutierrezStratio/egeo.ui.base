@@ -47,14 +47,14 @@ $this: '#{$egeo-namespace}c-message';
         &:before {
             @extend %arrow;
             border-bottom-color: $egeo-c-message--help---background;
-            top: 1px;
+            top: 2px;
             z-index: egeo-get-layer(top-1);
         }
 
         &:after {
             @extend %arrow;
             border-bottom-color: $egeo-c-message--help---shadow-color;
-            top: 0px;
+            top: 1px;
             z-index: egeo-get-layer(sub-1);
         }
 
