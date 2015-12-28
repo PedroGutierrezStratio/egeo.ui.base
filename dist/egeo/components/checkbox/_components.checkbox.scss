@@ -1,0 +1,53 @@
+// Checkbox
+//
+// <span class="tag tag--untested">Untested</span>
+//
+// The Checkbox Component is a class to show the Egeo custom version of an
+// HTML input checkbox tag.
+//
+// ### egeo-c-checkbox
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span>
+//
+// Apply the whole styles needed to customize a input.
+//
+// ## Variables exposed to theming
+//
+// | Variable                                                       | Default value                                      | Description                                                              |
+// | -------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------ |
+// | <span class="egeo-u-nowrap">$egeo-c-checkbox</span>            | <span class="egeo-u-nowrap">`true` </span>         | Tells Egeo if the class egeo-c-checkbox should be included in the CSS.   |
+//
+// ## The egeo-c-checkbox AngularJS directive
+//
+// Egeo includes an AngularJS directive to be used in Angular apps to allow developers to integrate the whole classes, properties and
+// functionalities with no effort. The directive is the responsible of apply different styles depending of the status of the input itself
+// and/or the form it is included on.
+//
+// ### How to work with
+//
+// ```
+// <div ng-controller="TestController as vm">
+//   <egeo-c-form id="TestForm" method="post">
+//      <egeo-c-checkbox data-id="test-checkbox" data-label="I read and accept the conditions" data-model="vm.isRead" data-required="true" data-qa="id-for-checkbox" data-help-text="The acceptance of conditions is needed to continue."></egeo-c-checkbox>
+//   </egeo-c-form>
+// </div>
+// ```
+// <hr>
+// <div ng-controller="TestController as vm">
+//   <egeo-c-form id="TestForm" method="post">
+//      <egeo-c-checkbox data-id="test-checkbox" data-label="I read and accept the conditions" data-model="vm.isRead" data-required="true" data-qa="id-for-checkbox" data-help-text="The acceptance of conditions is needed to continue."></egeo-c-checkbox>
+//   </egeo-c-form>
+// </div>
+// <hr>
+//
+// ## Dependencies
+//  
+// * [component](section-7.html#section-7.1)
+// * [formcontrol](section-7.html#section-7.12)
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.14
+
+@import 'vars';
+@import 'rules';

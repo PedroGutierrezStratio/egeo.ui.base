@@ -3,13 +3,13 @@
 
     angular
         .module('egeo.forms')
-        .directive('egeoCInput', egeoCInput);
+        .directive('egeoCCheckbox', egeoCCheckbox);
 
-    egeoCInput.$inject = ['EgeoConfig'];
+    egeoCCheckbox.$inject = ['EgeoConfig'];
 
-    function egeoCInput(EgeoConfig) {
+    function egeoCCheckbox(EgeoConfig) {
         var directive = {
-            controller: 'EgeoInputController as vm',
+            controller: 'EgeoCheckboxController as vm',
             link: link,
             restrict: 'E',
             replace: true,
@@ -19,13 +19,10 @@
                 id: '@',
                 label: '@',
                 model: '=',
-                pattern: '=',
-                placeholder: '@',
                 qa: '@',
-                required: '@',
-                type: '@'
+                required: '@'
             },
-            templateUrl: EgeoConfig.getEgeoPath() + '/components/input/components.input.tpl.html'
+            templateUrl: EgeoConfig.getEgeoPath() + '/components/input/components.checkbox.tpl.html'
         };
 
         return directive;

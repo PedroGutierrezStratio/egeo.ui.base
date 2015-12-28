@@ -3,9 +3,9 @@
 
     angular
         .module('egeo.buttons')
-        .controller('EgeoInputController', EgeoInputController);
+        .controller('EgeoCheckboxController', EgeoCheckboxController);
 
-    function EgeoInputController($scope, $element) {
+    function EgeoCheckboxController($scope, $element) {
         var vm = this;
 
         vm.hasHelp = false;
