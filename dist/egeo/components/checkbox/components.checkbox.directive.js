@@ -22,7 +22,7 @@
                 qa: '@',
                 required: '@'
             },
-            templateUrl: EgeoConfig.getEgeoPath() + '/components/input/components.checkbox.tpl.html'
+            templateUrl: EgeoConfig.getEgeoPath() + '/components/checkbox/components.checkbox.tpl.html'
         };
 
         return directive;
