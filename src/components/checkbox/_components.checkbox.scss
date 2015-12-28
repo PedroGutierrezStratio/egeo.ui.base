@@ -33,13 +33,14 @@
 // </div>
 // ```
 //
-// <hr />
+// ---
 // <div ng-controller="TestController as vm">
 //   <egeo-c-form id="TestForm" method="post">
 //      <egeo-c-checkbox data-id="test-checkbox" data-label="I read and accept the conditions" data-model="vm.isRead" data-required="true" data-qa="id-for-checkbox" data-help-text="The acceptance of conditions is needed to continue."></egeo-c-checkbox>
 //   </egeo-c-form>
 // </div>
-// <hr />
+//
+// ---
 //
 //
 // ## Dependencies

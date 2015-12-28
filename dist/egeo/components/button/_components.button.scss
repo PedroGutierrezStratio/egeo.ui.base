@@ -185,7 +185,7 @@
 // <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--rounded egeo-c-button--tool-ellipsis"><i class="egeo-c-icon icon-waiting"></i></button></div>
 // ```
 // Will be renderized to:
-// <hr>
+// ---
 // <div style="padding-left: 20px;">
 //   <div style="margin-bottom: 5px"><a class="egeo-c-button egeo-c-button--main-1"><i class="egeo-c-icon icon-cog"></i>Main 1</a></div>
 //   <div style="margin-bottom: 5px"><span class="egeo-c-button egeo-c-button--main-2"><i class="egeo-c-icon icon-cog"></i>Main 2</span></div>
@@ -198,7 +198,7 @@
 //   <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--rounded egeo-c-button--tool-2"><i class="egeo-c-icon icon-cog"></i></button></div>
 //   <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--rounded egeo-c-button--tool-ellipsis"><i class="egeo-c-icon icon-waiting"></i></button></div>
 // </div>
-// <hr>
+// ---
 //
 // ## Variables exposed to theming
 //  
@@ -260,7 +260,7 @@
 //   <div style="margin-bottom: 5px; overflow: auto"><egeo-c-button data-type="submit" data-modifier="ellipsis" data-rounded="true" data-small="true" data-icon-left="icon-datetime" data-at-right="true"></egeo-c-button></div>
 // ```
 //
-// <hr>
+// ---
 // <div style="padding-left: 20px;">
 //   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></div>
 //   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-2" data-icon-left="icon-cog" data-icon-right="icon-arrow2_down" data-label="AngularJS Button"></egeo-c-button></div>
@@ -277,7 +277,7 @@
 //   <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-small="true" data-icon-left="icon-waiting"></egeo-c-button></div>
 //   <div style="margin-bottom: 5px; overflow: auto"><egeo-c-button data-type="submit" data-modifier="ellipsis" data-rounded="true" data-small="true" data-icon-left="icon-datetime" data-at-right="true"></egeo-c-button></div>
 // </div>
-// <hr>
+// ---
 //
 // ## Dependencies
 //  
