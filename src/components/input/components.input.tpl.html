@@ -4,20 +4,11 @@
 
         <span class="egeo-c-label__optional-mark" data-ng-if="!required"></span>
 
-        <i class="egeo-c-icon icon-help2" data-ng-if="vm.hasHelp" data-ng-click="vm.isPopoverOpen = !vm.isPopoverOpen">
-<!--
-            <div class="egeo-c-popover__arrow egeo-c-popover__arrow--top" data-ng-if="vm.hasHelp" data-ng-class="{'egeo-c-popover--open': vm.isPopoverOpen}"></div>
-            <div class="egeo-c-popover__arrow-shadow egeo-c-popover__arrow-shadow--top" data-ng-if="vm.hasHelp" data-ng-class="{'egeo-c-popover--open': vm.isPopoverOpen}"></div>
--->
+        <i class="egeo-c-icon icon-help2" data-ng-if="vm.hasHelp" data-ng-click="vm.isHelpShown = !vm.isHelpShown">
         </i>
     </label>
 
     <input type="{{type}}" class="egeo-c-input" id="{{id}}" name="{{id}}" placeholder="{{placeholder}}" data-ng-model="model" data-ng-pattern="pattern" data-ng-required="{{required}}" data-ng-disabled="{{disabled}}" data-qa="{{qa}}" data-ng-trim="false" data-ng-focus="vm.isFocused = true" data-ng-blur="vm.isFocused = false">
-<!--
-    <div class="egeo-c-popover" data-id="popover-{{vm.id}}" data-ng-class="{'egeo-c-popover--open': (vm.isPopoverOpen && vm.hasHelp)}" data-ng-mouseleave="vm.isPopoverOpen = false">
-        <div class="egeo-c-popover__text">{{helpText}}</div>
-    </div>
--->
 
     <div class="egeo-c-message egeo-c-message--help" data-ng-if="(vm.isFocused && vm.hasHelp) || (!this[id].$valid && this[id][id].$touched)">
         <div class="egeo-c-message__text">
@@ -31,9 +22,4 @@
             {{helpText}}
         </div>
     </div>
-<!--
-    <div class="egeo-c-message egeo-c-message--restriction" data-ng-class="{'egeo-c-message--invisible': !(restriction && (this[id].$valid || !this[id][id].$touched) && vm.isFocused)}">
-        <span class="egeo-c-message__text">{{restriction}}</span>
-    </div>
--->
 </div>

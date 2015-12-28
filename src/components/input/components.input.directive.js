@@ -15,10 +15,8 @@
             replace: true,
             scope: {
                 disabled: '@',
-                form: '@',
                 helpText: '@',
                 id: '@',
-                restriction: '@',
                 label: '@',
                 model: '=',
                 pattern: '=',
