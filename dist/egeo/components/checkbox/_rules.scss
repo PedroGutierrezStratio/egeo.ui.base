@@ -2,6 +2,13 @@ $this: '#{$egeo-namespace}c-checkbox';
 
 @mixin egeo-c-checkbox {
     @include egeo-c-formcontrol;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    + .egeo-c-label {
+        display: inline-block;
+    }
 }
 
 @if variable-exists(egeo-c-checkbox) {

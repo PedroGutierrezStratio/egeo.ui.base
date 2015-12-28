@@ -68,6 +68,10 @@ $this: '#{$egeo-namespace}c-message';
             padding-bottom: .5rem;
         }
     }
+
+    &--help-left {
+        left: calc(25% - #{$egeo-c-message--help__arrow---size});
+    }
 }
 
 @if variable-exists(egeo-c-message) {

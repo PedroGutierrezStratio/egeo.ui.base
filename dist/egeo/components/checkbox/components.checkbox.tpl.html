@@ -1,5 +1,5 @@
 <div ng-form name="{{id}}" class="egeo-c-formgroup">
-    <input type="checkbox" class="egeo-c-input" id="{{id}}" name="{{id}}" data-ng-model="model" data-ng-required="{{required}}" data-ng-disabled="{{disabled}}" data-qa="{{qa}}" data-ng-trim="false" data-ng-focus="vm.isFocused = true" data-ng-blur="vm.isFocused = false">
+    <input type="checkbox" class="egeo-c-checkbox" id="{{id}}" name="{{id}}" data-ng-model="model" data-ng-required="{{required}}" data-ng-disabled="{{disabled}}" data-qa="{{qa}}" data-ng-trim="false" data-ng-focus="vm.isFocused = true" data-ng-blur="vm.isFocused = false">
 
     <label class="egeo-c-label" for="{{id}}" ng-show="{{(label != null)}}">
         {{label}}
@@ -10,7 +10,7 @@
         </i>
     </label>
 
-    <div class="egeo-c-message egeo-c-message--help" data-ng-if="(vm.isHelpShown && vm.hasHelp) || (!this[id].$valid && this[id][id].$touched)">
+    <div class="egeo-c-message egeo-c-message--help egeo-c-message--help-left" data-ng-if="(vm.isHelpShown && vm.hasHelp) || (!this[id].$valid && this[id][id].$touched)">
         <div class="egeo-c-message__text">
             <div class="egeo-c-message" data-ng-if="!this[id].$valid && this[id][id].$touched" data-ng-class="{'egeo-c-message--error': required, 'egeo-c-message--warn': !required}">
                 <i class="egeo-c-icon icon-alert" data-ng-if="!required && this[id][id].$error.pattern"></i>
