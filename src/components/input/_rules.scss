@@ -1,5 +1,10 @@
 $this: '#{$egeo-namespace}c-input';
 
+%egeo-c-input-placeholder {
+    color: $egeo-c-input__placeholder---color;
+    font-style: $egeo-c-input__placeholder---font-style;
+}
+
 @mixin egeo-c-input {
     @include egeo-c-formcontrol;
 
@@ -26,23 +31,19 @@ $this: '#{$egeo-namespace}c-input';
     }
 
     &::-webkit-input-placeholder {
-        color: $egeo-c-input__placeholder---color;
-        font-style: $egeo-c-input__placeholder---font-style;
+        @extend %egeo-c-input-placeholder;
     }
 
     &:-moz-placeholder {
-        color: $egeo-c-input__placeholder---color;
-        font-style: $egeo-c-input__placeholder---font-style;
+        @extend %egeo-c-input-placeholder;
     }
 
     &::-moz-placeholder {
-        color: $egeo-c-input__placeholder---color;
-        font-style: $egeo-c-input__placeholder---font-style;
+        @extend %egeo-c-input-placeholder;
     }
 
     &:-ms-input-placeholder {
-        color: $egeo-c-input__placeholder---color;
-        font-style: $egeo-c-input__placeholder---font-style;
+        @extend %egeo-c-input-placeholder;
     }
 }
 
