@@ -9,8 +9,15 @@ $this: '#{$egeo-namespace}c-checkbox';
     width: initial;
 
     + .egeo-c-label {
+        cursor: pointer;
         display: inline-block;
         width: initial;
+    }
+
+    .egeo-c-icon {
+        color: $egeo-c-label__optional-mark---color;
+        cursor: pointer;
+        vertical-align: middle;
     }
 }
 

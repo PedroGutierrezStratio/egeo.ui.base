@@ -5,10 +5,10 @@
         {{label}}
 
         <span class="egeo-c-label__optional-mark" data-ng-if="!required"></span>
-
-        <i class="egeo-c-icon icon-help2" data-ng-if="vm.hasHelp" data-ng-click="vm.isHelpShown = !vm.isHelpShown">
-        </i>
     </label>
+
+    <i class="egeo-c-icon icon-help2" data-ng-if="vm.hasHelp" data-ng-click="vm.isHelpShown = !vm.isHelpShown">
+    </i>
 
     <div class="egeo-c-message egeo-c-message--help egeo-c-message--help-left" data-ng-if="(vm.isHelpShown && vm.hasHelp) || (!this[id].$valid && this[id][id].$touched)">
         <div class="egeo-c-message__text">
