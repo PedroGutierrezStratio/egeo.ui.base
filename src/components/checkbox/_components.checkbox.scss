@@ -1,15 +1,15 @@
 // Checkbox
 //
-// <span class="tag tag--untested">Untested</span>
+// <span class="tag tag--untested">Untested</span><span class="tag tag--danger">alpha version</span>
 //
 // The Checkbox Component is a class to show the Egeo custom version of an
 // HTML input checkbox tag.
 //
 // ### egeo-c-checkbox
 // 
-// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span>
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span>
 //
-// Apply the whole styles needed to customize a input.
+// Apply the whole styles needed to customize a checkbox.
 //
 // ## Variables exposed to theming
 //
@@ -20,7 +20,7 @@
 // ## The egeo-c-checkbox AngularJS directive
 //
 // Egeo includes an AngularJS directive to be used in Angular apps to allow developers to integrate the whole classes, properties and
-// functionalities with no effort. The directive is the responsible of apply different styles depending of the status of the input itself
+// functionalities with no effort. The directive is the responsible of apply different styles depending of the status of the checkbox itself
 // and/or the form it is included on.
 //
 // ### How to work with
