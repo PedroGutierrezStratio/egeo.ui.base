@@ -18,15 +18,6 @@ $this: '#{$egeo-namespace}c-message';
     }
 }
 
-%arrow {
-    border-style: dashed dashed solid;
-    @if $egeo-c-message--help__arrow---size { border-width: 0 $egeo-c-message--help__arrow---size $egeo-c-message--help__arrow---size; }
-    color: transparent;
-    content: '';
-    @if $egeo-c-message--help__arrow---size { left: calc(50% - #{$egeo-c-message--help__arrow---size}); }
-    position: absolute;
-}
-
 @mixin egeo-c-message {
 	@include egeo-c-component;
 
@@ -39,41 +30,6 @@ $this: '#{$egeo-namespace}c-message';
 
     &--invisible {
         visibility: hidden;
-    }
-
-    &--help {
-        padding: $egeo-c-message--help__arrow---size 0 0;
-
-        &:before {
-            @extend %arrow;
-            border-bottom-color: $egeo-c-message--help---background;
-            top: 2px;
-            z-index: egeo-get-layer(top-1);
-        }
-
-        &:after {
-            @extend %arrow;
-            border-bottom-color: $egeo-c-message--help---shadow-color;
-            top: 1px;
-            z-index: egeo-get-layer(sub-1);
-        }
-
-        > .egeo-c-message__text {
-            border: 1px solid $egeo-c-message--help---shadow-color;
-            padding: .5rem;
-        }
-
-        .egeo-c-message {
-            margin-bottom: .5rem;
-            padding-bottom: .5rem;
-        }
-    }
-
-    &--help-left {
-        &:before,
-        &:after {
-            left: calc(15% - #{$egeo-c-message--help__arrow---size});            
-        }
     }
 }
 

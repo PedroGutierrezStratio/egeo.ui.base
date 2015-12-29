@@ -1,0 +1,12 @@
+// If silent classes are activated the CSS classes will be not created
+@if global-variable-exists(egeo-silent-classes) {
+    $egeo-c-helpbox: not $egeo-silent-classes !default;    
+} @else {
+    $egeo-c-helpbox: true !default;
+}
+
+$egeo-c-helpbox---background: egeo-get-color(n0);
+$egeo-c-helpbox---border-top: 1px solid egeo-get-color(n0);
+$egeo-c-helpbox---color: egeo-get-color(n0);
+$egeo-c-helpbox---shadow-color: egeo-get-color(n4);
+$egeo-c-helpbox__arrow---size: 8px !default;

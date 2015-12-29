@@ -1,0 +1,55 @@
+$this: '#{$egeo-namespace}c-helpbox';
+
+%arrow {
+    border-style: dashed dashed solid;
+    @if $egeo-c-helpbox__arrow---size { border-width: 0 $egeo-c-helpbox__arrow---size $egeo-c-helpbox__arrow---size; }
+    color: transparent;
+    content: '';
+    @if $egeo-c-helpbox__arrow---size { left: calc(50% - #{$egeo-c-helpbox__arrow---size}); }
+    position: absolute;
+}
+
+@mixin egeo-c-helpbox {
+    @include egeo-c-component;
+
+    padding: $egeo-c-helpbox__arrow---size 0 0;
+
+    &:before {
+        @extend %arrow;
+        border-bottom-color: $egeo-c-helpbox---background;
+        top: 2px;
+        z-index: egeo-get-layer(top-1);
+    }
+
+    &:after {
+        @extend %arrow;
+        border-bottom-color: $egeo-c-helpbox---shadow-color;
+        top: 1px;
+        z-index: egeo-get-layer(sub-1);
+    }
+
+    > &__text {
+        border: 1px solid $egeo-c-helpbox---shadow-color;
+        padding: .5rem;
+    }
+
+    .egeo-c-helpbox {
+        margin-bottom: .5rem;
+        padding-bottom: .5rem;
+    }
+
+    &--arrow-to-left {
+        &:before,
+        &:after {
+            left: calc(15% - #{$egeo-c-helpbox__arrow---size});            
+        }
+    }
+}
+
+@if variable-exists(egeo-c-helpbox) {
+    @if $egeo-c-helpbox {
+        .#{$this} {
+            @include egeo-c-helpbox;
+        }
+    }
+}
