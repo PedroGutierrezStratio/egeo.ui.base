@@ -3,11 +3,14 @@ $this: '#{$egeo-namespace}c-checkbox';
 @mixin egeo-c-checkbox {
     @include egeo-c-formcontrol;
 
+    box-shadow: none;
     display: inline-block;
     vertical-align: middle;
+    width: initial;
 
     + .egeo-c-label {
         display: inline-block;
+        width: initial;
     }
 }
 

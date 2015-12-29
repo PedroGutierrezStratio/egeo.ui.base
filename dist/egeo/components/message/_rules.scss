@@ -70,7 +70,10 @@ $this: '#{$egeo-namespace}c-message';
     }
 
     &--help-left {
-        left: calc(25% - #{$egeo-c-message--help__arrow---size});
+        &:before,
+        &:after {
+            left: calc(25% - #{$egeo-c-message--help__arrow---size});            
+        }
     }
 }
 
