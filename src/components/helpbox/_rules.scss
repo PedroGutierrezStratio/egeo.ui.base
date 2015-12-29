@@ -28,7 +28,7 @@ $this: '#{$egeo-namespace}c-helpbox';
         z-index: egeo-get-layer(sub-1);
     }
 
-    > &__text {
+    &__text {
         border: 1px solid $egeo-c-helpbox---shadow-color;
         padding: .5rem;
     }
