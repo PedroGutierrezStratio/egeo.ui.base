@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Egeo documentation</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link href='http://guide.stratio.com/public/favicon.ico' rel='icon' type='image/x-icon'>
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="public/styleguide.css">
+
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node" data-ng-app="myApp">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <div class="logo"><a href="/web/"><img src='public/assets/images/header.logo.png' /></a></div>
+            <h1 class="kss-doc-title"><a href="./">Egeo documentation</a></h1>
+            <div class="version">v0.1.0</div>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="3">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Managers</span></a></li>
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Settings</span></a></li>
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Tools</span></a></li>
+              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Vendors</span></a></li>
+              <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Base</span></a></li>
+              <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Objects</span></a></li>
+              <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Components</span></a></li>
+              <li class="kss-menu-item"><a href="section-8.html"><span class="kss-ref">8</span><span class="kss-name">Utils</span></a></li>
+              <li class="kss-menu-item"><a href="section-9.html"><span class="kss-ref">9</span><span class="kss-name">Theming</span></a></li>
+              <li class="kss-menu-item"><a href="section-10.html"><span class="kss-ref">10</span><span class="kss-name">Providers</span></a></li>
+              <li class="kss-menu-item"><a href="section-11.html"><span class="kss-ref">11</span><span class="kss-name">Factories</span></a></li>
+            </ul>
+            <ul class="kss-menu-child">
+              <li class="kss-menu-item"><a href="#section-3.1"><span class="kss-ref">3.1</span><span class="kss-name">tools.colors</span></a></li>
+              <li class="kss-menu-item"><a href="#section-3.2"><span class="kss-ref">3.2</span><span class="kss-name">tools.typography</span></a></li>
+              <li class="kss-menu-item"><a href="#section-3.3"><span class="kss-ref">3.3</span><span class="kss-name">tools.log</span></a></li>
+              <li class="kss-menu-item"><a href="#section-3.4"><span class="kss-ref">3.4</span><span class="kss-name">tools.layers</span></a></li>
+              <li class="kss-menu-item"><a href="#section-3.5"><span class="kss-ref">3.5</span><span class="kss-name">tools.maps</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          <section id="section-3" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">3</span> Tools</h1>
+            <div class="kss-description">
+              <p>The tools section includes a series of mixins, functions, placeholders, etc...
+to help developers to access settings with ease, do operations with different
+inputs and reuse concrete behaviors or properties.</p>
+
+            </div>
+          </section>
+          <section id="section-3.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.1</span> tools.colors</h1>
+            <div class="kss-description">
+              <p>A set of mixins and functions to work with colors.</p>
+<h3 id="egeo-is-coloured-colors-">egeo-is-coloured($colors)</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span></p>
+<p>Creates a set of modifier classes with the whole colors of a colors map passed as a parameter.</p>
+<ul>
+<li><strong>$colors</strong> - A Sass map of colors when the key is the name of the color and the value is the color itself.</li>
+<li><strong>$type</strong> - color/background</li>
+</ul>
+<div class="compatibility">Compatibility untested.</div>
+
+<h3 id="egeo-get-color-color-">egeo-get-color($color)</h3>
+<p><span class="tag tag--type">@function</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Get a specific color of the Sass map of colors <a href="section-2.html#section-2.1">$egeo-colors defined in settings.colors</a>.</p>
+<ul>
+<li><strong>$color</strong> - The key of color we want to obtain from the <a href="section-2.html#section-2.1">Sass map of colors</a>.</li>
+</ul>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-3.html#section-3.3">tools.log</a>: This library uses the logger tool to show debug info.</li>
+</ul>
+
+            </div>
+          </section>
+          <section id="section-3.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.2</span> tools.typography</h1>
+            <div class="kss-description">
+              <p>The typography tools includes a series of mixins and functions
+to work with typographies.</p>
+<h3 id="egeo-get-font-font-family-open-sans-">egeo-get-font($font-family: open-sans)</h3>
+<p><span class="tag tag--type">@function</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Return a value from the Sass map <a href="section-2.html#section-2.2">$egeo-font-families</a>.</p>
+<ul>
+<li><strong>$font-family</strong> - The key of a pair key/value defined in the Sass map <a href="section-2.html#section-2.2">$egeo-font-families</a>.</li>
+</ul>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+    font-family: egeo-get-font();
+}
+
+.test-2 {
+    font-family: egeo-get-font(brandon-grotesque);
+}
+</code></pre><p>This code will generate:</p>
+<pre><code>.test {
+    font-family: &#39;Open Sans&#39;;
+}
+
+.test-2 {
+    font-family: &#39;Brandon Grotesque&#39;;
+}
+</code></pre><div class="compatibility">Compatibility untested.</div>
+
+<h3 id="egeo-get-font-size-font-size-medium-">egeo-get-font-size($font-size: medium)</h3>
+<p><span class="tag tag--type">@function</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Return a value from the Sass map <a href="section-2.html#section-2.2">$egeo-font-sizes</a>.</p>
+<ul>
+<li><strong>$font-size</strong> - The key of a pair key/value defined in the Sass map <a href="section-2.html#section-2.2">$egeo-font-sizes</a>.</li>
+</ul>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+    font-size: egeo-get-font-size();
+}
+
+.test-2 {
+    font-size: egeo-get-font-size(small);
+}
+</code></pre><p>This code will generate:</p>
+<pre><code>.test {
+    font-size: 1rem;
+}
+
+.test-2 {
+    font-size: .8rem;
+}
+</code></pre><div class="compatibility">Compatibility untested.</div>
+
+<h3 id="egeo-get-font-weight-font-weight-normal-">egeo-get-font-weight($font-weight: normal)</h3>
+<p><span class="tag tag--type">@function</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Return a value from the Sass map <a href="section-2.html#section-2.2">$egeo-font-weights</a>.</p>
+<ul>
+<li><strong>$font-weight</strong> - The key of a pair key/value defined in the Sass map <a href="section-2.html#section-2.2">$egeo-font-weights</a>.</li>
+</ul>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+    font-weight: egeo-get-font-weight();
+}
+
+.test-2 {
+    font-weight: egeo-get-font-weight(bold);
+}
+</code></pre><p>This code will generate:</p>
+<pre><code>.test {
+    font-weight: 400;
+}
+
+.test-2 {
+    font-weight: 700;
+}
+</code></pre><div class="compatibility">Compatibility untested.</div>
+
+<h3 id="egeo-get-line-height-line-height-normal-">egeo-get-line-height($line-height: normal)</h3>
+<p><span class="tag tag--type">@function</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Return a value from the Sass map <a href="section-2.html#section-2.2">$egeo-line-heights</a>.</p>
+<ul>
+<li><strong>$line-height</strong> - The key of a pair key/value defined in the Sass map <a href="section-2.html#section-2.2">$egeo-line-heights</a>.</li>
+</ul>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+    line-height: egeo-get-line-height();
+}
+
+.test-2 {
+    line-height: egeo-get-line-height(double);
+}
+</code></pre><p>This code will generate:</p>
+<pre><code>.test {
+    line-height: 1em;
+}
+
+.test-2 {
+    line-height: 2em;
+}
+</code></pre><div class="compatibility">Compatibility untested.</div>
+
+<h3 id="egeo-set-font-families-">egeo-set-font-families()</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Output a set of modifiers based on the $egeo-font-families map</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+    @include egeo-set-font-families;
+}
+</code></pre><p>This code will generate:</p>
+<pre><code>...
+
+.test--brandon-grotesque {
+    font-family: &quot;Brandon Grotesque&quot;;
+}
+
+.test--open-sans {
+    font-family: &quot;Open Sans&quot;;
+}
+
+...
+</code></pre><div class="compatibility">Compatibility untested.</div>
+
+<h3 id="egeo-set-font-sizes-">egeo-set-font-sizes()</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Output a set of modifiers based on the $egeo-font-sizes map</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+    @include egeo-set-font-sizes;
+}
+</code></pre><p>This code will generate:</p>
+<pre><code>...
+
+.test--large {
+    font-size: 1.2rem;
+}
+
+.test--medium {
+    font-size: 1rem;
+}
+
+.test--small {
+    font-size: 0.8rem;
+}
+
+...
+</code></pre><div class="compatibility">Compatibility untested.</div>
+
+<h3 id="egeo-set-font-weights-">egeo-set-font-weights()</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Output a set of modifiers based on the $egeo-font-weights map</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+    @include egeo-set-font-weights;
+}
+</code></pre><p>This code will generate:</p>
+<pre><code>...
+
+.test--bold {
+    font-weight: 700;
+}
+
+.test--semibold {
+    font-weight: 500;
+}
+
+.test--normal {
+    font-weight: 400;
+}
+
+...
+</code></pre><div class="compatibility">Compatibility untested.</div>
+
+<h3 id="egeo-set-line-heights-">egeo-set-line-heights()</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Output a set of modifiers based on the $egeo-line-heights map</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+    @include egeo-set-line-heights;
+}
+</code></pre><p>This code will generate:</p>
+<pre><code>...
+
+.test--double {
+    line-height: 2em;
+}
+
+.test--normal {
+    line-height: 1.5em;
+}
+
+...
+</code></pre><div class="compatibility">Compatibility untested.</div>
+
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-3.html#section-3.5">tools.maps</a>: This library uses the maps tools to create the modifiers.</li>
+</ul>
+
+            </div>
+          </section>
+          <section id="section-3.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.3</span> tools.log</h1>
+            <div class="kss-description">
+              <p>A logger library implemented over the version created by Hugo Giraudel
+in his article
+<a href="http://www.sitepoint.com/using-error-responsibly-in-sass/">Using @error responsibly in Sass</a>
+at sitepoint.</p>
+<p>The log includes a mixin and a function with the same name. This is
+a hack needed to allow the log can be called from a function due to
+Sass doesn&#39;t allow calling mixins inside functions.</p>
+<p><strong>Note</strong>: This module cannot be tested due to the current systems of testing
+for Sass doesn&#39;t allow to test console outputs or compilation breaks.</p>
+<h2 id="variables">Variables</h2>
+<table>
+<thead>
+<tr>
+<th>var</th>
+<th>default</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="egeo-u-tx-align--left">$egeo-log-debug</div></td>
+<td>No</td>
+<td><div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show a debug message in the console.</div></td>
+</tr>
+<tr>
+<td><div class="egeo-u-tx-align--left">$egeo-log-warn</div></td>
+<td>No</td>
+<td><div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show a warn message in the console.</div></td>
+</tr>
+<tr>
+<td><div class="egeo-u-tx-align--left">$egeo-log-error</div></td>
+<td>No</td>
+<td><div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show an error message in the console.</div></td>
+</tr>
+</tbody>
+</table>
+<h2 id="functions">Functions</h2>
+<h3 id="egeo-log-message-type-egeo-log-debug-the-function">egeo-log($message, $type: $egeo-log-debug) - the function</h3>
+<p><span class="tag tag--type">@function</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>The function log launches the directive <code>@debug</code>, <code>@warn</code> or <code>@error</code> depending on
+the parameter <code>$type</code> passed to the function. It detects if the directive
+@error is supported (Sass 3.3+) and provides an alternative for lower versions.</p>
+<table>
+<thead>
+<tr>
+<th>parameters</th>
+<th><div class="egeo-u-nowrap">default value</div></th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="egeo-u-tx-align--left">$message</div></td>
+<td>No</td>
+<td><div class="egeo-u-tx-align--left">The message we want to show in the console.</div></td>
+</tr>
+<tr>
+<td><div class="egeo-u-tx-align--left">$type</div></td>
+<td>$egeo-log-debug</td>
+<td><div class="egeo-u-tx-align--left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: <code>$egeo-log-debug</code>, <code>@log-warn</code> or <code>@log-error</code>.</div></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage">Usage</h4>
+<p>If we want to use the logger inside a function we have to
+use a hack due to the Sass limitations. We should have a
+code like the one below:</p>
+<pre><code>@function myFunction() {
+    ...
+    @if @log(&#39;My log message&#39;, $egeo-log-error) {}
+    ...
+}
+</code></pre><div class="compatibility">Compatibility untested.</div>
+
+<h3 id="egeo-log-message-type-egeo-log-debug-the-mixin">egeo-log($message, $type: $egeo-log-debug) - the mixin</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>Does exactly the same than the function but you can call it
+like showed in the Usage section.</p>
+<table>
+<thead>
+<tr>
+<th>parameters</th>
+<th><div class="egeo-u-nowrap">default value</div></th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="egeo-u-tx-align--left">$message</div></td>
+<td>No</td>
+<td><div class="egeo-u-tx-align--left">The message we want to show in the console.</div></td>
+</tr>
+<tr>
+<td><div class="egeo-u-tx-align--left">$type</div></td>
+<td>$egeo-log-debug</td>
+<td><div class="egeo-u-tx-align--left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: <code>$egeo-log-debug</code>, <code>@log-warn</code> or <code>@log-error</code>.</div></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage">Usage</h4>
+<pre><code>...
+@include egeo-log(&#39;My log message&#39;, $egeo-log-error);
+...
+</code></pre><div class="compatibility">Compatibility untested.</div>
+            </div>
+          </section>
+          <section id="section-3.4" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.4</span> tools.layers</h1>
+            <div class="kss-description">
+              <p>A set of functions and mixins to work with layers (z-index).</p>
+<h3 id="egeo-get-layer-layer-">egeo-get-layer($layer)</h3>
+<p><span class="tag tag--type">@function</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Return a value from the Sass map <a href="section-2.html#section-2.5">$egeo-layers</a>.</p>
+<ul>
+<li><strong>$layer</strong> - The key of a pair key/value defined in the Sass map <a href="section-2.html#section-2.5">$egeo-layers</a>.</li>
+</ul>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+    @include egeo-get-layer(ontop);
+}
+</code></pre><p>This code will generate:</p>
+<pre><code>...
+
+.test {
+    z-index: 10;
+}
+
+...
+</code></pre><div class="compatibility">Compatibility untested.</div>
+
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-3.html#section-3.3">tools.log</a>: This library uses the logger tool to show debug info.</li>
+</ul>
+
+            </div>
+          </section>
+          <section id="section-3.5" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.5</span> tools.maps</h1>
+            <div class="kss-description">
+              <p>Functions and mixins to help work with Sass maps.</p>
+<h3 id="egeo-bem-modifiers-from-map-map-css-property-">egeo-bem-modifiers-from-map($map, $css-property)</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Create a BEM modifier class from the inner class that contains the mixin
+using the keys of the map passed as parameter as the --name and the
+values as the value of the $css-property.</p>
+<ul>
+<li><strong>$map</strong> - A Sass map with pairs key/value.</li>
+<li><strong>$css-property</strong> - The name of the CSS property which will change in the modifiers.</li>
+</ul>
+<h4 id="usage">Usage</h4>
+<pre><code>$my-map: (
+    large: 1.5rem;
+    normal: 1rem;
+    small: .8rem;
+)
+
+.my-class {
+        @include egeo-bem-modifiers-from-map($my-map, font-size);
+}
+</code></pre><p>This sample will generate this CSS code.</p>
+<pre><code>.my-class--large {
+    font-size: 1.5rem;
+}
+
+.my-class--normal {
+    font-size: 1rem;
+}
+.my-class--small {
+    font-size: .8rem;
+}
+</code></pre><div class="compatibility">Compatibility untested.</div>
+
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-3.html#section-3.3">tools.log</a>: This library uses the logger tool to show debug info.</li>
+</ul>
+
+            </div>
+          </section>
+        </article>
+        <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+    
+  </body>
+</html>

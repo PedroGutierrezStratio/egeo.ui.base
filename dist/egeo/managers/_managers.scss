@@ -1,0 +1,11 @@
+// Managers
+//
+// The Base Framework of Egeo includes a series of managers to encapsulate the access 
+// to the original data structures. It works like an API inside the Sass code. This 
+// keeps the system flexible and decoupled allowing that if we want to modify the 
+// data structures in the future to a better performance or more correct approach 
+// we can do it only changing the structure and the API. This is particularly useful 
+// when we want to adapt our code to a new version of Sass or if we plan to add a new 
+// 3rd party library.
+//
+// Styleguide 1
