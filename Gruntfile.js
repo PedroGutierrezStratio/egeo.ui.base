@@ -201,11 +201,11 @@ module.exports = function (grunt) {
                         // to view the documentation
   ]);
 
-  grunt.registerTask('sass-watch', [
+  grunt.registerTask('watch', [
     'watch:sass'  // Launch the doc task every time a Sass file changes
   ]);
 
-  grunt.registerTask('sass-dev', [
+  grunt.registerTask('dev', [
     'clean',      // Clean the directory to ensure all files are generated 
                   // from scratch
     'sass:dev',   // Generate custom CSS to customize the documentation

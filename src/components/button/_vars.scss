@@ -12,7 +12,7 @@
 //
 //  General properties shared between all buttons
 //
-$egeo-c-button---font-size: egeo-get-font-size(medium) !default;
+$egeo-c-button---font-size: egeo-get-font-size(body_medium) !default;
 $egeo-c-button---height: 40px !default;
 $egeo-c-button---min-width: 180px !default;
 $egeo-c-button---padding: 8px 20px !default;
@@ -30,7 +30,7 @@ $egeo-c-button__c-icon--last-child---margin: 0 0 0 8px !default;
 //  General properties shared between all buttons
 //  in a small size
 //
-$egeo-c-button--small---font-size: egeo-get-font-size(small) !default;
+$egeo-c-button--small---font-size: egeo-get-font-size(body_small) !default;
 $egeo-c-button--small---height: 30px !default;
 $egeo-c-button--small---padding: 4px 15px !default;
 
@@ -41,7 +41,7 @@ $egeo-c-button--small__c-icon---margin: 0 6px 0 0 !default;
 //  General properties shared between all buttons
 //  in a extra small size
 //
-$egeo-c-button--xxsmall---font-size: egeo-get-font-size(small) !default;
+$egeo-c-button--xxsmall---font-size: egeo-get-font-size(body_small) !default;
 $egeo-c-button--xxsmall---height: 12px !default;
 $egeo-c-button--xxsmall---padding: 0 5px !default;
 

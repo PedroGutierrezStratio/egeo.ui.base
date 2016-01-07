@@ -205,12 +205,12 @@ buttons share between them will be created in the <code>egeo-c-button</code> cla
 create a new pair of buttons, we only need to add their definitions to
 the <code>$egeo-c-buttons-custom</code> map as is shown below:</p>
 <pre><code>$egeo-c-buttons: (
-    button-1: (
+    main-1: (
                 normal: (background: egeo-get-color(a1), border: 0, color: egeo-get-color(n0)),
                 hover: (background: egeo-get-color(a1_dark), border: 0, color: egeo-get-color(n0)),
                 focus: (background: egeo-get-color(a1_light), border: 0, color: egeo-get-color(n0))
             ),
-    button-2: (
+    main-2: (
                 normal: (background: egeo-get-color(a2), border: 0, color: egeo-get-color(n0)),
                 hover: (background: egeo-get-color(a2_dark), border: 0, color: egeo-get-color(n0)),
                 focus: (background: egeo-get-color(a2_light), border: 0, color: egeo-get-color(n0))
@@ -218,12 +218,12 @@ the <code>$egeo-c-buttons-custom</code> map as is shown below:</p>
 );
 </code></pre><p>The definition above will generate the next classes:</p>
 <pre><code>.egeo-c-button {...}
-.egeo-c-button--button-1 {...}
-.egeo-c-button--button-1:hover {...}
-.egeo-c-button--button-1:focus {...}
-.egeo-c-button--button-2 {...}
-.egeo-c-button--button-2:hover {...}
-.egeo-c-button--button-2:focus {...}
+.egeo-c-button--main-1 {...}
+.egeo-c-button--main-1:hover {...}
+.egeo-c-button--main-1:focus {...}
+.egeo-c-button--main-2 {...}
+.egeo-c-button--main-2:hover {...}
+.egeo-c-button--main-2:focus {...}
 </code></pre><p>All properties are optional so, if you don&#39;t want your button have a background or a border, the
 only thing you have to do is not including in the map and it will not be renderized.</p>
 <p>The default values of the pre-configured buttons defined in the <code>$egeo-c-buttons</code> map are:</p>
@@ -237,6 +237,9 @@ only thing you have to do is not including in the map and it will not be renderi
 &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--rounded egeo-c-button--tool-1&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
 &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--rounded egeo-c-button--tool-2&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
 &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--rounded egeo-c-button--tool-ellipsis&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-waiting&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--help&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-help2&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--dropdown-1&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;Dropdown 1&lt;/button&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--menu-1&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;Menu 1&lt;/button&gt;&lt;/div&gt;
 </code></pre><p>Will be renderized to:</p>
 <hr>
 <div style="padding-left: 20px;">
@@ -250,6 +253,9 @@ only thing you have to do is not including in the map and it will not be renderi
   <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--rounded egeo-c-button--tool-1"><i class="egeo-c-icon icon-cog"></i></button></div>
   <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--rounded egeo-c-button--tool-2"><i class="egeo-c-icon icon-cog"></i></button></div>
   <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--rounded egeo-c-button--tool-ellipsis"><i class="egeo-c-icon icon-waiting"></i></button></div>
+  <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--help"><i class="egeo-c-icon icon-help2"></i></button></div>
+  <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--dropdown-1"><i class="egeo-c-icon icon-cog"></i>Dropdown 1</button></div>
+  <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--menu-1"><i class="egeo-c-icon icon-cog"></i>Menu 1</button></div>
 </div>
 
 <hr>
@@ -263,155 +269,92 @@ only thing you have to do is not including in the map and it will not be renderi
 </thead>
 <tbody>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button</div></td>
-<td><div class="egeo-u-tx-align--left"><code>true</code></div></td>
+<td>$egeo-c-button</td>
+<td><code>true</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button---height</div></td>
-<td><div class="egeo-u-tx-align--left"><code>40px</code></div></td>
+<td>$egeo-c-button---font-size</td>
+<td><a href="section-2.html#section-2.2">body_medium</a></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button---min-width</div></td>
-<td><div class="egeo-u-tx-align--left"><code>180px</code></div></td>
+<td>$egeo-c-button---height</td>
+<td><code>40px</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button---padding</div></td>
-<td><div class="egeo-u-tx-align--left"><code>0 20px</code></div></td>
+<td>$egeo-c-button---min-width</td>
+<td><code>180px</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button---text-align</div></td>
-<td><div class="egeo-u-tx-align--left"><code>center</code></div></td>
+<td>$egeo-c-button---padding</td>
+<td><code>0 20px</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button---text-transform</div></td>
-<td><div class="egeo-u-tx-align--left"><code>uppercase</code></div></td>
+<td>$egeo-c-button---text-align</td>
+<td><code>center</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button---transition</div></td>
-<td><div class="egeo-u-tx-align--left"><code>all .5s</code></td>
+<td>$egeo-c-button---text-transform</td>
+<td><code>uppercase</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button--focus---shadow</div></td>
-<td><div class="egeo-u-tx-align--left"><code>0 0 5px 0 rgba(egeo-get-color(n8), .5)</code></td>
+<td>$egeo-c-button---transition</td>
+<td><code>all .5s</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button__c-icon--first-child---margin</div></td>
-<td><div class="egeo-u-tx-align--left"><code>0 8px 0 0</code></td>
+<td>$egeo-c-button--focus---shadow</td>
+<td><code>0 0 5px 0 rgba(egeo-get-color(n8), .5)</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button__c-icon--last-child---margin</div></td>
-<td><div class="egeo-u-tx-align--left"><code>0 0 0 8px</code></td>
+<td>$egeo-c-button__c-icon--first-child---margin</td>
+<td><code>0 8px 0 0</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button--small---font-size</div></td>
-<td><div class="egeo-u-tx-align--left"><code>egeo-get-font-size(small)</code></td>
+<td>$egeo-c-button__c-icon--last-child---margin</td>
+<td><code>0 0 0 8px</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button--small---height</div></td>
-<td><div class="egeo-u-tx-align--left"><code>30px</code></td>
+<td>$egeo-c-button--small---font-size</td>
+<td><a href="section-2.html#section-2.2">body_small</a></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-button--small---padding</div></td>
-<td><div class="egeo-u-tx-align--left"><code>4px 15px</code></td>
+<td>$egeo-c-button--small---height</td>
+<td><code>30px</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-buttons</div></td>
-<td><div class="egeo-u-tx-align--left">Sass map</div></td>
+<td>$egeo-c-button--small---padding</td>
+<td><code>4px 15px</code></td>
 </tr>
 <tr>
-<td><div class="egeo-u-tx-align--left">$egeo-c-buttons-custom</div></td>
-<td><div class="egeo-u-tx-align--left">Sass map</div></td>
+<td>$egeo-c-button--xxsmall---font-size</td>
+<td><a href="section-2.html#section-2.2">body_small</a></td>
+</tr>
+<tr>
+<td>$egeo-c-button--xxsmall---height</td>
+<td><code>12px</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button--xxsmall---padding</td>
+<td><code>0 5px</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button--xxsmall__c-icon---margin</td>
+<td><code>0 6px 0 0</code></td>
+</tr>
+<tr>
+<td>$egeo-c-buttons</td>
+<td>Sass map (main-1, main-2, main-3, secondary-1, tool-1, tool-2, tool-ellipsis, help, danger, disabled, dropdown-1, menu-1)</td>
+</tr>
+<tr>
+<td>$egeo-c-buttons-custom</td>
+<td>Sass map</td>
 </tr>
 </tbody>
 </table>
-<h2 id="the-egeo-c-button-angularjs-directive">The egeo-c-button AngularJS directive</h2>
-<p><span class="tag tag--type">@directive</span><span class="tag tag--untested">untested</span></p>
-<p>Egeo provides an AngularJS directive to create all types of buttons defined with ease. The directive is restricted
-to HTML Element and called <code>egeo-c-button</code>. Below you can see the properties exposed:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><div class="egeo-u-tx-align--left">type</div></td>
-<td><div class="egeo-u-tx-align--left">Submit, Reset or Button</div></td>
-</tr>
-<tr>
-<td><div class="egeo-u-tx-align--left">modifier</div></td>
-<td><div class="egeo-u-tx-align--left">The name of the button created as a CSS BEM Modifier</div></td>
-</tr>
-<tr>
-<td><div class="egeo-u-tx-align--left">label</div></td>
-<td><div class="egeo-u-tx-align--left">The label of the button</div></td>
-</tr>
-<tr>
-<td><div class="egeo-u-tx-align--left">icon-left</div></td>
-<td><div class="egeo-u-tx-align--left">An icon which appears at left side</div></td>
-</tr>
-<tr>
-<td><div class="egeo-u-tx-align--left">icon-right</div></td>
-<td><div class="egeo-u-tx-align--left">An icon which appears at right side</div></td>
-</tr>
-<tr>
-<td><div class="egeo-u-tx-align--left">small</div></td>
-<td><div class="egeo-u-tx-align--left">A small version of the button</div></td>
-</tr>
-<tr>
-<td><div class="egeo-u-tx-align--left">rounded</div></td>
-<td><div class="egeo-u-tx-align--left">A rounded version of the button. A rounded button will hide the label and only show the icon.</div></td>
-</tr>
-<tr>
-<td><div class="egeo-u-tx-align--left">at-right</div></td>
-<td><div class="egeo-u-tx-align--left">Floats the button to right</div></td>
-</tr>
-<tr>
-<td><div class="egeo-u-tx-align--left">popover</div></td>
-<td><div classgit="egeo-u-tx-align--left"><span class="tag tag--danger">internal</span>It is used to reference popover IDs when the button is linked to a popover.</div></td>
-</tr>
-</tbody>
-</table>
-<h3 id="usage">Usage</h3>
-<p>Take a look to the samples shown below to see how the properties could be used and combined to get different results:</p>
-<pre><code>  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;main-1&quot; data-label=&quot;AngularJS Button: Click to test ({{count}})&quot; data-ng-click=&quot;count = count + 1&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;main-2&quot; data-icon-left=&quot;icon-cog&quot; data-icon-right=&quot;icon-arrow2_down&quot; data-label=&quot;AngularJS Button&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;main-3&quot; data-label=&quot;AngularJS Button&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;secondary-1&quot; data-label=&quot;AngularJS Button&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;secondary-1&quot; data-icon-left=&quot;icon-cog&quot; data-small=&quot;true&quot; data-label=&quot;AngularJS Button Small&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;danger&quot; data-label=&quot;AngularJS Danger Button&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;danger&quot; data-icon-left=&quot;icon-cog&quot; data-label=&quot;AngularJS Disabled Button&quot; disabled&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-1&quot; data-rounded=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-1&quot; data-rounded=&quot;true&quot; data-small=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-2&quot; data-rounded=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-2&quot; data-rounded=&quot;true&quot; data-small=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-ellipsis&quot; data-rounded=&quot;true&quot; data-icon-left=&quot;icon-waiting&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-ellipsis&quot; data-rounded=&quot;true&quot; data-small=&quot;true&quot; data-icon-left=&quot;icon-waiting&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-  &lt;div style=&quot;margin-bottom: 5px; overflow: auto&quot;&gt;&lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;ellipsis&quot; data-rounded=&quot;true&quot; data-small=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot; data-at-right=&quot;true&quot;&gt;&lt;/egeo-c-button&gt;&lt;/div&gt;
-</code></pre><hr>
-<div style="padding-left: 20px;">
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-2" data-icon-left="icon-cog" data-icon-right="icon-arrow2_down" data-label="AngularJS Button"></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="main-3" data-label="AngularJS Button"></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="secondary-1" data-label="AngularJS Button"></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="secondary-1" data-icon-left="icon-cog" data-small="true" data-label="AngularJS Button Small"></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="danger" data-label="AngularJS Danger Button"></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="danger" data-icon-left="icon-cog" data-label="AngularJS Disabled Button" disabled></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-1" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-icon-left="icon-datetime"></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-2" data-rounded="true" data-small="true" data-icon-left="icon-datetime"></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-icon-left="icon-waiting"></egeo-c-button></div>
-  <div style="margin-bottom: 5px"><egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-small="true" data-icon-left="icon-waiting"></egeo-c-button></div>
-  <div style="margin-bottom: 5px; overflow: auto"><egeo-c-button data-type="submit" data-modifier="ellipsis" data-rounded="true" data-small="true" data-icon-left="icon-datetime" data-at-right="true"></egeo-c-button></div>
-</div>
-
-<hr>
 <h2 id="dependencies">Dependencies</h2>
 <ul>
 <li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
 <li><a href="section-8.html#section-8.3">utils.floats</a> - <em>only if you want to float your buttons</em>.</li>
 </ul>
 

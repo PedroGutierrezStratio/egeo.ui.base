@@ -1,24 +1,23 @@
 {
   "name": "egeo.ui.base",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The Egeo Base Framework is a set of libraries and objects to help build Front-end components and apps.",
   "main": "src/index.scss",
   "scripts": {
-    "sass-watch": "grunt sass-watch",
-    "sass-dev": "grunt sass-dev",
-    "sass-dist": "grunt sass-dist",
-    "sass-test": "mocha tests/test-sass.js",
-    "js-test": "karma start",
-    "test": "mocha tests/test-sass.js && karma start"
+    "watch": "grunt watch",
+    "dev": "grunt dev",
+    "dist": "grunt dist",
+    "test": "mocha tests/test-sass.js",
+    "postinstall": "npm update egeo.website.template"
   },
   "author": "Alex R Chies (alejandrorodriguez@stratio.com)",
   "license": "ISC",
   "devDependencies": {
-    "grunt-batch": "^0.2.4",
+    "grunt": "^0.4.5",
     "grunt-contrib-connect": "^0.11.2",
-    "grunt-contrib-watch": "^0.6.1",
-    "kss": "^2.3.1",
-    "sass-true": "^2.0.2"
+    "mocha": "^2.3.3",
+    "sass-true": "^2.0.2",
+    "time-grunt": "^1.2.1"
   },
   "repository": {
     "type": "git",
@@ -26,12 +25,12 @@
   },
   "dependencies": {
     "egeo.website.template": "https://github.com/Stratio/egeo.website.template.git",
-    "angular-sanitize": "^1.4.7",
-    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "kss": "^2.3.1",
+    "grunt-batch": "^0.2.4",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.1",
     "grunt-sass": "^1.0.0",
-    "node-sass": "^3.3.3",
-    "time-grunt": "^1.2.1"
+    "node-sass": "^3.3.3"
   }
 }
