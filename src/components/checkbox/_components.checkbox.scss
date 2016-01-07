@@ -17,31 +17,6 @@
 // | -------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------ |
 // | <span class="egeo-u-nowrap">$egeo-c-checkbox</span>            | <span class="egeo-u-nowrap">`true` </span>         | Tells Egeo if the class egeo-c-checkbox should be included in the CSS.   |
 //
-// ## The egeo-c-checkbox AngularJS directive
-//
-// Egeo includes an AngularJS directive to be used in Angular apps to allow developers to integrate the whole classes, properties and
-// functionalities with no effort. The directive is the responsible of apply different styles depending of the status of the checkbox itself
-// and/or the form it is included on.
-//
-// ### How to work with
-//
-// ```
-// <div ng-controller="TestController as vm">
-//   <egeo-c-form id="TestForm" method="post">
-//      <egeo-c-checkbox data-id="test-checkbox" data-label="I read and accept the conditions" data-model="vm.isRead" data-required="true" data-qa="id-for-checkbox" data-help-text="The acceptance of conditions is needed to continue."></egeo-c-checkbox>
-//   </egeo-c-form>
-// </div>
-// ```
-//
-// ---
-// <div ng-controller="TestController as vm">
-//   <egeo-c-form id="TestForm" method="post">
-//      <egeo-c-checkbox data-id="test-checkbox" data-label="I read and accept the conditions" data-model="vm.isRead" data-required="true" data-qa="id-for-checkbox" data-help-text="The acceptance of conditions is needed to continue."></egeo-c-checkbox>
-//   </egeo-c-form>
-// </div>
-//
-// ---
-//
 //
 // ## Dependencies
 //  

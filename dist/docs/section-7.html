@@ -1180,24 +1180,6 @@ HTML input checkbox tag.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="the-egeo-c-checkbox-angularjs-directive">The egeo-c-checkbox AngularJS directive</h2>
-<p>Egeo includes an AngularJS directive to be used in Angular apps to allow developers to integrate the whole classes, properties and
-functionalities with no effort. The directive is the responsible of apply different styles depending of the status of the checkbox itself
-and/or the form it is included on.</p>
-<h3 id="how-to-work-with">How to work with</h3>
-<pre><code>&lt;div ng-controller=&quot;TestController as vm&quot;&gt;
-  &lt;egeo-c-form id=&quot;TestForm&quot; method=&quot;post&quot;&gt;
-     &lt;egeo-c-checkbox data-id=&quot;test-checkbox&quot; data-label=&quot;I read and accept the conditions&quot; data-model=&quot;vm.isRead&quot; data-required=&quot;true&quot; data-qa=&quot;id-for-checkbox&quot; data-help-text=&quot;The acceptance of conditions is needed to continue.&quot;&gt;&lt;/egeo-c-checkbox&gt;
-  &lt;/egeo-c-form&gt;
-&lt;/div&gt;
-</code></pre><hr>
-<div ng-controller="TestController as vm">
-  <egeo-c-form id="TestForm" method="post">
-     <egeo-c-checkbox data-id="test-checkbox" data-label="I read and accept the conditions" data-model="vm.isRead" data-required="true" data-qa="id-for-checkbox" data-help-text="The acceptance of conditions is needed to continue."></egeo-c-checkbox>
-  </egeo-c-form>
-</div>
-
-<hr>
 <h2 id="dependencies">Dependencies</h2>
 <ul>
 <li><a href="section-7.html#section-7.1">component</a></li>
