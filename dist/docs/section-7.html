@@ -750,81 +750,9 @@ transclude content.  Below you can see the properties exposed:</p>
 <p>The Button Group component is a wrapper to group a set of Egeo Buttons. You can
 use only the CSS styles but probably has no sense due to the whole functionality
 is only available via the AngularJS Directive.</p>
-<h2 id="the-egeo-c-buttongroup-angularjs-directive">The egeo-c-buttongroup AngularJS directive</h2>
-<p><span class="tag tag--type">@directive</span><span class="tag tag--untested">untested</span></p>
-<p>Egeo provides an AngularJS directive to create button groups with ease. The directive is restricted
-to HTML Element and called <code>egeo-c-buttongroup</code>. Below you can see the properties exposed:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><div class="egeo-u-tx-align--left">small</div></td>
-<td><div class="egeo-u-tx-align--left">Tell to the directive if the more button will be small or not.</div></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Warning:</strong> Keep in mind that the egeo-c-buttongroup Angular Directive is only allowed to be used
-with egeo-c-buttons as inside elements. Use it combined with other elements may have unexpected effects.</p>
-<h3 id="usage">Usage</h3>
-<pre><code>&lt;div data-ng-controller=&quot;TestController as TestCtrl&quot;&gt;
-     &lt;egeo-c-buttongroup&gt;
-         &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-1&quot; data-label=&quot;Test 1&quot; data-rounded=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot; data-ng-click=&quot;TestCtrl.test()&quot;&gt;&lt;/egeo-c-button&gt;
-         &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-1&quot; data-label=&quot;Test 2&quot; data-rounded=&quot;true&quot; data-small=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot; data-ng-click=&quot;TestCtrl.test()&quot;&gt;&lt;/egeo-c-button&gt;
-         &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-2&quot; data-label=&quot;Test 3&quot; data-rounded=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot; data-ng-click=&quot;TestCtrl.test()&quot;&gt;&lt;/egeo-c-button&gt;
-     &lt;/egeo-c-buttongroup&gt;
-&lt;/div&gt;
-&lt;p&gt;The same buttongroup in a container of 110px wide.&lt;/p&gt;
-&lt;div style=&quot;width: 110px&quot; data-ng-controller=&quot;TestController as TestCtrl&quot;&gt;
-     &lt;egeo-c-buttongroup small=&quot;true&quot;&gt;
-         &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-1&quot; data-label=&quot;Test 1&quot; data-rounded=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot; data-ng-click=&quot;TestCtrl.test()&quot;&gt;&lt;/egeo-c-button&gt;
-         &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-1&quot; data-label=&quot;Test 2&quot; data-rounded=&quot;true&quot; data-small=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot; data-ng-click=&quot;TestCtrl.test()&quot;&gt;&lt;/egeo-c-button&gt;
-         &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-2&quot; data-label=&quot;Test 3&quot; data-rounded=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot; data-ng-click=&quot;TestCtrl.test()&quot;&gt;&lt;/egeo-c-button&gt;
-     &lt;/egeo-c-buttongroup&gt;
-&lt;/div&gt;
-&lt;p&gt;The same buttongroup in a container of 110px wide and right aligned.&lt;/p&gt;
-&lt;div style=&quot;text-align: right; margin-right: 10px;&quot; data-ng-controller=&quot;TestController as TestCtrl&quot;&gt;
-  &lt;div style=&quot;display: inline-block; width: 110px&quot; data-ng-controller=&quot;TestController as TestCtrl&quot;&gt;
-     &lt;egeo-c-buttongroup&gt;
-         &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-1&quot; data-label=&quot;Test 1&quot; data-rounded=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot; data-ng-click=&quot;TestCtrl.test()&quot;&gt;&lt;/egeo-c-button&gt;
-         &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-1&quot; data-label=&quot;Test 2&quot; data-rounded=&quot;true&quot; data-small=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot; data-ng-click=&quot;TestCtrl.test()&quot;&gt;&lt;/egeo-c-button&gt;
-         &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-2&quot; data-label=&quot;Test 3&quot; data-rounded=&quot;true&quot; data-icon-left=&quot;icon-datetime&quot; data-ng-click=&quot;TestCtrl.test()&quot;&gt;&lt;/egeo-c-button&gt;
-     &lt;/egeo-c-buttongroup&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><p>To view the results of click actions, open the Javascript conole of your browser.</p>
-<hr>
-<div data-ng-controller="TestController as TestCtrl">
-     <egeo-c-buttongroup>
-         <egeo-c-button data-type="submit" data-modifier="tool-1" data-label="Test 1" data-rounded="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
-         <egeo-c-button data-type="submit" data-modifier="tool-1" data-label="Test 2" data-rounded="true" data-small="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
-         <egeo-c-button data-type="submit" data-modifier="tool-2" data-label="Test 3" data-rounded="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
-     </egeo-c-buttongroup>
-</div>
-<p>The same buttongroup in a container of 110px wide.</p>
-<div style="width: 110px" data-ng-controller="TestController as TestCtrl">
-     <egeo-c-buttongroup small="true">
-         <egeo-c-button data-type="submit" data-modifier="tool-1" data-label="Test 1" data-rounded="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
-         <egeo-c-button data-type="submit" data-modifier="tool-1" data-label="Test 2" data-rounded="true" data-small="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
-         <egeo-c-button data-type="submit" data-modifier="tool-2" data-label="Test 3" data-rounded="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
-     </egeo-c-buttongroup>
-</div>
-<p>The same buttongroup in a container of 110px wide and right aligned.</p>
-<div style="text-align: right; margin-right: 10px;" data-ng-controller="TestController as TestCtrl">
-  <div style="display: inline-block; width: 110px" data-ng-controller="TestController as TestCtrl">
-     <egeo-c-buttongroup>
-         <egeo-c-button data-type="submit" data-modifier="tool-1" data-label="Test 1" data-rounded="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
-         <egeo-c-button data-type="submit" data-modifier="tool-1" data-label="Test 2" data-rounded="true" data-small="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
-         <egeo-c-button data-type="submit" data-modifier="tool-2" data-label="Test 3" data-rounded="true" data-icon-left="icon-datetime" data-ng-click="TestCtrl.test()"></egeo-c-button>
-     </egeo-c-buttongroup>
-  </div>
-</div>
-
-<hr>
+<p><strong>Warning:</strong> The Button Group is, mainly, an AngularJS directive and, as such, is better defined
+in the <a href="">UI Kit Documentation</a>. Here you will only find basic CSS needed to compliment the button
+CSS itself and the way to position and manage the group of them.</p>
 <h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
 <table>
 <thead>
