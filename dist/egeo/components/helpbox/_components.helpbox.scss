@@ -20,14 +20,14 @@
 //
 // ## Variables exposed to theming
 //
-// | Variable                       | Default value                                     | Description                                                           |
-// | ------------------------------ | ------------------------------------------------- | --------------------------------------------------------------------- |
-// | $egeo-c-helpbox                | `true`                                            | Tells Egeo if the class egeo-c-helpbox should be included in the CSS. |
-// | $egeo-c-helpbox---background   | [egeo-get-color(n0)](section-2.html#section-2.1)  | Define the background of the helpbox.                                 |
-// | $egeo-c-helpbox---border-top   | `1px solid egeo-get-color(n0)`                    | Define the border-top style of the helpbox.                           |
-// | $egeo-c-helpbox---color        | [egeo-get-color(n0)](section-2.html#section-2.1)  | Define the font color of the text inside the helpbox.                 |
-// | $egeo-c-helpbox---shadow-color | [egeo-get-color(n4)](section-2.html#section-2.1)  | Define the base color of the shadow that emits the helpbox.           |
-// | $egeo-c-helpbox__arrow---size  | `8px`                                             | Define the size of the arrow (in px) of the helpbox.                  |
+// | Variable                       | Default value                     | Description                                                           |
+// | ------------------------------ | --------------------------------- | --------------------------------------------------------------------- |
+// | $egeo-c-helpbox                | `true`                            | Tells Egeo if the class egeo-c-helpbox should be included in the CSS. |
+// | $egeo-c-helpbox---background   | [n0](section-2.html#section-2.1)  | Define the background of the helpbox.                                 |
+// | $egeo-c-helpbox---border-top   | `1px solid egeo-get-color(n0)`    | Define the border-top style of the helpbox.                           |
+// | $egeo-c-helpbox---color        | [n0](section-2.html#section-2.1)  | Define the font color of the text inside the helpbox.                 |
+// | $egeo-c-helpbox---shadow-color | [n4](section-2.html#section-2.1)  | Define the base color of the shadow that emits the helpbox.           |
+// | $egeo-c-helpbox__arrow---size  | `8px`                             | Define the size of the arrow (in px) of the helpbox.                  |
 //
 // ## Dependencies
 //  
