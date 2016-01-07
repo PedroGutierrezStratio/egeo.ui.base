@@ -996,32 +996,57 @@ HTML input tag.</p>
 </thead>
 <tbody>
 <tr>
-<td><span class="egeo-u-nowrap">$egeo-c-input</span></td>
-<td><span class="egeo-u-nowrap"><code>true</code> </span></td>
+<td>$egeo-c-input</td>
+<td><code>true</code></td>
 <td>Tells Egeo if the class egeo-c-input should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-input---box-shadow</td>
+<td><code>none</code></td>
+<td>Define the box shadow of the input.</td>
+</tr>
+<tr>
+<td>$egeo-c-input---border</td>
+<td><code>0</code></td>
+<td>Define the border of the input.</td>
+</tr>
+<tr>
+<td>$egeo-c-input---border-bottom</td>
+<td><code>1px solid egeo-get-color(n6)</code></td>
+<td>Define specifically the border-bottom of the input.</td>
+</tr>
+<tr>
+<td>$egeo-c-input---font-size</td>
+<td><a href="section-2.html#section-2.2">body_large</a></td>
+<td>Define the font size of the input.</td>
+</tr>
+<tr>
+<td>$egeo-c-input--focus---border-bottom</td>
+<td><code>1px solid egeo-get-color(n10)</code></td>
+<td>Define the border-bottom when the input has the focus.</td>
+</tr>
+<tr>
+<td>$egeo-c-input__popover---left</td>
+<td><code>1px</code></td>
+<td>Define the left position of the popover when the input has help.</td>
+</tr>
+<tr>
+<td>$egeo-c-input__popover---top</td>
+<td><code>15px</code></td>
+<td>Define the top position of the popover when the input has help.</td>
+</tr>
+<tr>
+<td>$egeo-c-input__placeholder---color</td>
+<td><a href="section-2.html#section-2.1">n7</a></td>
+<td>Define the font color of the placeholder.</td>
+</tr>
+<tr>
+<td>$egeo-c-input__placeholder---font-style</td>
+<td><code>italic</code></td>
+<td>Define the font style of the placeholder.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="the-egeo-c-input-angularjs-directive">The egeo-c-input AngularJS directive</h2>
-<p>Egeo includes an AngularJS directive to be used in Angular apps to allow developers to integrate the whole classes, properties and
-functionalities with no effort. The directive is the responsible of apply different styles depending of the status of the input itself
-and/or the form it is included on.</p>
-<h3 id="how-to-work-with">How to work with</h3>
-<pre><code>&lt;div ng-controller=&quot;TestController as vm&quot;&gt;
-  &lt;egeo-c-form id=&quot;TestForm&quot; method=&quot;post&quot;&gt;
-     &lt;egeo-c-input data-id=&quot;username&quot; data-label=&quot;username&quot; data-placeholder=&quot;Ex. dwalsh&quot; data-type=&quot;text&quot; data-model=&quot;vm.username&quot; data-pattern=&quot;&#39;([a-zA-Z0-9]*)&#39;&quot; data-required=&quot;true&quot; data-qa=&quot;id-for-username&quot; data-help-text=&quot;The username is needed to login into our applications. Only numbers and letters are allowed.&quot;&gt;&lt;/egeo-c-input&gt;
-     &lt;egeo-c-input data-id=&quot;city&quot; data-label=&quot;city&quot; data-placeholder=&quot;Ex. Madrid&quot; data-type=&quot;text&quot; data-model=&quot;vm.city&quot; data-pattern=&quot;&#39;([a-zA-Z]*)&#39;&quot; data-qa=&quot;id-for-city&quot; data-help-text=&quot;The city will be used to gather stat info.&quot;&gt;&lt;/egeo-c-input&gt;
-     &lt;egeo-c-input data-id=&quot;freetext&quot; data-label=&quot;free text&quot; data-placeholder=&quot;Ex. No contextual help but errors (try put whitespaces)&quot; data-type=&quot;text&quot; data-model=&quot;vm.other&quot; data-pattern=&quot;&#39;([a-zA-Z]*)&#39;&quot; data-qa=&quot;id-for-free-text&quot;&gt;&lt;/egeo-c-input&gt;
-  &lt;/egeo-c-form&gt;
-&lt;/div&gt;
-</code></pre><div ng-controller="TestController as vm">
-  <egeo-c-form id="TestForm" method="post">
-     <egeo-c-input data-id="username" data-label="username" data-placeholder="Ex. dwalsh" data-type="text" data-model="vm.username" data-pattern="'([a-zA-Z0-9]*)'" data-required="true" data-qa="id-for-username" data-help-text="The username is needed to login into our applications. Only numbers and letters are allowed."></egeo-c-input>
-     <egeo-c-input data-id="city" data-label="city" data-placeholder="Ex. Madrid" data-type="text" data-model="vm.city" data-pattern="'([a-zA-Z]*)'" data-qa="id-for-city" data-help-text="The city will be used to gather stat info."></egeo-c-input>
-     <egeo-c-input data-id="freetext" data-label="free text" data-placeholder="Ex. No contextual help but errors (try put whitespaces)" data-type="text" data-model="vm.other" data-pattern="'([a-zA-Z]*)'" data-qa="id-for-free-text"></egeo-c-input>
-  </egeo-c-form>
-</div>
-
 <h2 id="dependencies">Dependencies</h2>
 <ul>
 <li><a href="section-7.html#section-7.1">component</a></li>

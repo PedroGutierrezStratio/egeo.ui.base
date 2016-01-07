@@ -13,34 +13,18 @@
 //
 // ## Variables exposed to theming
 //
-// | Variable                                                       | Default value                                      | Description                                                              |
-// | -------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------ |
-// | <span class="egeo-u-nowrap">$egeo-c-input</span>               | <span class="egeo-u-nowrap">`true` </span>         | Tells Egeo if the class egeo-c-input should be included in the CSS.      |
-//
-// ## The egeo-c-input AngularJS directive
-//
-// Egeo includes an AngularJS directive to be used in Angular apps to allow developers to integrate the whole classes, properties and
-// functionalities with no effort. The directive is the responsible of apply different styles depending of the status of the input itself
-// and/or the form it is included on.
-//
-// ### How to work with
-//
-// ```
-// <div ng-controller="TestController as vm">
-//   <egeo-c-form id="TestForm" method="post">
-//      <egeo-c-input data-id="username" data-label="username" data-placeholder="Ex. dwalsh" data-type="text" data-model="vm.username" data-pattern="'([a-zA-Z0-9]*)'" data-required="true" data-qa="id-for-username" data-help-text="The username is needed to login into our applications. Only numbers and letters are allowed."></egeo-c-input>
-//      <egeo-c-input data-id="city" data-label="city" data-placeholder="Ex. Madrid" data-type="text" data-model="vm.city" data-pattern="'([a-zA-Z]*)'" data-qa="id-for-city" data-help-text="The city will be used to gather stat info."></egeo-c-input>
-//      <egeo-c-input data-id="freetext" data-label="free text" data-placeholder="Ex. No contextual help but errors (try put whitespaces)" data-type="text" data-model="vm.other" data-pattern="'([a-zA-Z]*)'" data-qa="id-for-free-text"></egeo-c-input>
-//   </egeo-c-form>
-// </div>
-// ```
-// <div ng-controller="TestController as vm">
-//   <egeo-c-form id="TestForm" method="post">
-//      <egeo-c-input data-id="username" data-label="username" data-placeholder="Ex. dwalsh" data-type="text" data-model="vm.username" data-pattern="'([a-zA-Z0-9]*)'" data-required="true" data-qa="id-for-username" data-help-text="The username is needed to login into our applications. Only numbers and letters are allowed."></egeo-c-input>
-//      <egeo-c-input data-id="city" data-label="city" data-placeholder="Ex. Madrid" data-type="text" data-model="vm.city" data-pattern="'([a-zA-Z]*)'" data-qa="id-for-city" data-help-text="The city will be used to gather stat info."></egeo-c-input>
-//      <egeo-c-input data-id="freetext" data-label="free text" data-placeholder="Ex. No contextual help but errors (try put whitespaces)" data-type="text" data-model="vm.other" data-pattern="'([a-zA-Z]*)'" data-qa="id-for-free-text"></egeo-c-input>
-//   </egeo-c-form>
-// </div>
+// | Variable                                | Default value                            | Description                                                           |
+// | --------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------- |
+// | $egeo-c-input                           | `true`                                   | Tells Egeo if the class egeo-c-input should be included in the CSS.   |
+// | $egeo-c-input---box-shadow              | `none`                                   | Define the box shadow of the input.                                   |
+// | $egeo-c-input---border                  | `0`                                      | Define the border of the input.                                       |
+// | $egeo-c-input---border-bottom           | `1px solid egeo-get-color(n6)`           | Define specifically the border-bottom of the input.                   |
+// | $egeo-c-input---font-size               | [body_large](section-2.html#section-2.2) | Define the font size of the input.                                    |
+// | $egeo-c-input--focus---border-bottom    | `1px solid egeo-get-color(n10)`          | Define the border-bottom when the input has the focus.                |
+// | $egeo-c-input__popover---left           | `1px`                                    | Define the left position of the popover when the input has help.      |
+// | $egeo-c-input__popover---top            | `15px`                                   | Define the top position of the popover when the input has help.       |
+// | $egeo-c-input__placeholder---color      | [n7](section-2.html#section-2.1)         | Define the font color of the placeholder.                             |
+// | $egeo-c-input__placeholder---font-style | `italic`                                 | Define the font style of the placeholder.                             |
 //
 // ## Dependencies
 //  
