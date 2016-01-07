@@ -13,12 +13,20 @@
 //
 // ## Variables exposed to theming
 //
-// | Variable                                                       | Default value                                      | Description                                                              |
-// | -------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------ |
-// | <span class="egeo-u-nowrap">$egeo-c-label</span>               | <span class="egeo-u-nowrap">`true` </span>         | Tells Egeo if the class egeo-c-label should be included in the CSS.      |
-// | <span class="egeo-u-nowrap">$egeo-c-label---background</span>  | <span class="egeo-u-nowrap">`transparent` </span>  | Set the background of the label.                                         |
-// | <span class="egeo-u-nowrap">$egeo-c-label---border</span>      | <span class="egeo-u-nowrap">`0` </span>            | Set the border of the label.                                             |
-// | <span class="egeo-u-nowrap">$egeo-c-label---box-shadow</span>  | <span class="egeo-u-nowrap">`none` </span>         | Set the box-shadow of the label.                                         |
+// | Variable                                   | Default value                                     | Description                                                                   |
+// | ------------------------------------------ | ------------------------------------------------- | ----------------------------------------------------------------------------- |
+// | $egeo-c-label                              | `true`                                            | Tells Egeo if the class egeo-c-label should be included in the CSS.           |
+// | $egeo-c-label---background                 | `transparent`                                     | Define the background of the label.                                           |
+// | $egeo-c-label---border                     | `0`                                               | Define the border of the label.                                               |
+// | $egeo-c-label---box-shadow                 | `none`                                            | Define the box-shadow of the label.                                           |
+// | $egeo-c-label---color                      | [a1](section-2.html#section-2.1)                  | Define the font color of the label.                                           |
+// | $egeo-c-label---font-size                  | [body_xxsmall]([a1](section-2.html#section-2.2))  | Define the font size of the label.                                            |
+// | $egeo-c-label---font-style                 | `null`                                            | Define the font style of the label.                                           |
+// | $egeo-c-label__optional-mark---color       | [a1](section-2.html#section-2.1)                  | Define the color of the optional mark if it joins the label.                  |
+// | $egeo-c-label__optional-mark---content     | '(optional)'                                      | Define the content of the optional mark if it joins the label.                |
+// | $egeo-c-label__optional-mark---font-style  | `null`                                            | Define the font style of the optional mark if it joins the label.             |
+// | $egeo-c-label__icon---color                | [n5](section-2.html#section-2.1)                  | Define the color of the icon if any icon joins the label.                     |
+// | $egeo-c-label__icon---font-size            | [body_xsmall]([a1](section-2.html#section-2.2))   | Define the font size of the icon if any icon joins the label.                 |
 //
 // ## Dependencies
 //  
