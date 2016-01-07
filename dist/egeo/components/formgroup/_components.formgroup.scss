@@ -10,28 +10,15 @@
 // 
 // <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span>
 //
-// At present, the component only includes the basic behavior inherited from [component](section-7.html#section-7.1).
-//
-// #### Usage
-//
-// ```
-// .test {
-//      @include egeo-c-formgroup;
-// }
-// ```
-// Will product the next result:
-// ```
-// .test {
-//      box-sizing: border-box;
-//      position: relative;
-// }
-// ```
+// At present, the component only includes the basic behavior inherited from [component](section-7.html#section-7.1)
+// with an extra to manage the margin.
 //
 // ## Variables exposed to theming
 //
-// | Variable                                              | Default value                                                        | Description                                                             |
-// | ----------------------------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-// | <span class="egeo-u-nowrap">$egeo-c-formgroup</span>  | <span class="egeo-u-nowrap">`true` </span>                           | Tells Egeo if the class egeo-c-formgroup should be included in the CSS. |
+// | Variable                    | Default value    | Description                                                             |
+// | --------------------------- | ---------------- | ----------------------------------------------------------------------- |
+// | $egeo-c-formgroup           | `true`           | Tells Egeo if the class egeo-c-formgroup should be included in the CSS. |
+// | $egeo-c-formgroup---margin  | `0 0 8px`        | Define the margins around the form group.                               |
 //
 // ## Dependencies
 //  

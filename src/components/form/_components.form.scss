@@ -11,44 +11,11 @@
 //
 // At present, the component only includes the basic behavior inherited from [component](section-7.html#section-7.1).
 //
-// #### Usage
-//
-// ```
-// .test {
-//      @include egeo-c-form;
-// }
-// ```
-// Will product the next result:
-// ```
-// .test {
-//      box-sizing: border-box;
-//      position: relative;
-// }
-// ```
-//
 // ## Variables exposed to theming
 //
 // | Variable                                              | Default value                                                        | Description                                                             |
 // | ----------------------------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 // | <span class="egeo-u-nowrap">$egeo-c-form</span>       | <span class="egeo-u-nowrap">`true` </span>                           | Tells Egeo if the class egeo-c-form should be included in the CSS.      |
-//
-// ## How to work with forms
-//
-// ```
-// <egeo-c-form id="TestForm" method="post">
-//      <egeo-c-formgroup>
-//          <label class="egeo-c-label" for="test1">test:</label><input class="egeo-c-input" type="text" id="test1">
-//      </egeo-c-formgroup>
-//      <egeo-c-input id="test2" label="test2" placeholder="put here your text" type="text"></egeo-c-input>
-// </egeo-c-form>
-// ```
-//
-// <egeo-c-form name="test" method="post">
-//      <egeo-c-formgroup>
-//          <label class="egeo-c-label" for="test1">test:</label><input class="egeo-c-input" type="text" id="test1">
-//      </egeo-c-formgroup>
-//      <egeo-c-input id="test2" label="test2" placeholder="put here your text" type="text"></egeo-c-input>
-// </egeo-c-form>
 //
 // ## Dependencies
 //  
