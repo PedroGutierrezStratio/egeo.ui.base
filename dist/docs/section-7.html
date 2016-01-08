@@ -497,47 +497,6 @@ components of the UI Kit.</p>
 &lt;span class=&quot;egeo-c-row&quot;&gt;Nam faucibus aliquam mi, sit amet eleifend libero vehicula a. Fusce efficitur posuere lacus, eu tempus dolor volutpat id.&lt;/span&gt;
 </code></pre><p><span class="egeo-c-row">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sem sem. Sed eros mi, blandit vel nulla non, sodales mollis libero.</span>
 <span class="egeo-c-row">Nam faucibus aliquam mi, sit amet eleifend libero vehicula a. Fusce efficitur posuere lacus, eu tempus dolor volutpat id.</span></p>
-<h2 id="the-egeo-c-row-angularjs-directive">The egeo-c-row AngularJS directive</h2>
-<p><span class="tag tag--type">@directive</span><span class="tag tag--untested">untested</span></p>
-<p>Egeo provides an AngularJS directive to create rows with ease. The directive is restricted
-to HTML Element and called <code>egeo-c-row</code>. The Row component is a container so it allows to use
-transclude content. Below you can see the properties exposed:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Default value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>content-at-right</td>
-<td>false</td>
-<td>If the content will be right aligned</td>
-</tr>
-<tr>
-<td>content-centered</td>
-<td>false</td>
-<td>If the content will be center aligned</td>
-</tr>
-<tr>
-<td>variant</td>
-<td>none</td>
-<td>Background colors. Now b1, b2, b3, b3_dark and b4 are set by default.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="usage">Usage</h3>
-<p>Take a look to the samples shown below to see how the properties could be used and combined to get different results:</p>
-<pre><code>&lt;egeo-c-row&gt;&lt;egeo-c-button type=&quot;submit&quot; modifier=&quot;main-1&quot; label=&quot;AngularJS Button: Click to test ({{count}})&quot; data-ng-click=&quot;count = count + 1&quot;&gt;&lt;/egeo-c-button&gt;&lt;/egeo-c-row&gt;
-&lt;egeo-c-row data-content-at-right=&quot;true&quot;&gt;&lt;egeo-c-button type=&quot;submit&quot; modifier=&quot;main-1&quot; label=&quot;AngularJS Button: Click to test ({{count}})&quot; data-ng-click=&quot;count = count + 1&quot;&gt;&lt;/egeo-c-button&gt;&lt;/egeo-c-row&gt;
-&lt;egeo-c-row data-content-centered=&quot;true&quot;&gt;&lt;egeo-c-button type=&quot;submit&quot; modifier=&quot;main-1&quot; label=&quot;AngularJS Button: Click to test ({{count}})&quot; data-ng-click=&quot;count = count + 1&quot;&gt;&lt;/egeo-c-button&gt;&lt;/egeo-c-row&gt;
-</code></pre><hr>
-<p><egeo-c-row><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row></p>
-<p><egeo-c-row data-content-at-right="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row></p>
-<p><egeo-c-row data-content-centered="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row></p>
-<hr>
 <h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
 <p>Egeo provides an AngularJS directive to create rows with ease. The directive is restricted
 to HTML Element and called <code>egeo-c-row</code>. The Row component is a container so it allows to use
@@ -552,14 +511,14 @@ transclude content. Below you can see the properties exposed:</p>
 </thead>
 <tbody>
 <tr>
-<td><div class="egeo-u-nowrap">$egeo-c-row</div></td>
+<td>$egeo-c-row</td>
 <td><code>true</code></td>
 <td>Tells Egeo if the class egeo-c-group should be included in the CSS.</td>
 </tr>
 <tr>
-<td><div class="egeo-u-nowrap">$egeo-c-row---backgrounds</div></td>
-<td><code>(&#39;b1&#39;: egeo-get-color(b1), &#39;b2&#39;: egeo-get-color(b2), &#39;b3&#39;: egeo-get-color(b3), &#39;b3_dark&#39;: egeo-get-color(b3_dark),&#39;b4&#39;: egeo-get-color(b4))</code></td>
-<td><div class="egeo-u-nowrap">Background colors. Now b1, b2, b3, b3_dark and b4 are set by default.</div></td>
+<td>$egeo-c-row---backgrounds</td>
+<td><code>(b1, b2, b3, b3_dark,b4)</code></td>
+<td>Background colors. Now b1, b2, b3, b3_dark and b4 are set by default.</td>
 </tr>
 </tbody>
 </table>
@@ -567,6 +526,7 @@ transclude content. Below you can see the properties exposed:</p>
 <ul>
 <li><a href="section-7.html#section-7.1">component</a></li>
 <li><a href="section-8.html#section-8.1">clearfix</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
 </ul>
 <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
             </div>
@@ -608,43 +568,6 @@ components of the UI Kit.</p>
      <button>Opt 2</button>
      <button>Opt 3</button>
 </span></p>
-<h2 id="the-egeo-c-toolbar-angularjs-directive">The egeo-c-toolbar AngularJS directive</h2>
-<p><span class="tag tag--type">@directive</span><span class="tag tag--untested">untested</span></p>
-<p>Egeo provides an AngularJS directive to create toolbars with ease. The directive is restricted
-to HTML Element and called <code>egeo-c-toolbar</code>. The Toolbar component is a container so it allows to use
-transclude content.  Below you can see the properties exposed:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Default value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><div class="egeo-u-tx-align--left">at-right</div></td>
-<td><div class="egeo-u-tx-align--left">false</div></td>
-<td><div class="egeo-u-tx-align--left">If the content will be right floated</div></td>
-</tr>
-</tbody>
-</table>
-<h3 id="usage">Usage</h3>
-<p>Take a look to the samples shown below to see how the properties could be used and combined to get different results:</p>
-<pre><code>&lt;egeo-c-toolbar&gt;
-  &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;main-1&quot; data-label=&quot;AngularJS Button: Click to test ({{count}})&quot; data-ng-click=&quot;count = count + 1&quot;&gt;&lt;/egeo-c-button&gt;
-  &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;main-2&quot; data-icon-left=&quot;icon-cog&quot; data-icon-right=&quot;icon-arrow2_down&quot; data-label=&quot;AngularJS Button&quot;&gt;&lt;/egeo-c-button&gt;
-  &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;main-3&quot; data-label=&quot;AngularJS Button&quot;&gt;&lt;/egeo-c-button&gt;
-  &lt;egeo-c-button data-type=&quot;submit&quot; data-modifier=&quot;tool-ellipsis&quot; data-rounded=&quot;true&quot; data-icon-left=&quot;icon-waiting&quot;&gt;&lt;/egeo-c-button&gt;
-&lt;/egeo-c-toolbar&gt;
-</code></pre><hr>
-<p><egeo-c-toolbar>
-  <egeo-c-button data-type="submit" data-modifier="main-1" data-label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button>
-  <egeo-c-button data-type="submit" data-modifier="main-2" data-icon-left="icon-cog" data-icon-right="icon-arrow2_down" data-label="AngularJS Button"></egeo-c-button>
-  <egeo-c-button data-type="submit" data-modifier="main-3" data-label="AngularJS Button"></egeo-c-button>
-  <egeo-c-button data-type="submit" data-modifier="tool-ellipsis" data-rounded="true" data-icon-left="icon-waiting"></egeo-c-button>
-</egeo-c-toolbar></p>
-<hr>
 <h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
 <table>
 <thead>
@@ -656,19 +579,19 @@ transclude content.  Below you can see the properties exposed:</p>
 </thead>
 <tbody>
 <tr>
-<td><span class="egeo-u-nowrap">$egeo-c-toolbar</span></td>
-<td><span class="egeo-u-nowrap"><code>true</code> </span></td>
+<td>$egeo-c-toolbar</td>
+<td><code>true</code></td>
 <td>Tells Egeo if the class egeo-c-toolbar should be included in the CSS.</td>
 </tr>
 <tr>
-<td><span class="egeo-u-nowrap">$egeo-c-toolbar---margin</span></td>
-<td><span class="egeo-u-nowrap"><code>0 0 0 8px</code> </span></td>
-<td>Set the margin by default for the whole items in the toolbar.</td>
+<td>$egeo-c-toolbar---margin</td>
+<td><code>0 0 0 8px</code></td>
+<td>Define the margin by default for the whole items in the toolbar.</td>
 </tr>
 <tr>
-<td><span class="egeo-u-nowrap">$egeo-c-toolbar--first-child---margin</span></td>
-<td><span class="egeo-u-nowrap"><code>0</code> </span></td>
-<td>Set the margin by default for the first element in the toolbar (typically zero).</td>
+<td>$egeo-c-toolbar--first-child---margin</td>
+<td><code>0</code></td>
+<td>Define the margin by default for the first element in the toolbar (typically zero).</td>
 </tr>
 </tbody>
 </table>

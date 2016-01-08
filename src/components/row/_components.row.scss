@@ -43,52 +43,22 @@
 // <span class="egeo-c-row">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sem sem. Sed eros mi, blandit vel nulla non, sodales mollis libero.</span>
 // <span class="egeo-c-row">Nam faucibus aliquam mi, sit amet eleifend libero vehicula a. Fusce efficitur posuere lacus, eu tempus dolor volutpat id.</span>
 //
-// ## The egeo-c-row AngularJS directive
-//
-// <span class="tag tag--type">@directive</span><span class="tag tag--untested">untested</span>
-//
-// Egeo provides an AngularJS directive to create rows with ease. The directive is restricted
-// to HTML Element and called `egeo-c-row`. The Row component is a container so it allows to use
-// transclude content. Below you can see the properties exposed:
-//
-// | Property                                                   | Default value                                  | Description                                                                                                      |
-// | ---------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-// | content-at-right  | false | If the content will be right aligned                                    |
-// | content-centered  | false | If the content will be center aligned                                   |
-// | variant           | none  | Background colors. Now b1, b2, b3, b3_dark and b4 are set by default.   |
-//
-// ### Usage
-//
-// Take a look to the samples shown below to see how the properties could be used and combined to get different results:
-//
-// ```
-// <egeo-c-row><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
-// <egeo-c-row data-content-at-right="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
-// <egeo-c-row data-content-centered="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
-// ```
-//
-// ---
-// <egeo-c-row><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
-// <egeo-c-row data-content-at-right="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
-// <egeo-c-row data-content-centered="true"><egeo-c-button type="submit" modifier="main-1" label="AngularJS Button: Click to test ({{count}})" data-ng-click="count = count + 1"></egeo-c-button></egeo-c-row>
-//
-// ---
-//
 // ## Variables exposed to theming
 //
 // Egeo provides an AngularJS directive to create rows with ease. The directive is restricted
 // to HTML Element and called `egeo-c-row`. The Row component is a container so it allows to use
 // transclude content. Below you can see the properties exposed:
 //
-// | Property                                                           | Default value                                                                                                                                  | Description                                                                                              |
-// | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-// | <div class="egeo-u-nowrap">$egeo-c-row</div>                       | `true`                                                                                                                                         | Tells Egeo if the class egeo-c-group should be included in the CSS.                                      |
-// | <div class="egeo-u-nowrap">$egeo-c-row---backgrounds</div>         | `('b1': egeo-get-color(b1), 'b2': egeo-get-color(b2), 'b3': egeo-get-color(b3), 'b3_dark': egeo-get-color(b3_dark),'b4': egeo-get-color(b4))`  | <div class="egeo-u-nowrap">Background colors. Now b1, b2, b3, b3_dark and b4 are set by default.</div>   |
+// | Property                          | Default value               | Description                                                             |
+// | --------------------------------- | --------------------------- | ----------------------------------------------------------------------- |
+// | $egeo-c-row                       | `true`                      | Tells Egeo if the class egeo-c-group should be included in the CSS.     |
+// | $egeo-c-row---backgrounds         | `(b1, b2, b3, b3_dark,b4)`  | Background colors. Now b1, b2, b3, b3_dark and b4 are set by default.   |
 //
 // ## Dependencies
 //  
 // * [component](section-7.html#section-7.1)
 // * [clearfix](section-8.html#section-8.1)
+// * [tools.colors](section-3.html#section-3.1)
 //
 // <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
 //
