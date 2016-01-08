@@ -27,13 +27,19 @@
 //
 // ## Variables exposed to theming
 //
-// | Variable                                              | Default value                                | Description                                                           |
-// | ----------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
-// | <span class="egeo-u-nowrap">$egeo-c-message</span>    | <span class="egeo-u-nowrap">`true` </span>   | Tells Egeo if the class egeo-c-message should be included in the CSS. |
+// | Variable                       | Default value     | Description                                                           |
+// | ------------------------------ | ----------------- | --------------------------------------------------------------------- |
+// | $egeo-c-message                | `true`            | Tells Egeo if the class egeo-c-message should be included in the CSS. |
+// | $egeo-c-message---padding      | `.5em`            | Define the padding of the message.                                    |
+// | $egeo-c-message---font-size    | `12px`            | Define the font size of the message text.                             |
+// | $egeo-c-messages--custom       | Sass map          | Define custom messages which will be joined to the default ones.      |
+// | $egeo-c-messages               | Sass map          | (restriction, warn, error)                                            |
 //
 // ## Dependencies
 //  
 // * [component](section-7.html#section-7.1)
+// * [tools.colors](section-3.html#section-3.1)
+// * [tools.log](section-3.html#section-3.3)
 //
 // <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
 //

@@ -355,6 +355,7 @@ only thing you have to do is not including in the map and it will not be renderi
 <li><a href="section-7.html#section-7.1">components.component</a></li>
 <li><a href="section-3.html#section-3.1">tools.colors</a></li>
 <li><a href="section-3.html#section-3.2">tools.typography</a></li>
+<li><a href="section-3.html#section-3.3">tools.log</a></li>
 <li><a href="section-8.html#section-8.3">utils.floats</a> - <em>only if you want to float your buttons</em>.</li>
 </ul>
 
@@ -431,15 +432,37 @@ all Messages in an Egeo app.</p>
 </thead>
 <tbody>
 <tr>
-<td><span class="egeo-u-nowrap">$egeo-c-message</span></td>
-<td><span class="egeo-u-nowrap"><code>true</code> </span></td>
+<td>$egeo-c-message</td>
+<td><code>true</code></td>
 <td>Tells Egeo if the class egeo-c-message should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-message---padding</td>
+<td><code>.5em</code></td>
+<td>Define the padding of the message.</td>
+</tr>
+<tr>
+<td>$egeo-c-message---font-size</td>
+<td><code>12px</code></td>
+<td>Define the font size of the message text.</td>
+</tr>
+<tr>
+<td>$egeo-c-messages--custom</td>
+<td>Sass map</td>
+<td>Define custom messages which will be joined to the default ones.</td>
+</tr>
+<tr>
+<td>$egeo-c-messages</td>
+<td>Sass map</td>
+<td>(restriction, warn, error)</td>
 </tr>
 </tbody>
 </table>
 <h2 id="dependencies">Dependencies</h2>
 <ul>
 <li><a href="section-7.html#section-7.1">component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.3">tools.log</a></li>
 </ul>
 <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
             </div>
