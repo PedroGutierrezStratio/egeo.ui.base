@@ -35,14 +35,12 @@
               <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Components</span></a></li>
               <li class="kss-menu-item"><a href="section-8.html"><span class="kss-ref">8</span><span class="kss-name">Utils</span></a></li>
               <li class="kss-menu-item"><a href="section-9.html"><span class="kss-ref">9</span><span class="kss-name">Theming</span></a></li>
-              <li class="kss-menu-item"><a href="section-10.html"><span class="kss-ref">10</span><span class="kss-name">Providers</span></a></li>
-              <li class="kss-menu-item"><a href="section-11.html"><span class="kss-ref">11</span><span class="kss-name">Factories</span></a></li>
             </ul>
             <ul class="kss-menu-child">
               <li class="kss-menu-item"><a href="#section-7.1"><span class="kss-ref">7.1</span><span class="kss-name">Component</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.2"><span class="kss-ref">7.2</span><span class="kss-name">Button</span></a></li>
-              <li class="kss-menu-item"><a href="#section-7.3"><span class="kss-ref">7.3</span><span class="kss-name">Icon</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.3"><span class="kss-ref">7.3</span><span class="kss-name">Message</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.3"><span class="kss-ref">7.3</span><span class="kss-name">Icon</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.4"><span class="kss-ref">7.4</span><span class="kss-name">Row</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.5"><span class="kss-ref">7.5</span><span class="kss-name">Toolbar</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.6"><span class="kss-ref">7.6</span><span class="kss-name">Dropdown</span></a></li>
@@ -65,7 +63,14 @@
           <section id="section-7" class="kss-section kss-depth-1">
             <h1 class="kss-title"><span class="kss-ref">7</span> Components</h1>
             <div class="kss-description">
-              <p>To do</p>
+              <p>The components are the core of the CSS Base Framework. But, What is a component?
+An UI Component is all element that can be re-used and provides a defined UI to
+be shown in a webapp. A sample of components could be an Input Text Box, a Checkbox,
+ a Menu Item or a Carousel.</p>
+<p>Don&#39;t mind the complexity, the size or the skins of the component. A component
+may be formed, in turn, by other smaller components and, in fact, this is the
+ideal and the concept behind this architecture to rise the reusability to the
+maximum.</p>
 
             </div>
           </section>
@@ -362,49 +367,6 @@ only thing you have to do is not including in the map and it will not be renderi
             </div>
           </section>
           <section id="section-7.3" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">7.3</span> Icon</h1>
-            <div class="kss-description">
-              <p><span class="tag tag--tested">tested</span></p>
-<p>The Icon Component is a class to group common styles and behaviors to
-all icons in an Egeo app.</p>
-<h3 id="egeo-c-icon">egeo-c-icon</h3>
-<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
-<p>Injects the general behavior and properties of the class Icon to other
-components of the UI Kit.</p>
-<p><strong>Note</strong>: The Icon component triggers styles in other components if is active.</p>
-<h4 id="usage">Usage</h4>
-<pre><code>.test {
-        @include egeo-c-icon;
-}
-</code></pre><p>Will product the next result:</p>
-<pre><code>.test {
-        box-sizing: border-box;
-}
-</code></pre><h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Default value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$egeo-c-icon</td>
-<td><code>true</code></td>
-<td>Tells Egeo if the class egeo-c-icon should be included in the CSS.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-<li><a href="section-7.html#section-7.1">components.component</a></li>
-</ul>
-<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
-            </div>
-          </section>
-          <section id="section-7.3" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">7.3</span> Message</h1>
             <div class="kss-description">
               <p><span class="tag tag--untested">untested</span><span class="tag tag--danger">in progress</span><span class="tag tag--danger">internal</span></p>
@@ -463,6 +425,49 @@ all Messages in an Egeo app.</p>
 <li><a href="section-7.html#section-7.1">component</a></li>
 <li><a href="section-3.html#section-3.1">tools.colors</a></li>
 <li><a href="section-3.html#section-3.3">tools.log</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.3</span> Icon</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--tested">tested</span></p>
+<p>The Icon Component is a class to group common styles and behaviors to
+all icons in an Egeo app.</p>
+<h3 id="egeo-c-icon">egeo-c-icon</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Injects the general behavior and properties of the class Icon to other
+components of the UI Kit.</p>
+<p><strong>Note</strong>: The Icon component triggers styles in other components if is active.</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+        @include egeo-c-icon;
+}
+</code></pre><p>Will product the next result:</p>
+<pre><code>.test {
+        box-sizing: border-box;
+}
+</code></pre><h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-icon</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-icon should be included in the CSS.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
 </ul>
 <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
             </div>
