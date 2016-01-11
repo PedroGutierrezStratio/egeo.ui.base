@@ -47,45 +47,38 @@ The Base Framework is a set of Sass libraries designed to be included in other p
 
 There are three tasks we can launch from the command line to work with the project.
 
-### sass-dist
+### dist
 
 ```
-npm run-script sass-dist
+npm run-script dist
 ```
 
 This command compiles the framework and creates a distribution with all files needed. The distribution will be set in the *dist* folder and will include the whole assets needed as well as the Sass files to be imported in the final projects and a minified version of the CSS generated.
 
-### sass-dev
+### dev
 
 ```
-npm run-script sass-dev
+npm run-script dev
 ```
 
-This command works almost equal the sass-dist one except because the CSS file is created in an expanded format to check easily if errors occurred.
+This command works almost equal the dist one except because the CSS file is created in an expanded format to check easily if errors occurred.
 
-### sass-watch
+### watch
 
 ```
-npm run-script sass-watch
+npm run-script watch
 ```
 
 This command creates a watcher that launches the sass-dev task every time a Sass file changes.
 
-## How to test
+### How to test
 
-The Base Framework includes a couple of commands to test the Sass and Javascript and to generate a report about code coverage.
+The Kit includes a command to test the Sass code. Egeo uses [Sass-True](https://github.com/oddbird/true) by [Miriam Eric Suzanne](http://www.miriamsuzanne.com/) and [Mocha](https://mochajs.org/) as unit testing framework.
 
-The command below will launch the Sass suite of tests:
-```
-npm run-script sass-test
-```
+The command below will launch the suite of tests:
 
-The command below will launch the Javascript suite of tests:
-```
-npm run-script js-test
-```
-
-The command below will launch the both suite of tests, Javascript and Sass, and will generate the code coverage report about the Javascript code:
 ```
 npm run-script test
 ```
+
+This command launches the suit of unit tests to test the Sass code.
