@@ -39,7 +39,6 @@
             <ul class="kss-menu-child">
               <li class="kss-menu-item"><a href="#section-7.1"><span class="kss-ref">7.1</span><span class="kss-name">Component</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.2"><span class="kss-ref">7.2</span><span class="kss-name">Button</span></a></li>
-              <li class="kss-menu-item"><a href="#section-7.3"><span class="kss-ref">7.3</span><span class="kss-name">Message</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.3"><span class="kss-ref">7.3</span><span class="kss-name">Icon</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.4"><span class="kss-ref">7.4</span><span class="kss-name">Row</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.5"><span class="kss-ref">7.5</span><span class="kss-name">Toolbar</span></a></li>
@@ -54,6 +53,7 @@
               <li class="kss-menu-item"><a href="#section-7.14"><span class="kss-ref">7.14</span><span class="kss-name">Label</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.15"><span class="kss-ref">7.15</span><span class="kss-name">Checkbox</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.16"><span class="kss-ref">7.16</span><span class="kss-name">Helpbox</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.17"><span class="kss-ref">7.17</span><span class="kss-name">Message</span></a></li>
             </ul>
           </nav>
         </div>
@@ -364,69 +364,6 @@ only thing you have to do is not including in the map and it will not be renderi
 <li><a href="section-8.html#section-8.3">utils.floats</a> - <em>only if you want to float your buttons</em>.</li>
 </ul>
 
-            </div>
-          </section>
-          <section id="section-7.3" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">7.3</span> Message</h1>
-            <div class="kss-description">
-              <p><span class="tag tag--untested">untested</span><span class="tag tag--danger">in progress</span><span class="tag tag--danger">internal</span></p>
-<p>The Message Component is a class to group common styles and behaviors to
-all Messages in an Egeo app.</p>
-<h3 id="egeo-c-message">egeo-c-message</h3>
-<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
-<p>Injects the general behavior and properties of the class Message.</p>
-<h4 id="usage">Usage</h4>
-<pre><code>.test {
-        @include egeo-c-message;
-}
-</code></pre><p>Will product the next result:</p>
-<pre><code>.test {
-        box-sizing: border-box;
-}
-</code></pre><h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Default value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$egeo-c-message</td>
-<td><code>true</code></td>
-<td>Tells Egeo if the class egeo-c-message should be included in the CSS.</td>
-</tr>
-<tr>
-<td>$egeo-c-message---padding</td>
-<td><code>.5em</code></td>
-<td>Define the padding of the message.</td>
-</tr>
-<tr>
-<td>$egeo-c-message---font-size</td>
-<td><code>12px</code></td>
-<td>Define the font size of the message text.</td>
-</tr>
-<tr>
-<td>$egeo-c-messages--custom</td>
-<td>Sass map</td>
-<td>Define custom messages which will be joined to the default ones.</td>
-</tr>
-<tr>
-<td>$egeo-c-messages</td>
-<td>Sass map</td>
-<td>(restriction, warn, error)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-<li><a href="section-7.html#section-7.1">component</a></li>
-<li><a href="section-3.html#section-3.1">tools.colors</a></li>
-<li><a href="section-3.html#section-3.3">tools.log</a></li>
-</ul>
-<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
             </div>
           </section>
           <section id="section-7.3" class="kss-section kss-depth-2">
@@ -1228,6 +1165,69 @@ HTML input checkbox tag.</p>
 <li><a href="section-7.html#section-7.1">components.component</a></li>
 <li><a href="section-3.html#section-3.1">tools.colors</a></li>
 <li><a href="section-3.html#section-3.4">tools.layers</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.17" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.17</span> Message</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--danger">in progress</span><span class="tag tag--danger">internal</span></p>
+<p>The Message Component is a class to group common styles and behaviors to
+all Messages in an Egeo app.</p>
+<h3 id="egeo-c-message">egeo-c-message</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>Injects the general behavior and properties of the class Message.</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+        @include egeo-c-message;
+}
+</code></pre><p>Will product the next result:</p>
+<pre><code>.test {
+        box-sizing: border-box;
+}
+</code></pre><h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-message</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-message should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-message---padding</td>
+<td><code>.5em</code></td>
+<td>Define the padding of the message.</td>
+</tr>
+<tr>
+<td>$egeo-c-message---font-size</td>
+<td><code>12px</code></td>
+<td>Define the font size of the message text.</td>
+</tr>
+<tr>
+<td>$egeo-c-messages--custom</td>
+<td>Sass map</td>
+<td>Define custom messages which will be joined to the default ones.</td>
+</tr>
+<tr>
+<td>$egeo-c-messages</td>
+<td>Sass map</td>
+<td>(restriction, warn, error)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.3">tools.log</a></li>
 </ul>
 <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
             </div>
