@@ -156,6 +156,9 @@
 <p>Egeo is built around the modularization principle so depending of the items you need to work with, you would need to load different packages and load differente archives in your code.</p>
 <p>The main of all of them is the Egeo Base Framework which is the foundation of the rest of the components. This package is always mandatory to be included (and, at this moment, is the only one).</p>
 <p>Install the Base Framework to begin to work with Egeo following the installation instructions included in <a href="https://github.com/Stratio/egeo.ui.base">its Github repository</a>.</p>
+<h2 id="note-about-efficiency">Note about efficiency</h2>
+<p>Egeo is designed keeping in mind that the server in such it will be installed is gzipped. So, the Sass code is based in the use of @mixins over @extends due to is better in terms of code control (not alter the order of the CSS, can decide where insert @mixin the code, etc.) and avoid @extend nightmare problem. When not gzipped @extend code is smaller than the @mixin one due to the repetition of the same lines of code. However, when gzipped, this problem dissapears because gzipped works well with repeated lines so the final CSS code will be smaller than the @extend one.</p>
+<p>Regardless of it, the CSS code is served minified.</p>
 <h3 id="example">Example</h3>
 <p>Create a simple AngularJS app with the two dependencies we currently have in the framework; the EgeoConfigProvider to config the path where Egeo files are deployed and the egeo-c-button directive. Change the <code>public/js/egeo</code> by your own path in the line 11:</p>
 <pre><code>(function() {

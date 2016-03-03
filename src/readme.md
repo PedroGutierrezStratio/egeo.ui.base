@@ -45,6 +45,12 @@ The main of all of them is the Egeo Base Framework which is the foundation of th
 
 Install the Base Framework to begin to work with Egeo following the installation instructions included in [its Github repository](https://github.com/Stratio/egeo.ui.base).
 
+## Note about efficiency
+
+Egeo is designed keeping in mind that the server in such it will be installed is gzipped. So, the Sass code is based in the use of @mixins over @extends due to is better in terms of code control (not alter the order of the CSS, can decide where insert @mixin the code, etc.) and avoid @extend nightmare problem. When not gzipped @extend code is smaller than the @mixin one due to the repetition of the same lines of code. However, when gzipped, this problem dissapears because gzipped works well with repeated lines so the final CSS code will be smaller than the @extend one.
+
+Regardless of it, the CSS code is served minified.
+
 ### Example
 
 Create a simple AngularJS app with the two dependencies we currently have in the framework; the EgeoConfigProvider to config the path where Egeo files are deployed and the egeo-c-button directive. Change the `public/js/egeo` by your own path in the line 11:
