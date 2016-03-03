@@ -7,8 +7,7 @@
     "watch": "grunt watch",
     "dev": "grunt dev",
     "dist": "grunt dist",
-    "test": "mocha tests/test-sass.js",
-    "auto-test": "mocha tests/test-sass.js && exit 0"
+    "test": "mocha tests/test-sass.js"
   },
   "author": "Alex R Chies (alejandrorodriguez@stratio.com)",
   "license": "ISC",
