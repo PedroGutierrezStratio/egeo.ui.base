@@ -1,0 +1,13 @@
+$this: '#{$egeo-namespace}c-radiobutton';
+
+@mixin egeo-c-radiobutton {
+    @include egeo-c-checkbox;
+}
+
+@if variable-exists(egeo-c-radiobutton) {
+    @if $egeo-c-radiobutton {
+        .#{$this} {
+            @include egeo-c-radiobutton;
+        }
+    }
+}
