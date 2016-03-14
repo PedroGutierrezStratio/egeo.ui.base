@@ -1,0 +1,16 @@
+$this: '#{$egeo-namespace}c-header';
+
+@mixin egeo-c-header {
+    @include egeo-c-component;
+
+    @if $egeo-c-header--background { background: $egeo-c-header--background; }
+    @if $egeo-c-header--padding { padding: $egeo-c-header--padding; }
+}
+
+@if variable-exists(egeo-c-header) {
+    @if $egeo-c-header {
+        .#{$this} {
+            @include egeo-c-header;
+        }
+    }
+}
