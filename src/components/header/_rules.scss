@@ -31,26 +31,27 @@ $this: '#{$egeo-namespace}c-header';
 
             &__label {
                 @if $egeo-c-header__menu-item---color { color: $egeo-c-header__menu-item---color; }
+                @if $egeo-c-header__menu-item__label---font-family { font-family: $egeo-c-header__menu-item__label---font-family; }
+                @if $egeo-c-header__menu-item__label---text-transform { text-transform: $egeo-c-header__menu-item__label---text-transform; }
             }
 
             .egeo-c-icon + &__label {
-                color: $egeo-c-header__menu-item---color;
-                font-family: $egeo-c-header__menu-item__label---font-family;
-                margin: $egeo-c-header__menu-item__label---margin;
-                text-transform: $egeo-c-header__menu-item__label---text-transform;
+                @if $egeo-c-header__menu-item__label---margin { margin: $egeo-c-header__menu-item__label---margin; }
             }
 
-            $temp: '#{&}';
+            @if $egeo-c-header__menu-item--hover---color {
+                $temp: '#{&}';
 
-            &:hover,
-            &--active {
-                @if $egeo-c-header__menu-item--hover---color {
-                    color: $egeo-c-header__menu-item--hover---color;
-
-                    & #{$temp}__label {
+                &:hover,
+                &--active {
+                    @if $egeo-c-header__menu-item--hover---color {
                         color: $egeo-c-header__menu-item--hover---color;
+
+                        & #{$temp}__label {
+                            color: $egeo-c-header__menu-item--hover---color;
+                        }
                     }
-                }
+                }                
             }
         }
     }
