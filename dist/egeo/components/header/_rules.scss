@@ -5,6 +5,35 @@ $this: '#{$egeo-namespace}c-header';
 
     @if $egeo-c-header--background { background: $egeo-c-header--background; }
     @if $egeo-c-header--padding { padding: $egeo-c-header--padding; }
+
+    &__logo {
+        display: inline-block;
+    }
+
+    &__nav {
+        display: inline-block;
+    }
+
+    &__menu {
+        list-style: none;
+        margin: $egeo-c-header__menu--margin;
+        padding: 0;
+
+        &-item {
+            color: $egeo-c-header__menu-item--color;
+            cursor: pointer;
+            display: inline-block;
+            margin: $egeo-c-header__menu-item--margin;
+
+            &:first-child {
+                margin: 0;
+            }
+
+            &__label {
+                color: $egeo-c-header__menu-item--color;
+            }
+        }
+    }
 }
 
 @if variable-exists(egeo-c-header) {
