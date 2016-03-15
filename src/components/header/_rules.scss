@@ -3,8 +3,8 @@ $this: '#{$egeo-namespace}c-header';
 @mixin egeo-c-header {
     @include egeo-c-component;
 
-    @if $egeo-c-header--background { background: $egeo-c-header--background; }
-    @if $egeo-c-header--padding { padding: $egeo-c-header--padding; }
+    @if $egeo-c-header---background { background: $egeo-c-header---background; }
+    @if $egeo-c-header---padding { padding: $egeo-c-header---padding; }
 
     &__logo {
         display: inline-block;
@@ -16,25 +16,39 @@ $this: '#{$egeo-namespace}c-header';
 
     &__menu {
         list-style: none;
-        margin: $egeo-c-header__menu--margin;
+        @if $egeo-c-header__menu---margin { margin: $egeo-c-header__menu---margin; }
         padding: 0;
 
         &-item {
-            color: $egeo-c-header__menu-item--color;
+            @if $egeo-c-header__menu-item---color { color: $egeo-c-header__menu-item---color; }
             cursor: pointer;
             display: inline-block;
-            margin: $egeo-c-header__menu-item--margin;
+            @if $egeo-c-header__menu-item---margin { margin: $egeo-c-header__menu-item---margin; }
 
             &:first-child {
                 margin: 0;
             }
 
             &__label {
-                color: $egeo-c-header__menu-item--color;
+                @if $egeo-c-header__menu-item---color { color: $egeo-c-header__menu-item---color; }
             }
 
             .egeo-c-icon + &__label {
-                margin-left: 10px;
+                color: $egeo-c-header__menu-item---color;
+                font-family: $egeo-c-header__menu-item__label---font-family;
+                margin: $egeo-c-header__menu-item__label---margin;
+                text-transform: $egeo-c-header__menu-item__label---text-transform;
+            }
+
+            &:hover,
+            &--active {
+                @if $egeo-c-header__menu-item--hover---color {
+                    color: $egeo-c-header__menu-item--hover---color;
+
+                    &__label {
+                        color: $egeo-c-header__menu-item--hover---color;
+                    }
+                }
             }
         }
     }

@@ -5,13 +5,17 @@
     $egeo-c-header: true !default;
 }
 
-$egeo-c-header--background: egeo-get-color(n10) !default;
-$egeo-c-header--padding: 30px 30px 20px !default;
+$egeo-c-header---background: egeo-get-color(n10) !default;
+$egeo-c-header---padding: 30px 30px 20px !default;
 
-$egeo-c-header__menu--margin: 0 0 0 15px !default;
+$egeo-c-header__menu---margin: 0 0 0 15px !default;
 
-$egeo-c-header__menu-item--color: egeo-get-color(n0) !default;
-$egeo-c-header__menu-item--margin: 0 0 0 15px !default;
+$egeo-c-header__menu-item---color: egeo-get-color(n6) !default;
+$egeo-c-header__menu-item---margin: 0 0 0 15px !default;
 
-$egeo-c-header__menu-item__label--color: egeo-get-color(n6) !default;
-$egeo-c-header__menu-item__label--margin: 0 0 0 10px !default;
+$egeo-c-header__menu-item__label---color: egeo-get-color(n6) !default;
+$egeo-c-header__menu-item__label---font-family: egeo-get-font(brandon-grotesque) !default;
+$egeo-c-header__menu-item__label---margin: 0 0 0 5px !default;
+$egeo-c-header__menu-item__label---text-transform: uppercase !default;
+
+$egeo-c-header__menu-item--hover---color: egeo-get-color(n0) !default;
