@@ -32,7 +32,13 @@ $this: '#{$egeo-namespace}c-header';
             &__label {
                 @if $egeo-c-header__menu-item---color { color: $egeo-c-header__menu-item---color; }
                 @if $egeo-c-header__menu-item__label---font-family { font-family: $egeo-c-header__menu-item__label---font-family; }
+                @if $egeo-c-header__menu-item__label---font-size { font-size: $egeo-c-header__menu-item__label---font-size; }
+                @if $egeo-c-header__menu-item__label---letter-spacing { font-size: $egeo-c-header__menu-item__label---letter-spacing; }
                 @if $egeo-c-header__menu-item__label---text-transform { text-transform: $egeo-c-header__menu-item__label---text-transform; }
+            }
+
+            &__icon {
+                @if $egeo-c-header__menu-item__icon---font-size { font-size: $egeo-c-header__menu-item__icon---font-size; }
             }
 
             .egeo-c-icon + &__label {
@@ -51,7 +57,7 @@ $this: '#{$egeo-namespace}c-header';
                             color: $egeo-c-header__menu-item--hover---color;
                         }
                     }
-                }                
+                }
             }
         }
     }
