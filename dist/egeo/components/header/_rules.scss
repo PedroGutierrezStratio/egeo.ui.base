@@ -40,12 +40,14 @@ $this: '#{$egeo-namespace}c-header';
                 text-transform: $egeo-c-header__menu-item__label---text-transform;
             }
 
+            $temp: '#{&}';
+
             &:hover,
             &--active {
                 @if $egeo-c-header__menu-item--hover---color {
                     color: $egeo-c-header__menu-item--hover---color;
 
-                    &__label {
+                    & #{$temp}__label {
                         color: $egeo-c-header__menu-item--hover---color;
                     }
                 }
