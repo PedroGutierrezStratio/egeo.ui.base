@@ -32,6 +32,10 @@ $this: '#{$egeo-namespace}c-header';
             &__label {
                 color: $egeo-c-header__menu-item--color;
             }
+
+            .egeo-c-icon + &__label {
+                margin-left: 10px;
+            }
         }
     }
 }
