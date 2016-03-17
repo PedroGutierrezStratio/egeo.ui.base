@@ -24,6 +24,7 @@ $this: '#{$egeo-namespace}c-header';
             cursor: pointer;
             display: inline-block;
             @if $egeo-c-header__menu-item---margin { margin: $egeo-c-header__menu-item---margin; }
+            position: relative;
 
             &:first-child {
                 margin: 0;
