@@ -6,6 +6,17 @@ $this: '#{$egeo-namespace}c-header';
     @if $egeo-c-header---background { background: $egeo-c-header---background; }
     @if $egeo-c-header---padding { padding: $egeo-c-header---padding; }
 
+    &:before {
+        background: egeo-get-color(a3);
+        content: ' ';
+        display: block;
+        height: 5px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
     &__logo {
         display: inline-block;
     }
@@ -60,6 +71,33 @@ $this: '#{$egeo-namespace}c-header';
                     }
                 }
             }
+        }
+    }
+
+    &__note {
+        @if $egeo-c-header__note---background { background: $egeo-c-header__note---background; }
+        @if $egeo-c-header__note---bottom { bottom: $egeo-c-header__note---bottom; }
+        display: inline-block;
+        @if $egeo-c-header__note---right { right: $egeo-c-header__note---right; }
+        @if $egeo-c-header__note---padding { padding: $egeo-c-header__note---padding; }
+        position: absolute;
+
+        @if $egeo-c-header__note__link---color {
+            &__link {
+                color: $egeo-c-header__note__link---color;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .egeo-c-icon + &__label {
+            margin-left: 5px;
+        }
+
+        &__label + .egeo-c-icon {
+            margin-right: 25px;
         }
     }
 }
