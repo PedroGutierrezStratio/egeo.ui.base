@@ -1,0 +1,36 @@
+$this: '#{$egeo-namespace}c-user-dropdown';
+
+@mixin egeo-c-user-dropdown {
+    @include egeo-c-component;
+
+    cursor: pointer;
+    display: inline-block;
+
+    .egeo-c-icon,
+    &__label {
+        color: egeo-get-color(n0);
+        display: inline-block;
+        font-size: egeo-get-font-size(head_xxxsmall);
+    }
+
+    .egeo-c-icon + &__label {
+        margin-left: 5px;
+    }
+
+    &:after {
+        color: egeo-get-color(n7);
+        content: '\e63f';
+        display: inline-block;
+        font-family: egeo-get-font(icon);
+        font-size: egeo-get-font-size(head_xxxsmall);
+        margin-left: 10px;
+    }
+}
+
+@if variable-exists(egeo-c-user-dropdown) {
+    @if $egeo-c-user-dropdown {
+        .#{$this} {
+            @include egeo-c-user-dropdown;
+        }
+    }
+}
