@@ -55,7 +55,12 @@ $this: '#{$egeo-namespace}c-header';
             &:first-child {
                 margin-left: 15px;
             }
+            
+            &__icon {
+                color: egeo-get-color(n0);
+            }
         }
+
     }
 
     &__app-dropdown {
