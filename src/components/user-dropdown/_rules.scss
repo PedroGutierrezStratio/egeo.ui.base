@@ -5,6 +5,7 @@ $this: '#{$egeo-namespace}c-user-dropdown';
 
     cursor: pointer;
     display: inline-block;
+    user-select: none;
 
     .egeo-c-icon,
     &__label {

@@ -1,0 +1,39 @@
+$this: '#{$egeo-namespace}c-dropdown-box';
+
+@mixin egeo-c-dropdown-box {
+    @include egeo-c-component;
+
+    background: egeo-get-color(a3);
+    font-size: egeo-get-font-size(head_xxxsmall);
+    list-style: none;
+    margin: 0 0 0 -5px;
+    min-width: 130px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: egeo-get-layer(top-1);
+
+    &-item {
+        cursor: pointer;
+        padding: 5px 15px;
+
+        &:hover {
+            background: egeo-get-color(a3_dark);
+        }
+
+        &__icon {
+            font-size: egeo-get-font-size(head_xxxsmall);
+        }
+
+        &__icon + &__label {
+            margin-left: 5px;
+        }
+    }
+}
+
+@if variable-exists(egeo-c-dropdown-box) {
+    @if $egeo-c-dropdown-box {
+        .#{$this} {
+            @include egeo-c-dropdown-box;
+        }
+    }
+}
