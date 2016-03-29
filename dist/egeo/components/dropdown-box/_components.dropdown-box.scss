@@ -1,30 +1,43 @@
-// Badge
+// Dropdown Box
 //
 // <span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span>
 //
-// soon
+// The dropdown-box component creates a dropdown list specifically designed
+// to work with other components like the user-dropdown or the app-dropdown.
 //
-// ### egeo-c-badge
+// ### egeo-c-dropdown-box
 //
 // <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span>
 //
-// soon
+// Returns the whole styles to create a dropdown-box to be extended in another CSS class
+// not implemented by this framework.
 //
 // ## Variables exposed to theming
 //
-// | Variable                               | Default value                              | Description                                                                                                              |
-// | -------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-// | $egeo-c-badge                          | `true`                                     | Tells Egeo if the class egeo-c-badge should be included in the CSS.                                                      |
+// | Variable                                       | Default value                              | Description                                                                                                    |
+// | ---------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+// | $egeo-c-dropdown-box                           | `true`                                     | Tells Egeo if the class egeo-c-dropdown-box should be included in the CSS.                                     |
+// | $egeo-c-dropdown-box---background              | `egeo-get-color(a3)`                       | The background of the box.                                                                                     |
+// | $egeo-c-dropdown-box---font-size               | `egeo-get-font-size(head_xxxsmall)`        | The font-size of the box items.                                                                                |
+// | $egeo-c-dropdown-box---margin                  | `0 0 0 -5px`                               | The margin around the box.                                                                                     |
+// | $egeo-c-dropdown-box---min-width               | `130px`                                    | The min-width the box should have.                                                                             |
+// | $egeo-c-dropdown-box---padding                 | `5px 0`                                    | The padding inside the box.                                                                                    |
+// | $egeo-c-dropdown-box---z-index                 | `egeo-get-layer(top-1)`                    | The z-index of the box.                                                                                        |
+// | $egeo-c-dropdown-box-item---padding            | `5px 15px`                                 | The padding inside each item of the box.                                                                       |
+// | $egeo-c-dropdown-box-item--hover---background  | `egeo-get-color(a3_dark)`                  | The background of each item of the box when mouse hover.                                                       |
+// | $egeo-c-dropdown-box-item__icon---font-size    | `egeo-get-font-size(head_xxxsmall)`        | The font-size of each item of the box.                                                                         |
+// | $egeo-c-dropdown-box-item__label---margin      | `0 0 0 5px`                                | The margin in the label inside of each item of the box (useful, for examplo, to separate if has icon at left). |
 //
 // ## Dependencies
 //
 // * [components.component](section-7.html#section-7.1)
 // * [tools.colors](section-3.html#section-3.1)
 // * [tools.typography](section-3.html#section-3.2)
+// * [tools.layers](section-3.html#section-3.4)
 //
 // <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
 //
-// Styleguide 7.12
+// Styleguide 7.21
 
 @import 'vars';
 @import 'rules';
