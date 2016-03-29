@@ -1430,7 +1430,12 @@ not implemented by this framework.</p>
           <section id="section-7.20" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">7.20</span> Header</h1>
             <div class="kss-description">
-              <p><span class="tag tag--danger">in progress</span><span class="tag tag--untested">untested</span></p>
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The header component creates the official header of the stratio modules.</p>
+<h3 id="egeo-c-header">egeo-c-header</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span></p>
+<p>Returns the whole styles to create a header to be extended in another CSS class
+not implemented by this framework.</p>
 <h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
 <table>
 <thead>
@@ -1445,6 +1450,196 @@ not implemented by this framework.</p>
 <td>$egeo-c-app-header</td>
 <td><code>true</code></td>
 <td>Tells Egeo if the class egeo-c-app-header should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-header---background</td>
+<td><code>egeo-get-color(n10)</code></td>
+<td>The background of the header.</td>
+</tr>
+<tr>
+<td>$egeo-c-header---color</td>
+<td><code>egeo-get-color(n0)</code></td>
+<td>The main color of the texts inside the header.</td>
+</tr>
+<tr>
+<td>$egeo-c-header---padding</td>
+<td><code>30px 30px 20px</code></td>
+<td>The padding around the contents of the header.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__menu---margin</td>
+<td><code>0 0 0 30px</code></td>
+<td>The margins around the header</td>
+</tr>
+<tr>
+<td>$egeo-c-header__menu----tweakpoint</td>
+<td><code>1260px</code></td>
+<td>The tweakpoint (a media query) where the component would adapt its behavior and appearance.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__menu-item---color</td>
+<td><code>egeo-get-color(n6)</code></td>
+<td>The color of the items of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__menu-item---margin</td>
+<td><code>0 0 0 30px</code></td>
+<td>The margin around each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__menu-item--hover---color</td>
+<td><code>egeo-get-color(n0)</code></td>
+<td>The color of each item of the main menu when mouse over.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---color</td>
+<td><code>egeo-get-color(n6)</code></td>
+<td>The color of the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---font-family</td>
+<td><code>egeo-get-font(brandon-grotesque)</code></td>
+<td>The font family of the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---font-size</td>
+<td><code>egeo-get-font-size(head_xsmall)</code></td>
+<td>The font size of the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---letter-spacing</td>
+<td><code>-1px</code></td>
+<td>The letter spacing of the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---margin</td>
+<td><code>0 0 0 5px</code></td>
+<td>The margin around the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---text-transform</td>
+<td><code>uppercase</code></td>
+<td>The text-transform value of the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>icon---font-size</td>
+<td><code>egeo-get-font-size(head_xxsmall)</code></td>
+<td>The font size of the icon of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__note---background</td>
+<td><code>egeo-get-color(a1_dark)</code></td>
+<td>The background of the note (if used).</td>
+</tr>
+<tr>
+<td>$egeo-c-header__note---bottom</td>
+<td><code>0</code></td>
+<td>The distance of the note from the bottom of the header (if note used).</td>
+</tr>
+<tr>
+<td>$egeo-c-header__note---padding</td>
+<td><code>5px 10px</code></td>
+<td>The paddings of the note (if used).</td>
+</tr>
+<tr>
+<td>$egeo-c-header__note---right</td>
+<td><code>10px</code></td>
+<td>The distance of the note form the right of the header (if note used).</td>
+</tr>
+<tr>
+<td>$egeo-c-header__note--menu-max---padding</td>
+<td><code>10px</code></td>
+<td>The paddings of the note when the min-width of the viewport is less than the tweakpoint.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>note</strong>link---color</td>
+<td><code>egeo-get-color(n0)</code></td>
+<td>The color of the link inside the note (if note used).</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu---margin</td>
+<td><code>30px 0 0</code></td>
+<td>The margin around the submenu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---content</td>
+<td><code>&#39;\e625&#39;</code></td>
+<td>The content of the arrow of the submenu that correponds to the icon code in the icon font used.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---font-family</td>
+<td><code>egeo-get-font(icon)</code></td>
+<td>The icon font used to print the arrow of the submenu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---font-size</td>
+<td><code>egeo-get-font-size(head_normal)</code></td>
+<td>The font size of the icon used to print the arrow of the submenu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---color</td>
+<td><code>egeo-get-color(n10)</code></td>
+<td>The color used to print the arrow of the submenu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---left</td>
+<td><code>0</code></td>
+<td>The left position from the labels of the submenu where the arrow of the submenu would be positioned.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---top</td>
+<td><code>-17px</code></td>
+<td>The top position from the labels of the submenu where the arrow of the submenu would be positioned.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item---border-left</td>
+<td><code>1px solid egeo-get-color(n6)</code></td>
+<td>The border would be printed at left of the submenu items except the first one to separate each from others.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item---color</td>
+<td><code>egeo-get-color(n6)</code></td>
+<td>The color of the labels of the submenu items.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item---margin</td>
+<td><code>0 0 0 25px</code></td>
+<td>The margin around each submenu item.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item---padding</td>
+<td><code>0 0 0 25px</code></td>
+<td>The padding around each submenu item.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item---text-transform</td>
+<td><code>uppercase</code></td>
+<td>The text-transform value the label of each submenu item would have.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item--active---color</td>
+<td><code>egeo-get-color(n10)</code></td>
+<td>The color of each submenu item when it is active.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item--active---border-bottom</td>
+<td><code>3px solid egeo-get-color(a1)</code></td>
+<td>The border at bottom of each submenu item when it is active.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item--hover---color</td>
+<td><code>egeo-get-color(n10)</code></td>
+<td>The color of each submenu item when mouse over.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>note</strong>label---margin</td>
+<td><code>0 0 0 5px</code></td>
+<td>The margin of the label of each submenu item when have a left icon.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>note</strong>right-icon---margin</td>
+<td><code>0 25px 0 0</code></td>
+<td>The margin of the label of each submenu item when have a right icon.</td>
 </tr>
 </tbody>
 </table>

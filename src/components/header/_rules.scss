@@ -127,17 +127,27 @@ $this: '#{$egeo-namespace}c-header';
     &__submenu {
         position: absolute;
         list-style: none;
-        margin: 30px 0 0;
+        margin: $egeo-c-header__submenu---margin;
         white-space: nowrap;
 
+        &:before {
+            content: $egeo-c-header__submenu__arrow---content;
+            font-family: $egeo-c-header__submenu__arrow---font-family;
+            font-size: $egeo-c-header__submenu__arrow---font-size;
+            color: $egeo-c-header__submenu__arrow---color;
+            left: $egeo-c-header__submenu__arrow---left;
+            position: absolute;
+            top: $egeo-c-header__submenu__arrow---top;
+        }
+
         &-item {
-            border-left: 1px solid egeo-get-color(n6);
-            color: egeo-get-color(n6);
+            border-left: $egeo-c-header__submenu-item---border-left;
+            color: $egeo-c-header__submenu-item---color;
             cursor: pointer;
             display: inline-block;
-            margin: 0 0 0 25px;
-            padding: 0 0 0 25px;
-            text-transform: uppercase;
+            margin: $egeo-c-header__submenu-item---margin;
+            padding: $egeo-c-header__submenu-item---padding;
+            text-transform: $egeo-c-header__submenu-item---text-transform;
 
             &:first-child {
                 border-left: 0;
@@ -147,13 +157,13 @@ $this: '#{$egeo-namespace}c-header';
 
             &--active {
                 .#{$this}__submenu-item__label {
-                    color: egeo-get-color(n10);
-                    border-bottom: 3px solid egeo-get-color(a1);
+                    color: $egeo-c-header__submenu-item--active---color;
+                    border-bottom: $egeo-c-header__submenu-item--active---border-bottom;
                 }
             }
 
             &:hover {
-                color: egeo-get-color(n10);
+                color: $egeo-c-header__submenu-item--hover---color;
             }
         }
     }
@@ -177,11 +187,11 @@ $this: '#{$egeo-namespace}c-header';
         }
 
         .egeo-c-icon + &__label {
-            margin-left: 5px;
+            margin: $egeo-c-header__note__label---margin;
         }
 
         &__label + .egeo-c-icon {
-            margin-right: 25px;
+            margin: $egeo-c-header__note__right-icon---margin;
         }
     }
 }
