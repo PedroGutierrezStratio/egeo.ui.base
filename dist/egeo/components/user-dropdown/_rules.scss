@@ -9,22 +9,22 @@ $this: '#{$egeo-namespace}c-user-dropdown';
 
     .egeo-c-icon,
     &__label {
-        color: egeo-get-color(n0);
+        color: $egeo-c-user-dropdown__label---color;
         display: inline-block;
-        font-size: egeo-get-font-size(head_xxxsmall);
+        font-size: $egeo-c-user-dropdown__label---font-size;
     }
 
     .egeo-c-icon + &__label {
-        margin-left: 5px;
+        margin: $egeo-c-user-dropdown__icon---margin;
     }
 
     &:after {
-        color: egeo-get-color(n7);
-        content: '\e63f';
+        color: $egeo-c-dropdown__caret---color;
+        content: $egeo-c-dropdown__caret---content;
         display: inline-block;
-        font-family: egeo-get-font(icon);
-        font-size: egeo-get-font-size(head_xxxsmall);
-        margin-left: 10px;
+        font-family: $egeo-c-dropdown__caret---font-family;
+        font-size: $egeo-c-dropdown__caret---font-size;
+        margin: $egeo-c-dropdown__caret---margin;
     }
 }
 

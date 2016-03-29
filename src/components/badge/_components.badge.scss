@@ -2,19 +2,28 @@
 //
 // <span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span>
 //
-// soon
+// The Badge component is a way to show how many items are pending to read or
+// do some actions with them.
 //
 // ### egeo-c-badge
 //
 // <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span>
 //
-// soon
+// Returns the whole styles to create a badge to be extended in another CSS class
+// not implemented by this framework.
 //
 // ## Variables exposed to theming
 //
 // | Variable                               | Default value                              | Description                                                                                                              |
-// | -------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-// | $egeo-c-badge                          | `true`                                     | Tells Egeo if the class egeo-c-badge should be included in the CSS.                                                      |
+// | ----------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------- |
+// | $egeo-c-badge                 | `true`                              | Tells Egeo if the class egeo-c-badge should be included in the CSS.                                       |
+// | $egeo-c-badge---background    | `egeo-get-color(s2_dark)`           | Background of the badge.                                                                                  |
+// | $egeo-c-badge---border-radius | `7px`                               | The radius of the border of the badge.                                                                    |
+// | $egeo-c-badge---color         | `egeo-get-color(n10)`               | Color of the text inside the badge.                                                                       |
+// | $egeo-c-badge---font-size     | `egeo-get-font-size(body_xxxsmall)` | Font size of the text inside the badge.                                                                   |
+// | $egeo-c-badge---padding       | `1px 5px 1px 5px`                   | The padding of the badge that create a space around the text.                                             |
+// | $egeo-c-badge---right         | `0`                                 | The space from the right position of the item who is the parent of the badge and is relative positioned.  |
+// | $egeo-c-badge---top           | `-25px`                             | The space from the top position of the item who is the parent of the badge and is relative positioned.    |
 //
 // ## Dependencies
 //
@@ -24,7 +33,7 @@
 //
 // <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
 //
-// Styleguide 7.12
+// Styleguide 7.18
 
 @import 'vars';
 @import 'rules';

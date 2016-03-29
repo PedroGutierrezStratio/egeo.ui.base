@@ -4,3 +4,14 @@
 } @else {
     $egeo-c-user-dropdown: true !default;
 }
+
+$egeo-c-user-dropdown__label---color: egeo-get-color(n0) !default;
+$egeo-c-user-dropdown__label---font-size: egeo-get-font-size(head_xxxsmall) !default;
+
+$egeo-c-user-dropdown__icon---margin: 0 0 0 5px !default;
+
+$egeo-c-dropdown__caret---color: egeo-get-color(n7) !default;
+$egeo-c-dropdown__caret---content: '\e63f' !default;
+$egeo-c-dropdown__caret---font-family: egeo-get-font(icon) !default;
+$egeo-c-dropdown__caret---font-size: egeo-get-font-size(head_xxxsmall) !default;
+$egeo-c-dropdown__caret---margin: 0 0 0 10px !default;
