@@ -4,6 +4,7 @@ $this: '#{$egeo-namespace}c-header';
     @include egeo-c-component;
 
     @if $egeo-c-header---background { background: $egeo-c-header---background; }
+    @if $egeo-c-header---color { color: $egeo-c-header---color; }
     @if $egeo-c-header---padding { padding: $egeo-c-header---padding; }
     margin: 0 0 50px;
 
@@ -18,8 +19,14 @@ $this: '#{$egeo-namespace}c-header';
         width: 100%;
     }
 
+    &__mobile-menu {
+        cursor: pointer;
+        display: none;
+        font-size: egeo-get-font-size(head_medium);
+    }
+
     &__logo {
-        display: inline-block;
+        display: inline-block;;
     }
 
     &__user-bar {
@@ -95,19 +102,11 @@ $this: '#{$egeo-namespace}c-header';
             }
 
             &__label {
-                @if $egeo-c-header__menu-item---color { color: $egeo-c-header__menu-item---color; }
-                @if $egeo-c-header__menu-item__label---font-family { font-family: $egeo-c-header__menu-item__label---font-family; }
-                @if $egeo-c-header__menu-item__label---font-size { font-size: $egeo-c-header__menu-item__label---font-size; }
-                @if $egeo-c-header__menu-item__label---letter-spacing { letter-spacing: $egeo-c-header__menu-item__label---letter-spacing; }
-                @if $egeo-c-header__menu-item__label---text-transform { text-transform: $egeo-c-header__menu-item__label---text-transform; }
+                display: none;
             }
 
             &__icon {
                 @if $egeo-c-header__menu-item__icon---font-size { font-size: $egeo-c-header__menu-item__icon---font-size; }
-            }
-
-            .egeo-c-icon + &__label {
-                @if $egeo-c-header__menu-item__label---margin { margin: $egeo-c-header__menu-item__label---margin; }
             }
 
             @if $egeo-c-header__menu-item--hover---color {
@@ -117,10 +116,6 @@ $this: '#{$egeo-namespace}c-header';
                 &--active {
                     @if $egeo-c-header__menu-item--hover---color {
                         color: $egeo-c-header__menu-item--hover---color;
-
-                        & #{$temp}__label {
-                            color: $egeo-c-header__menu-item--hover---color;
-                        }
                     }
                 }
             }
