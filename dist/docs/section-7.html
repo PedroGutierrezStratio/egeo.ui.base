@@ -51,14 +51,14 @@
               <li class="kss-menu-item"><a href="#section-7.13"><span class="kss-ref">7.13</span><span class="kss-name">Input</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.14"><span class="kss-ref">7.14</span><span class="kss-name">Label</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.15"><span class="kss-ref">7.15</span><span class="kss-name">Checkbox</span></a></li>
-              <li class="kss-menu-item"><a href="#section-7.16"><span class="kss-ref">7.16</span><span class="kss-name">Helpbox</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.16"><span class="kss-ref">7.16</span><span class="kss-name">Radiobutton</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.17"><span class="kss-ref">7.17</span><span class="kss-name">Message</span></a></li>
-              <li class="kss-menu-item"><a href="#section-7.18"><span class="kss-ref">7.18</span><span class="kss-name">Badge</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.18"><span class="kss-ref">7.18</span><span class="kss-name">Combobox</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.19"><span class="kss-ref">7.19</span><span class="kss-name">User Dropdown</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.20"><span class="kss-ref">7.20</span><span class="kss-name">Header</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.21"><span class="kss-ref">7.21</span><span class="kss-name">Dropdown Box</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.22"><span class="kss-ref">7.22</span><span class="kss-name">Helpbox</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.23"><span class="kss-ref">7.23</span><span class="kss-name">Badge</span></a></li>
             </ul>
           </nav>
         </div>
@@ -1088,69 +1088,6 @@ HTML input checkbox tag.</p>
             </div>
           </section>
           <section id="section-7.16" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">7.16</span> Helpbox</h1>
-            <div class="kss-description">
-              <p><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span><span class="tag tag--warn">beta version</span></p>
-<p>The helpbox Component is a wrapper to show the help messages.</p>
-<h3 id="egeo-c-helpbox">egeo-c-helpbox</h3>
-<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
-<p>Injects the general behavior and properties of the class helpbox.</p>
-<h4 id="usage">Usage</h4>
-<pre><code>.test {
-     @include egeo-c-helpbox;
-}
-</code></pre><h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Default value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$egeo-c-helpbox</td>
-<td><code>true</code></td>
-<td>Tells Egeo if the class egeo-c-helpbox should be included in the CSS.</td>
-</tr>
-<tr>
-<td>$egeo-c-helpbox---background</td>
-<td><a href="section-2.html#section-2.1">n0</a></td>
-<td>Define the background of the helpbox.</td>
-</tr>
-<tr>
-<td>$egeo-c-helpbox---border-top</td>
-<td><code>1px solid egeo-get-color(n0)</code></td>
-<td>Define the border-top style of the helpbox.</td>
-</tr>
-<tr>
-<td>$egeo-c-helpbox---color</td>
-<td><a href="section-2.html#section-2.1">n0</a></td>
-<td>Define the font color of the text inside the helpbox.</td>
-</tr>
-<tr>
-<td>$egeo-c-helpbox---shadow-color</td>
-<td><a href="section-2.html#section-2.1">n4</a></td>
-<td>Define the base color of the shadow that emits the helpbox.</td>
-</tr>
-<tr>
-<td>$egeo-c-helpbox__arrow---size</td>
-<td><code>8px</code></td>
-<td>Define the size of the arrow (in px) of the helpbox.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-<li><a href="section-7.html#section-7.1">components.component</a></li>
-<li><a href="section-3.html#section-3.1">tools.colors</a></li>
-<li><a href="section-3.html#section-3.4">tools.layers</a></li>
-</ul>
-<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
-            </div>
-          </section>
-          <section id="section-7.16" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">7.16</span> Radiobutton</h1>
             <div class="kss-description">
               <p><span class="tag tag--untested">Untested</span><span class="tag tag--danger">alpha version</span></p>
@@ -1242,77 +1179,6 @@ all Messages in an Egeo app.</p>
 <li><a href="section-7.html#section-7.1">component</a></li>
 <li><a href="section-3.html#section-3.1">tools.colors</a></li>
 <li><a href="section-3.html#section-3.3">tools.log</a></li>
-</ul>
-<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
-            </div>
-          </section>
-          <section id="section-7.18" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">7.18</span> Badge</h1>
-            <div class="kss-description">
-              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
-<p>The Badge component is a way to show how many items are pending to read or
-do some actions with them.</p>
-<h3 id="egeo-c-badge">egeo-c-badge</h3>
-<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
-<p>Returns the whole styles to create a badge to be extended in another CSS class
-not implemented by this framework.</p>
-<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Default value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$egeo-c-badge</td>
-<td><code>true</code></td>
-<td>Tells Egeo if the class egeo-c-badge should be included in the CSS.</td>
-</tr>
-<tr>
-<td>$egeo-c-badge---background</td>
-<td><code>egeo-get-color(s2_dark)</code></td>
-<td>Background of the badge.</td>
-</tr>
-<tr>
-<td>$egeo-c-badge---border-radius</td>
-<td><code>7px</code></td>
-<td>The radius of the border of the badge.</td>
-</tr>
-<tr>
-<td>$egeo-c-badge---color</td>
-<td><code>egeo-get-color(n10)</code></td>
-<td>Color of the text inside the badge.</td>
-</tr>
-<tr>
-<td>$egeo-c-badge---font-size</td>
-<td><code>egeo-get-font-size(body_xxxsmall)</code></td>
-<td>Font size of the text inside the badge.</td>
-</tr>
-<tr>
-<td>$egeo-c-badge---padding</td>
-<td><code>1px 5px 1px 5px</code></td>
-<td>The padding of the badge that create a space around the text.</td>
-</tr>
-<tr>
-<td>$egeo-c-badge---right</td>
-<td><code>0</code></td>
-<td>The space from the right position of the item who is the parent of the badge and is relative positioned.</td>
-</tr>
-<tr>
-<td>$egeo-c-badge---top</td>
-<td><code>-25px</code></td>
-<td>The space from the top position of the item who is the parent of the badge and is relative positioned.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-<li><a href="section-7.html#section-7.1">components.component</a></li>
-<li><a href="section-3.html#section-3.1">tools.colors</a></li>
-<li><a href="section-3.html#section-3.2">tools.typography</a></li>
 </ul>
 <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
             </div>
@@ -1729,6 +1595,140 @@ not implemented by this framework.</p>
 <li><a href="section-3.html#section-3.1">tools.colors</a></li>
 <li><a href="section-3.html#section-3.2">tools.typography</a></li>
 <li><a href="section-3.html#section-3.4">tools.layers</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.22" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.22</span> Helpbox</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span><span class="tag tag--warn">beta version</span></p>
+<p>The helpbox Component is a wrapper to show the help messages.</p>
+<h3 id="egeo-c-helpbox">egeo-c-helpbox</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>Injects the general behavior and properties of the class helpbox.</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+     @include egeo-c-helpbox;
+}
+</code></pre><h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-helpbox</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-helpbox should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-helpbox---background</td>
+<td><a href="section-2.html#section-2.1">n0</a></td>
+<td>Define the background of the helpbox.</td>
+</tr>
+<tr>
+<td>$egeo-c-helpbox---border-top</td>
+<td><code>1px solid egeo-get-color(n0)</code></td>
+<td>Define the border-top style of the helpbox.</td>
+</tr>
+<tr>
+<td>$egeo-c-helpbox---color</td>
+<td><a href="section-2.html#section-2.1">n0</a></td>
+<td>Define the font color of the text inside the helpbox.</td>
+</tr>
+<tr>
+<td>$egeo-c-helpbox---shadow-color</td>
+<td><a href="section-2.html#section-2.1">n4</a></td>
+<td>Define the base color of the shadow that emits the helpbox.</td>
+</tr>
+<tr>
+<td>$egeo-c-helpbox__arrow---size</td>
+<td><code>8px</code></td>
+<td>Define the size of the arrow (in px) of the helpbox.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.4">tools.layers</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.23" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.23</span> Badge</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The Badge component is a way to show how many items are pending to read or
+do some actions with them.</p>
+<h3 id="egeo-c-badge">egeo-c-badge</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>Returns the whole styles to create a badge to be extended in another CSS class
+not implemented by this framework.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-badge</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-badge should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---background</td>
+<td><code>egeo-get-color(s2_dark)</code></td>
+<td>Background of the badge.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---border-radius</td>
+<td><code>7px</code></td>
+<td>The radius of the border of the badge.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---color</td>
+<td><code>egeo-get-color(n10)</code></td>
+<td>Color of the text inside the badge.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---font-size</td>
+<td><code>egeo-get-font-size(body_xxxsmall)</code></td>
+<td>Font size of the text inside the badge.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---padding</td>
+<td><code>1px 5px 1px 5px</code></td>
+<td>The padding of the badge that create a space around the text.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---right</td>
+<td><code>0</code></td>
+<td>The space from the right position of the item who is the parent of the badge and is relative positioned.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---top</td>
+<td><code>-25px</code></td>
+<td>The space from the top position of the item who is the parent of the badge and is relative positioned.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
 </ul>
 <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
             </div>
