@@ -1,5 +1,5 @@
 /*
-  
+
   GruntJS task runner for Egeo Base Framework
 
   author: Alejandro Rodriguez (alejandrorodriguez@stratio.com)
@@ -11,8 +11,8 @@
   grunt sass-watch................Launch the sass-dev task every time a Sass file
                                   changes
   grunt sass-dev..................Compiles the sass, the files and creates an
-                                  expanded version of the CSS to check that all is ok. 
-  grunt sass-dist.................Compiles the sass and creates the distribution 
+                                  expanded version of the CSS to check that all is ok.
+  grunt sass-dist.................Compiles the sass and creates the distribution
                                   folder with all files needed.
   grunt default...................Launch the sass-dist task
 
@@ -41,13 +41,13 @@ module.exports = function (grunt) {
 
     Note that the bat command needs to be typed exactly as it will be executed, so
     it doesn't support the use of vars inside the command. Then, keep in mind that
-    if you change the paths, you should check the bat command to ensure that all 
+    if you change the paths, you should check the bat command to ensure that all
     will be executed as expected. Check in the "batch" subtask.
 
   */
   var appConfig = {
     src: 'src',               // Folder of the source
-    styleguide: 'styleguide', // Warning: This name is used to reference files 
+    styleguide: 'styleguide', // Warning: This name is used to reference files
     dist: 'dist',             // Folder of the distributable deliverables.
     sass: 'egeo',             // Folder of the Sass deliverables inside dist.
     docs: 'docs',             // Folder of the Docs deliverables inside dist.
@@ -90,14 +90,14 @@ module.exports = function (grunt) {
       }
     },
 
-    /* 
+    /*
 
-      Watch task to automatically refresh the documentation when any Sass file 
+      Watch task to automatically refresh the documentation when any Sass file
       changes in any subfolder.
 
-        Warning: Sometimes it fails on Windows due to the antivirus is checking 
-        the files and are blocked. So it is needed create another change in a 
-        Sass file to the watch repeat the task and write the compiled 
+        Warning: Sometimes it fails on Windows due to the antivirus is checking
+        the files and are blocked. So it is needed create another change in a
+        Sass file to the watch repeat the task and write the compiled
         documentation properly.
 
     */
@@ -106,9 +106,9 @@ module.exports = function (grunt) {
         files: ['<%= app.src %>/*.scss', '<%= app.src %>/**/*.scss'], // Files to watch
         tasks: ['sass-dev'],                                          // Taks to execute when changes detected
         options: {
-          spawn: true   // If the spawn property is established to false, the 
-                        // system is faster but also  more prone to fail due to 
-                        // it opens a second thread to treat the files and can 
+          spawn: true   // If the spawn property is established to false, the
+                        // system is faster but also  more prone to fail due to
+                        // it opens a second thread to treat the files and can
                         // result in the warning explained above.
         },
       },
@@ -166,7 +166,7 @@ module.exports = function (grunt) {
       dist: {
         files: [
           // Includes font files within path and its sub-directories
-          {expand: true, cwd: '<%= app.src %>/', src: ['**/*.scss', '*.scss', '!fonts'], dest: '<%= app.dist %>/<%= app.sass %>'}
+          {expand: true, cwd: '<%= app.src %>/', src: ['!assets/*', '**/*', '*'], dest: '<%= app.dist %>/<%= app.sass %>'}
         ],
       },
     },
@@ -197,7 +197,7 @@ module.exports = function (grunt) {
 
   */
   grunt.registerTask('serve', [
-    'connect'           // Launch the local webserver in http://localhost:9001 
+    'connect'           // Launch the local webserver in http://localhost:9001
                         // to view the documentation
   ]);
 
@@ -206,27 +206,27 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('dev', [
-    'clean',      // Clean the directory to ensure all files are generated 
+    'clean',      // Clean the directory to ensure all files are generated
                   // from scratch
     'sass:dev',   // Generate custom CSS to customize the documentation
     'copy'        // Copy files needed
   ]);
 
   grunt.registerTask('dist', [
-    'clean:dist',      // Clean the directory to ensure all files are generated 
+    'clean:dist',      // Clean the directory to ensure all files are generated
                   // from scratch
     'sass:dist',  // Generate custom CSS to customize the documentation
     'copy:dist'   // Copy files needed
   ]);
 
   grunt.registerTask('upload', [
-    'clean:upload',     // Clean the directory to ensure all files are generated 
+    'clean:upload',     // Clean the directory to ensure all files are generated
                         // from scratch
     'copy:upload',      // Copy files needed
   ]);
 
   grunt.registerTask('doc', [
-    'clean:styleguide', // Clean the directory to ensure all files are generated 
+    'clean:styleguide', // Clean the directory to ensure all files are generated
                         // from scratch
     'batch:doc',        // Generate KSS documentation
     'copy:styleguide'   // Copy files needed
