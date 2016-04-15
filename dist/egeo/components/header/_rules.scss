@@ -83,6 +83,8 @@ $this: '#{$egeo-namespace}c-header';
 
     &__navigation {
         display: inline-block;
+        @if $egeo-c-header__navigation---font-size { font-size: $egeo-c-header__navigation---font-size; }
+        vertical-align: bottom;
     }
 
     &__menu {
@@ -125,6 +127,7 @@ $this: '#{$egeo-namespace}c-header';
     @include menu-max;
 
     &__submenu {
+        font-size: $egeo-c-header__submenu---font-size;
         position: absolute;
         list-style: none;
         margin: $egeo-c-header__submenu---margin;
@@ -172,6 +175,7 @@ $this: '#{$egeo-namespace}c-header';
         @if $egeo-c-header__note---background { background: $egeo-c-header__note---background; }
         @if $egeo-c-header__note---bottom { bottom: $egeo-c-header__note---bottom; }
         display: inline-block;
+        @if $egeo-c-header__note---font-size { font-size: $egeo-c-header__note---font-size; }
         @if $egeo-c-header__note---right { right: $egeo-c-header__note---right; }
         @if $egeo-c-header__note---padding { padding: $egeo-c-header__note---padding; }
         position: absolute;
