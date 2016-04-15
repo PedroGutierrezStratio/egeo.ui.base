@@ -1,5 +1,5 @@
-@mixin egeo-c-component {
+@mixin egeo-c-component($font-family: $egeo-c-component---font-family) {
 	box-sizing: border-box;
-    font-family: egeo-get-font($egeo-c-component---font-family);
+    font-family: egeo-get-font($font-family);
     position: relative;
 }
