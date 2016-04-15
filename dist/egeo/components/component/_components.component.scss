@@ -8,7 +8,7 @@
 // in any component.
 //
 // ### egeo-c-component
-// 
+//
 // <span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span>
 //
 // Injects the general behavior and properties of the abstract class Component to other
@@ -33,4 +33,5 @@
 //
 // Styleguide 7.1
 
+@import 'vars';
 @import 'rules';
