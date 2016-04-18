@@ -41,10 +41,10 @@ $this: '#{$egeo-namespace}c-header';
         &:before {
             border-color: transparent egeo-get-color(a3) transparent transparent;
             border-style: solid;
-            border-width: 0px 25px 25px 0;
+            border-width: 0px $egeo-c-header__user-bar---size $egeo-c-header__user-bar---size 0;
             content: ' ';
             height: 0;
-            left: -25px;
+            left: -$egeo-c-header__user-bar---size;
             position: absolute;
             width: 0;
         }

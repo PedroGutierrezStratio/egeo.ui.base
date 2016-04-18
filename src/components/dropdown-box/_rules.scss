@@ -29,6 +29,10 @@ $this: '#{$egeo-namespace}c-dropdown-box';
         &__icon + &__label {
             @if $egeo-c-dropdown-box-item__label---margin { margin: $egeo-c-dropdown-box-item__label---margin; }
         }
+
+        a {
+            @if $egeo-c-dropdown-box---color { color: $egeo-c-dropdown-box---color; }
+        }
     }
 }
 
