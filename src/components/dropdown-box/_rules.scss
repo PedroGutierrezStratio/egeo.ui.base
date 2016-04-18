@@ -3,29 +3,31 @@ $this: '#{$egeo-namespace}c-dropdown-box';
 @mixin egeo-c-dropdown-box {
     @include egeo-c-component;
 
-    background: $egeo-c-dropdown-box---background;
-    font-size: $egeo-c-dropdown-box---font-size;
+    @if $egeo-c-dropdown-box---background { background: $egeo-c-dropdown-box---background; }
+    @if $egeo-c-dropdown-box---color { color: $egeo-c-dropdown-box---color; }
+    @if $egeo-c-dropdown-box---font-size { font-size: $egeo-c-dropdown-box---font-size; }
     list-style: none;
-    margin: $egeo-c-dropdown-box---margin;
-    min-width: $egeo-c-dropdown-box---min-width;
-    padding: $egeo-c-dropdown-box---padding;
+    @if $egeo-c-dropdown-box---margin { margin: $egeo-c-dropdown-box---margin; }
+    @if $egeo-c-dropdown-box---min-width { min-width: $egeo-c-dropdown-box---min-width; }
+    @if $egeo-c-dropdown-box---padding { padding: $egeo-c-dropdown-box---padding; }
     position: absolute;
-    z-index: $egeo-c-dropdown-box---z-index;
+    @if $egeo-c-dropdown-box---z-index { z-index: $egeo-c-dropdown-box---z-index; }
 
     &-item {
         cursor: pointer;
-        padding: $egeo-c-dropdown-box-item---padding;
+        @if $egeo-c-dropdown-box-item---padding { padding: $egeo-c-dropdown-box-item---padding; }
+        white-space: nowrap;
 
         &:hover {
-            background: $egeo-c-dropdown-box-item--hover---background;
+            @if $egeo-c-dropdown-box-item--hover---background { background: $egeo-c-dropdown-box-item--hover---background; }
         }
 
         &__icon {
-            font-size: $egeo-c-dropdown-box-item__icon---font-size;
+            @if $egeo-c-dropdown-box-item__icon---font-size { font-size: $egeo-c-dropdown-box-item__icon---font-size; }
         }
 
         &__icon + &__label {
-            margin: $egeo-c-dropdown-box-item__label---margin;
+            @if $egeo-c-dropdown-box-item__label---margin { margin: $egeo-c-dropdown-box-item__label---margin; }
         }
     }
 }
