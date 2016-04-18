@@ -1,0 +1,19 @@
+$this: '#{$egeo-namespace}c-app';
+
+@mixin egeo-c-app {
+    @include egeo-c-component;
+
+    @if $egeo-c-app---font-family { font-family: $egeo-c-app---font-family; }
+    @if $egeo-c-app---font-size { font-size: $egeo-c-app---font-size; }
+    @if $egeo-c-app---background { background: $egeo-c-app---background; }
+    @if $egeo-c-app---margin { margin: $egeo-c-app---margin; }
+    @if $egeo-c-app---color { color: $egeo-c-app---color; }
+}
+
+@if variable-exists(egeo-c-app) {
+    @if $egeo-c-app {
+        .#{$this} {
+            @include egeo-c-app;
+        }
+    }
+}

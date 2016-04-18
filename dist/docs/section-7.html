@@ -61,6 +61,7 @@
               <li class="kss-menu-item"><a href="#section-7.21"><span class="kss-ref">7.21</span><span class="kss-name">Dropdown Box</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.22"><span class="kss-ref">7.22</span><span class="kss-name">Helpbox</span></a></li>
               <li class="kss-menu-item"><a href="#section-7.23"><span class="kss-ref">7.23</span><span class="kss-name">Badge</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.24"><span class="kss-ref">7.24</span><span class="kss-name">App</span></a></li>
             </ul>
           </nav>
         </div>
@@ -1723,6 +1724,67 @@ not implemented by this framework.</p>
 <td>$egeo-c-badge---top</td>
 <td><code>-25px</code></td>
 <td>The space from the top position of the item who is the parent of the badge and is relative positioned.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.24" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.24</span> App</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The App component is a way to configure the default options of a website or
+webapp based on Stratio style guidelines.</p>
+<h3 id="egeo-c-app">egeo-c-app</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span></p>
+<p>Returns the whole styles to put preferably on the body of the DOM to configure
+the default CSS properties in the cascade.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-app</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-app should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-app---font-family</td>
+<td><code>Open Sans</code></td>
+<td>Set the default font family will be used in the site. Should be a value included in the <a href="section-2.html#section-2.2">typography settings</a>.</td>
+</tr>
+<tr>
+<td>$egeo-c-app---font-size</td>
+<td><code>1rem</code></td>
+<td>Set the default font size will be used in the site. Should be a value included in the <a href="section-2.html#section-2.2">typography settings</a>.</td>
+</tr>
+<tr>
+<td>$egeo-c-app---background</td>
+<td><code>null</code></td>
+<td>Set the background of the site.</td>
+</tr>
+<tr>
+<td>$egeo-c-app---color</td>
+<td><code>#000</code></td>
+<td>Set the default font color of the site.</td>
+</tr>
+<tr>
+<td>$egeo-c-app---margin</td>
+<td><code>0</code></td>
+<td>Set the margin of the container where the class will be applied.</td>
 </tr>
 </tbody>
 </table>

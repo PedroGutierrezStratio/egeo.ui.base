@@ -1,0 +1,37 @@
+// App
+//
+// <span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span>
+//
+// The App component is a way to configure the default options of a website or
+// webapp based on Stratio style guidelines.
+//
+// ### egeo-c-app
+//
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span>
+//
+// Returns the whole styles to put preferably on the body of the DOM to configure
+// the default CSS properties in the cascade.
+//
+// ## Variables exposed to theming
+//
+// | Variable                      | Default value                              | Description                                                                                                              |
+// | ----------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------- |
+// | $egeo-c-app                   | `true`           | Tells Egeo if the class egeo-c-app should be included in the CSS.                                       |
+// | $egeo-c-app---font-family     | `Open Sans`      | Set the default font family will be used in the site. Should be a value included in the [typography settings](section-2.html#section-2.2). |
+// | $egeo-c-app---font-size       | `1rem`           | Set the default font size will be used in the site. Should be a value included in the [typography settings](section-2.html#section-2.2). |
+// | $egeo-c-app---background      | `null`           | Set the background of the site. |
+// | $egeo-c-app---color           | `#000`           | Set the default font color of the site. |
+// | $egeo-c-app---margin          | `0`              | Set the margin of the container where the class will be applied. |
+//
+// ## Dependencies
+//
+// * [components.component](section-7.html#section-7.1)
+// * [tools.colors](section-3.html#section-3.1)
+// * [tools.typography](section-3.html#section-3.2)
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.24
+
+@import 'vars';
+@import 'rules';

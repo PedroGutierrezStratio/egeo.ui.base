@@ -1,0 +1,12 @@
+// If silent classes are activated the CSS classes will be not created
+@if global-variable-exists(egeo-silent-classes) {
+    $egeo-c-app: not $egeo-silent-classes !default;
+} @else {
+    $egeo-c-app: true !default;
+}
+
+$egeo-c-app---font-family: egeo-get-font(open-sans) !default;
+$egeo-c-app---font-size: 1rem !default;
+$egeo-c-app---background: null !default;
+$egeo-c-app---margin: 0 !default;
+$egeo-c-app---color: egeo-get-color(n10) !default;
