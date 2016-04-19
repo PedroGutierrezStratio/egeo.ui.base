@@ -132,8 +132,12 @@ $this: '#{$egeo-namespace}c-header';
             content: '';
             background: egeo-get-color(n2);
             display: block;
-            height: 45px;
-            margin: 20px -30px -20px -30px;
+            height: $egeo-c-header--submenu-shadow---height;
+            margin: $egeo-c-header--submenu-shadow---margin;
+        }
+
+        .#{$this}__note {
+            bottom: $egeo-c-header--submenu-shadow---height;
         }
     }
 
