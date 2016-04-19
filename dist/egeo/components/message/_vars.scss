@@ -1,6 +1,6 @@
 // If silent classes are activated the CSS classes will be not created
 @if global-variable-exists(egeo-silent-classes) {
-    $egeo-c-message: not $egeo-silent-classes !default;    
+    $egeo-c-message: not $egeo-silent-classes !default;
 } @else {
     $egeo-c-message: true !default;
 }
@@ -17,12 +17,12 @@ $egeo-c-messages: (
     warn: (
         background: egeo-get-color(s2),
         color: egeo-get-color(n0),
-        margin: -.5rem -.5rem .5rem
+        margin: -.5rem
         ),
     error: (
         background: egeo-get-color(s3),
         color: egeo-get-color(n0),
-        margin: -.5rem -.5rem .5rem
+        margin: -.5rem
         )
 ) !default;
 

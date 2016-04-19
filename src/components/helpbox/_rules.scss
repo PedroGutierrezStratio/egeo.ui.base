@@ -33,6 +33,10 @@ $this: '#{$egeo-namespace}c-helpbox';
         padding: .5rem;
     }
 
+    &__label {
+        margin: 1rem 0 0;
+    }
+
     .egeo-c-helpbox {
         margin-bottom: .5rem;
         padding-bottom: .5rem;
@@ -41,7 +45,7 @@ $this: '#{$egeo-namespace}c-helpbox';
     &--arrow-to-left {
         &:before,
         &:after {
-            left: calc(15% - #{$egeo-c-helpbox__arrow---size});            
+            left: calc(15% - #{$egeo-c-helpbox__arrow---size});
         }
     }
 }
