@@ -34,7 +34,9 @@ $this: '#{$egeo-namespace}c-helpbox';
     }
 
     &__label {
-        margin: 1rem 0 0;
+        @at-root .egeo-c-message + & {
+            margin: 1rem 0 0;
+        }
     }
 
     .egeo-c-helpbox {
