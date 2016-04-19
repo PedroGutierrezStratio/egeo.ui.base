@@ -127,10 +127,12 @@ $this: '#{$egeo-namespace}c-header';
     @include menu-max;
 
     &--submenu-shadow {
-        background: egeo-get-color(n4);
-        display: block;
-        height: 60px;
-        width: 100%;
+        &:after {
+            background: egeo-get-color(n4);
+            display: block;
+            height: 60px;
+            width: 100%;
+        }
     }
 
     &__submenu {
