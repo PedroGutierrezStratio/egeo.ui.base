@@ -1,5 +1,82 @@
 // How to create a theme
 //
-// To do
-// 
+// To create a theme the only thing you must to do is to create a Sass part file
+// and include there all the properties you want to customize and are provided
+// by the component. The ones you don't include in the file will be replaced by
+// the default value ones.
+//
+// It is also possible, and even advisable, to create an own micro-architecture
+// for the theme if it is too complex to be included in one unique file.
+//
+// # Creating a theme
+//
+// The best way to create a theme is creating a new file inside the /theme/ folder,
+// called _themes.mythemename.scss. The underscore is to indicate that is a Sass
+// part file, and the rest is a convention naming.
+//
+// Inside the file we can begin to create our theme customizing the values provided
+// by the components. For example:
+//
+// ```
+// $egeo-c-label---background: transparent;
+// $egeo-c-label---border: 0;
+// $egeo-c-label---box-shadow: none;
+// $egeo-c-label---color: egeo-get-color(a1);
+// $egeo-c-label---font-size: egeo-get-font-size(body_xxsmall);
+// $egeo-c-label---font-style: null;
+//
+// $egeo-c-label__optional-mark---color: egeo-get-color(a1);
+// $egeo-c-label__optional-mark---content: '(optional)';
+// $egeo-c-label__optional-mark---font-style: null;
+//
+// $egeo-c-label__icon---color: egeo-get-color(n5);
+// $egeo-c-label__icon---font-size: egeo-get-font-size(body_xsmall);
+// ```
+//
+// If we want to create a complex architecture for the theme, we should remember
+// that we want to use @import directive.
+//
+// ```
+// @import '/mythemename/label';
+// @import '/mythemename/header';
+// @import '/mythemename/icon';
+// ...
+// ```
+//
+// # How to import the theme in Egeo
+//
+// To import the theme inside Egeo to be applied, is needed to do it just after
+// the tools importing as is shown below:
+//
+// ```
+// @import 'tools/tools.log';
+//
+// @import 'settings/settings';
+// @import 'settings/settings.colors';
+// @import 'settings/settings.fonts';
+// @import 'settings/settings.layers';
+// @import 'settings/settings.icons';
+// @import 'settings/settings.typography';
+//
+// @import 'tools/tools.log';
+// @import 'tools/tools.maps';
+// @import 'tools/tools.colors';
+// @import 'tools/tools.typography';
+// @import 'tools/tools.layers';
+//
+// @import 'themes/theme.mythemename';
+//
+// @import 'utils/utils.alignments';
+// @import 'utils/utils.clearfix';
+// @import 'utils/utils.floats';
+// @import 'utils/utils.text';
+//
+// @import 'objects/media/objects.media';
+// @import 'objects/box-shadow/objects.box-shadow';
+//
+// @import 'components/component/components.component';
+// @import 'components/app/components.app';
+// ...
+// ```
+//
 // Styleguide 9.1

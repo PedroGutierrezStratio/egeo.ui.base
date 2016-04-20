@@ -49,15 +49,78 @@
           <section id="section-9" class="kss-section kss-depth-1">
             <h1 class="kss-title"><span class="kss-ref">9</span> Theming</h1>
             <div class="kss-description">
-              <p>To do</p>
+              <p>The Egeo Base Framework was built thinking in theming from the first time. All
+components provides a series of properties with default values that can be
+changed using Sass.</p>
 
             </div>
           </section>
           <section id="section-9.1" class="kss-section kss-depth-2">
             <h1 class="kss-title"><span class="kss-ref">9.1</span> How to create a theme</h1>
             <div class="kss-description">
-              <p>To do</p>
+              <p>To create a theme the only thing you must to do is to create a Sass part file
+and include there all the properties you want to customize and are provided
+by the component. The ones you don&#39;t include in the file will be replaced by
+the default value ones.</p>
+<p>It is also possible, and even advisable, to create an own micro-architecture
+for the theme if it is too complex to be included in one unique file.</p>
+<h1 id="creating-a-theme">Creating a theme</h1>
+<p>The best way to create a theme is creating a new file inside the /theme/ folder,
+called _themes.mythemename.scss. The underscore is to indicate that is a Sass
+part file, and the rest is a convention naming.</p>
+<p>Inside the file we can begin to create our theme customizing the values provided
+by the components. For example:</p>
+<pre><code>$egeo-c-label---background: transparent;
+$egeo-c-label---border: 0;
+$egeo-c-label---box-shadow: none;
+$egeo-c-label---color: egeo-get-color(a1);
+$egeo-c-label---font-size: egeo-get-font-size(body_xxsmall);
+$egeo-c-label---font-style: null;
 
+$egeo-c-label__optional-mark---color: egeo-get-color(a1);
+$egeo-c-label__optional-mark---content: &#39;(optional)&#39;;
+$egeo-c-label__optional-mark---font-style: null;
+
+$egeo-c-label__icon---color: egeo-get-color(n5);
+$egeo-c-label__icon---font-size: egeo-get-font-size(body_xsmall);
+</code></pre><p>If we want to create a complex architecture for the theme, we should remember
+that we want to use @import directive.</p>
+<pre><code>@import &#39;/mythemename/label&#39;;
+@import &#39;/mythemename/header&#39;;
+@import &#39;/mythemename/icon&#39;;
+...
+</code></pre><h1 id="how-to-import-the-theme-in-egeo">How to import the theme in Egeo</h1>
+<p>To import the theme inside Egeo to be applied, is needed to do it just after
+the tools importing as is shown below:</p>
+<pre><code>@import &#39;tools/tools.log&#39;;
+
+@import &#39;settings/settings&#39;;
+@import &#39;settings/settings.colors&#39;;
+@import &#39;settings/settings.fonts&#39;;
+@import &#39;settings/settings.layers&#39;;
+@import &#39;settings/settings.icons&#39;;
+@import &#39;settings/settings.typography&#39;;
+
+@import &#39;tools/tools.log&#39;;
+@import &#39;tools/tools.maps&#39;;
+@import &#39;tools/tools.colors&#39;;
+@import &#39;tools/tools.typography&#39;;
+@import &#39;tools/tools.layers&#39;;
+
+@import &#39;themes/theme.mythemename&#39;;
+
+@import &#39;utils/utils.alignments&#39;;
+@import &#39;utils/utils.clearfix&#39;;
+@import &#39;utils/utils.floats&#39;;
+@import &#39;utils/utils.text&#39;;
+
+@import &#39;objects/media/objects.media&#39;;
+@import &#39;objects/box-shadow/objects.box-shadow&#39;;
+
+@import &#39;components/component/components.component&#39;;
+@import &#39;components/app/components.app&#39;;
+...
+</code></pre>
             </div>
           </section>
         </article>
