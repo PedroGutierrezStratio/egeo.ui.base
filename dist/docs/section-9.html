@@ -59,11 +59,16 @@ changed using Sass.</p>
             <h1 class="kss-title"><span class="kss-ref">9.1</span> How to create a theme</h1>
             <div class="kss-description">
               <p>To create a theme the only thing you must to do is to create a Sass part file
-and include there all the properties you want to customize and are provided
+and include all the properties you want to customize and are provided
 by the component. The ones you don&#39;t include in the file will be replaced by
 the default value ones.</p>
 <p>It is also possible, and even advisable, to create an own micro-architecture
 for the theme if it is too complex to be included in one unique file.</p>
+<p><strong>Note: </strong> Note that when we are talking about components to theme, we are
+talking about [CSS Base Framework Components(section-7.html) and not the
+<a href="../ui-kit/section-5.html">UI Kit Components</a>. The difference is that they
+are a different set of components. The UI Kit Components were built using
+several CSS Components.</p>
 <h1 id="creating-a-theme">Creating a theme</h1>
 <p>The best way to create a theme is creating a new file inside the /theme/ folder,
 called _themes.mythemename.scss. The underscore is to indicate that is a Sass
@@ -89,9 +94,9 @@ that we want to use @import directive.</p>
 @import &#39;/mythemename/header&#39;;
 @import &#39;/mythemename/icon&#39;;
 ...
-</code></pre><h1 id="how-to-import-the-theme-in-egeo">How to import the theme in Egeo</h1>
+</code></pre><h1 id="how-to-import-a-theme-inside-the-egeo-base-framework">How to import a theme inside the Egeo Base Framework</h1>
 <p>To import the theme inside Egeo to be applied, is needed to do it just after
-the tools importing as is shown below:</p>
+the tools, importing it as is shown below:</p>
 <pre><code>@import &#39;tools/tools.log&#39;;
 
 @import &#39;settings/settings&#39;;
@@ -119,6 +124,43 @@ the tools importing as is shown below:</p>
 
 @import &#39;components/component/components.component&#39;;
 @import &#39;components/app/components.app&#39;;
+...
+</code></pre><h1 id="how-to-import-a-theme-inside-an-external-project">How to import a theme inside an external project</h1>
+<p>If you have a project based in Egeo components and want to create a theme to
+be used by the Egeo components, basically, the way to do it is exactly the
+same than the before one shown. The only thing to keep in mind is that the
+paths used to import the Egeo Base Framework files would come from
+/node_modules/egeo.ui.base/dist/egeo/... instead the theme that you probably
+want to be in your own project and then come from /sass/mytheme/_mytheme.scss.
+Take a look to the sample below:</p>
+<pre><code>$egeo-fontface-src: &#39;/assets/fonts&#39;;
+
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/vendors/vendors.sanitize&#39;;
+
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/settings/settings&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/settings/settings.colors&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/settings/settings.fonts&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/settings/settings.icons&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/settings/settings.typography&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/settings/settings.layers&#39;;
+
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/tools/tools.log&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/tools/tools.maps&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/tools/tools.layers&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/tools/tools.colors&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/tools/tools.typography&#39;;
+
+@import &#39;theme/egeoapptheme/theme.egeoapptheme&#39;;
+
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/utils/utils.alignments&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/utils/utils.floats&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/utils/utils.text&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/utils/utils.clearfix&#39;;
+
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/objects/media/objects.media&#39;;
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/objects/box-shadow/objects.box-shadow&#39;;
+
+@import &#39;../../node_modules/egeo.ui.base/dist/egeo/components/component/components.component&#39;;
 ...
 </code></pre>
             </div>

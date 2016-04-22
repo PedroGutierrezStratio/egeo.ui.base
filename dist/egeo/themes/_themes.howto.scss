@@ -1,12 +1,18 @@
 // How to create a theme
 //
 // To create a theme the only thing you must to do is to create a Sass part file
-// and include there all the properties you want to customize and are provided
+// and include all the properties you want to customize and are provided
 // by the component. The ones you don't include in the file will be replaced by
 // the default value ones.
 //
 // It is also possible, and even advisable, to create an own micro-architecture
 // for the theme if it is too complex to be included in one unique file.
+//
+// **Note: ** Note that when we are talking about components to theme, we are
+// talking about [CSS Base Framework Components(section-7.html) and not the
+// [UI Kit Components](../ui-kit/section-5.html). The difference is that they
+// are a different set of components. The UI Kit Components were built using
+// several CSS Components.
 //
 // # Creating a theme
 //
@@ -43,10 +49,10 @@
 // ...
 // ```
 //
-// # How to import the theme in Egeo
+// # How to import a theme inside the Egeo Base Framework
 //
 // To import the theme inside Egeo to be applied, is needed to do it just after
-// the tools importing as is shown below:
+// the tools, importing it as is shown below:
 //
 // ```
 // @import 'tools/tools.log';
@@ -76,6 +82,48 @@
 //
 // @import 'components/component/components.component';
 // @import 'components/app/components.app';
+// ...
+// ```
+//
+// # How to import a theme inside an external project
+//
+// If you have a project based in Egeo components and want to create a theme to
+// be used by the Egeo components, basically, the way to do it is exactly the
+// same than the before one shown. The only thing to keep in mind is that the
+// paths used to import the Egeo Base Framework files would come from
+// /node_modules/egeo.ui.base/dist/egeo/... instead the theme that you probably
+// want to be in your own project and then come from /sass/mytheme/_mytheme.scss.
+// Take a look to the sample below:
+//
+// ```
+// $egeo-fontface-src: '/assets/fonts';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/vendors/vendors.sanitize';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings.colors';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings.fonts';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings.icons';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings.typography';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings.layers';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/tools/tools.log';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/tools/tools.maps';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/tools/tools.layers';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/tools/tools.colors';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/tools/tools.typography';
+//
+// @import 'theme/egeoapptheme/theme.egeoapptheme';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/utils/utils.alignments';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/utils/utils.floats';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/utils/utils.text';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/utils/utils.clearfix';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/objects/media/objects.media';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/objects/box-shadow/objects.box-shadow';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/components/component/components.component';
 // ...
 // ```
 //
