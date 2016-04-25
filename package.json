@@ -25,15 +25,17 @@
   },
   "dependencies": {
     "egeo.website.template": "https://github.com/Stratio/egeo.website.template.git",
-    "grunt-contrib-watch": "^0.6.1",
-    "kss": "^2.3.1",
     "grunt-batch": "^0.2.4",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.1",
-    "grunt-sass": "^1.0.0",
-    "node-sass": "^3.3.3"
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.1.0",
+    "kss": "^2.3.1",
+    "node-sass": "^3.5.3"
   },
   "pre-commit": {
-    "run": ["test"]
+    "run": [
+      "test"
+    ]
   }
 }

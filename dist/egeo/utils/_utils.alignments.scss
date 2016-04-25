@@ -1,11 +1,11 @@
 // utils.alignments
 //
 // A set of mixins, functions and classes to work with alignments.
-// These classes are also available using the [non-BEM 
+// These classes are also available using the [non-BEM
 // namespace](section-1.html).
 //
 // ## Variables exposed to theming
-//  
+//
 // | Variable                              | Default value  | Description                                                                          |
 // | ------------------------------------- | -------------- | ------------------------------------------------------------------------------------ |
 // | $egeo-u-tx-alignments                 | `true`         | Whether or not we want to include the alignments classes in the compiled CSS.        |
@@ -14,13 +14,13 @@
 //
 // <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Tested</span><span class="tag tag--danger">internal</span>
 //
-// Creates a text-align property in any $direction (left/right/center) and adding `!important` 
+// Creates a text-align property in any $direction (left/right/center) and adding `!important`
 // depending of the `$nobem` parameter value.
 //
 // <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
 //
 // ### %egeo-u-tx-align--left, .egeo-u-tx-align--left
-// 
+//
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
 // Set a 'text-align: left;' property.
@@ -28,7 +28,7 @@
 // <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
 //
 // ### %egeo-u-tx-align--left, .egeo-u-tx-align--left
-// 
+//
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
 // Set a 'text-align: left !important;' property.
@@ -36,7 +36,7 @@
 // <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
 //
 // ### %egeo-u-tx-align-right, .egeo-u-tx-align-right
-// 
+//
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
 // Set a 'text-align: right;' property.
@@ -44,13 +44,13 @@
 // <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
 //
 // ### %egeo-u-tx-align-right, .egeo-u-tx-align-right
-// 
+//
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
 // Set a 'text-align: right !important;' property.
 //
 // ### %egeo-u-tx-align-center, .egeo-u-tx-align-center
-// 
+//
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
 // Set a 'text-align: center;' property.
@@ -58,7 +58,7 @@
 // <div class="compatibility">Compatibility IE3+, Firefox 1+, Chrome 1+, Edge 12+, Safari 1+, Opera 3.5+</div>
 //
 // ### %egeo-u-tx-align-center, .egeo-u-tx-align-center
-// 
+//
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
 // Set a 'text-align: center !important;' property.
@@ -71,11 +71,7 @@ $this: '#{$egeo-namespace}u-tx-align';
 $this-nobem: '#{$egeo-nobem-namespace}u-tx-align';
 
 // If silent classes are activated the CSS classes will be not created
-@if global-variable-exists(egeo-silent-classes) {
-    $egeo-u-tx-alignments: not $egeo-silent-classes !default;    
-} @else {
-    $egeo-u-tx-alignments: true !default;
-}
+$egeo-u-tx-alignments: not $egeo-silent-classes !default;
 
 @mixin egeo-u-tx-align($direction: left, $nobem: false) {
     @if $nobem {
@@ -104,7 +100,7 @@ $this-nobem: '#{$egeo-nobem-namespace}u-tx-align';
     .#{$this-nobem}--right,
     %#{$this-nobem}--right {
         @include egeo-u-tx-align(right, true);
-    }    
+    }
 
     .#{$this}--center,
     %#{$this}--center {
@@ -114,5 +110,5 @@ $this-nobem: '#{$egeo-nobem-namespace}u-tx-align';
     .#{$this-nobem}--center,
     %#{$this-nobem}--center {
         @include egeo-u-tx-align(center, true);
-    }    
+    }
 }
