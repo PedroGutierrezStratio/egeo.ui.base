@@ -1,6 +1,6 @@
 {
   "name": "egeo.ui.base",
-  "version": "0.1.1",
+  "version": "0.2.0-rc.0",
   "description": "The Egeo Base Framework is a set of libraries and objects to help build Front-end components and apps.",
   "main": "src/index.scss",
   "scripts": {
@@ -24,7 +24,7 @@
     "url": "https://github.com/Stratio/egeo.ui.base"
   },
   "dependencies": {
-    "egeo.website.template": "https://github.com/Stratio/egeo.website.template.git",
+    "egeo.website.template": "https://github.com/Stratio/egeo.website.template.git#v0.2.0-rc.0",
     "grunt-batch": "^0.2.4",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.1",
