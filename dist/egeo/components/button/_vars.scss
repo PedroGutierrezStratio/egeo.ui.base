@@ -1,9 +1,5 @@
 // If silent classes are activated the CSS classes will be not created
-@if global-variable-exists(egeo-silent-classes) {
-    $egeo-c-button: not $egeo-silent-classes !default;    
-} @else {
-    $egeo-c-button: true !default;
-}
+$egeo-c-button: not $egeo-silent-classes !default;    
 
 //
 //  Button definitions
@@ -51,30 +47,30 @@ $egeo-c-button--xxsmall__c-icon---margin: 0 6px 0 0 !default;
 // Default button types
 $egeo-c-buttons: (
     main-1: (
-                normal: (background: egeo-get-color(a1), border: 0, color: egeo-get-color(n0)), 
-                hover: (background: egeo-get-color(a1_dark), border: 0, color: egeo-get-color(n0)), 
+                normal: (background: egeo-get-color(a1), border: 0, color: egeo-get-color(n0)),
+                hover: (background: egeo-get-color(a1_dark), border: 0, color: egeo-get-color(n0)),
                 focus: (background: egeo-get-color(a1_light), border: 0, color: egeo-get-color(n0))
             ),
     main-2: (
-                normal: (background: egeo-get-color(a2), border: 0, color: egeo-get-color(n0)), 
-                hover: (background: egeo-get-color(a2_dark), border: 0, color: egeo-get-color(n0)), 
+                normal: (background: egeo-get-color(a2), border: 0, color: egeo-get-color(n0)),
+                hover: (background: egeo-get-color(a2_dark), border: 0, color: egeo-get-color(n0)),
                 focus: (background: egeo-get-color(a2_light), border: 0, color: egeo-get-color(n0))
             ),
     main-3: (
-                normal: (background: egeo-get-color(a3), border: 0, color: egeo-get-color(n0)), 
-                hover: (background: egeo-get-color(a3_dark), border: 0, color: egeo-get-color(n0)), 
+                normal: (background: egeo-get-color(a3), border: 0, color: egeo-get-color(n0)),
+                hover: (background: egeo-get-color(a3_dark), border: 0, color: egeo-get-color(n0)),
                 focus: (background: egeo-get-color(a3_light), border: 0, color: egeo-get-color(n0))
             ),
     secondary-1: (
-                    normal: (background: transparent, border: 3px solid egeo-get-color(n3), color: egeo-get-color(n4)), 
+                    normal: (background: transparent, border: 3px solid egeo-get-color(n3), color: egeo-get-color(n4)),
                     hover: (background: transparent, border: 3px solid egeo-get-color(n4), color: egeo-get-color(n5))
                 ),
     tool-1: (
-                normal: (background: egeo-get-color(n2), border: 0, color: egeo-get-color(a1)), 
+                normal: (background: egeo-get-color(n2), border: 0, color: egeo-get-color(a1)),
                 hover: (background: egeo-get-color(n3), border: 0, color: egeo-get-color(a1_dark))
             ),
     tool-2: (
-                normal: (background: egeo-get-color(n2), border: 0, color: egeo-get-color(n6)), 
+                normal: (background: egeo-get-color(n2), border: 0, color: egeo-get-color(n6)),
                 hover: (background: egeo-get-color(n3), border: 0, color: egeo-get-color(n7))
             ),
     tool-ellipsis: (
@@ -85,20 +81,20 @@ $egeo-c-buttons: (
                 normal: (background: transparent, border: 0, color: egeo-get-color(n5), min-width: $egeo-c-button--xxsmall---height, width: $egeo-c-button--xxsmall---height),
             ),
     danger: (
-                normal: (background: egeo-get-color(s3), border: 0, color: egeo-get-color(n0)), 
+                normal: (background: egeo-get-color(s3), border: 0, color: egeo-get-color(n0)),
                 hover: (background: egeo-get-color(s3_dark), border: 0, color: egeo-get-color(n0))
             ),
     disabled: (
                 normal: (background: egeo-get-color(n3), border: 0, color: egeo-get-color(n0))
               ),
     dropdown-1: (
-                normal: (background: transparent, border: 0, color: egeo-get-color(n7), min-width: 0, padding: 0), 
-                hover: (background: transparent, border: 0, color: egeo-get-color(n6), min-width: 0, padding: 0), 
+                normal: (background: transparent, border: 0, color: egeo-get-color(n7), min-width: 0, padding: 0),
+                hover: (background: transparent, border: 0, color: egeo-get-color(n6), min-width: 0, padding: 0),
                 focus: (background: transparent, border: 0, color: egeo-get-color(n6), min-width: 0, padding: 0)
             ),
     menu-1: (
-                normal: (background: transparent, border: 0, color: egeo-get-color(n7), min-width: 0, padding: 0), 
-                hover: (background: transparent, border: 0, color: egeo-get-color(n5), min-width: 0, padding: 0), 
+                normal: (background: transparent, border: 0, color: egeo-get-color(n7), min-width: 0, padding: 0),
+                hover: (background: transparent, border: 0, color: egeo-get-color(n5), min-width: 0, padding: 0),
                 focus: (background: transparent, border: 0, color: egeo-get-color(n5), min-width: 0, padding: 0)
             )
 ) !default;

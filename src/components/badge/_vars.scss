@@ -1,9 +1,5 @@
 // If silent classes are activated the CSS classes will be not created
-@if global-variable-exists(egeo-silent-classes) {
-    $egeo-c-badge: not $egeo-silent-classes !default;
-} @else {
-    $egeo-c-badge: true !default;
-}
+$egeo-c-badge: not $egeo-silent-classes !default;
 
 $egeo-c-badge---font-size: egeo-get-font-size(body_xxxsmall) !default;
 $egeo-c-badge---background: egeo-get-color(s2_dark) !default;

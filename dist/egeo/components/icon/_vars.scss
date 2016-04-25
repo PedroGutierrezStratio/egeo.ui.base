@@ -1,6 +1,2 @@
 // If silent classes are activated the CSS classes will be not created
-@if global-variable-exists(egeo-silent-classes) {
-    $egeo-c-icon: not $egeo-silent-classes !default;    
-} @else {
-    $egeo-c-icon: true !default;
-}
+$egeo-c-icon: not $egeo-silent-classes !default;

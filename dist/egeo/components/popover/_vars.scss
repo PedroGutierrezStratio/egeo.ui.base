@@ -1,9 +1,5 @@
 // If silent classes are activated the CSS classes will be not created
-@if global-variable-exists(egeo-silent-classes) {
-    $egeo-c-popover: not $egeo-silent-classes !default;    
-} @else {
-    $egeo-c-popover: true !default;
-}
+$egeo-c-popover: not $egeo-silent-classes !default;
 
 $egeo-c-popover---background: #fff !default;
 $egeo-c-popover---border: 0 !default;

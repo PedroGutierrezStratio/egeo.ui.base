@@ -1,6 +1,2 @@
 // If silent classes are activated the CSS classes will be not created
-@if global-variable-exists(egeo-silent-classes) {
-    $egeo-c-combobox: not $egeo-silent-classes !default;    
-} @else {
-    $egeo-c-combobox: true !default;
-}
+$egeo-c-combobox: not $egeo-silent-classes !default;    

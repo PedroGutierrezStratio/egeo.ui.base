@@ -1,14 +1,10 @@
 // If silent classes are activated the CSS classes will be not created
-@if global-variable-exists(egeo-silent-classes) {
-    $egeo-c-row: not $egeo-silent-classes !default;    
-} @else {
-    $egeo-c-row: true !default;
-}
+$egeo-c-row: not $egeo-silent-classes !default;
 
 $egeo-c-row---backgrounds: (
-    'b1': egeo-get-color(b1), 
-    'b2': egeo-get-color(b2), 
-    'b3': egeo-get-color(b3), 
+    'b1': egeo-get-color(b1),
+    'b2': egeo-get-color(b2),
+    'b3': egeo-get-color(b3),
     'b3_dark': egeo-get-color(b3_dark),
     'b4': egeo-get-color(b4)
 ) !default;
