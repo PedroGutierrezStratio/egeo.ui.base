@@ -1,0 +1,4 @@
+// If silent classes are activated the CSS classes will be not created
+$egeo-c-formgroup: not $egeo-silent-classes !default;
+
+$egeo-c-formgroup---margin: 0 0 8px !default;

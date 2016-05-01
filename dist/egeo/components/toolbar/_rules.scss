@@ -6,10 +6,14 @@ $this: '#{$egeo-namespace}c-toolbar';
     display: inline-block;
 
     &__item {
-        margin: $egeo-c-toolbar__item---margin;
+        display: inline-block;
+        @if $egeo-c-toolbar__item---margin { margin: $egeo-c-toolbar__item---margin; }
+        vertical-align: top;
 
-        &:first-child {
-            margin: $egeo-c-toolbar__item--first-child---margin;
+        @if $egeo-c-toolbar__item--first-child---margin {
+            &:first-child {
+                margin: $egeo-c-toolbar__item--first-child---margin;
+            }
         }
     }
 }

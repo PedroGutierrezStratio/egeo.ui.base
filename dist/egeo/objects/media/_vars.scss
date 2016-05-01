@@ -1,2 +1,4 @@
-$egeo-o-media: true !default;
+// If silent classes are activated the CSS classes will be not created
+$egeo-o-media: not $egeo-silent-classes !default;
+
 $egeo-o-media-margin: 10px !default;

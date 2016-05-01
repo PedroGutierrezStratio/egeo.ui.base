@@ -1,0 +1,15 @@
+$this: '#{$egeo-namespace}c-combobox';
+
+@mixin egeo-c-combobox {
+    @include egeo-c-input;
+
+    cursor: pointer;
+}
+
+@if variable-exists(egeo-c-combobox) {
+    @if $egeo-c-combobox {
+        .#{$this} {
+            @include egeo-c-combobox;
+        }
+    }
+}

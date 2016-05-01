@@ -1,0 +1,11 @@
+// If silent classes are activated the CSS classes will be not created
+$egeo-o-box-shadow: not $egeo-silent-classes !default;    
+
+$egeo-shadows: (
+    sh1: rgba(0, 0, 0, .1),
+    sh2: rgba(0, 0, 0, .15),
+    sh3: rgba(0, 0, 0, .3)
+) !default;
+
+$egeo-o-box-shadow---box-shadow: 0 0 3px map-get($egeo-shadows, sh2), 0 0 1px map-get($egeo-shadows, sh3), 0 3px 2px -1px map-get($egeo-shadows, sh1) !default;
+$egeo-o-box-shadow---shadow-color: map-get($egeo-shadows, sh3) !default;

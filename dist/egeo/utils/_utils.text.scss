@@ -1,26 +1,26 @@
 // utils.text
 //
 // Provide a series of classes and placeholders to work with text
-// like whitespaces, underlines and so on. These classes are also 
+// like whitespaces, underlines and so on. These classes are also
 // available using the [non-BEM namespace](section-1.html).
 //
 // ## Variables exposed to theming
-//  
+//
 // | Variable                                                | Default value                                    | Description                                                                                                       |
 // | ------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
 // | <div class="egeo-u-tx-align--left">$egeo-u-nowrap</div> | <div class="egeo-u-tx-align--left">`true`</div>  | <div class="egeo-u-tx-align--left">Whether or not we want to include the nowrap class in the compiled CSS.</div> |
 //
 // ### egeo-u-nowrap($nobem: false)
 //
-// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Tested</span><span class="tag tag--danger">Internal</span>
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Tested</span><span class="tag tag--danger">internal</span>
 //
-// Creates a `white-space: nowrap;` property and adds `!important` 
+// Creates a `white-space: nowrap;` property and adds `!important`
 // depending of the `$nobem` parameter value.
 //
 // <div class="compatibility">Compatibility IE8+, Firefox 3.5+, Chrome 1+, Edge 12+, Safari 3+, Opera 9.5+</div>
 //
 // ## %egeo-u-nowrap, .egeo-u-nowrap
-// 
+//
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
 // Set a 'white-space: nowrap;' property.
@@ -28,7 +28,7 @@
 // <div class="compatibility">Compatibility IE8+, Firefox 3.5+, Chrome 1+, Edge 12+, Safari 3+, Opera 9.5+</div>
 //
 // ## %egeo-nobem-u-nowrap, .#egeo-nobem-u-nowrap
-// 
+//
 // <span class="tag tag--type">@placeholder</span><span class="tag tag--type">@class</span>
 //
 // Set a 'white-space: nowrap !important;' property.
@@ -41,11 +41,7 @@ $this: '#{$egeo-namespace}u-nowrap';
 $this-nobem: '#{$egeo-nobem-namespace}u-nowrap';
 
 // If silent classes are activated the CSS classes will be not created
-@if global-variable-exists(egeo-silent-classes) {
-    $egeo-u-nowrap: not $egeo-silent-classes !default;    
-} @else {
-    $egeo-u-nowrap: true !default;
-}
+$egeo-u-nowrap: not $egeo-silent-classes !default;
 
 @mixin egeo-u-nowrap($nobem: false) {
     @if $nobem {
@@ -56,13 +52,13 @@ $this-nobem: '#{$egeo-nobem-namespace}u-nowrap';
 }
 
 @if $egeo-u-nowrap {
-    .#{this},
-    %#{this} {
+    .#{$this},
+    %#{$this} {
     	@include egeo-u-nowrap;
     }
 
-    .#{this-nobem},
-    %#{this-nobem} {
+    .#{$this-nobem},
+    %#{$this-nobem} {
     	@include egeo-u-nowrap(true);
     }
 }

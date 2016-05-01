@@ -1,0 +1,22 @@
+$this: '#{$egeo-namespace}c-badge';
+
+@mixin egeo-c-badge {
+    @include egeo-c-component;
+
+    @if $egeo-c-badge---font-size { font-size: $egeo-c-badge---font-size; }
+    @if $egeo-c-badge---background { background: $egeo-c-badge---background; }
+    @if $egeo-c-badge---padding { padding: $egeo-c-badge---padding; }
+    @if $egeo-c-badge---color { color: $egeo-c-badge---color; }
+    @if $egeo-c-badge---border-radius { border-radius: $egeo-c-badge---border-radius; }
+    @if $egeo-c-badge---top { top: $egeo-c-badge---top; }
+    position: absolute;
+    @if $egeo-c-badge---right { right: $egeo-c-badge---right; }
+}
+
+@if variable-exists(egeo-c-badge) {
+    @if $egeo-c-badge {
+        .#{$this} {
+            @include egeo-c-badge;
+        }
+    }
+}

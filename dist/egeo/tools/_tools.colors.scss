@@ -4,17 +4,18 @@
 //
 // ### egeo-is-coloured($colors)
 // 
-// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">Test covered</span>
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span>
 //
 // Creates a set of modifier classes with the whole colors of a colors map passed as a parameter.
 //
 // * **$colors** - A Sass map of colors when the key is the name of the color and the value is the color itself.
+// * **$type** - color/background
 //
 // <div class="compatibility">Compatibility untested.</div>
 //
 // ### egeo-get-color($color)
 // 
-// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
+// <span class="tag tag--type">@function</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span>
 //
 // Get a specific color of the Sass map of colors [$egeo-colors defined in settings.colors](section-2.html#section-2.1).
 //
@@ -22,6 +23,7 @@
 //
 // ## Dependencies
 //
+// * [settings.colors](section-2.html#section-2.1)
 // * [tools.log](section-3.html#section-3.3): This library uses the logger tool to show debug info.
 //
 // Styleguide 3.1
@@ -32,7 +34,7 @@
 			&--#{$key} {
 				@if $type == color {
 					color: $value;
-				} @else if {
+				} @else if $type == background {
 					background-color: $value;
 				} @else {
 					@if function-exists(egeo-log) {

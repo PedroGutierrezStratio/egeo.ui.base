@@ -1,0 +1,56 @@
+$this: '#{$egeo-namespace}c-input';
+
+%egeo-c-input-placeholder {
+    color: $egeo-c-input__placeholder---color;
+    font-style: $egeo-c-input__placeholder---font-style;
+}
+
+@mixin egeo-c-input {
+    @include egeo-c-formcontrol;
+
+    @if $egeo-c-input---border { border: $egeo-c-input---border; }
+    @if $egeo-c-input---border-bottom { border-bottom: $egeo-c-input---border-bottom; }
+    @if $egeo-c-input---font-size { font-size: $egeo-c-input---font-size; }
+    @if $egeo-c-input---box-shadow { box-shadow: $egeo-c-input---box-shadow; }
+
+    + .egeo-c-message--restriction {
+        visibility: hidden;
+    }
+
+    &:focus {
+        @if $egeo-c-input--focus---border-bottom { border-bottom: $egeo-c-input--focus---border-bottom; }
+
+        + .egeo-c-message--restriction {
+            visibility: visible;
+        }
+    }
+
+    + .egeo-c-popover {
+        left: $egeo-c-input__popover---left;
+        top: $egeo-c-input__popover---top;
+    }
+
+    &::-webkit-input-placeholder {
+        @extend %egeo-c-input-placeholder;
+    }
+
+    &:-moz-placeholder {
+        @extend %egeo-c-input-placeholder;
+    }
+
+    &::-moz-placeholder {
+        @extend %egeo-c-input-placeholder;
+    }
+
+    &:-ms-input-placeholder {
+        @extend %egeo-c-input-placeholder;
+    }
+}
+
+@if variable-exists(egeo-c-input) {
+    @if $egeo-c-input {
+        .#{$this} {
+            @include egeo-c-input;
+        }
+    }
+}

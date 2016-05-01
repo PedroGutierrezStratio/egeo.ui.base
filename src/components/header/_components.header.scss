@@ -1,0 +1,62 @@
+// Header
+//
+// <span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span>
+//
+// The header component creates the official header of the stratio modules.
+//
+// ### egeo-c-header
+//
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span>
+//
+// Returns the whole styles to create a header to be extended in another CSS class
+// not implemented by this framework.
+//
+// ## Variables exposed to theming
+//
+// | Variable           | Default value    | Description                                                              |
+// | ------------------ | ---------------- | ------------------------------------------------------------------------ |
+// | $egeo-c-app-header | `true`           | Tells Egeo if the class egeo-c-app-header should be included in the CSS. |
+// | $egeo-c-header---background | `egeo-get-color(n10)` | The background of the header. |
+// | $egeo-c-header---color | `egeo-get-color(n0)` | The main color of the texts inside the header. |
+// | $egeo-c-header---padding | `30px 30px 20px` | The padding around the contents of the header. |
+// | $egeo-c-header__menu---margin | `0 0 0 30px` | The margins around the header |
+// | $egeo-c-header__menu----tweakpoint | `1260px` | The tweakpoint (a media query) where the component would adapt its behavior and appearance. |
+// | $egeo-c-header__menu-item---color | `egeo-get-color(n6)` | The color of the items of the main menu. |
+// | $egeo-c-header__menu-item---margin | `0 0 0 30px` | The margin around each item of the main menu. |
+// | $egeo-c-header__menu-item--hover---color | `egeo-get-color(n0)` | The color of each item of the main menu when mouse over. |
+// | $egeo-c-header__menu-item__label---color | `egeo-get-color(n6)` | The color of the label of each item of the main menu. |
+// | $egeo-c-header__menu-item__label---font-family | `egeo-get-font(brandon-grotesque)` | The font family of the label of each item of the main menu. |
+// | $egeo-c-header__menu-item__label---font-size | `egeo-get-font-size(head_xsmall)` | The font size of the label of each item of the main menu. |
+// | $egeo-c-header__menu-item__label---letter-spacing | `-1px` | The letter spacing of the label of each item of the main menu. |
+// | $egeo-c-header__menu-item__label---margin | `0 0 0 5px` | The margin around the label of each item of the main menu. |
+// | $egeo-c-header__menu-item__label---text-transform | `uppercase` | The text-transform value of the label of each item of the main menu. |
+// | $egeo-c-header__menu-item__icon---font-size | `egeo-get-font-size(head_xxsmall)` | The font size of the icon of each item of the main menu. |
+// | $egeo-c-header__note---background | `egeo-get-color(a1_dark)` | The background of the note (if used). |
+// | $egeo-c-header__note---bottom | `0` | The distance of the note from the bottom of the header (if note used).  |
+// | $egeo-c-header__note---padding | `5px 10px` | The paddings of the note (if used). |
+// | $egeo-c-header__note---right | `10px` | The distance of the note form the right of the header (if note used). |
+// | $egeo-c-header__note--menu-max---padding | `10px` | The paddings of the note when the min-width of the viewport is less than the tweakpoint. |
+// | $egeo-c-header__note__link---color | `egeo-get-color(n0)` | The color of the link inside the note (if note used). |
+// | $egeo-c-header__submenu---margin | `30px 0 0` | The margin around the submenu. |
+// | $egeo-c-header__submenu__arrow---content | `'\e625'` | The content of the arrow of the submenu that correponds to the icon code in the icon font used. |
+// | $egeo-c-header__submenu__arrow---font-family | `egeo-get-font(icon)` | The icon font used to print the arrow of the submenu. |
+// | $egeo-c-header__submenu__arrow---font-size | `egeo-get-font-size(head_normal)` | The font size of the icon used to print the arrow of the submenu. |
+// | $egeo-c-header__submenu__arrow---color | `egeo-get-color(n10)` | The color used to print the arrow of the submenu. |
+// | $egeo-c-header__submenu__arrow---left | `0` | The left position from the labels of the submenu where the arrow of the submenu would be positioned. |
+// | $egeo-c-header__submenu__arrow---top | `-17px` | The top position from the labels of the submenu where the arrow of the submenu would be positioned. |
+// | $egeo-c-header__submenu-item---border-left | `1px solid egeo-get-color(n6)` | The border would be printed at left of the submenu items except the first one to separate each from others. |
+// | $egeo-c-header__submenu-item---color | `egeo-get-color(n6)` | The color of the labels of the submenu items. |
+// | $egeo-c-header__submenu-item---margin | `0 0 0 25px` | The margin around each submenu item. |
+// | $egeo-c-header__submenu-item---padding | `0 0 0 25px` | The padding around each submenu item. |
+// | $egeo-c-header__submenu-item---text-transform | `uppercase` | The text-transform value the label of each submenu item would have. |
+// | $egeo-c-header__submenu-item--active---color | `egeo-get-color(n10)` | The color of each submenu item when it is active. |
+// | $egeo-c-header__submenu-item--active---border-bottom | `3px solid egeo-get-color(a1)` | The border at bottom of each submenu item when it is active. |
+// | $egeo-c-header__submenu-item--hover---color | `egeo-get-color(n10)` | The color of each submenu item when mouse over. |
+// | $egeo-c-header__note__label---margin | `0 0 0 5px` | The margin of the label of each submenu item when have a left icon. |
+// | $egeo-c-header__note__right-icon---margin | `0 25px 0 0` | The margin of the label of each submenu item when have a right icon. |
+//
+// Styleguide 7.20
+
+@import 'vars';
+@import 'mq';
+@import 'rules';

@@ -1,0 +1,29 @@
+// Combobox
+//
+// <span class="tag tag--untested">untested</span><span class="tag tag--danger">alpha version</span>
+//
+// The Combobox Component is a class to show the Egeo custom version of an
+// HTML select tag. It extends the input component.
+//
+// ### egeo-c-combobox
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span>
+//
+// Apply the whole styles needed to customize a select.
+//
+// ## Variables exposed to theming
+//
+// | Variable                                | Default value                            | Description                                                           |
+// | --------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------- |
+// | $egeo-c-combobox                        | `true`                                   | Tells Egeo if the class egeo-c-combobox should be included in the CSS.   |
+//
+// ## Dependencies
+//  
+// * [components.input](section-7.html#section-7.13)
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.18
+
+@import 'vars';
+@import 'rules';

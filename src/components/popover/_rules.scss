@@ -1,0 +1,122 @@
+$this: '#{$egeo-namespace}c-popover';
+
+@mixin egeo-c-popover {
+    @include egeo-c-component;
+
+    @if $egeo-c-popover---background { background: $egeo-c-popover---background; }
+    @if $egeo-c-popover---border { border: $egeo-c-popover---border; }
+    @if $egeo-c-popover---border-radius { border-radius: $egeo-c-popover---border-radius; }
+    @if $egeo-c-popover---box-shadow { box-shadow: $egeo-c-popover---box-shadow; }
+    display: none;
+    @if $egeo-c-popover---padding { padding: $egeo-c-popover---padding; }
+    position: absolute;
+    @if $egeo-c-popover---width { width: $egeo-c-popover---width; }
+    @if $egeo-c-popover---z-index { z-index: $egeo-c-popover---z-index; }
+
+    &--right-aligned {
+        right: 0;
+    }
+
+    &__text {
+        color: $egeo-c-popover__text---color;
+        font-style: $egeo-c-popover__text---font-style;
+        padding: $egeo-c-popover__text---padding;
+    }
+
+    &__listitems {
+        list-style: none;
+    }
+
+    &__listitem {
+        background: transparent;
+        border: 0;
+        @if $egeo-c-popover__listitem---color { color: $egeo-c-popover__listitem---color; }
+        cursor: pointer;
+        display: block;
+        list-style: none;
+        @if $egeo-c-popover__listitem---margin { margin: $egeo-c-popover__listitem---margin; }
+        @if $egeo-c-popover__listitem---padding { padding: $egeo-c-popover__listitem---padding; }
+        text-align: left;
+        width: 100%;
+
+        @if $egeo-c-popover__listitem--hover---background {
+            &:hover {
+                background: $egeo-c-popover__listitem--hover---background;
+            }
+        }
+
+        @if $egeo-c-icon {
+            @if $egeo-c-popover__listitem__icon---color {
+                .egeo-c-icon {
+                    color: $egeo-c-popover__listitem__icon---color;
+                }
+            }
+        }
+    }
+
+    &__arrow,
+    &__arrow-shadow {
+        border-color: transparent;
+        display: none;
+        height: 0;
+        position: absolute;
+        width: 0;
+
+        &--open {
+            display: block;
+        }
+    }
+
+    &__arrow {
+        @if $egeo-c-popover---background { border-bottom-color: $egeo-c-popover---background; }
+        z-index: egeo-get-layer(top-2);
+
+        &--top {
+            border-style: dashed dashed solid;
+            @if $egeo-c-popover__arrow---size { border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size; }
+            bottom: -2px;
+            @if $egeo-c-popover__arrow---size { left: calc(50% - #{$egeo-c-popover__arrow---size}); }
+        }
+
+        &--left {
+            border-style: dashed dashed solid;
+            @if $egeo-c-popover__arrow---size { border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size; }
+            bottom: 2px;
+            @if $egeo-c-popover__arrow---size { left: calc(50% - 1px); }
+            transform: rotate(270deg);
+        }
+    }
+
+    &__arrow-shadow {
+        border-bottom-color: $egeo-c-popover---shadow-color;
+
+        &--top {
+            border-style: dashed dashed solid;
+            @if $egeo-c-popover__arrow---size { border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size; }
+            bottom: -1px;
+            @if $egeo-c-popover__arrow---size { left: calc(50% - #{$egeo-c-popover__arrow---size}); }
+        }
+
+        &--left {
+            border-style: dashed dashed solid;
+            @if $egeo-c-popover__arrow---size { border-width: 0 $egeo-c-popover__arrow---size $egeo-c-popover__arrow---size; }
+            bottom: 2px;
+            @if $egeo-c-popover__arrow---size { left: 50%; }
+            transform: rotate(270deg);
+        }
+    }
+
+    &--open {
+        display: block;
+    }
+}
+
+@if variable-exists(egeo-c-popover) {
+    @if $egeo-c-popover {
+        @if (not $egeo-c-popover__arrow---size) { @include egeo-log('The arrow of the popover will be not drawed due to its size is not defined or is null.', $egeo-log-warn); }
+
+        .#{$this} {
+            @include egeo-c-popover;
+        }
+    }
+}

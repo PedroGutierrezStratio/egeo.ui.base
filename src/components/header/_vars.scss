@@ -1,0 +1,64 @@
+// If silent classes are activated the CSS classes will be not created
+$egeo-c-header: not $egeo-silent-classes !default;
+
+$egeo-c-header---background: egeo-get-color(n10) !default;
+$egeo-c-header---color: egeo-get-color(n0) !default;
+$egeo-c-header---padding: 30px 30px 20px !default;
+$egeo-c-header---margin: 0 0 20px 0 !default;
+
+$egeo-c-header__navigation---font-size: egeo-get-font-size(head_xxsmall) !default;
+
+$egeo-c-header__menu---margin: 0 0 0 30px !default;
+$egeo-c-header__menu----tweakpoint: 1260px !default;
+
+$egeo-c-header__menu-item---color: egeo-get-color(n6) !default;
+$egeo-c-header__menu-item---margin: 0 0 0 30px !default;
+
+$egeo-c-header__menu-item--hover---color: egeo-get-color(n0) !default;
+
+$egeo-c-header__menu-item__label---color: egeo-get-color(n6) !default;
+$egeo-c-header__menu-item__label---font-family: egeo-get-font(brandon-grotesque) !default;
+$egeo-c-header__menu-item__label---font-size: egeo-get-font-size(head_xsmall) !default;
+$egeo-c-header__menu-item__label---letter-spacing: -1px !default;
+$egeo-c-header__menu-item__label---margin: 0 0 0 5px !default;
+$egeo-c-header__menu-item__label---text-transform: uppercase !default;
+
+$egeo-c-header__menu-item__icon---font-size: egeo-get-font-size(head_xxsmall) !default;
+
+$egeo-c-header__note---right: 10px !default;
+$egeo-c-header__note---bottom: 0 !default;
+$egeo-c-header__note---background: egeo-get-color(a1_dark) !default;
+$egeo-c-header__note---padding: 5px 10px !default;
+
+$egeo-c-header__note--menu-max---padding: 10px !default;
+
+$egeo-c-header__note__link---color: egeo-get-color(n0) !default;
+
+$egeo-c-header__submenu---margin: 30px 0 0 !default;
+
+$egeo-c-header__submenu__arrow---content: '\e625' !default;
+$egeo-c-header__submenu__arrow---font-family: egeo-get-font(icon) !default;
+$egeo-c-header__submenu__arrow---font-size: egeo-get-font-size(head_normal) !default;
+$egeo-c-header__submenu__arrow---color: egeo-get-color(n10) !default;
+$egeo-c-header__submenu__arrow---left: 0 !default;
+$egeo-c-header__submenu__arrow---top: -17px !default;
+
+$egeo-c-header__submenu-item---border-left: 1px solid egeo-get-color(n6) !default;
+$egeo-c-header__submenu-item---color: egeo-get-color(n6) !default;
+$egeo-c-header__submenu---font-size: egeo-get-font-size(head_xxsmall) !default;
+$egeo-c-header__submenu-item---margin: 0 0 0 25px !default;
+$egeo-c-header__submenu-item---padding: 0 0 0 25px !default;
+$egeo-c-header__submenu-item---text-transform: uppercase !default;
+
+$egeo-c-header__submenu-item--active---color: egeo-get-color(n10) !default;
+$egeo-c-header__submenu-item--active---border-bottom: 3px solid egeo-get-color(a1) !default;
+$egeo-c-header__submenu-item--hover---color: egeo-get-color(n10) !default;
+
+$egeo-c-header--submenu-shadow---height: 45px !default;
+$egeo-c-header--submenu-shadow---margin: 20px -30px -20px -30px !default;
+
+$egeo-c-header__note__label---margin: 0 0 0 5px !default;
+$egeo-c-header__note---font-size: egeo-get-font-size(head_xxxsmall) !default;
+$egeo-c-header__note__right-icon---margin: 0 25px 0 0 !default;
+
+$egeo-c-header__user-bar---size: 30px !default;

@@ -4,7 +4,7 @@
 //
 // ### egeo-get-layer($layer)
 // 
-// <span class="tag tag--type">@function</span><span class="tag tag--tested">Test covered</span><span class="tag tag--danger">Internal</span>
+// <span class="tag tag--type">@function</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span>
 //
 // Return a value from the Sass map [$egeo-layers](section-2.html#section-2.5).
 //
@@ -31,6 +31,7 @@
 //
 // ## Dependencies
 //
+// * [settings.layers](section-2.html#section-2.5)
 // * [tools.log](section-3.html#section-3.3): This library uses the logger tool to show debug info.
 //
 // Styleguide 3.4

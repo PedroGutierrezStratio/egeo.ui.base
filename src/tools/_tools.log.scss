@@ -14,26 +14,26 @@
 //
 // ## Variables
 //
-// | var 											| default 	| desc 																																							|
-// |------------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-// | <div class="egeo-u-tx-align--left">$egeo-log-debug</div> 	| No 		| <div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show a debug message in the console.</div> 	|
-// | <div class="egeo-u-tx-align--left">$egeo-log-warn</div> 	| No 		| <div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show a warn message in the console.</div> 		|
-// | <div class="egeo-u-tx-align--left">$egeo-log-error</div> 	| No 		| <div class="egeo-u-tx-align--left">A constant value used by the log methods to say to the log method that we want to show an error message in the console.</div> 	|
+// | var 				| default 	| desc 																														|
+// | ------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------- |
+// | $egeo-log-debug 	| No 		| A constant value used by the log methods to say to the log method that we want to show a debug message in the console. 	|
+// | $egeo-log-warn 	| No 		| A constant value used by the log methods to say to the log method that we want to show a warn message in the console. 	|
+// | $egeo-log-error 	| No 		| A constant value used by the log methods to say to the log method that we want to show an error message in the console. 	|
 //
 // ## Functions
 //
 // ### egeo-log($message, $type: $egeo-log-debug) - the function
 //
-// <span class="tag tag--type">@function</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">Internal</span>
+// <span class="tag tag--type">@function</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span>
 //
 // The function log launches the directive `@debug`, `@warn` or `@error` depending on
 // the parameter `$type` passed to the function. It detects if the directive
 // @error is supported (Sass 3.3+) and provides an alternative for lower versions.
 //
-// | parameters										| <div class="egeo-u-nowrap">default value</div> 	| desc 																																																|
-// |------------------------------------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-// | <div class="egeo-u-tx-align--left">$message</div> 	| No 				| <div class="egeo-u-tx-align--left">The message we want to show in the console.</div> 																													|
-// | <div class="egeo-u-tx-align--left">$type</div> 		| $egeo-log-debug		| <div class="egeo-u-tx-align--left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$egeo-log-debug`, `@log-warn` or `@log-error`.</div> |
+// | parameters	| default value 	| desc 																																									|
+// | ---------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+// | $message 	| No 				| The message we want to show in the console.																															|
+// | $type 		| `$egeo-log-debug`	| The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$egeo-log-debug`, `@log-warn` or `@log-error`. 	|
 // 
 // #### Usage
 //
@@ -53,21 +53,21 @@
 //
 // ### egeo-log($message, $type: $egeo-log-debug) - the mixin
 //
-// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">Internal</span>
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span>
 //
 // Does exactly the same than the function but you can call it
 // like showed in the Usage section.
 //
-// | parameters										| <div class="egeo-u-nowrap">default value</div> 	| desc 																																																|
-// |------------------------------------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-// | <div class="egeo-u-tx-align--left">$message</div> 	| No 				| <div class="egeo-u-tx-align--left">The message we want to show in the console.</div> 																													|
-// | <div class="egeo-u-tx-align--left">$type</div> 		| $egeo-log-debug		| <div class="egeo-u-tx-align--left">The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$egeo-log-debug`, `@log-warn` or `@log-error`.</div> |
+// | parameters		| default value 	| desc 																																									|
+// |--------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+// | $message 		| No 				| The message we want to show in the console. 																															|
+// | $type 			| $egeo-log-debug	| The type of message we want to show in the console. It could be have the value of one of the variables pre-defined: `$egeo-log-debug`, `@log-warn` or `@log-error`. 	|
 //
 // #### Usage
 //
 // ```
 //	...
-//	@include('My log message', $egeo-log-error);
+//	@include egeo-log('My log message', $egeo-log-error);
 //	...
 // ```
 //

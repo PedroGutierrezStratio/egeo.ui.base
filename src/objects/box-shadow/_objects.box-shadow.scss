@@ -1,0 +1,66 @@
+// Box Shadow
+//
+// The Box Shadow object includes a series of variables and a mixin to help
+// all components in an application to have the same shadow using a common
+// way to do it.
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// ### egeo-o-box-shadow
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span>
+//
+// Injects the box-shadow property as is defined by the variables exposed to theming (see below).
+//
+//
+// ### .egeo-o-box-shadow
+// 
+// <span class="tag tag--type">@class</span><span class="tag tag--tested">tested</span>
+//
+// If the class is not silenced, the css will include the `.egeo-o-box-shadow` class with which
+// we can apply the box-shadow effect everywhere we want.
+//
+//
+// ### Usage
+//
+// #### Using the mixin
+//
+// ```
+// .test {
+//        @include egeo-o-box-shadow;
+// }
+// ```
+// Will product the next result:
+// ```
+// .test {
+//      box-shadow: 0 0 3px map-get($egeo-shadows, sh2), 0 0 1px map-get($egeo-shadows, sh3), 0 3px 2px -1px map-get($egeo-shadows, sh1);
+// }
+// ```
+//
+// #### Using the class
+//
+// ```
+// <div>
+//      <div class="egeo-o-box-shadow" style="background: red; display: inline-block; height: 200px; width: 200px;"></div>
+// </div>
+// ```
+// Will product the next result:
+// 
+// <div>
+//      <div class="egeo-o-box-shadow" style="background: red; display: inline-block; height: 200px; width: 200px;"></div>
+// </div>
+//
+// ## Variables exposed to theming
+//  
+// | Variable                                                               | Default value                                                 |
+// | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+// | <div class="egeo-u-nowrap">$egeo-o-box-shadow</div>                    | <div class="egeo-u-tx-align--left">`true`</div>                                 |
+// | <div class="egeo-u-nowrap">$egeo-shadows</div>                         | <div class="egeo-u-tx-align--left">A Sass map with RGBA colors to be used as shadows. The values are sh1, sh2 and sh3, with value rgba(0, 0, 0, .1), rgba(0, 0, 0, .15) and rgba(0, 0, 0, .3) respectively.</div> |
+// | <div class="egeo-u-nowrap">$egeo-o-box-shadow---box-shadow</div>       | <div class="egeo-u-tx-align--left">0 0 3px map-get($egeo-shadows, sh2), 0 0 1px map-get($egeo-shadows, sh3), 0 3px 2px -1px map-get($egeo-shadows, sh1)</div> |
+// | <div class="egeo-u-nowrap">$egeo-o-box-shadow---shadow-color</div>     | <div class="egeo-u-tx-align--left">map-get($egeo-shadows, sh3)</div>                               |
+//
+//
+// Styleguide 6.2
+
+@import 'vars';
+@import 'rules';

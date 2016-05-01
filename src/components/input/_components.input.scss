@@ -1,0 +1,41 @@
+// Input
+//
+// <span class="tag tag--tested">tested</span><span class="tag tag--danger">alpha version</span>
+//
+// The Input Component is a class to show the Ege ocustom version of an
+// HTML input tag.
+//
+// ### egeo-c-input
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span>
+//
+// Apply the whole styles needed to customize a input.
+//
+// ## Variables exposed to theming
+//
+// | Variable                                | Default value                            | Description                                                           |
+// | --------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------- |
+// | $egeo-c-input                           | `true`                                   | Tells Egeo if the class egeo-c-input should be included in the CSS.   |
+// | $egeo-c-input---box-shadow              | `none`                                   | Define the box shadow of the input.                                   |
+// | $egeo-c-input---border                  | `0`                                      | Define the border of the input.                                       |
+// | $egeo-c-input---border-bottom           | `1px solid egeo-get-color(n6)`           | Define specifically the border-bottom of the input.                   |
+// | $egeo-c-input---font-size               | [body_large](section-2.html#section-2.2) | Define the font size of the input.                                    |
+// | $egeo-c-input--focus---border-bottom    | `1px solid egeo-get-color(n10)`          | Define the border-bottom when the input has the focus.                |
+// | $egeo-c-input__popover---left           | `1px`                                    | Define the left position of the popover when the input has help.      |
+// | $egeo-c-input__popover---top            | `15px`                                   | Define the top position of the popover when the input has help.       |
+// | $egeo-c-input__placeholder---color      | [n7](section-2.html#section-2.1)         | Define the font color of the placeholder.                             |
+// | $egeo-c-input__placeholder---font-style | `italic`                                 | Define the font style of the placeholder.                             |
+//
+// ## Dependencies
+//  
+// * [components.component](section-7.html#section-7.1)
+// * [components.formcontrol](section-7.html#section-7.12)
+// * [tools.colors](section-3.html#section-3.1)
+// * [tools.typography](section-3.html#section-3.2)
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.13
+
+@import 'vars';
+@import 'rules';

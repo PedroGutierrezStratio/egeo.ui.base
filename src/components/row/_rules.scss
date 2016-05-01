@@ -5,6 +5,8 @@ $this: '#{$egeo-namespace}c-row';
     @extend %#{$egeo-namespace}u-clearfix;
 
     display: block;
+
+    @if $egeo-c-row---backgrounds { @include egeo-is-coloured($egeo-c-row---backgrounds, background); }
 }
 
 @if variable-exists(egeo-c-row) {

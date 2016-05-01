@@ -1,0 +1,40 @@
+$this: '#{$egeo-namespace}c-label';
+
+@mixin egeo-c-label {
+    @include egeo-c-formcontrol;
+
+    @if $egeo-c-label---background { background: $egeo-c-label---background; }
+    @if $egeo-c-label---border { border: $egeo-c-label---border; }
+    @if $egeo-c-label---box-shadow { box-shadow: $egeo-c-label---box-shadow; }
+    @if $egeo-c-label---color { color: $egeo-c-label---color; }
+    @if $egeo-c-label---font-size { font-size: $egeo-c-label---font-size; }
+    @if $egeo-c-label---font-style { font-style: $egeo-c-label---font-style; }
+
+    &__optional-mark:before {
+        @if $egeo-c-label__optional-mark---color { color: $egeo-c-label__optional-mark---color; }
+        @if $egeo-c-label__optional-mark---content { content: $egeo-c-label__optional-mark---content; }
+        @if $egeo-c-label__optional-mark---font-style { font-style: $egeo-c-label__optional-mark---font-style; }
+    }
+
+    @if $egeo-c-popover {
+        .egeo-c-popover {
+            margin-top: -3px;
+        }
+    }
+
+    @if $egeo-c-icon {
+        .egeo-c-icon {
+            @if $egeo-c-label__icon---color { color: $egeo-c-label__icon---color; }
+            cursor: pointer;
+            @if $egeo-c-label__icon---font-size { font-size: $egeo-c-label__icon---font-size; }
+        }
+    }
+}
+
+@if variable-exists(egeo-c-label) {
+    @if $egeo-c-label {
+        .#{$this} {
+            @include egeo-c-label;
+        }
+    }
+}

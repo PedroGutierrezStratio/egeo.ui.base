@@ -1,0 +1,48 @@
+// Popover
+//
+// <span class="tag tag--danger">internal</span><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span>
+//
+// The Popover component, for now, is only available inside other components like
+// the Button Group. For that, in terms of code available to work with, only the
+// CSS has real influence in the code. In short term, this component will be 
+// available to be included as a directive in any other component itself.
+//
+// ## Variables exposed to theming
+//
+// | Variable                                        | Default value                                                    | Description                                                                                   |
+// | ----------------------------------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+// | $egeo-c-popover                                 | `true`                                                           | Tells Egeo if the class egeo-c-popover should be included in the CSS.                         | 
+// | $egeo-c-popover---background                    | `#fff`                                                           | Define the background of the popover.                                                         |
+// | $egeo-c-popover---border                        | `0`                                                              | the border of the popover.                                                                    |
+// | $egeo-c-popover---border-radius                 | `5px`                                                            | the border-radius of the popover.                                                             |
+// | $egeo-c-popover---box-shadow                    | [$egeo-o-box-shadow---box-shadow](section-6.html#section-6.2)    | Tells egeo if the popover should use the o-box-shadow to draw the box-shadow of the popover.  |
+// | $egeo-c-popover---padding                       | `10px 0`                                                         | the padding of the popover.                                                                   |
+// | $egeo-c-popover---width                         | `300px`                                                          | the width of the popover.                                                                     |
+// | $egeo-c-popover---shadow-color                  | [$egeo-o-box-shadow---shadow-color](section-6.html#section-6.2)  | the color of the shadow of the popover. This color is a reference to be used as a mask to keep the feeling of uniform (no matter that the box-shadow uses three or more distinct colors, you should set here the average one). |
+// | $egeo-c-popover---z-index                       | [top-1](section-2.html#section-2.5)                              | the stack order of the popover.                                                               |
+// | $egeo-c-popover__text---padding                 | `10px`                                                           | the padding of the text inside the popover.                                                   |
+// | $egeo-c-popover__text---color                   | [n8](section-2.html#section-2.1)                                 | the color of the text inside the popover.                                                     |
+// | $egeo-c-popover__text---font-size               | [body_large](section-2.html#section-2.2)                         | the font size of the text inside the popover.                                                 |
+// | $egeo-c-popover__text---font-style              | `normal`                                                         | the font style of the text inside the popover.                                                |
+// | $egeo-c-popover__text---line-height             | [single](section-2.html#section-2.2)                             | the line height of the text inside the popover.                                               |
+// | $egeo-c-popover__listitem---margin              | `0`                                                              | the margin of the list items inside the popover.                                              |
+// | $egeo-c-popover__listitem---padding             | `7px 25px`                                                       | the padding of the list items inside the popover.                                             |
+// | $egeo-c-popover__listitem---color               | [a1](section-2.html#section-2.1)                                 | the color of the list items inside the popover.                                               |
+// | $egeo-c-popover__listitem--hover---background   | [n3](section-2.html#section-2.1)                                 | the background of the list items inside the popover on hover.                                 |
+// | $egeo-c-popover__listitem__icon---color         | [a1](section-2.html#section-2.1)                                 | the color of the icons in the list items inside the popover.                                  |
+// | $egeo-c-popover__arrow---size                   | `8.5px`                                                          | the size of the arrow which points to the origin of the popover.                              |
+//
+// ## Dependencies
+//  
+// * [component](section-7.html#section-7.1)
+// * [objects.box-shadow](section-6.html#section-6.2)
+// * [tools.colors](section-3.html#section-3.1)
+// * [tools.typography](section-3.html#section-3.2)
+// * [tools.layers](section-3.html#section-3.4)
+//
+// <div class="compatibility">Compatibility untested</div>
+//
+// Styleguide 7.9
+
+@import 'vars';
+@import 'rules';

@@ -1,0 +1,42 @@
+$this: '#{$egeo-namespace}c-message';
+
+@mixin egeo-c-message-modifier($name, $properties) {
+    @if $name {
+        &--#{$name} {
+            @if $properties {
+                @if length($properties) > 0 {
+                    @each $name, $value in $properties {
+                        #{$name}: $value;
+                    }
+                }               
+            }
+        }       
+    } @else {
+        @if function-exist(egeo-log) {
+            @if egeo-log('@egeo-c-message-modifier::$name null is not allowed, the modifier will be not generated.', $log-warn) {}
+        }
+    }
+}
+
+@mixin egeo-c-message {
+	@include egeo-c-component;
+
+    @if $egeo-c-message---padding { padding: $egeo-c-message---padding; }
+    @if $egeo-c-message---font-size { font-size: $egeo-c-message---font-size; }
+
+    @each $message, $properties in $egeo-c-messages {
+        @include egeo-c-message-modifier($message, $properties);
+    }
+
+    &--invisible {
+        visibility: hidden;
+    }
+}
+
+@if variable-exists(egeo-c-message) {
+    @if $egeo-c-message {
+        .#{$this} {
+            @include egeo-c-message;
+        }
+    }
+}

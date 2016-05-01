@@ -1,0 +1,224 @@
+$this: '#{$egeo-namespace}c-header';
+
+@mixin egeo-c-header {
+    @include egeo-c-component;
+
+    @if $egeo-c-header---background { background: $egeo-c-header---background; }
+    @if $egeo-c-header---color { color: $egeo-c-header---color; }
+    @if $egeo-c-header---padding { padding: $egeo-c-header---padding; }
+    @if $egeo-c-header---margin { margin: $egeo-c-header---margin; }
+    //margin: 0 0 50px;
+
+    &:before {
+        background: egeo-get-color(a3);
+        content: ' ';
+        display: block;
+        height: 5px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &__mobile-menu {
+        cursor: pointer;
+        display: none;
+        font-size: egeo-get-font-size(head_medium);
+    }
+
+    &__logo {
+        display: inline-block;;
+    }
+
+    &__user-bar {
+        background: egeo-get-color(a3);
+        color: egeo-get-color(n0);
+        display: inline-block;
+        padding: 0 5px 5px;
+        position: absolute;
+        right: 0;
+        top: 5px;
+
+        &:before {
+            border-color: transparent egeo-get-color(a3) transparent transparent;
+            border-style: solid;
+            border-width: 0px $egeo-c-header__user-bar---size $egeo-c-header__user-bar---size 0;
+            content: ' ';
+            height: 0;
+            left: -$egeo-c-header__user-bar---size;
+            position: absolute;
+            width: 0;
+        }
+    }
+
+    &__tools {
+        display: inline-block;
+        margin: 0;
+
+        &-item {
+            cursor: pointer;
+            display: inline-block;
+            list-style: none;
+            margin-left: 10px;
+
+            &:first-child {
+                margin-left: 15px;
+            }
+
+            &__icon {
+                color: egeo-get-color(n0);
+            }
+        }
+
+    }
+
+    &__app-dropdown {
+        border-left: 1px solid egeo-get-color(n0);
+        padding: 0 15px 0 5px;
+        margin: 0 0 0 5px;
+
+        .egeo-c-icon {
+            cursor: pointer;
+        }
+    }
+
+    &__navigation {
+        display: inline-block;
+        @if $egeo-c-header__navigation---font-size { font-size: $egeo-c-header__navigation---font-size; }
+        vertical-align: bottom;
+    }
+
+    &__menu {
+        list-style: none;
+        @if $egeo-c-header__menu---margin { margin: $egeo-c-header__menu---margin; }
+        padding: 0;
+
+        &-item {
+            @if $egeo-c-header__menu-item---color { color: $egeo-c-header__menu-item---color; }
+            cursor: pointer;
+            display: inline-block;
+            @if $egeo-c-header__menu-item---margin { margin: $egeo-c-header__menu-item---margin; }
+            position: relative;
+
+            &:first-child {
+                margin: 0;
+            }
+
+            &__label {
+                display: none;
+            }
+
+            &__icon {
+                @if $egeo-c-header__menu-item__icon---font-size { font-size: $egeo-c-header__menu-item__icon---font-size; }
+            }
+
+            @if $egeo-c-header__menu-item--hover---color {
+                $temp: '#{&}';
+
+                &:hover,
+                &--active {
+                    @if $egeo-c-header__menu-item--hover---color {
+                        color: $egeo-c-header__menu-item--hover---color;
+                    }
+                }
+            }
+        }
+    }
+
+    @include menu-max;
+
+    &--submenu-shadow {
+        &::after {
+            content: '';
+            background: egeo-get-color(n2);
+            display: block;
+            height: $egeo-c-header--submenu-shadow---height;
+            margin: $egeo-c-header--submenu-shadow---margin;
+        }
+
+        .#{$this}__note {
+            bottom: $egeo-c-header--submenu-shadow---height;
+        }
+    }
+
+    &__submenu {
+        font-size: $egeo-c-header__submenu---font-size;
+        position: absolute;
+        list-style: none;
+        margin: $egeo-c-header__submenu---margin;
+        white-space: nowrap;
+
+        &:before {
+            content: $egeo-c-header__submenu__arrow---content;
+            font-family: $egeo-c-header__submenu__arrow---font-family;
+            font-size: $egeo-c-header__submenu__arrow---font-size;
+            color: $egeo-c-header__submenu__arrow---color;
+            left: $egeo-c-header__submenu__arrow---left;
+            position: absolute;
+            top: $egeo-c-header__submenu__arrow---top;
+        }
+
+        &-item {
+            border-left: $egeo-c-header__submenu-item---border-left;
+            color: $egeo-c-header__submenu-item---color;
+            cursor: pointer;
+            display: inline-block;
+            margin: $egeo-c-header__submenu-item---margin;
+            padding: $egeo-c-header__submenu-item---padding;
+            text-transform: $egeo-c-header__submenu-item---text-transform;
+
+            &:first-child {
+                border-left: 0;
+                margin-left: 0;
+                padding-left: 0;
+            }
+
+            &--active {
+                .#{$this}__submenu-item__label {
+                    color: $egeo-c-header__submenu-item--active---color;
+                    border-bottom: $egeo-c-header__submenu-item--active---border-bottom;
+                }
+            }
+
+            &:hover {
+                color: $egeo-c-header__submenu-item--hover---color;
+            }
+        }
+    }
+
+    &__note {
+        @if $egeo-c-header__note---background { background: $egeo-c-header__note---background; }
+        @if $egeo-c-header__note---bottom { bottom: $egeo-c-header__note---bottom; }
+        display: inline-block;
+        @if $egeo-c-header__note---font-size { font-size: $egeo-c-header__note---font-size; }
+        @if $egeo-c-header__note---right { right: $egeo-c-header__note---right; }
+        @if $egeo-c-header__note---padding { padding: $egeo-c-header__note---padding; }
+        position: absolute;
+
+        @if $egeo-c-header__note__link---color {
+            &__link {
+                color: $egeo-c-header__note__link---color;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .egeo-c-icon + &__label {
+            margin: $egeo-c-header__note__label---margin;
+        }
+
+        &__label + .egeo-c-icon {
+            margin: $egeo-c-header__note__right-icon---margin;
+        }
+    }
+}
+
+@if variable-exists(egeo-c-header) {
+    @if $egeo-c-header {
+        .#{$this} {
+            @include egeo-c-header;
+        }
+    }
+}

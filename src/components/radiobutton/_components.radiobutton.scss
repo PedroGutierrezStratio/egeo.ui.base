@@ -1,0 +1,30 @@
+// Radiobutton
+//
+// <span class="tag tag--untested">Untested</span><span class="tag tag--danger">alpha version</span>
+//
+// The radiobutton Component is a class to show the Egeo custom version of an
+// HTML input Radiobutton tag.
+//
+// ### egeo-c-radiobutton
+// 
+// <span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span>
+//
+// Apply the whole styles needed to customize a radiobutton.
+//
+// ## Variables exposed to theming
+//
+// | Variable              | Default value   | Description                                                              |
+// | --------------------- | --------------- | ------------------------------------------------------------------------ |
+// | $egeo-c-radiobutton   | `true`          | Tells Egeo if the class egeo-c-radiobutton should be included in the CSS.|
+//
+//
+// ## Dependencies
+//  
+// * [components.checkbox](section-7.html#section-7.15)
+//
+// <div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+//
+// Styleguide 7.16
+
+@import 'vars';
+@import 'rules';

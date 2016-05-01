@@ -1,0 +1,34 @@
+$this: '#{$egeo-namespace}c-checkbox';
+
+@mixin egeo-c-checkbox {
+    @include egeo-c-formcontrol;
+
+    box-shadow: none;
+    display: inline-block;
+    vertical-align: middle;
+    width: initial;
+
+    @if $egeo-c-label {
+        + .egeo-c-label {
+            cursor: pointer;
+            display: inline-block;
+            width: initial;
+
+            @if $egeo-c-icon {
+                + .egeo-c-icon {
+                    @if $egeo-c-label__icon---color { color: $egeo-c-label__icon---color; }
+                    cursor: pointer;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+@if variable-exists(egeo-c-checkbox) {
+    @if $egeo-c-checkbox {
+        .#{$this} {
+            @include egeo-c-checkbox;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+$this: '#{$egeo-namespace}c-form';
+
+@mixin egeo-c-form {
+    @include egeo-c-component;
+}
+
+@if variable-exists(egeo-c-form) {
+    @if $egeo-c-form {
+        .#{$this} {
+            @include egeo-c-form;
+        }
+    }
+}

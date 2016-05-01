@@ -1,0 +1,10 @@
+// If silent classes are activated the CSS classes will be not created
+$egeo-c-badge: not $egeo-silent-classes !default;
+
+$egeo-c-badge---font-size: egeo-get-font-size(body_xxxsmall) !default;
+$egeo-c-badge---background: egeo-get-color(s2_dark) !default;
+$egeo-c-badge---padding: 1px 5px 1px 5px !default;
+$egeo-c-badge---color: egeo-get-color(n10) !default;
+$egeo-c-badge---border-radius: 7px !default;
+$egeo-c-badge---top: -15px !default;
+$egeo-c-badge---right: -25px !default;

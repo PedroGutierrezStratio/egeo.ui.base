@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Egeo documentation</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="icon" type="image/png" href="http://guide.stratio.com/web/favicon-16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="http://guide.stratio.com/web/favicon-24.png" sizes="24x24">
+    <link rel="icon" type="image/png" href="http://guide.stratio.com/web/favicon-32.png" sizes="32x32">
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="public/styleguide.css">
+
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node" data-ng-app="myApp">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <div class="logo"><a href="/web/"><img src="public/assets/images/header.logo.png" /></a></div>
+            <h1 class="kss-doc-title"><a href="./">Egeo documentation</a></h1>
+            <div class="version">v0.1.0</div>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="1">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Managers</span></a></li>
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Settings</span></a></li>
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Tools</span></a></li>
+              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Vendors</span></a></li>
+              <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Base</span></a></li>
+              <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Objects</span></a></li>
+              <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Components</span></a></li>
+              <li class="kss-menu-item"><a href="section-8.html"><span class="kss-ref">8</span><span class="kss-name">Utils</span></a></li>
+              <li class="kss-menu-item"><a href="section-9.html"><span class="kss-ref">9</span><span class="kss-name">Theming</span></a></li>
+            </ul>
+            <ul class="kss-menu-child">
+              <li class="kss-menu-item"><a href="#section-1.1"><span class="kss-ref">1.1</span><span class="kss-name">Color Manager</span></a></li>
+              <li class="kss-menu-item"><a href="#section-1.2"><span class="kss-ref">1.2</span><span class="kss-name">Typography Manager</span></a></li>
+              <li class="kss-menu-item"><a href="#section-1.3"><span class="kss-ref">1.3</span><span class="kss-name">Layer Manager</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          <section id="section-1" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">1</span> Managers</h1>
+            <div class="kss-description">
+              <p>The Base Framework of Egeo includes a series of managers to encapsulate the access
+to the original data structures. It works like an API inside the Sass code. This
+keeps the system flexible and decoupled allowing that if we want to modify the
+data structures in the future to a better performance or more correct approach
+we can do it only changing the structure and the API. This is particularly useful
+when we want to adapt our code to a new version of Sass or if we plan to add a new
+3rd party library.</p>
+
+            </div>
+          </section>
+          <section id="section-1.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.1</span> Color Manager</h1>
+            <div class="kss-description">
+              <p>The color manager is the set of settings and functions to work
+with colors in Egeo. It provides a Sass map with the whole colors
+defined by the Design Team in the <a href="/visual-docs/section-1.html#section-1.1">visual specification</a>.</p>
+<p>The Sass map of colors is defined as !default so it is perfectly
+possible redefine it via theming to adapt it to all possibilities.</p>
+<p>See also:</p>
+<ul>
+<li><a href="section-2.html#section-2.1">settings.colors</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+</ul>
+
+            </div>
+          </section>
+          <section id="section-1.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.2</span> Typography Manager</h1>
+            <div class="kss-description">
+              <p>The typography manager is the set of settings and functions to work
+with fonts in Egeo. It provides several Sass maps with the whole font
+families, weights and sizes defined by the Design Team in the
+<a href="/ui-docs/section-2.html">visual specification</a> as well as the line
+heights.</p>
+<p>All these Sass maps are defined as !default so it is perfectly
+possible redefine them via theming to adapt it to all possibilities.</p>
+<p>See also:</p>
+<ul>
+<li><a href="section-2.html#section-2.2">settings.typography</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
+</ul>
+
+            </div>
+          </section>
+          <section id="section-1.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.3</span> Layer Manager</h1>
+            <div class="kss-description">
+              <p>The layer manager is the set of settings and functions to work
+with layers in Egeo. It provides a Sass maps with the whole possible
+z-index values could be used in the app.</p>
+<p>This Sass maps is defined as !default so it is perfectly
+possible redefine it via theming to adapt it to all possibilities.</p>
+<p>See also:</p>
+<ul>
+<li><a href="section-2.html#section-2.5">settings.typography</a></li>
+<li><a href="section-3.html#section-3.4">tools.typography</a></li>
+</ul>
+
+            </div>
+          </section>
+        </article>
+        <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+    
+  </body>
+</html>

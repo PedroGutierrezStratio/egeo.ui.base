@@ -1,0 +1,15 @@
+// If silent classes are activated the CSS classes will be not created
+$egeo-c-input: not $egeo-silent-classes !default;
+
+$egeo-c-input---box-shadow: none !default;
+$egeo-c-input---border: 0 !default;
+$egeo-c-input---border-bottom: 1px solid egeo-get-color(n6) !default;
+$egeo-c-input---font-size: egeo-get-font-size(body_large) !default;
+
+$egeo-c-input--focus---border-bottom: 1px solid egeo-get-color(n10) !default;
+
+$egeo-c-input__popover---left: 1px !default;
+$egeo-c-input__popover---top: 15px !default;
+
+$egeo-c-input__placeholder---color: egeo-get-color(n7) !default;
+$egeo-c-input__placeholder---font-style: italic !default;

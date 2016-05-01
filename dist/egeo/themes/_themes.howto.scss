@@ -1,0 +1,130 @@
+// How to create a theme
+//
+// To create a theme the only thing you must to do is to create a Sass part file
+// and include all the properties you want to customize and are provided
+// by the component. The ones you don't include in the file will be replaced by
+// the default value ones.
+//
+// It is also possible, and even advisable, to create an own micro-architecture
+// for the theme if it is too complex to be included in one unique file.
+//
+// **Note: ** Note that when we are talking about components to theme, we are
+// talking about [CSS Base Framework Components(section-7.html) and not the
+// [UI Kit Components](../ui-kit/section-5.html). The difference is that they
+// are a different set of components. The UI Kit Components were built using
+// several CSS Components.
+//
+// # Creating a theme
+//
+// The best way to create a theme is creating a new file inside the /theme/ folder,
+// called _themes.mythemename.scss. The underscore is to indicate that is a Sass
+// part file, and the rest is a convention naming.
+//
+// Inside the file we can begin to create our theme customizing the values provided
+// by the components. For example:
+//
+// ```
+// $egeo-c-label---background: transparent;
+// $egeo-c-label---border: 0;
+// $egeo-c-label---box-shadow: none;
+// $egeo-c-label---color: egeo-get-color(a1);
+// $egeo-c-label---font-size: egeo-get-font-size(body_xxsmall);
+// $egeo-c-label---font-style: null;
+//
+// $egeo-c-label__optional-mark---color: egeo-get-color(a1);
+// $egeo-c-label__optional-mark---content: '(optional)';
+// $egeo-c-label__optional-mark---font-style: null;
+//
+// $egeo-c-label__icon---color: egeo-get-color(n5);
+// $egeo-c-label__icon---font-size: egeo-get-font-size(body_xsmall);
+// ```
+//
+// If we want to create a complex architecture for the theme, we should remember
+// that we want to use @import directive.
+//
+// ```
+// @import '/mythemename/label';
+// @import '/mythemename/header';
+// @import '/mythemename/icon';
+// ...
+// ```
+//
+// # How to import a theme inside the Egeo Base Framework
+//
+// To import the theme inside Egeo to be applied, is needed to do it just after
+// the tools, importing it as is shown below:
+//
+// ```
+// @import 'tools/tools.log';
+//
+// @import 'settings/settings';
+// @import 'settings/settings.colors';
+// @import 'settings/settings.fonts';
+// @import 'settings/settings.layers';
+// @import 'settings/settings.icons';
+// @import 'settings/settings.typography';
+//
+// @import 'tools/tools.log';
+// @import 'tools/tools.maps';
+// @import 'tools/tools.colors';
+// @import 'tools/tools.typography';
+// @import 'tools/tools.layers';
+//
+// @import 'themes/theme.mythemename';
+//
+// @import 'utils/utils.alignments';
+// @import 'utils/utils.clearfix';
+// @import 'utils/utils.floats';
+// @import 'utils/utils.text';
+//
+// @import 'objects/media/objects.media';
+// @import 'objects/box-shadow/objects.box-shadow';
+//
+// @import 'components/component/components.component';
+// @import 'components/app/components.app';
+// ...
+// ```
+//
+// # How to import a theme inside an external project
+//
+// If you have a project based in Egeo components and want to create a theme to
+// be used by the Egeo components, basically, the way to do it is exactly the
+// same than the before one shown. The only thing to keep in mind is that the
+// paths used to import the Egeo Base Framework files would come from
+// /node_modules/egeo.ui.base/dist/egeo/... instead the theme that you probably
+// want to be in your own project and then come from /sass/mytheme/_mytheme.scss.
+// Take a look to the sample below:
+//
+// ```
+// $egeo-fontface-src: '/assets/fonts';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/vendors/vendors.sanitize';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings.colors';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings.fonts';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings.icons';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings.typography';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/settings/settings.layers';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/tools/tools.log';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/tools/tools.maps';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/tools/tools.layers';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/tools/tools.colors';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/tools/tools.typography';
+//
+// @import 'theme/egeoapptheme/theme.egeoapptheme';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/utils/utils.alignments';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/utils/utils.floats';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/utils/utils.text';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/utils/utils.clearfix';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/objects/media/objects.media';
+// @import '../../node_modules/egeo.ui.base/dist/egeo/objects/box-shadow/objects.box-shadow';
+//
+// @import '../../node_modules/egeo.ui.base/dist/egeo/components/component/components.component';
+// ...
+// ```
+//
+// Styleguide 9.1

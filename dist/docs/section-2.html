@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Egeo documentation</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="icon" type="image/png" href="http://guide.stratio.com/web/favicon-16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="http://guide.stratio.com/web/favicon-24.png" sizes="24x24">
+    <link rel="icon" type="image/png" href="http://guide.stratio.com/web/favicon-32.png" sizes="32x32">
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="public/styleguide.css">
+
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node" data-ng-app="myApp">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <div class="logo"><a href="/web/"><img src="public/assets/images/header.logo.png" /></a></div>
+            <h1 class="kss-doc-title"><a href="./">Egeo documentation</a></h1>
+            <div class="version">v0.1.0</div>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="2">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Managers</span></a></li>
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Settings</span></a></li>
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Tools</span></a></li>
+              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Vendors</span></a></li>
+              <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Base</span></a></li>
+              <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Objects</span></a></li>
+              <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Components</span></a></li>
+              <li class="kss-menu-item"><a href="section-8.html"><span class="kss-ref">8</span><span class="kss-name">Utils</span></a></li>
+              <li class="kss-menu-item"><a href="section-9.html"><span class="kss-ref">9</span><span class="kss-name">Theming</span></a></li>
+            </ul>
+            <ul class="kss-menu-child">
+              <li class="kss-menu-item"><a href="#section-2.1"><span class="kss-ref">2.1</span><span class="kss-name">settings.colors</span></a></li>
+              <li class="kss-menu-item"><a href="#section-2.2"><span class="kss-ref">2.2</span><span class="kss-name">settings.typography</span></a></li>
+              <li class="kss-menu-item"><a href="#section-2.3"><span class="kss-ref">2.3</span><span class="kss-name">settings.icons</span></a></li>
+              <li class="kss-menu-item"><a href="#section-2.4"><span class="kss-ref">2.4</span><span class="kss-name">settings.fonts</span></a></li>
+              <li class="kss-menu-item"><a href="#section-2.5"><span class="kss-ref">2.5</span><span class="kss-name">settings.layers</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          <section id="section-2" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">2</span> Settings</h1>
+            <div class="kss-description">
+              <p>The settings section includes a series of variables to configure our project.
+You could find two differente types of variables; the default ones which should
+be modified vía <a href="section-9.html">theming</a> and the immutable ones which are
+internally used by the framework and shouldn&#39;t be modified.</p>
+<h2 id="variables">Variables</h2>
+<table>
+<thead>
+<tr>
+<th>var</th>
+<th>default</th>
+<th>value</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="egeo-u-nowrap">$egeo-namespace</div></td>
+<td><span class="egeo-u-nowrap"><span class="tag tag--default">!default</span><span class="tag tag--danger">internal</span></span></td>
+<td><code>egeo-</code></td>
+<td><div class="egeo-u-tx-align--left">A prefix included in all classes created by the UI Kit. <span class="text text--s3">This variable is used internally so change it could cause unexpected results.</span></div></td>
+</tr>
+<tr>
+<td><div class="egeo-u-nowrap">$egeo-nobem-namespace</div></td>
+<td><span class="egeo-u-nowrap"><span class="tag tag--default">!default</span><span class="tag tag--danger">internal</span></span></td>
+<td><span class="egeo-u-nowrap"><code>egeo-nobem-</code></span></td>
+<td><div class="egeo-u-tx-align--left">A prefix included in all classes created by the UI Kit to be used in projects which are not using BEM like naming methodology. <span class="text text--s3">This variable is used internally so change it could cause unexpected results.</span></div></td>
+</tr>
+<tr>
+<td><div class="egeo-u-nowrap">$egeo-fontface-src</div></td>
+<td><span class="egeo-u-nowrap"><span class="tag tag--default">!default</span></span></td>
+<td>&#39;assets/fonts&#39;</td>
+<td><div class="egeo-u-tx-align--left">A base url from which the @font-face directive will seek the font folders.</div></td>
+</tr>
+<tr>
+<td><div class="egeo-u-nowrap">$egeo-silent-classes</div></td>
+<td><span class="egeo-u-nowrap"><span class="tag tag--default">!default</span></span></td>
+<td>false</td>
+<td><div class="egeo-u-tx-align--left">Active/deactivate the use of silent classes (view en explanation about silent classes below).</div></td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-a-ui-kit-namespace-">Why a UI Kit namespace?</h3>
+<p>The use of a namespace that prefix all classes exposed ensures that the classes of
+the framework will have no collisions with the classes defined in the project the
+framework will be imported on.</p>
+<h3 id="why-a-non-bem-namespace-">Why a non-BEM namespace?</h3>
+<p>When you are building a project using
+<a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM Methodology</a>,
+created by <a href="https://www.yandex.com/">Yandex</a>, you are building a CSS with
+flat <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">specificity</a>
+due to almost all selectors used are delimited to one class, that
+is equal to 10 points of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">specificity</a>.
+That means that if you load the files of the framework in the right order,
+the classes always be respond as expected, overwritten the styles necessary,
+for example, when you are using <a href="section-8.html">utils</a>.</p>
+<p>However, if you are not working with BEM or you are using external libraries not built
+with <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM</a>
+like <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="https://angular-ui.github.io/">AngularUI</a> or
+<a href="http://foundation.zurb.com/">Foundation</a>, then you have to overwritte some styles
+using <code>!important</code> flag due to you have no way to know what specifity could have a selector.
+Even knowing it, you would have to create a selector specifically written for each
+selector you want to overwrite. A mess.</p>
+<p>For that, some classes and placeholders in the framework uses the non-BEM namespace to
+ensure that the <code>!important</code> flag is used and they can overwrite any class in the project.</p>
+<h3 id="silent-classes">Silent Classes</h3>
+<p>It is possible that, in any cases, you want to use some of the Egeo features
+but you don&#39;t want to import all the classes generated in your final CSS due to
+obvious performance reasons. If not used, shouldn&#39;t appear.</p>
+<p>All CSS classes in the Egeo UI Kit even in the Base Framework, are generated
+throughout mixins. This means that we can enable/disable the generation of the
+CSS class and import only the mixins to our code or import only the CSS classes
+we really need to use. This technique is called <em>Silent Classes</em>.</p>
+<p>By default, Egeo considers that you want to generate all CSS classes you import so
+the default value of <code>$egeo-silent-classes</code> is <em>false</em>. If you set it as <em>true</em>,
+by default, the system will only provide you the mixins and you have to set manually,
+class by class, if you want to generate the CSS class or not.</p>
+<p>To do it, all Egeo components include a variable called like the component that is
+a boolean. For example, the Button component that has the mixin <code>egeo-c-button</code>
+includes a variable called <code>$egeo-c-button</code> to indicate if Egeo should generate
+the CSS class or not. By default, this variable will have the value of
+<code>$egeo-silent-classes</code>.</p>
+
+            </div>
+          </section>
+          <section id="section-2.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">2.1</span> settings.colors</h1>
+            <div class="kss-description">
+              <p>In this file are defined the variables related to the use of colors.
+By default, the colors included in the main Sass map <code>$colors</code> are the
+ones defined by the Design Team in the <a href="/web/visual-docs/section-1.html">visual specification</a>.</p>
+<h2 id="variables">Variables</h2>
+<table>
+<thead>
+<tr>
+<th>var</th>
+<th>default</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="egeo-u-tx-align--left">$colors</div></td>
+<td><span class="tag tag--default">!default</span></td>
+<td><div class="egeo-u-tx-align--left">The default Sass map of colors. By default, the map includes the whole <a href="/web/visual-docs/section-1.html">colors of the visual specification</a>.</div></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sass-map-colors">Sass Map $colors</h3>
+<div class="c-col--3 color-block color-block--c1"><div class="color-block__title">c1: #37b5e4</div></div><!--
+--><div class="c-col--3 color-block color-block--a1"><div class="color-block__title">a1: #37b5e4</div></div><!--
+--><div class="c-col--3 color-block color-block--a1_dark"><div class="color-block__title">a1_dark: #2d96bd</div></div><!--
+--><div class="c-col--3 color-block color-block--a1_light"><div class="color-block__title">a1_light: #3dc9fc</div></div><!--
+--><div class="c-col--3 color-block color-block--a2"><div class="color-block__title">a2: #b5c1c5</div></div><!--
+--><div class="c-col--3 color-block color-block--a2_dark"><div class="color-block__title">a2_dark: #919b9e</div></div><!--
+--><div class="c-col--3 color-block color-block--a2_light"><div class="color-block__title">a2_light: #ccd9de</div></div><!--
+--><div class="c-col--3 color-block color-block--a3"><div class="color-block__title">a3: #405467</div></div><!--
+--><div class="c-col--3 color-block color-block--a3_dark"><div class="color-block__title">a3_dark: #283440</div></div><!--
+--><div class="c-col--3 color-block color-block--a3_light"><div class="color-block__title">a3_light: #4f6880</div></div><!--
+--><div class="c-col--3 color-block color-block--n0"><div class="color-block__title">n0: #fff</div></div><!--
+--><div class="c-col--3 color-block color-block--n1"><div class="color-block__title">n1: #fbfbfb</div></div><!--
+--><div class="c-col--3 color-block color-block--n2"><div class="color-block__title">n2: #f3f3f3</div></div><!--
+--><div class="c-col--3 color-block color-block--n3"><div class="color-block__title">n3: #e4e4e4</div></div><!--
+--><div class="c-col--3 color-block color-block--n4"><div class="color-block__title">n4: #cbcbcb</div></div><!--
+--><div class="c-col--3 color-block color-block--n5"><div class="color-block__title">n5: #b5b5b5</div></div><!--
+--><div class="c-col--3 color-block color-block--n6"><div class="color-block__title">n6: #999</div></div><!--
+--><div class="c-col--3 color-block color-block--n7"><div class="color-block__title">n7: #777</div></div><!--
+--><div class="c-col--3 color-block color-block--n8"><div class="color-block__title">n8: #555</div></div><!--
+--><div class="c-col--3 color-block color-block--n9"><div class="color-block__title">n9: #242424</div></div><!--
+--><div class="c-col--3 color-block color-block--n10"><div class="color-block__title">n10: #000</div></div><!--
+--><div class="c-col--3 color-block color-block--b1"><div class="color-block__title">b1: #172734</div></div><!--
+--><div class="c-col--3 color-block color-block--b2"><div class="color-block__title">b2: #0f1b27</div></div><!--
+--><div class="c-col--3 color-block color-block--b3"><div class="color-block__title">b3: #eff2f3</div></div><!--
+--><div class="c-col--3 color-block color-block--b3_dark"><div class="color-block__title">b3_dark: #e1e4e5</div></div><!--
+--><div class="c-col--3 color-block color-block--b4"><div class="color-block__title">b4: #fff</div></div><!--
+--><div class="c-col--3 color-block color-block--s1"><div class="color-block__title">s1: #88b060</div></div><!--
+--><div class="c-col--3 color-block color-block--s1_dark"><div class="color-block__title">s1_dark: #759653</div></div><!--
+--><div class="c-col--3 color-block color-block--s1_light"><div class="color-block__title">s1_light: #9ab084</div></div><!--
+--><div class="c-col--3 color-block color-block--s2"><div class="color-block__title">s2: #ff8900</div></div><!--
+--><div class="c-col--3 color-block color-block--s2_dark"><div class="color-block__title">s2_dark: #e57a00</div></div><!--
+--><div class="c-col--3 color-block color-block--s2_light"><div class="color-block__title">s2_light: #ffa033</div></div><!--
+--><div class="c-col--3 color-block color-block--s3"><div class="color-block__title">s3: #e23b2b</div></div><!--
+--><div class="c-col--3 color-block color-block--s3_dark"><div class="color-block__title">s3_dark: #c93426</div></div><!--
+--><div class="c-col--3 color-block color-block--s3_light"><div class="color-block__title">s3_light: #e36459</div></div><!--
+--><div class="c-col--3 color-block color-block--t1"><div class="color-block__title">t1: #d0c120</div></div><!--
+--><div class="c-col--3 color-block color-block--t2"><div class="color-block__title">t2: #21d8de</div></div><!--
+--><div class="c-col--3 color-block color-block--t3"><div class="color-block__title">t3: #bcea3f</div></div>
+            </div>
+          </section>
+          <section id="section-2.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">2.2</span> settings.typography</h1>
+            <div class="kss-description">
+              <p>In this file are defined the variables related to the use of typography.</p>
+<h2 id="variables">Variables</h2>
+<table>
+<thead>
+<tr>
+<th>font-variant:</th>
+<th>default</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="egeo-u-tx-align--left">$egeo-font-families</div></td>
+<td><span class="tag tag--default">!default</span></td>
+<td><div class="egeo-u-tx-align--left">The default Sass map of font families declared in the <a href="/web/visual-docs/section-2.html">visual specifications</a>.</div></td>
+</tr>
+<tr>
+<td><div class="egeo-u-tx-align--left">$egeo-font-weights</div></td>
+<td><span class="tag tag--default">!default</span></td>
+<td><div class="egeo-u-tx-align--left">The default Sass map of font weights declared in the <a href="/web/visual-docs/section-2.html">visual specifications</a>.</div></td>
+</tr>
+<tr>
+<td><div class="egeo-u-tx-align--left">$egeo-font-sizes</div></td>
+<td><span class="tag tag--default">!default</span></td>
+<td><div class="egeo-u-tx-align--left">The default Sass map of font sizes declared in the <a href="/web/visual-docs/section-2.html">visual specifications</a>. </div></td>
+</tr>
+<tr>
+<td><div class="egeo-u-tx-align--left">$egeo-line-heights</div></td>
+<td><span class="tag tag--default">!default</span></td>
+<td><div class="egeo-u-tx-align--left">The default Sass map of line heights declared in the <a href="/web/visual-docs/section-2.html">visual specifications</a>.</div></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sass-map-egeo-font-families">Sass map $egeo-font-families</h3>
+<p>The $egeo-font-families map includes, althought the font families used, a series of alias to hide
+the font family behind the purpose of that font and protect our app of the changes in the typographies
+at future. For example, we can use <code>egeo-get-font(heading)</code> instead of <code>egeo-get-font(brandon-grotesque)</code>.
+The final result will be the same but, if in the future the design team decides that the font for the
+heading will be Monotype, our code will be safe due to when the framework update the font reference of
+the heading value, we will only need to recompile the Sass code to obtain the new value in all places
+we are using it.</p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Value</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--medium">Brandon Grotesque</span></td>
+<td>Brandon Grotesque</td>
+<td>brandon-grotesque</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--medium">Open Sans</span></td>
+<td>Open Sans</td>
+<td>open-sans</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--droid-sans typo-block--medium">Droid Sans</span></td>
+<td>DroidSansMonoRegular</td>
+<td>droid-sans</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--stratio-iconfont typo-block--medium"><i class="icon-datetime"></i></span></td>
+<td>ico_stratio</td>
+<td>stratio-iconfont</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--heading typo-block--medium">Heading</span></td>
+<td>Brandon Grotesque</td>
+<td>heading</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--body typo-block--medium">Body</span></td>
+<td>Open Sans</td>
+<td>body</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--code typo-block--medium">Code</span></td>
+<td>DroidSansMonoRegular</td>
+<td>code</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--icon typo-block--medium"><i class="icon-github"></i></span></td>
+<td>icon</td>
+<td>stratio-iconfont</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sass-map-egeo-font-sizes">Sass map $egeo-font-sizes</h3>
+<p>The $egeo-font-sizes map is really a merge of three different maps: $egeo-head-font-sizes,
+$egeo-icon-font-sizes and $egeo-body-font-sizes as it is described in the <a href="/web/visual-docs/">Visual Guidelines</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Value</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--head_giant">Heading in Brandon Grotesque</span></td>
+<td>2.75rem</td>
+<td>head_giant</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--head_xxxlarge">Heading in Brandon Grotesque</span></td>
+<td>2.12rem</td>
+<td>head_xxxlarge</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--head_xxlarge">Heading in Brandon Grotesque</span></td>
+<td>1.88rem</td>
+<td>head_xxlarge</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--head_xlarge">Heading in Brandon Grotesque</span></td>
+<td>1.75rem</td>
+<td>head_xlarge</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--head_large">Heading in Brandon Grotesque</span></td>
+<td>1.5rem</td>
+<td>head_large</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--head_medium">Heading in Brandon Grotesque</span></td>
+<td>1.38rem</td>
+<td>head_medium</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--head_small">Heading in Brandon Grotesque</span></td>
+<td>1.13rem</td>
+<td>head_small</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--head_xsmall">Heading in Brandon Grotesque</span></td>
+<td>1rem</td>
+<td>head_xsmall</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--head_xxsmall">Heading in Brandon Grotesque</span></td>
+<td>.94rem</td>
+<td>head_xxsmall</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--head_xxxsmall">Heading in Brandon Grotesque</span></td>
+<td>.82rem</td>
+<td>head_xxxsmall</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--head_mini">Heading in Brandon Grotesque</span></td>
+<td>.75rem</td>
+<td>head_mini</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--stratio-iconfont typo-block--icon_xxlarge"><i class="icon-datetime"></i></span></td>
+<td>1.88rem</td>
+<td>icon_xxlarge</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--stratio-iconfont typo-block--icon_xlarge"><i class="icon-datetime"></i></span></td>
+<td>1.63rem</td>
+<td>icon_xlarge</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--stratio-iconfont typo-block--icon_large"><i class="icon-datetime"></i></span></td>
+<td>1.38rem</td>
+<td>icon_large</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--stratio-iconfont typo-block--icon_medium"><i class="icon-datetime"></i></span></td>
+<td>1.2rem</td>
+<td>icon_medium</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--stratio-iconfont typo-block--icon_small"><i class="icon-datetime"></i></span></td>
+<td>1.1rem</td>
+<td>icon_small</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--stratio-iconfont typo-block--icon_xsmall"><i class="icon-datetime"></i></span></td>
+<td>.94rem</td>
+<td>icon_xsmall</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--stratio-iconfont typo-block--icon_xxsmall"><i class="icon-datetime"></i></span></td>
+<td>.82rem</td>
+<td>icon_xxsmall</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--stratio-iconfont typo-block--icon_xxxsmall"><i class="icon-datetime"></i></span></td>
+<td>.7rem</td>
+<td>icon_xxxsmall</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--body_xxxlarge">Body in Open Sans</span></td>
+<td>1.38rem</td>
+<td>body_xxxlarge</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--body_xxlarge">Body in Open Sans</span></td>
+<td>1.19rem</td>
+<td>body_xxlarge</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--body_xlarge">Body in Open Sans</span></td>
+<td>1.1rem</td>
+<td>body_xlarge</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--body_large">Body in Open Sans</span></td>
+<td>1rem</td>
+<td>body_large</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--body_medium">Body in Open Sans</span></td>
+<td>.94rem</td>
+<td>body_medium</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--body_small">Body in Open Sans</span></td>
+<td>.84rem</td>
+<td>body_small</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--body_xsmall">Body in Open Sans</span></td>
+<td>.82rem</td>
+<td>body_xsmall</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--body_xxsmall">Body in Open Sans</span></td>
+<td>.75rem</td>
+<td>body_xxsmall</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--body_xxxsmall">Body in Open Sans</span></td>
+<td>.69rem</td>
+<td>body_xxxsmall</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sass-map-egeo-font-weights">Sass map $egeo-font-weights</h3>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Value</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--medium typo-block--bolder">Open Sans</span></td>
+<td>900</td>
+<td>bolder</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--medium typo-block--bold">Open Sans</span></td>
+<td>700</td>
+<td>bold</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--medium typo-block--semibold">Open Sans</span></td>
+<td>500</td>
+<td>semibold</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--medium typo-block--normal">Open Sans</span></td>
+<td>400</td>
+<td>normal</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--medium typo-block--light">Open Sans</span></td>
+<td>200</td>
+<td>light</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sass-map-egeo-line-heights">Sass map $egeo-line-heights</h3>
+<h4 id="double">double</h4>
+<p class="typo-block typo-block--line-height-double">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor nunc elit. Sed ut euismod sem, congue blandit odio. Curabitur enim eros, imperdiet aliquam maximus non, luctus a diam. Suspendisse eleifend lectus metus. Morbi maximus eget sem a laoreet. Proin a nibh nec dolor vulputate auctor sit amet ut erat. Fusce scelerisque justo leo, sit amet rhoncus leo finibus dictum. Aliquam eget placerat nunc.</p>
+
+<h4 id="normal">normal</h4>
+<p class="typo-block typo-block--line-height-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor nunc elit. Sed ut euismod sem, congue blandit odio. Curabitur enim eros, imperdiet aliquam maximus non, luctus a diam. Suspendisse eleifend lectus metus. Morbi maximus eget sem a laoreet. Proin a nibh nec dolor vulputate auctor sit amet ut erat. Fusce scelerisque justo leo, sit amet rhoncus leo finibus dictum. Aliquam eget placerat nunc.</p>
+
+<h4 id="stretch">stretch</h4>
+<p class="typo-block typo-block--line-height-stretch">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor nunc elit. Sed ut euismod sem, congue blandit odio. Curabitur enim eros, imperdiet aliquam maximus non, luctus a diam. Suspendisse eleifend lectus metus. Morbi maximus eget sem a laoreet. Proin a nibh nec dolor vulputate auctor sit amet ut erat. Fusce scelerisque justo leo, sit amet rhoncus leo finibus dictum. Aliquam eget placerat nunc.</p>
+
+<h4 id="single">single</h4>
+<p class="typo-block typo-block--line-height-single">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor nunc elit. Sed ut euismod sem, congue blandit odio. Curabitur enim eros, imperdiet aliquam maximus non, luctus a diam. Suspendisse eleifend lectus metus. Morbi maximus eget sem a laoreet. Proin a nibh nec dolor vulputate auctor sit amet ut erat. Fusce scelerisque justo leo, sit amet rhoncus leo finibus dictum. Aliquam eget placerat nunc.</p>
+            </div>
+          </section>
+          <section id="section-2.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">2.3</span> settings.icons</h1>
+            <div class="kss-description">
+              <p>This file only include an import of the Stratio Icon Font. You can see
+the detail of the whole <a href="/web/visual-docs/section-3.html">icons imported in the visual reference</a>.</p>
+<p>To use any icon, you only need to create a tag with the class of the
+icon. All classes are defined in the <a href="/web/visual-docs/section-3.html">visual reference</a>.</p>
+<h2 id="markup">Markup</h2>
+<p><i class="icon-sample icon-datetime"></i></p>
+<pre><code>&lt;i class=&quot;icon-datetime&quot;&gt;&lt;/i&gt;
+</code></pre><h2 id="compatibility">Compatibility</h2>
+<p>The Stratio Icon Font is provided in EOT, SVG, TTF and WOFF formats so it is compatible with
+all modern browsers and the most of the older ones. You can see a compatibility table of this
+formats in the <a href="section-2.html#section-2.4">fonts section</a>.</p>
+
+            </div>
+          </section>
+          <section id="section-2.4" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">2.4</span> settings.fonts</h1>
+            <div class="kss-description">
+              <p>This file only include an import of the Fonts specified in
+the <a href="/web/visual-docs/section-2.html">visual reference</a>. You can
+see below the families and formats imported as well as a
+reference compatibility table.</p>
+<h2 id="fonts">Fonts</h2>
+<table>
+<thead>
+<tr>
+<th>Font</th>
+<th>Families</th>
+<th>Formats available</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="typo-block typo-block--brandon-grotesque typo-block--medium">Brandon Grotesque</span></td>
+<td><div class="egeo-u-tx-align--left">Light, Regular, Bold, Black</div></td>
+<td>EOT, SVG, TTF, WOFF</td>
+</tr>
+<tr>
+<td><span class="typo-block typo-block--open-sans typo-block--medium">Open Sans</span></td>
+<td><div class="egeo-u-tx-align--left">Light, LightItalic, Regular, Italic, Semibold, SemiboldItalic, Bold, BoldItalic, ExtraBold, ExtraBoldItalic</div></td>
+<td>EOT, SVG, TTF, WOFF</td>
+</tr>
+</tbody>
+</table>
+<h2 id="compatibility">Compatibility</h2>
+<table>
+<thead>
+<tr>
+<th>Font format</th>
+<th>IE</th>
+<th>Chrome</th>
+<th>Firefox</th>
+<th>Safari</th>
+<th>Opera</th>
+<th>Edge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TTF/OTF</td>
+<td>9.0+*</td>
+<td>4.0+</td>
+<td>3.5+</td>
+<td>3.1+</td>
+<td>10.0+</td>
+<td>12+</td>
+</tr>
+<tr>
+<td>WOFF</td>
+<td>9.0+</td>
+<td>5.0+</td>
+<td>3.6+</td>
+<td>5.1+</td>
+<td>11.1+</td>
+<td>12+</td>
+</tr>
+<tr>
+<td>WOFF2</td>
+<td><span class="tag tag--not-supported">not supported</span></td>
+<td>36.0+</td>
+<td>35.0*</td>
+<td><span class="tag tag--not-supported">not supported</span></td>
+<td>26.0+</td>
+<td>12+</td>
+</tr>
+<tr>
+<td>SVG</td>
+<td><span class="tag tag--not-supported">not supported</span></td>
+<td>4.0+</td>
+<td><span class="tag tag--not-supported">not supported</span></td>
+<td>3.2+</td>
+<td>9.0+</td>
+<td>12+</td>
+</tr>
+<tr>
+<td>EOT</td>
+<td>6.0+</td>
+<td><span class="tag tag--not-supported">not supported</span></td>
+<td><span class="tag tag--not-supported">not supported</span></td>
+<td><span class="tag tag--not-supported">not supported</span></td>
+<td><span class="tag tag--not-supported">not supported</span></td>
+<td>12+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>IE: The font format only works when set to be &quot;installable&quot;.</em></li>
+<li><em>Firefox: Disabled by default, but can be enabled (need to set a flag to &quot;true&quot; to use WOFF2).</em></li>
+</ul>
+<p>Compatible in IE8+, Edge 12+, Firefox 3.5+, Chrome 4+, Safari 3.1+, Opera 9+</p>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-3.html#section-3.3">tools.log</a>: The fonts uses the logger tool to show debug info.</li>
+</ul>
+
+            </div>
+          </section>
+          <section id="section-2.5" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">2.5</span> settings.layers</h1>
+            <div class="kss-description">
+              <p>In this file are defined the variables related to the use of different layers
+in the app. When you work in any web project, often it is needed to fight with
+multiple z-index declarations across different CSS files or in one only big CSS
+with thousands lines of code. This library, working with
+<a href="section-3.html#section-3.4">tools.layers</a> provides a set of tools to abstract
+all this complexity referencing the layer deeps with descriptive names, helping
+developers to set the CSS classes in the appropiate layer without the use of
+magic numbers.</p>
+<h2 id="variables">Variables</h2>
+<table>
+<thead>
+<tr>
+<th>var</th>
+<th>default</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="egeo-u-tx-align--left">$egeo-layers</div></td>
+<td><span class="tag tag--default">!default</span></td>
+<td><div class="egeo-u-tx-align--left">The default Sass map of layers. This map is only a set of pairs key/value that represents name/number of deep.</div></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sass-map-layers">Sass Map $layers</h3>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>back</td>
+<td>-10</td>
+</tr>
+<tr>
+<td>sub-2</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>sub-1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>base</td>
+<td>0</td>
+</tr>
+<tr>
+<td>top-1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>top-2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>top-3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>ontop</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+          </section>
+        </article>
+        <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+    
+  </body>
+</html>

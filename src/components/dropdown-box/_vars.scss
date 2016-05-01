@@ -1,0 +1,18 @@
+// If silent classes are activated the CSS classes will be not created
+$egeo-c-dropdown-box: not $egeo-silent-classes !default;
+
+$egeo-c-dropdown-box---background: egeo-get-color(a3) !default;
+$egeo-c-dropdown-box---color: egeo-get-color(n0) !default;
+$egeo-c-dropdown-box---font-size: egeo-get-font-size(head_xxxsmall) !default;
+$egeo-c-dropdown-box---margin: 0 0 0 -5px !default;
+$egeo-c-dropdown-box---min-width: 130px !default;
+$egeo-c-dropdown-box---padding: 5px 0 !default;
+$egeo-c-dropdown-box---z-index: egeo-get-layer(top-1) !default;
+
+$egeo-c-dropdown-box-item---padding: 5px 15px !default;
+
+$egeo-c-dropdown-box-item--hover---background: egeo-get-color(a3_dark) !default;
+
+$egeo-c-dropdown-box-item__icon---font-size: egeo-get-font-size(head_xxxsmall) !default;
+
+$egeo-c-dropdown-box-item__label---margin: 0 0 0 5px !default;

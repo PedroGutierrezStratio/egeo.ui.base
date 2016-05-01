@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Egeo documentation</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="icon" type="image/png" href="http://guide.stratio.com/web/favicon-16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="http://guide.stratio.com/web/favicon-24.png" sizes="24x24">
+    <link rel="icon" type="image/png" href="http://guide.stratio.com/web/favicon-32.png" sizes="32x32">
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="public/styleguide.css">
+
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node" data-ng-app="myApp">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <div class="logo"><a href="/web/"><img src="public/assets/images/header.logo.png" /></a></div>
+            <h1 class="kss-doc-title"><a href="./">Egeo documentation</a></h1>
+            <div class="version">v0.1.0</div>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="7">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Managers</span></a></li>
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Settings</span></a></li>
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Tools</span></a></li>
+              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Vendors</span></a></li>
+              <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Base</span></a></li>
+              <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Objects</span></a></li>
+              <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Components</span></a></li>
+              <li class="kss-menu-item"><a href="section-8.html"><span class="kss-ref">8</span><span class="kss-name">Utils</span></a></li>
+              <li class="kss-menu-item"><a href="section-9.html"><span class="kss-ref">9</span><span class="kss-name">Theming</span></a></li>
+            </ul>
+            <ul class="kss-menu-child">
+              <li class="kss-menu-item"><a href="#section-7.1"><span class="kss-ref">7.1</span><span class="kss-name">Component</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.2"><span class="kss-ref">7.2</span><span class="kss-name">Button</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.3"><span class="kss-ref">7.3</span><span class="kss-name">Icon</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.4"><span class="kss-ref">7.4</span><span class="kss-name">Row</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.5"><span class="kss-ref">7.5</span><span class="kss-name">Toolbar</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.6"><span class="kss-ref">7.6</span><span class="kss-name">Dropdown</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.8"><span class="kss-ref">7.8</span><span class="kss-name">Button Group</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.9"><span class="kss-ref">7.9</span><span class="kss-name">Popover</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.10"><span class="kss-ref">7.10</span><span class="kss-name">Form</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.11"><span class="kss-ref">7.11</span><span class="kss-name">Form Group</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.12"><span class="kss-ref">7.12</span><span class="kss-name">Form Control</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.13"><span class="kss-ref">7.13</span><span class="kss-name">Input</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.14"><span class="kss-ref">7.14</span><span class="kss-name">Label</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.15"><span class="kss-ref">7.15</span><span class="kss-name">Checkbox</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.16"><span class="kss-ref">7.16</span><span class="kss-name">Radiobutton</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.17"><span class="kss-ref">7.17</span><span class="kss-name">Message</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.18"><span class="kss-ref">7.18</span><span class="kss-name">Combobox</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.19"><span class="kss-ref">7.19</span><span class="kss-name">User Dropdown</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.20"><span class="kss-ref">7.20</span><span class="kss-name">Header</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.21"><span class="kss-ref">7.21</span><span class="kss-name">Dropdown Box</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.22"><span class="kss-ref">7.22</span><span class="kss-name">Helpbox</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.23"><span class="kss-ref">7.23</span><span class="kss-name">Badge</span></a></li>
+              <li class="kss-menu-item"><a href="#section-7.24"><span class="kss-ref">7.24</span><span class="kss-name">App</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          <section id="section-7" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">7</span> Components</h1>
+            <div class="kss-description">
+              <p>The components are the core of the CSS Base Framework. But, What is a component?
+An UI Component is all element that can be re-used and provides a defined UI to
+be shown in a webapp. A sample of components could be an Input Text Box, a Checkbox,
+ a Menu Item or a Carousel.</p>
+<p>Don&#39;t mind the complexity, the size or the skins of the component. A component
+may be formed, in turn, by other smaller components and, in fact, this is the
+ideal and the concept behind this architecture to rise the reusability to the
+maximum.</p>
+
+            </div>
+          </section>
+          <section id="section-7.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.1</span> Component</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--danger">internal</span><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The component Component is the parent class of all components in
+the UI Kit. It is an abstrac class that it means that it doesn&#39;t
+exist as a CSS class itself but as a mixin that can be inherited
+in any component.</p>
+<h3 id="egeo-c-component">egeo-c-component</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Injects the general behavior and properties of the abstract class Component to other
+components of the UI Kit.</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+        @include egeo-c-component;
+}
+</code></pre><p>Will product the next result:</p>
+<pre><code>.test {
+        box-sizing: border-box;
+     position: relative;
+}
+</code></pre><div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.2</span> Button</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--danger">internal</span><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The component Button is officially supported in <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code> and <code>&lt;span&gt;</code> tags.
+The <code>&lt;input&gt;</code> tag has a particular behavior due to the default values and special
+implementation dragged from its implementation in the oldest browsers.</p>
+<p><code>&lt;input&gt;</code> tag can be perfectly used but keep in mind that the input type doesn&#39;t allow
+to use an icon inside the text (that is place in the value attribute).</p>
+<h3 id="egeo-c-button-modifier">egeo-c-button-modifier</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>Creates a new modifier which is a type of button with the properties passed as parameters.
+Sass True doesn&#39;t work well with mixins that generates completely new classes outside
+the one marked as input.</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+       @include egeo-c-button-modifier(&#39;warning&#39;,
+                                   (background: orange, margin:0, color: white), // Sass map that includes the styles to be placed in the modifier
+                                   (background: black, margin:0, color: white), // Sass map that includes the styles to be placed in the modifier on hover
+                                   (background: blue, margin:0, color: white)  // Sass map that includes the styles to be placed in the modifier on focus
+                                   );
+}
+</code></pre><p>Will product the next result:</p>
+<pre><code>.test--warning {
+        background: orange;
+     color: white;
+     margin: 0;
+}
+
+.test--warning:hover {
+     background: black;
+     color: white;
+     margin: 0;
+}
+
+.test--warning:focus {
+     background: blue;
+     color: white;
+     margin: 0;
+}
+</code></pre><h3 id="egeo-c-button">egeo-c-button</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>Internally used to create the Egeo buttons in an extensible way. Sass True doesn&#39;t work well with mixins that generates
+completely new classes outside the one marked as input.</p>
+<div class="compatibility">Compatibility IE6+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+
+<h2 id="how-to-extend-the-button">How to extend the button</h2>
+<pre><code>   .#{$egeo-namespace}c-button {
+       @include egeo-c-button;
+
+       // If you want to use the modifier constructor
+       @include egeo-c-button-modifier(&#39;name-of-you-modifier&#39;,
+                                   (background: #000, margin:0), // Sass map that includes the styles to be placed in the modifier
+                                   (background: #777, margin:0), // Sass map that includes the styles to be placed in the modifier on hover
+                                   (background: #fff, margin:0)  // Sass map that includes the styles to be placed in the modifier on focus
+                                   );
+
+       // your code here
+   }
+</code></pre><h2 id="how-to-create-a-new-button-inheriting-from-button">How to create a new button inheriting from button</h2>
+<pre><code>   .my-button {
+       @include egeo-c-button;
+
+       // If you want to use the modifier constructor
+       @include egeo-c-button-modifier(&#39;name-of-you-modifier&#39;,
+                                   (background: #000, margin:0), // Sass map that includes the styles to be placed in the modifier
+                                   (background: #777, margin:0), // Sass map that includes the styles to be placed in the modifier on hover
+                                   (background: #fff, margin:0)  // Sass map that includes the styles to be placed in the modifier on focus
+                                   );
+
+       // your code here
+   }
+</code></pre><p>This script will create a class called <code>my-button</code> with the shared styles of all egeo-buttons,
+other class called <code>my-button---name-of-your-modifier</code> with the default values
+of the first Sass map, a pseudo-class called <code>my-button---name-of-your-modifier:hover</code>
+with the values of the second Sass map and a last pseudo-class called
+<code>my-button---name-of-your-modifier:focus</code> with the values of the third Sass map.</p>
+<h2 id="how-to-create-a-disabled-state">How to create a disabled state</h2>
+<p>Automatically, if exist a button which name is <em>disabled</em>, then the system
+will also create a pseudo-class called <code>:disabled</code> that will work when buttons
+will be tagged with the HTML5 attribute <strong>disabled</strong>.</p>
+<pre><code>   .my-button {
+       @include egeo-c-button;
+
+       // If you want to use the modifier constructor
+       @include egeo-c-button-modifier(&#39;disabled&#39;,
+                                   (background: #777, margin:0), // Sass map that includes the styles to be placed in the modifier
+                                   (background: #777, margin:0), // Sass map that includes the styles to be placed in the modifier on hover
+                                   (background: #777, margin:0)  // Sass map that includes the styles to be placed in the modifier on focus
+                                   );
+
+       // your code here
+   }
+</code></pre><div class="compatibility">Compatibility untested</div>
+
+<h2 id="how-the-buttons-sass-maps-work">How the buttons Sass maps work</h2>
+<p>There are two different Sass Maps we can work with to create new buttons or
+remove those that were created as default ones. The map <code>$egeo-c-buttons</code> is
+used to describe the default buttons defined in the <a href="/web/visual-docs/section-1.html">Visual Guidelines</a>.
+As is defined as <code>!default</code> is perfectly possible to reset it, removing all
+the buttons pre-configurated.</p>
+<p>However, if you want create new buttons and keep the default ones, you can use
+the second map called <code>$egeo-c-buttons-custom</code> and define there the buttons you
+need to add.</p>
+<p>The system will merge the two maps to renderize the whole buttons defined in both.</p>
+<p>We have three inner Sass maps with properties we can modify to create new custom buttons:
+a map for the default state, other one for the hover state and a last one for the focus state.
+These Sass maps can include any CSS class. In addition, the general properties the whole
+buttons share between them will be created in the <code>egeo-c-button</code> class. So, if we want to
+create a new pair of buttons, we only need to add their definitions to
+the <code>$egeo-c-buttons-custom</code> map as is shown below:</p>
+<pre><code>$egeo-c-buttons: (
+    main-1: (
+                normal: (background: egeo-get-color(a1), border: 0, color: egeo-get-color(n0)),
+                hover: (background: egeo-get-color(a1_dark), border: 0, color: egeo-get-color(n0)),
+                focus: (background: egeo-get-color(a1_light), border: 0, color: egeo-get-color(n0))
+            ),
+    main-2: (
+                normal: (background: egeo-get-color(a2), border: 0, color: egeo-get-color(n0)),
+                hover: (background: egeo-get-color(a2_dark), border: 0, color: egeo-get-color(n0)),
+                focus: (background: egeo-get-color(a2_light), border: 0, color: egeo-get-color(n0))
+            )
+);
+</code></pre><p>The definition above will generate the next classes:</p>
+<pre><code>.egeo-c-button {...}
+.egeo-c-button--main-1 {...}
+.egeo-c-button--main-1:hover {...}
+.egeo-c-button--main-1:focus {...}
+.egeo-c-button--main-2 {...}
+.egeo-c-button--main-2:hover {...}
+.egeo-c-button--main-2:focus {...}
+</code></pre><p>All properties are optional so, if you don&#39;t want your button have a background or a border, the
+only thing you have to do is not including in the map and it will not be renderized.</p>
+<p>The default values of the pre-configured buttons defined in the <code>$egeo-c-buttons</code> map are:</p>
+<pre><code>&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;a class=&quot;egeo-c-button egeo-c-button--main-1&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;Main 1&lt;/a&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;span class=&quot;egeo-c-button egeo-c-button--main-2&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;Main 2&lt;/span&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--main-3&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;Main 3&lt;/button&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;input type=&quot;submit&quot; class=&quot;egeo-c-button egeo-c-button--secondary-1&quot; value=&quot;Secondary 1&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;input type=&quot;button&quot; class=&quot;egeo-c-button egeo-c-button--small egeo-c-button--secondary-1&quot; value=&quot;Secondary 2&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;input type=&quot;reset&quot; class=&quot;egeo-c-button egeo-c-button--danger&quot; value=&quot;Danger action&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--main-3&quot; disabled&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;Disabled button&lt;/button&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--rounded egeo-c-button--tool-1&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--rounded egeo-c-button--tool-2&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--rounded egeo-c-button--tool-ellipsis&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-waiting&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--help&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-help2&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--dropdown-1&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;Dropdown 1&lt;/button&gt;&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 5px&quot;&gt;&lt;button class=&quot;egeo-c-button egeo-c-button--menu-1&quot;&gt;&lt;i class=&quot;egeo-c-icon icon-cog&quot;&gt;&lt;/i&gt;Menu 1&lt;/button&gt;&lt;/div&gt;
+</code></pre><p>Will be renderized to:</p>
+<hr>
+<div style="padding-left: 20px;">
+  <div style="margin-bottom: 5px"><a class="egeo-c-button egeo-c-button--main-1"><i class="egeo-c-icon icon-cog"></i>Main 1</a></div>
+  <div style="margin-bottom: 5px"><span class="egeo-c-button egeo-c-button--main-2"><i class="egeo-c-icon icon-cog"></i>Main 2</span></div>
+  <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--main-3"><i class="egeo-c-icon icon-cog"></i>Main 3</button></div>
+  <div style="margin-bottom: 5px"><input type="submit" class="egeo-c-button egeo-c-button--secondary-1" value="Secondary 1"></div>
+  <div style="margin-bottom: 5px"><input type="button" class="egeo-c-button egeo-c-button--small egeo-c-button--secondary-1" value="Secondary 2"></div>
+  <div style="margin-bottom: 5px"><input type="reset" class="egeo-c-button egeo-c-button--danger" value="Danger action"></div>
+  <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--main-3" disabled><i class="egeo-c-icon icon-cog"></i>Disabled button</button></div>
+  <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--rounded egeo-c-button--tool-1"><i class="egeo-c-icon icon-cog"></i></button></div>
+  <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--rounded egeo-c-button--tool-2"><i class="egeo-c-icon icon-cog"></i></button></div>
+  <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--rounded egeo-c-button--tool-ellipsis"><i class="egeo-c-icon icon-waiting"></i></button></div>
+  <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--help"><i class="egeo-c-icon icon-help2"></i></button></div>
+  <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--dropdown-1"><i class="egeo-c-icon icon-cog"></i>Dropdown 1</button></div>
+  <div style="margin-bottom: 5px"><button class="egeo-c-button egeo-c-button--menu-1"><i class="egeo-c-icon icon-cog"></i>Menu 1</button></div>
+</div>
+
+<hr>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-button</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button---font-size</td>
+<td><a href="section-2.html#section-2.2">body_medium</a></td>
+</tr>
+<tr>
+<td>$egeo-c-button---height</td>
+<td><code>40px</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button---min-width</td>
+<td><code>180px</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button---padding</td>
+<td><code>0 20px</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button---text-align</td>
+<td><code>center</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button---text-transform</td>
+<td><code>uppercase</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button---transition</td>
+<td><code>all .5s</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button--focus---shadow</td>
+<td><code>0 0 5px 0 rgba(egeo-get-color(n8), .5)</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button__c-icon--first-child---margin</td>
+<td><code>0 8px 0 0</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button__c-icon--last-child---margin</td>
+<td><code>0 0 0 8px</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button--small---font-size</td>
+<td><a href="section-2.html#section-2.2">body_small</a></td>
+</tr>
+<tr>
+<td>$egeo-c-button--small---height</td>
+<td><code>30px</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button--small---padding</td>
+<td><code>4px 15px</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button--xxsmall---font-size</td>
+<td><a href="section-2.html#section-2.2">body_small</a></td>
+</tr>
+<tr>
+<td>$egeo-c-button--xxsmall---height</td>
+<td><code>12px</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button--xxsmall---padding</td>
+<td><code>0 5px</code></td>
+</tr>
+<tr>
+<td>$egeo-c-button--xxsmall__c-icon---margin</td>
+<td><code>0 6px 0 0</code></td>
+</tr>
+<tr>
+<td>$egeo-c-buttons</td>
+<td>Sass map (main-1, main-2, main-3, secondary-1, tool-1, tool-2, tool-ellipsis, help, danger, disabled, dropdown-1, menu-1)</td>
+</tr>
+<tr>
+<td>$egeo-c-buttons-custom</td>
+<td>Sass map</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
+<li><a href="section-3.html#section-3.3">tools.log</a></li>
+<li><a href="section-8.html#section-8.3">utils.floats</a> - <em>only if you want to float your buttons</em>.</li>
+</ul>
+
+            </div>
+          </section>
+          <section id="section-7.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.3</span> Icon</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--tested">tested</span></p>
+<p>The Icon Component is a class to group common styles and behaviors to
+all icons in an Egeo app.</p>
+<h3 id="egeo-c-icon">egeo-c-icon</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Injects the general behavior and properties of the class Icon to other
+components of the UI Kit.</p>
+<p><strong>Note</strong>: The Icon component triggers styles in other components if is active.</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+        @include egeo-c-icon;
+}
+</code></pre><p>Will product the next result:</p>
+<pre><code>.test {
+        box-sizing: border-box;
+}
+</code></pre><h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-icon</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-icon should be included in the CSS.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.4" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.4</span> Row</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The Row Component is a container which uses always 100% width
+and never floats.</p>
+<h3 id="egeo-c-row">egeo-c-row</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Injects the general behavior and properties of the class Row to other
+components of the UI Kit.</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+     @include egeo-c-row;
+}
+</code></pre><p>Will product the next result:</p>
+<pre><code>.test {
+     box-sizing: border-box;
+     display: block;
+}
+
+.test:after {
+     clear: both;
+     content: &quot;&quot;;
+     display: table;
+}
+</code></pre><h4 id="example">Example</h4>
+<pre><code>&lt;span class=&quot;egeo-c-row&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sem sem. Sed eros mi, blandit vel nulla non, sodales mollis libero.&lt;/span&gt;
+&lt;span class=&quot;egeo-c-row&quot;&gt;Nam faucibus aliquam mi, sit amet eleifend libero vehicula a. Fusce efficitur posuere lacus, eu tempus dolor volutpat id.&lt;/span&gt;
+</code></pre><p><span class="egeo-c-row">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sem sem. Sed eros mi, blandit vel nulla non, sodales mollis libero.</span>
+<span class="egeo-c-row">Nam faucibus aliquam mi, sit amet eleifend libero vehicula a. Fusce efficitur posuere lacus, eu tempus dolor volutpat id.</span></p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<p>Egeo provides an AngularJS directive to create rows with ease. The directive is restricted
+to HTML Element and called <code>egeo-c-row</code>. The Row component is a container so it allows to use
+transclude content. Below you can see the properties exposed:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-row</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-group should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-row---backgrounds</td>
+<td><code>(b1, b2, b3, b3_dark,b4)</code></td>
+<td>Background colors. Now b1, b2, b3, b3_dark and b4 are set by default.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">component</a></li>
+<li><a href="section-8.html#section-8.1">clearfix</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.5" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.5</span> Toolbar</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The Toolbar Component is a container of items which will be added one behind the other.</p>
+<h3 id="egeo-c-toolbar">egeo-c-toolbar</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Injects the general behavior and properties of the class Toolbar to other
+components of the UI Kit.</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+     @include egeo-c-toolbar;
+}
+</code></pre><p>Will product the next result:</p>
+<pre><code>.test {
+     box-sizing: border-box;
+     display: inline-block;
+}
+
+.test__item {
+     margin: 0 0 0 8px;
+}
+
+.test__item:first-child {
+     margin: 0;
+}
+</code></pre><h4 id="example">Example</h4>
+<pre><code>&lt;span class=&quot;egeo-c-toolbar&quot;&gt;
+     &lt;button&gt;Opt 1&lt;/button&gt;
+     &lt;button&gt;Opt 2&lt;/button&gt;
+     &lt;button&gt;Opt 3&lt;/button&gt;
+&lt;/span&gt;
+</code></pre><p><span class="egeo-c-toolbar">
+     <button>Opt 1</button>
+     <button>Opt 2</button>
+     <button>Opt 3</button>
+</span></p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-toolbar</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-toolbar should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-toolbar---margin</td>
+<td><code>0 0 0 8px</code></td>
+<td>Define the margin by default for the whole items in the toolbar.</td>
+</tr>
+<tr>
+<td>$egeo-c-toolbar--first-child---margin</td>
+<td><code>0</code></td>
+<td>Define the margin by default for the first element in the toolbar (typically zero).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">component</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.6" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.6</span> Dropdown</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--danger">in progress</span><span class="tag tag--untested">untested</span></p>
+<p>In progress...</p>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-7.html#section-7.2">components.button</a></li>
+</ul>
+
+            </div>
+          </section>
+          <section id="section-7.8" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.8</span> Button Group</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The Button Group component is a wrapper to group a set of Egeo Buttons. You can
+use only the CSS styles but probably has no sense due to the whole functionality
+is only available via the AngularJS Directive.</p>
+<p><strong>Warning:</strong> The Button Group is, mainly, an AngularJS directive and, as such, is better defined
+in the <a href="">UI Kit Documentation</a>. Here you will only find basic CSS needed to compliment the button
+CSS itself and the way to position and manage the group of them.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-buttongroup</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-buttongroup should be included in the CSS.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-7.html#section-7.2">components.button</a></li>
+<li><a href="section-7.html#section-7.9">components.popover</a></li>
+</ul>
+<div class="compatibility">Compatibility untested</div>
+            </div>
+          </section>
+          <section id="section-7.9" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.9</span> Popover</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--danger">internal</span><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The Popover component, for now, is only available inside other components like
+the Button Group. For that, in terms of code available to work with, only the
+CSS has real influence in the code. In short term, this component will be
+available to be included as a directive in any other component itself.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-popover</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-popover should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover---background</td>
+<td><code>#fff</code></td>
+<td>Define the background of the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover---border</td>
+<td><code>0</code></td>
+<td>the border of the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover---border-radius</td>
+<td><code>5px</code></td>
+<td>the border-radius of the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover---box-shadow</td>
+<td><a href="section-6.html#section-6.2">$egeo-o-box-shadow---box-shadow</a></td>
+<td>Tells egeo if the popover should use the o-box-shadow to draw the box-shadow of the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover---padding</td>
+<td><code>10px 0</code></td>
+<td>the padding of the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover---width</td>
+<td><code>300px</code></td>
+<td>the width of the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover---shadow-color</td>
+<td><a href="section-6.html#section-6.2">$egeo-o-box-shadow---shadow-color</a></td>
+<td>the color of the shadow of the popover. This color is a reference to be used as a mask to keep the feeling of uniform (no matter that the box-shadow uses three or more distinct colors, you should set here the average one).</td>
+</tr>
+<tr>
+<td>$egeo-c-popover---z-index</td>
+<td><a href="section-2.html#section-2.5">top-1</a></td>
+<td>the stack order of the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover__text---padding</td>
+<td><code>10px</code></td>
+<td>the padding of the text inside the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover__text---color</td>
+<td><a href="section-2.html#section-2.1">n8</a></td>
+<td>the color of the text inside the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover__text---font-size</td>
+<td><a href="section-2.html#section-2.2">body_large</a></td>
+<td>the font size of the text inside the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover__text---font-style</td>
+<td><code>normal</code></td>
+<td>the font style of the text inside the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover__text---line-height</td>
+<td><a href="section-2.html#section-2.2">single</a></td>
+<td>the line height of the text inside the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover__listitem---margin</td>
+<td><code>0</code></td>
+<td>the margin of the list items inside the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover__listitem---padding</td>
+<td><code>7px 25px</code></td>
+<td>the padding of the list items inside the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover__listitem---color</td>
+<td><a href="section-2.html#section-2.1">a1</a></td>
+<td>the color of the list items inside the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover__listitem--hover---background</td>
+<td><a href="section-2.html#section-2.1">n3</a></td>
+<td>the background of the list items inside the popover on hover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover<strong>listitem</strong>icon---color</td>
+<td><a href="section-2.html#section-2.1">a1</a></td>
+<td>the color of the icons in the list items inside the popover.</td>
+</tr>
+<tr>
+<td>$egeo-c-popover__arrow---size</td>
+<td><code>8.5px</code></td>
+<td>the size of the arrow which points to the origin of the popover.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">component</a></li>
+<li><a href="section-6.html#section-6.2">objects.box-shadow</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
+<li><a href="section-3.html#section-3.4">tools.layers</a></li>
+</ul>
+<div class="compatibility">Compatibility untested</div>
+            </div>
+          </section>
+          <section id="section-7.10" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.10</span> Form</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The Form component is a wrapper to group all components inside an HTML Form
+logically related to the CSS.</p>
+<h3 id="egeo-c-form">egeo-c-form</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span></p>
+<p>At present, the component only includes the basic behavior inherited from <a href="section-7.html#section-7.1">component</a>.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-form</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-form should be included in the CSS.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.11" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.11</span> Form Group</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The Form Group component is a wrapper to group components inside an HTML Form
+that can be joined to work together. A typical example of a form group is a
+label with an input.</p>
+<h3 id="egeo-c-formgroup">egeo-c-formgroup</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span></p>
+<p>At present, the component only includes the basic behavior inherited from <a href="section-7.html#section-7.1">component</a>
+with an extra to manage the margin.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-formgroup</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-formgroup should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-formgroup---margin</td>
+<td><code>0 0 8px</code></td>
+<td>Define the margins around the form group.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.12" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.12</span> Form Control</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The Form Control component is an abstract class which is inherited
+by the components which belong to a form. It includes a series of
+default properties and behaviors all child components could inherit
+as well, modify or complete overwrite by their owns.</p>
+<h3 id="egeo-c-formcontrol">egeo-c-formcontrol</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>This mixin is used by the form controls to inherit a default and common
+behavior and appearance. It can be used to create new custom form controls,
+extending it vía include in our own classes.</p>
+<p>These classes which inherit from egeo-c-formcontrol are designed to work
+with egeo-c-form and egeo-c-formgroup so keep it in mind when you create
+new form controls or extend them.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-formcontrol</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-formcontrol should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-formcontrol---background</td>
+<td><a href="section-2.html#section-2.1">n0</a></td>
+<td>Set the background by default of all form controls.</td>
+</tr>
+<tr>
+<td>$egeo-c-formcontrol---border</td>
+<td><code>1px solid</code></td>
+<td>Set the border by default of all form controls.</td>
+</tr>
+<tr>
+<td>$egeo-c-formcontrol---box-shadow</td>
+<td><code>$egeo-o-box-shadow---box-shadow</code></td>
+<td>If we don&#39;t want to use the egeo-o-box-shadow, Egeo will use this variable to set the box shadow of the form controls.</td>
+</tr>
+<tr>
+<td>$egeo-c-formcontrol---color</td>
+<td><a href="section-2.html#section-2.1">n10</a></td>
+<td>Set the font color by default of all form controls.</td>
+</tr>
+<tr>
+<td>$egeo-c-formcontrol---font-size</td>
+<td><a href="section-2.html#section-2.2">body_medium</a></td>
+<td>Set the font size by default of all form controls.</td>
+</tr>
+<tr>
+<td>$egeo-c-formcontrol---line-height</td>
+<td><code>null</code></td>
+<td>Set the line height by default of all form controls.</td>
+</tr>
+<tr>
+<td>$egeo-c-formcontrol---padding</td>
+<td><code>3px 5px</code></td>
+<td>Set the padding by default of all form controls.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-7.html#section-7.10">components.form</a></li>
+<li><a href="section-7.html#section-7.11">components.formgroup</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.13" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.13</span> Input</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--tested">tested</span><span class="tag tag--danger">alpha version</span></p>
+<p>The Input Component is a class to show the Ege ocustom version of an
+HTML input tag.</p>
+<h3 id="egeo-c-input">egeo-c-input</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Apply the whole styles needed to customize a input.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-input</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-input should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-input---box-shadow</td>
+<td><code>none</code></td>
+<td>Define the box shadow of the input.</td>
+</tr>
+<tr>
+<td>$egeo-c-input---border</td>
+<td><code>0</code></td>
+<td>Define the border of the input.</td>
+</tr>
+<tr>
+<td>$egeo-c-input---border-bottom</td>
+<td><code>1px solid egeo-get-color(n6)</code></td>
+<td>Define specifically the border-bottom of the input.</td>
+</tr>
+<tr>
+<td>$egeo-c-input---font-size</td>
+<td><a href="section-2.html#section-2.2">body_large</a></td>
+<td>Define the font size of the input.</td>
+</tr>
+<tr>
+<td>$egeo-c-input--focus---border-bottom</td>
+<td><code>1px solid egeo-get-color(n10)</code></td>
+<td>Define the border-bottom when the input has the focus.</td>
+</tr>
+<tr>
+<td>$egeo-c-input__popover---left</td>
+<td><code>1px</code></td>
+<td>Define the left position of the popover when the input has help.</td>
+</tr>
+<tr>
+<td>$egeo-c-input__popover---top</td>
+<td><code>15px</code></td>
+<td>Define the top position of the popover when the input has help.</td>
+</tr>
+<tr>
+<td>$egeo-c-input__placeholder---color</td>
+<td><a href="section-2.html#section-2.1">n7</a></td>
+<td>Define the font color of the placeholder.</td>
+</tr>
+<tr>
+<td>$egeo-c-input__placeholder---font-style</td>
+<td><code>italic</code></td>
+<td>Define the font style of the placeholder.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-7.html#section-7.12">components.formcontrol</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.14" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.14</span> Label</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--tested">tested</span></p>
+<p>The Label Component is a class to show the Egeo custom version of an
+HTML label tag.</p>
+<h3 id="egeo-c-label">egeo-c-label</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--tested">tested</span><span class="tag tag--danger">internal</span></p>
+<p>Apply the whole styles needed to customize a label.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-label</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-label should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-label---background</td>
+<td><code>transparent</code></td>
+<td>Define the background of the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-label---border</td>
+<td><code>0</code></td>
+<td>Define the border of the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-label---box-shadow</td>
+<td><code>none</code></td>
+<td>Define the box-shadow of the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-label---color</td>
+<td><a href="section-2.html#section-2.1">a1</a></td>
+<td>Define the font color of the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-label---font-size</td>
+<td><a href="[a1](section-2.html#section-2.2">body_xxsmall</a>)</td>
+<td>Define the font size of the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-label---font-style</td>
+<td><code>null</code></td>
+<td>Define the font style of the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-label__optional-mark---color</td>
+<td><a href="section-2.html#section-2.1">a1</a></td>
+<td>Define the color of the optional mark if it joins the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-label__optional-mark---content</td>
+<td>&#39;(optional)&#39;</td>
+<td>Define the content of the optional mark if it joins the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-label__optional-mark---font-style</td>
+<td><code>null</code></td>
+<td>Define the font style of the optional mark if it joins the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-label__icon---color</td>
+<td><a href="section-2.html#section-2.1">n5</a></td>
+<td>Define the color of the icon if any icon joins the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-label__icon---font-size</td>
+<td><a href="[a1](section-2.html#section-2.2">body_xsmall</a>)</td>
+<td>Define the font size of the icon if any icon joins the label.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-7.html#section-7.12">components.formcontrol</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.15" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.15</span> Checkbox</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">Untested</span><span class="tag tag--danger">alpha version</span></p>
+<p>The Checkbox Component is a class to show the Egeo custom version of an
+HTML input checkbox tag.</p>
+<h3 id="egeo-c-checkbox">egeo-c-checkbox</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span></p>
+<p>Apply the whole styles needed to customize a checkbox.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-checkbox</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-checkbox should be included in the CSS.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-7.html#section-7.12">components.formcontrol</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.16" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.16</span> Radiobutton</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">Untested</span><span class="tag tag--danger">alpha version</span></p>
+<p>The radiobutton Component is a class to show the Egeo custom version of an
+HTML input Radiobutton tag.</p>
+<h3 id="egeo-c-radiobutton">egeo-c-radiobutton</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span></p>
+<p>Apply the whole styles needed to customize a radiobutton.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-radiobutton</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-radiobutton should be included in the CSS.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.15">components.checkbox</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.17" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.17</span> Message</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--danger">in progress</span><span class="tag tag--danger">internal</span></p>
+<p>The Message Component is a class to group common styles and behaviors to
+all Messages in an Egeo app.</p>
+<h3 id="egeo-c-message">egeo-c-message</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>Injects the general behavior and properties of the class Message.</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+        @include egeo-c-message;
+}
+</code></pre><p>Will product the next result:</p>
+<pre><code>.test {
+        box-sizing: border-box;
+}
+</code></pre><h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-message</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-message should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-message---padding</td>
+<td><code>.5em</code></td>
+<td>Define the padding of the message.</td>
+</tr>
+<tr>
+<td>$egeo-c-message---font-size</td>
+<td><code>12px</code></td>
+<td>Define the font size of the message text.</td>
+</tr>
+<tr>
+<td>$egeo-c-messages--custom</td>
+<td>Sass map</td>
+<td>Define custom messages which will be joined to the default ones.</td>
+</tr>
+<tr>
+<td>$egeo-c-messages</td>
+<td>Sass map</td>
+<td>(restriction, warn, error)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.3">tools.log</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.18" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.18</span> Combobox</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--danger">alpha version</span></p>
+<p>The Combobox Component is a class to show the Egeo custom version of an
+HTML select tag. It extends the input component.</p>
+<h3 id="egeo-c-combobox">egeo-c-combobox</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span></p>
+<p>Apply the whole styles needed to customize a select.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-combobox</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-combobox should be included in the CSS.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.13">components.input</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.19" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.19</span> User Dropdown</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The user-dropdown component creates a combobox-like item specifically designed
+to fit into the Header component.</p>
+<h3 id="egeo-c-user-dropdown">egeo-c-user-dropdown</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>Returns the whole styles to create an user-dropdown to be extended in another CSS class
+not implemented by this framework.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-user-dropdown</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-user-dropdown should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-user-dropdown__label---color</td>
+<td><code>egeo-get-color(n0)</code></td>
+<td>The color of the text of the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-user-dropdown__label---font-size</td>
+<td><code>egeo-get-font-size(head_xxxsmall)</code></td>
+<td>The font-size of the text of the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-user-dropdown__icon---margin</td>
+<td><code>0 0 0 5px</code></td>
+<td>The margins around the icon who is after the label.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown__caret---color</td>
+<td><code>egeo-get-color(n7)</code></td>
+<td>The color of the caret.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown__caret---content</td>
+<td><code>&#39;\e63f&#39;</code></td>
+<td>The icon used to print the caret.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown__caret---font-family</td>
+<td><code>egeo-get-font(icon)</code></td>
+<td>The font-family of the icon used to print the caret.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown__caret---font-size</td>
+<td><code>egeo-get-font-size(head_xxxsmall)</code></td>
+<td>The font-size of the icon used to print the caret.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown__caret---margin</td>
+<td><code>0 0 0 10px</code></td>
+<td>The margins around the caret.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-7.html#section-7.20">components.header</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.20" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.20</span> Header</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The header component creates the official header of the stratio modules.</p>
+<h3 id="egeo-c-header">egeo-c-header</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span></p>
+<p>Returns the whole styles to create a header to be extended in another CSS class
+not implemented by this framework.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-app-header</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-app-header should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-header---background</td>
+<td><code>egeo-get-color(n10)</code></td>
+<td>The background of the header.</td>
+</tr>
+<tr>
+<td>$egeo-c-header---color</td>
+<td><code>egeo-get-color(n0)</code></td>
+<td>The main color of the texts inside the header.</td>
+</tr>
+<tr>
+<td>$egeo-c-header---padding</td>
+<td><code>30px 30px 20px</code></td>
+<td>The padding around the contents of the header.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__menu---margin</td>
+<td><code>0 0 0 30px</code></td>
+<td>The margins around the header</td>
+</tr>
+<tr>
+<td>$egeo-c-header__menu----tweakpoint</td>
+<td><code>1260px</code></td>
+<td>The tweakpoint (a media query) where the component would adapt its behavior and appearance.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__menu-item---color</td>
+<td><code>egeo-get-color(n6)</code></td>
+<td>The color of the items of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__menu-item---margin</td>
+<td><code>0 0 0 30px</code></td>
+<td>The margin around each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__menu-item--hover---color</td>
+<td><code>egeo-get-color(n0)</code></td>
+<td>The color of each item of the main menu when mouse over.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---color</td>
+<td><code>egeo-get-color(n6)</code></td>
+<td>The color of the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---font-family</td>
+<td><code>egeo-get-font(brandon-grotesque)</code></td>
+<td>The font family of the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---font-size</td>
+<td><code>egeo-get-font-size(head_xsmall)</code></td>
+<td>The font size of the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---letter-spacing</td>
+<td><code>-1px</code></td>
+<td>The letter spacing of the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---margin</td>
+<td><code>0 0 0 5px</code></td>
+<td>The margin around the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>label---text-transform</td>
+<td><code>uppercase</code></td>
+<td>The text-transform value of the label of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>menu-item</strong>icon---font-size</td>
+<td><code>egeo-get-font-size(head_xxsmall)</code></td>
+<td>The font size of the icon of each item of the main menu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__note---background</td>
+<td><code>egeo-get-color(a1_dark)</code></td>
+<td>The background of the note (if used).</td>
+</tr>
+<tr>
+<td>$egeo-c-header__note---bottom</td>
+<td><code>0</code></td>
+<td>The distance of the note from the bottom of the header (if note used).</td>
+</tr>
+<tr>
+<td>$egeo-c-header__note---padding</td>
+<td><code>5px 10px</code></td>
+<td>The paddings of the note (if used).</td>
+</tr>
+<tr>
+<td>$egeo-c-header__note---right</td>
+<td><code>10px</code></td>
+<td>The distance of the note form the right of the header (if note used).</td>
+</tr>
+<tr>
+<td>$egeo-c-header__note--menu-max---padding</td>
+<td><code>10px</code></td>
+<td>The paddings of the note when the min-width of the viewport is less than the tweakpoint.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>note</strong>link---color</td>
+<td><code>egeo-get-color(n0)</code></td>
+<td>The color of the link inside the note (if note used).</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu---margin</td>
+<td><code>30px 0 0</code></td>
+<td>The margin around the submenu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---content</td>
+<td><code>&#39;\e625&#39;</code></td>
+<td>The content of the arrow of the submenu that correponds to the icon code in the icon font used.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---font-family</td>
+<td><code>egeo-get-font(icon)</code></td>
+<td>The icon font used to print the arrow of the submenu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---font-size</td>
+<td><code>egeo-get-font-size(head_normal)</code></td>
+<td>The font size of the icon used to print the arrow of the submenu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---color</td>
+<td><code>egeo-get-color(n10)</code></td>
+<td>The color used to print the arrow of the submenu.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---left</td>
+<td><code>0</code></td>
+<td>The left position from the labels of the submenu where the arrow of the submenu would be positioned.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>submenu</strong>arrow---top</td>
+<td><code>-17px</code></td>
+<td>The top position from the labels of the submenu where the arrow of the submenu would be positioned.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item---border-left</td>
+<td><code>1px solid egeo-get-color(n6)</code></td>
+<td>The border would be printed at left of the submenu items except the first one to separate each from others.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item---color</td>
+<td><code>egeo-get-color(n6)</code></td>
+<td>The color of the labels of the submenu items.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item---margin</td>
+<td><code>0 0 0 25px</code></td>
+<td>The margin around each submenu item.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item---padding</td>
+<td><code>0 0 0 25px</code></td>
+<td>The padding around each submenu item.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item---text-transform</td>
+<td><code>uppercase</code></td>
+<td>The text-transform value the label of each submenu item would have.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item--active---color</td>
+<td><code>egeo-get-color(n10)</code></td>
+<td>The color of each submenu item when it is active.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item--active---border-bottom</td>
+<td><code>3px solid egeo-get-color(a1)</code></td>
+<td>The border at bottom of each submenu item when it is active.</td>
+</tr>
+<tr>
+<td>$egeo-c-header__submenu-item--hover---color</td>
+<td><code>egeo-get-color(n10)</code></td>
+<td>The color of each submenu item when mouse over.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>note</strong>label---margin</td>
+<td><code>0 0 0 5px</code></td>
+<td>The margin of the label of each submenu item when have a left icon.</td>
+</tr>
+<tr>
+<td>$egeo-c-header<strong>note</strong>right-icon---margin</td>
+<td><code>0 25px 0 0</code></td>
+<td>The margin of the label of each submenu item when have a right icon.</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+          </section>
+          <section id="section-7.21" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.21</span> Dropdown Box</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The dropdown-box component creates a dropdown list specifically designed
+to work with other components like the user-dropdown or the app-dropdown.</p>
+<h3 id="egeo-c-dropdown-box">egeo-c-dropdown-box</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>Returns the whole styles to create a dropdown-box to be extended in another CSS class
+not implemented by this framework.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-dropdown-box</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-dropdown-box should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown-box---background</td>
+<td><code>egeo-get-color(a3)</code></td>
+<td>The background of the box.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown-box---font-size</td>
+<td><code>egeo-get-font-size(head_xxxsmall)</code></td>
+<td>The font-size of the box items.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown-box---margin</td>
+<td><code>0 0 0 -5px</code></td>
+<td>The margin around the box.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown-box---min-width</td>
+<td><code>130px</code></td>
+<td>The min-width the box should have.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown-box---padding</td>
+<td><code>5px 0</code></td>
+<td>The padding inside the box.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown-box---z-index</td>
+<td><code>egeo-get-layer(top-1)</code></td>
+<td>The z-index of the box.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown-box-item---padding</td>
+<td><code>5px 15px</code></td>
+<td>The padding inside each item of the box.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown-box-item--hover---background</td>
+<td><code>egeo-get-color(a3_dark)</code></td>
+<td>The background of each item of the box when mouse hover.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown-box-item__icon---font-size</td>
+<td><code>egeo-get-font-size(head_xxxsmall)</code></td>
+<td>The font-size of each item of the box.</td>
+</tr>
+<tr>
+<td>$egeo-c-dropdown-box-item__label---margin</td>
+<td><code>0 0 0 5px</code></td>
+<td>The margin in the label inside of each item of the box (useful, for examplo, to separate if has icon at left).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
+<li><a href="section-3.html#section-3.4">tools.layers</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.22" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.22</span> Helpbox</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span><span class="tag tag--warn">beta version</span></p>
+<p>The helpbox Component is a wrapper to show the help messages.</p>
+<h3 id="egeo-c-helpbox">egeo-c-helpbox</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>Injects the general behavior and properties of the class helpbox.</p>
+<h4 id="usage">Usage</h4>
+<pre><code>.test {
+     @include egeo-c-helpbox;
+}
+</code></pre><h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-helpbox</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-helpbox should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-helpbox---background</td>
+<td><a href="section-2.html#section-2.1">n0</a></td>
+<td>Define the background of the helpbox.</td>
+</tr>
+<tr>
+<td>$egeo-c-helpbox---border-top</td>
+<td><code>1px solid egeo-get-color(n0)</code></td>
+<td>Define the border-top style of the helpbox.</td>
+</tr>
+<tr>
+<td>$egeo-c-helpbox---color</td>
+<td><a href="section-2.html#section-2.1">n0</a></td>
+<td>Define the font color of the text inside the helpbox.</td>
+</tr>
+<tr>
+<td>$egeo-c-helpbox---shadow-color</td>
+<td><a href="section-2.html#section-2.1">n4</a></td>
+<td>Define the base color of the shadow that emits the helpbox.</td>
+</tr>
+<tr>
+<td>$egeo-c-helpbox__arrow---size</td>
+<td><code>8px</code></td>
+<td>Define the size of the arrow (in px) of the helpbox.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.4">tools.layers</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.23" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.23</span> Badge</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The Badge component is a way to show how many items are pending to read or
+do some actions with them.</p>
+<h3 id="egeo-c-badge">egeo-c-badge</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span><span class="tag tag--danger">internal</span></p>
+<p>Returns the whole styles to create a badge to be extended in another CSS class
+not implemented by this framework.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-badge</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-badge should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---background</td>
+<td><code>egeo-get-color(s2_dark)</code></td>
+<td>Background of the badge.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---border-radius</td>
+<td><code>7px</code></td>
+<td>The radius of the border of the badge.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---color</td>
+<td><code>egeo-get-color(n10)</code></td>
+<td>Color of the text inside the badge.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---font-size</td>
+<td><code>egeo-get-font-size(body_xxxsmall)</code></td>
+<td>Font size of the text inside the badge.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---padding</td>
+<td><code>1px 5px 1px 5px</code></td>
+<td>The padding of the badge that create a space around the text.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---right</td>
+<td><code>0</code></td>
+<td>The space from the right position of the item who is the parent of the badge and is relative positioned.</td>
+</tr>
+<tr>
+<td>$egeo-c-badge---top</td>
+<td><code>-25px</code></td>
+<td>The space from the top position of the item who is the parent of the badge and is relative positioned.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+          <section id="section-7.24" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">7.24</span> App</h1>
+            <div class="kss-description">
+              <p><span class="tag tag--untested">untested</span><span class="tag tag--warn">beta version</span></p>
+<p>The App component is a way to configure the default options of a website or
+webapp based on Stratio style guidelines.</p>
+<h3 id="egeo-c-app">egeo-c-app</h3>
+<p><span class="tag tag--type">@mixin</span><span class="tag tag--untested">untested</span></p>
+<p>Returns the whole styles to put preferably on the body of the DOM to configure
+the default CSS properties in the cascade.</p>
+<h2 id="variables-exposed-to-theming">Variables exposed to theming</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$egeo-c-app</td>
+<td><code>true</code></td>
+<td>Tells Egeo if the class egeo-c-app should be included in the CSS.</td>
+</tr>
+<tr>
+<td>$egeo-c-app---font-family</td>
+<td><code>Open Sans</code></td>
+<td>Set the default font family will be used in the site. Should be a value included in the <a href="section-2.html#section-2.2">typography settings</a>.</td>
+</tr>
+<tr>
+<td>$egeo-c-app---font-size</td>
+<td><code>1rem</code></td>
+<td>Set the default font size will be used in the site. Should be a value included in the <a href="section-2.html#section-2.2">typography settings</a>.</td>
+</tr>
+<tr>
+<td>$egeo-c-app---background</td>
+<td><code>null</code></td>
+<td>Set the background of the site.</td>
+</tr>
+<tr>
+<td>$egeo-c-app---color</td>
+<td><code>#000</code></td>
+<td>Set the default font color of the site.</td>
+</tr>
+<tr>
+<td>$egeo-c-app---margin</td>
+<td><code>0</code></td>
+<td>Set the margin of the container where the class will be applied.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="section-7.html#section-7.1">components.component</a></li>
+<li><a href="section-3.html#section-3.1">tools.colors</a></li>
+<li><a href="section-3.html#section-3.2">tools.typography</a></li>
+</ul>
+<div class="compatibility">Compatibility IE8+, Firefox 29+, Chrome 10+, Edge 12+, Safari 5.1+, Opera 9.5+</div>
+            </div>
+          </section>
+        </article>
+        <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+    
+  </body>
+</html>

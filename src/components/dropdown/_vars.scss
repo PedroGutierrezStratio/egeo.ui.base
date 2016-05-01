@@ -1,16 +1,6 @@
+// If silent classes are activated the CSS classes will be not created
+$egeo-c-dropdown: not $egeo-silent-classes !default;    
 
-// Default Dropdown button types
-$egeo-c-dropdown-items: (
-    main-1: (
-                normal: (background: transparent, border: 0, color: egeo-get-color(n7)), 
-                hover: (background: transparent, border: 0, color: egeo-get-color(n7)), 
-                focus: (background: transparent, border: 0, color: egeo-get-color(n7))
-            ),
-    item-1: (
-                normal: (background: transparent, border: 0, color: egeo-get-color(n0)), 
-                hover: (background: transparent, border: 0, color: egeo-get-color(n0)), 
-                focus: (background: transparent, border: 0, color: egeo-get-color(n0))
-            )
-) !default;
+$egeo-c-dropdown__caret---color: egeo-get-color(n7) !default;
 
-$egeo-c-dropdown__caret---color: egeo-get-color(n7);
+$egeo-c-dropdown__menu---width: 300px !default;
